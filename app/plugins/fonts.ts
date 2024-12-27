@@ -1,9 +1,9 @@
-import { Work_Sans, Inter, Poppins } from "next/font/google";
+import { Work_Sans, Inter, Poppins, Bricolage_Grotesque } from "next/font/google";
 
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--bricolage",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"]
+  weight: ["300", "400", "500", "600", "700", "800"]
 });
 
 const inter = Inter({
@@ -21,5 +21,5 @@ const poppins = Poppins({
 export {
   inter,
   poppins,
-  workSans
+  bricolageGrotesque
 };

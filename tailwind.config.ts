@@ -1,126 +1,211 @@
 import type { Config } from "tailwindcss";
 
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
 export default {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}"
-  ],
+  darkMode: ["class"],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     fontFamily: {
       inter: ["Inter", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
-      "work-sans": ["Work Sans", "sans-serif"]
+      bricolage: ["Bricolage Grotesque", "sans-serif"],
     },
     extend: {
       colors: {
-        // Using CSS Variables for colors
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-
-        primaryText: "var(--primary-text)",
-        secondaryText: "var(--secondary-text)",
-
-        link: "var(--link)",
-        linkHover: "var(--link-hover)",
-
-        primaryBtn: "var(--primary-btn)",
-        primaryBtnText: "var(--primary-btn-text)",
-        primaryBtnHover: "var(--primary-btn-hover)",
-        primaryBtnHoverText: "var(--primary-btn-hover-text)",
-
-        secondaryBtn: "var(--secondary-btn)",
-        secondaryBtnText: "var(--secondary-btn-text)",
-        secondaryBtnHover: "var(--secondary-btn-hover)",
-        secondaryBtnHoverText: "var(--secondary-btn-hover-text)",
-
-        // Color Shades
-        silver: {
-          50: "var(--silver-50)",
-          100: "var(--silver-100)",
-          200: "var(--silver-200)",
-          300: "var(--silver-300)",
-          400: "var(--silver-400)",
-          500: "var(--silver-500)",
-          600: "var(--silver-600)",
-          700: "var(--silver-700)",
-          800: "var(--silver-800)",
-          900: "var(--silver-900)",
-          950: "var(--silver-950)",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
-
-        slateGray: {
-          50: "var(--slate-gray-50)",
-          100: "var(--slate-gray-100)",
-          200: "var(--slate-gray-200)",
-          300: "var(--slate-gray-300)",
-          400: "var(--slate-gray-400)",
-          500: "var(--slate-gray-500)",
-          600: "var(--slate-gray-600)",
-          700: "var(--slate-gray-700)",
-          800: "var(--slate-gray-800)",
-          900: "var(--slate-gray-900)",
-          950: "var(--slate-gray-950)",
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
-
-        deepBlue: {
-          50: "var(--deep-blue-50)",
-          100: "var(--deep-blue-100)",
-          200: "var(--deep-blue-200)",
-          300: "var(--deep-blue-300)",
-          400: "var(--deep-blue-400)",
-          500: "var(--deep-blue-500)",
-          600: "var(--deep-blue-600)",
-          700: "var(--deep-blue-700)",
-          800: "var(--deep-blue-800)",
-          900: "var(--deep-blue-900)",
-          950: "var(--deep-blue-950)",
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
-
-        accent: {
-          50: "var(--accent-50)",
-          100: "var(--accent-100)",
-          200: "var(--accent-200)",
-          300: "var(--accent-300)",
-          400: "var(--accent-400)",
-          500: "var(--accent-500)",
-          600: "var(--accent-600)",
-          700: "var(--accent-700)",
-          800: "var(--accent-800)",
-          900: "var(--accent-900)",
-          950: "var(--accent-950)",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
+        primary: {
+          "50": "hsl(var(--primary-50))",
+          "100": "hsl(var(--primary-100))",
+          "200": "hsl(var(--primary-200))",
+          "300": "hsl(var(--primary-300))",
+          "400": "hsl(var(--primary-400))",
+          "500": "hsl(var(--primary-500))",
+          "600": "hsl(var(--primary-600))",
+          "700": "hsl(var(--primary-700))",
+          "800": "hsl(var(--primary-800))",
+          "900": "hsl(var(--primary-900))",
+          "950": "hsl(var(--primary-950))",
+          DEFAULT: "hsl(var(--primary))",
+          active: "hsl(var(--primary-active))",
+          content: "hsl(var(--primary-content))",
+          gradient: "var(--primary-gradient)",
+        },
+        secondary: {
+          "50": "hsl(var(--secondary-50))",
+          "100": "hsl(var(--secondary-100))",
+          "200": "hsl(var(--secondary-200))",
+          "300": "hsl(var(--secondary-300))",
+          "400": "hsl(var(--secondary-400))",
+          "500": "hsl(var(--secondary-500))",
+          "600": "hsl(var(--secondary-600))",
+          "700": "hsl(var(--secondary-700))",
+          "800": "hsl(var(--secondary-800))",
+          "900": "hsl(var(--secondary-900))",
+          "950": "hsl(var(--secondary-950))",
+          DEFAULT: "hsl(var(--secondary))",
+          active: "hsl(var(--secondary-active))",
+          content: "hsl(var(--secondary-content))",
+          gradient: "var(--secondary-gradient)",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
         success: {
-          50: "var(--success-50)",
-          100: "var(--success-100)",
-          200: "var(--success-200)",
-          300: "var(--success-300)",
-          400: "var(--success-400)",
-          500: "var(--success-500)",
-          600: "var(--success-600)",
-          700: "var(--success-700)",
-          800: "var(--success-800)",
-          900: "var(--success-900)",
-          950: "var(--success-950)",
+          DEFAULT: "hsl(var(--success))",
+          accent: "hsl(var(--success-accent))",
+          content: "hsl(var(--success-content))",
+          hairline: "hsl(var(--success-hairline))",
+          background: "hsl(var(--success-background))",
         },
-
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          hover: "hsl(var(--warning-hover))",
+          content: "hsl(var(--warning-content))",
+          hairline: "hsl(var(--warning-hairline))",
+          background: "hsl(var(--warning-background))",
+        },
         error: {
-          50: "var(--error-50)",
-          100: "var(--error-100)",
-          200: "var(--error-200)",
-          300: "var(--error-300)",
-          400: "var(--error-400)",
-          500: "var(--error-500)",
-          600: "var(--error-600)",
-          700: "var(--error-700)",
-          800: "var(--error-800)",
-          900: "var(--error-900)",
-          950: "var(--error-950)",
+          DEFAULT: "hsl(var(--error))",
+          hover: "hsl(var(--error-hover))",
+          content: "hsl(var(--error-content))",
+          hairline: "hsl(var(--error-hairline))",
+          background: "hsl(var(--error-background))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          hover: "hsl(var(--info-hover))",
+          content: "hsl(var(--info-content))",
+          hairline: "hsl(var(--info-hairline))",
+          background: "hsl(var(--info-background))",
+        },
+        focusRing: "hsl(var(--focus-ring))",
+        boxShadow: "hsl(var(--box-shadow))",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      animation: {
+        rainbow: "rainbow var(--speed, 3s) infinite linear",
+        aurora: "aurora 60s linear infinite",
+        meteor: "meteor 5s linear infinite",
+        "shimmer-slide":
+          "shimmer-slide var(--speed) ease-in-out infinite alternate",
+        "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
+        "shiny-text": "shiny-text 8s infinite",
+        gradient: "gradient 8s linear infinite",
+      },
+      keyframes: {
+        rainbow: {
+          "0%": {
+            "background-position": "0%",
+          },
+          "100%": {
+            "background-position": "200%",
+          },
+        },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        meteor: {
+          "0%": {
+            transform: "rotate(215deg) translateX(0)",
+            opacity: "1",
+          },
+          "70%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        "shimmer-slide": {
+          to: {
+            transform: "translate(calc(100cqw - 100%), 0)",
+          },
+        },
+        "spin-around": {
+          "0%": {
+            transform: "translateZ(0) rotate(0)",
+          },
+          "15%, 35%": {
+            transform: "translateZ(0) rotate(90deg)",
+          },
+          "65%, 85%": {
+            transform: "translateZ(0) rotate(270deg)",
+          },
+          "100%": {
+            transform: "translateZ(0) rotate(360deg)",
+          },
+        },
+        "shiny-text": {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shiny-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shiny-width)) 0",
+          },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          },
         },
       },
     },
   },
   plugins: [
     require("tailwindcss-animate"),
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    addVariablesForColors,
   ],
 } satisfies Config;
