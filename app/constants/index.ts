@@ -128,7 +128,7 @@ export const goals = [
   {
     id: nanoid(),
     Icon: Rocket,
-    code: "launch-project",
+    code: "launch-a-project",
     heading: "Launch a Project",
     subheading: "Need a partner to bring your idea to life?",
   },
@@ -136,7 +136,7 @@ export const goals = [
     id: nanoid(),
     Icon: Handshake,
     code: "collaborate-long-term",
-    heading: " Collaborate Long-term",
+    heading: "Collaborate Long-term",
     subheading: "Need a partner to bring your idea to life?",
   },
   {

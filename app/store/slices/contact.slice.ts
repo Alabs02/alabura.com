@@ -20,7 +20,7 @@ export type ContactForm = {
     heading: string;
     subheading: string;
   };
-  questions: any[]
+  questions: any[];
   services: Service[];
 };
 

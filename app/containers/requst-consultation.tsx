@@ -11,7 +11,7 @@ import {
 import { UI } from "@/models";
 import toLower from "lodash/toLower";
 import { cn } from "@/lib/utils";
-import { MagicCard } from "@/components/ui";
+import { MagicCard, RainbowButton } from "@/components/ui";
 import { useBoundStore } from "@/store";
 import isEqual from "lodash/isEqual";
 import kebabCase from "lodash/kebabCase";
@@ -42,7 +42,7 @@ const RequstConsultation = () => {
 
   const setContact = (value: string) => {
     updateForm("contact", value);
-  }
+  };
 
   const getInquiryBySubject = () => {
     if (isEmpty(getForm().subject)) {
@@ -124,36 +124,23 @@ const RequstConsultation = () => {
     }
   };
 
-  const hasFilledOutStepForm = () => {
-    switch (getStep()) {
-      case 1:
-        return isEmpty(getForm().subject);
-      case 2:
-        return isEmpty(getForm().inquiry);
-      default:
-        return false;
-    }
-  };
-
-  const calculateProgress = (currentStep: number, totalSteps: number) => {
-    setProgress(((currentStep - 1) / (totalSteps - 1)) * 100);
-  };
-
-  // const onNext = () => {
-  //   const totalSteps = 5; // Define your total number of steps here.
-
-  //   if (getStep() === 1 && isEmpty(getForm().subject)) {
-  //     toast.error("Select an item!");
-  //   } else if (getStep() === 2 && hasFilledOutStepForm()) {
-  //     toast.error("Complete this step!");
-  //   } else {
-  //     nextStep();
-  //     calculateProgress(getStep() + 1, totalSteps); // Update step progress
+  // const hasFilledOutStepForm = () => {
+  //   switch (getStep()) {
+  //     case 1:
+  //       return isEmpty(getForm().subject);
+  //     case 2:
+  //       return isEmpty(getForm().inquiry);
+  //     default:
+  //       return false;
   //   }
   // };
 
+  const calculateProgress = (currentStep: number, totalSteps: number) => {
+    setProgress(((currentStep - 1) / totalSteps) * 100);
+  };
+
   const onNext = () => {
-    const totalSteps = 5;
+    const totalSteps = 4;
 
     const caseOne = () => {
       if (isEmpty(getForm().subject)) {
@@ -161,10 +148,10 @@ const RequstConsultation = () => {
       } else {
         if (kebabCase(getForm().subject) === "explore-possibilities") {
           nextStep(3);
-          // calculateProgress();
+          calculateProgress(getStep(), totalSteps);
         } else {
           nextStep(2);
-          // calculateProgress();
+          calculateProgress(getStep(), totalSteps);
         }
       }
     };
@@ -178,20 +165,51 @@ const RequstConsultation = () => {
         toast.error("Select an item!");
       } else {
         nextStep(3);
-        // calculateProgress();
+        calculateProgress(getStep(), totalSteps);
       }
     };
 
     const caseThree = () => {
       if (
-        isEmpty(getForm().inquiry.type) ||
-        isEmpty(getForm().inquiry.heading) ||
-        isEmpty(getForm().inquiry.subheading)
+        kebabCase(getForm().subject) === "launch-a-project" ||
+        kebabCase(getForm().subject) === "collaborate-long-term"
       ) {
-        toast.error("Select an item!");
+        if (isEmpty(getForm().services)) {
+          toast.error("Kindly select an item!");
+        } else {
+          nextStep(4);
+          calculateProgress(getStep(), totalSteps);
+        }
       } else {
-        nextStep(3);
-        // calculateProgress();
+        const formFields = getInquiryQuestionsBySubject(
+          kebabCase(getForm().subject) as keyof typeof inquiryQuestions
+        );
+
+        const missingFields = formFields.filter(
+          (field) =>
+            field.isRequired && isEmpty((getForm() as any)[field.label])
+        );
+
+        if (missingFields.length > 0) {
+          toast.error("Please fill in all required fields!");
+        } else {
+          nextStep(4);
+          calculateProgress(getStep(), totalSteps);
+        }
+      }
+    };
+
+    const caseFour = () => {
+      const requiredFields = [getForm().name, getForm().email];
+
+      if (requiredFields.some(isEmpty)) {
+        toast.error("Please fill in all required fields to confirm!");
+      } else {
+        // Proceed to final step
+        toast.success("Request Submitted Successfully!");
+        // You can add your final submission logic here
+        nextStep(5);
+        calculateProgress(getStep(), totalSteps);
       }
     };
 
@@ -200,28 +218,26 @@ const RequstConsultation = () => {
     } else if (getStep() === 2) {
       caseTwo();
     } else if (getStep() === 3) {
-      
+      caseThree();
+    } else if (getStep() === 4) {
+      caseFour();
     }
   };
 
-  // const onPrevious = () => {
-  //   if (kebabCase(getForm().subject) === "explore-possibilities") {
-  //     prevStep(1);
-  //     calculateProgress();
-  //   } else {
-  //     prevStep();
-  //     calculateProgress();
-  //   }
-  // };
-
   const onPrevious = () => {
-    const totalSteps = 5; // Define your total number of steps here.
-    prevStep();
-    calculateProgress(getStep() - 1, totalSteps); // Update step progress
+    const totalSteps = 4;
+
+    if (kebabCase(getForm().subject) === "explore-possibilities") {
+      prevStep(1);
+      calculateProgress(getStep(), totalSteps);
+    } else {
+      prevStep();
+      calculateProgress(getStep(), totalSteps);
+    }
   };
 
   useEffect(() => {
-    const totalSteps = 5;
+    const totalSteps = 4;
     calculateProgress(getStep(), totalSteps);
   }, [getStep]);
 
@@ -285,7 +301,7 @@ const RequstConsultation = () => {
               >
                 <MagicCard
                   className={cn(
-                    "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 group-focus:border-primary-200/5 group-focus:bg-gradient-to-r group-focus:from-primary-600 group-focus:to-indigo-600 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+                    "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
                     kebabCase(getForm().subject) === kebabCase(heading) &&
                       "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
                   )}
@@ -349,7 +365,7 @@ const RequstConsultation = () => {
                 >
                   <MagicCard
                     className={cn(
-                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 group-focus:border-primary-200/5 group-focus:bg-gradient-to-r group-focus:from-primary-600 group-focus:to-indigo-600 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
                       `${kebabCase(getForm().subject)}_${kebabCase(
                         getForm().inquiry.heading
                       )}` === code &&
@@ -453,7 +469,7 @@ const RequstConsultation = () => {
                 >
                   <MagicCard
                     className={cn(
-                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 group-focus:border-primary-200/5 group-focus:bg-gradient-to-r group-focus:from-primary-600 group-focus:to-indigo-600 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
                       getLeanFormServices().includes(id) &&
                         "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
                     )}
@@ -511,7 +527,9 @@ const RequstConsultation = () => {
                   className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
                   required
                   placeholder={"E.g., John Snow"}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateForm(e.target.name, e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    updateForm(e.target.name, e.target.value)
+                  }
                 />
               </motion.div>
 
@@ -532,8 +550,9 @@ const RequstConsultation = () => {
                   required
                   className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
                   placeholder={"E.g., johnsnow@example.com"}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateForm(e.target.name, e.target.value)}
-
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    updateForm(e.target.name, e.target.value)
+                  }
                 />
               </motion.div>
 
@@ -585,7 +604,9 @@ const RequstConsultation = () => {
                 </motion.label>
                 <motion.textarea
                   name="message"
-                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => updateForm(e.target.name, e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                    updateForm(e.target.name, e.target.value)
+                  }
                   id={kebabCase("Anything else you'd like to share")}
                   className="w-full col-span-1 p-4 relative font-poppins bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-2xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
                   rows={3}
@@ -597,6 +618,14 @@ const RequstConsultation = () => {
             </motion.div>
           </>
         );
+      case 5:
+        return (
+          <>
+            <motion.h1>Request Submitted Successfully!</motion.h1>
+          </>
+        );
+      default:
+        return <></>;
     }
   };
 
@@ -661,8 +690,23 @@ const RequstConsultation = () => {
           <InteractiveRightButton
             onClick={onNext}
             text="Next"
-            className="border-primary-300/40 hover:border-primary-200/5 text-primary-400 hover:text-primary-content font-poppins text-[15px] uppercase tracking-wide !font-medium"
+            className={cn(
+              "border-primary-300/40 hover:border-primary-200/5 text-primary-400 hover:text-primary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+              getStep() > 3
+                ? "opacity-0 pointer-events-none hidden"
+                : "opacity-1 block"
+            )}
           />
+
+          <RainbowButton
+            onClick={onNext}
+            className={cn(
+              "!rounded-full font-poppins",
+              getStep() < 4 ? "opacity-0 hidden" : "inline-flex opacity-1"
+            )}
+          >
+            {"Confirm & Submit"}
+          </RainbowButton>
         </motion.div>
       </motion.div>
     </>
