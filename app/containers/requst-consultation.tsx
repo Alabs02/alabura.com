@@ -19,6 +19,11 @@ import isEmpty from "lodash/isEmpty";
 import { toast } from "react-hot-toast";
 import { ContactForm, Service } from "@slice/index";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
+const CACHE_KEY = "geoLocationData";
+const CACHE_EXPIRATION = 24 * 60 * 60 * 1000;
 
 const RequstConsultation = () => {
   const {
@@ -33,6 +38,11 @@ const RequstConsultation = () => {
     removeService,
   } = useBoundStore();
   const [progress, setProgress] = useState<number>(0);
+  const [defaultCountry, setDefaultCountry] = useState("gb");
+
+  const setContact = (value: string) => {
+    updateForm("contact", value);
+  }
 
   const getInquiryBySubject = () => {
     if (isEmpty(getForm().subject)) {
@@ -129,18 +139,80 @@ const RequstConsultation = () => {
     setProgress(((currentStep - 1) / (totalSteps - 1)) * 100);
   };
 
-  const onNext = () => {
-    const totalSteps = 5; // Define your total number of steps here.
+  // const onNext = () => {
+  //   const totalSteps = 5; // Define your total number of steps here.
 
-    if (getStep() === 1 && isEmpty(getForm().subject)) {
-      toast.error("Select an item!");
-    } else if (getStep() === 2 && hasFilledOutStepForm()) {
-      toast.error("Complete this step!");
-    } else {
-      nextStep();
-      calculateProgress(getStep() + 1, totalSteps); // Update step progress
+  //   if (getStep() === 1 && isEmpty(getForm().subject)) {
+  //     toast.error("Select an item!");
+  //   } else if (getStep() === 2 && hasFilledOutStepForm()) {
+  //     toast.error("Complete this step!");
+  //   } else {
+  //     nextStep();
+  //     calculateProgress(getStep() + 1, totalSteps); // Update step progress
+  //   }
+  // };
+
+  const onNext = () => {
+    const totalSteps = 5;
+
+    const caseOne = () => {
+      if (isEmpty(getForm().subject)) {
+        toast.error("Select an item!");
+      } else {
+        if (kebabCase(getForm().subject) === "explore-possibilities") {
+          nextStep(3);
+          // calculateProgress();
+        } else {
+          nextStep(2);
+          // calculateProgress();
+        }
+      }
+    };
+
+    const caseTwo = () => {
+      if (
+        isEmpty(getForm().inquiry.type) ||
+        isEmpty(getForm().inquiry.heading) ||
+        isEmpty(getForm().inquiry.subheading)
+      ) {
+        toast.error("Select an item!");
+      } else {
+        nextStep(3);
+        // calculateProgress();
+      }
+    };
+
+    const caseThree = () => {
+      if (
+        isEmpty(getForm().inquiry.type) ||
+        isEmpty(getForm().inquiry.heading) ||
+        isEmpty(getForm().inquiry.subheading)
+      ) {
+        toast.error("Select an item!");
+      } else {
+        nextStep(3);
+        // calculateProgress();
+      }
+    };
+
+    if (getStep() === 1) {
+      caseOne();
+    } else if (getStep() === 2) {
+      caseTwo();
+    } else if (getStep() === 3) {
+      
     }
   };
+
+  // const onPrevious = () => {
+  //   if (kebabCase(getForm().subject) === "explore-possibilities") {
+  //     prevStep(1);
+  //     calculateProgress();
+  //   } else {
+  //     prevStep();
+  //     calculateProgress();
+  //   }
+  // };
 
   const onPrevious = () => {
     const totalSteps = 5; // Define your total number of steps here.
@@ -152,6 +224,37 @@ const RequstConsultation = () => {
     const totalSteps = 5;
     calculateProgress(getStep(), totalSteps);
   }, [getStep]);
+
+  useEffect(() => {
+    const cachedData = localStorage.getItem(CACHE_KEY);
+
+    if (cachedData) {
+      const { countryCode, timestamp } = JSON.parse(cachedData);
+
+      if (Date.now() - timestamp < CACHE_EXPIRATION) {
+        setDefaultCountry(countryCode);
+        return;
+      }
+    }
+
+    fetch("https://ipapi.co/json/")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data && data.country_code) {
+          const countryCode = data.country_code.toLowerCase();
+
+          setDefaultCountry(countryCode);
+
+          localStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify({ countryCode, timestamp: Date.now() })
+          );
+        }
+      })
+      .catch(() => {
+        setDefaultCountry("gb");
+      });
+  }, []);
 
   useEffect(() => {
     console.log(`Step: ${getStep()}, Progress: ${progress}%`);
@@ -390,7 +493,108 @@ const RequstConsultation = () => {
       case 4:
         return (
           <>
-            <motion.div className="border w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3"></motion.div>
+            <motion.div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6">
+              <motion.div className="flex flex-col space-y-1">
+                <motion.label
+                  className="text-sm font-poppins text-zinc-50"
+                  htmlFor={"name"}
+                >
+                  Your Name
+                  <span className="text-pink-600 text-base font-medium ml-1">
+                    *
+                  </span>
+                </motion.label>
+                <motion.input
+                  id="name"
+                  name="name"
+                  type="text"
+                  className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+                  required
+                  placeholder={"E.g., John Snow"}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateForm(e.target.name, e.target.value)}
+                />
+              </motion.div>
+
+              <motion.div className="flex flex-col space-y-1">
+                <motion.label
+                  className="text-sm font-poppins text-zinc-50"
+                  htmlFor={"email"}
+                >
+                  Your Email Address
+                  <span className="text-pink-600 text-base font-medium ml-1">
+                    *
+                  </span>
+                </motion.label>
+                <motion.input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+                  placeholder={"E.g., johnsnow@example.com"}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => updateForm(e.target.name, e.target.value)}
+
+                />
+              </motion.div>
+
+              <motion.div className="flex flex-col space-y-1">
+                <motion.label
+                  className="text-sm font-poppins text-zinc-50"
+                  htmlFor={"contact"}
+                >
+                  Your Phone Number{" "}
+                  <span className="text-zinc-400">(Optional)</span>
+                </motion.label>
+                <PhoneInput
+                  country={defaultCountry}
+                  value={getForm().contact}
+                  onChange={setContact}
+                  inputStyle={{
+                    backgroundColor: "#27272a", // bg-zinc-800
+                    color: "#F4F4F5", // text-zinc-50
+                    fontFamily: "Poppins, sans-serif",
+                    fontSize: "0.875rem", // text-sm
+                    padding: "0.60rem 1.5rem", // p-3 px-6
+                    paddingLeft: "3rem",
+                    height: "auto",
+                    width: "100%",
+                    border: "none",
+                    borderRadius: "9999px",
+                    boxShadow:
+                      "0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)", // shadow styles
+                  }}
+                  buttonStyle={{
+                    backgroundColor: "#18181b",
+                    border: "none",
+                  }}
+                  dropdownStyle={{
+                    backgroundColor: "#1C1C1F",
+                    color: "#F4F4F5",
+                  }}
+                  placeholder="E.g., +44 7700 900123"
+                />
+              </motion.div>
+
+              <motion.div className="flex flex-col space-y-1 col-span-2">
+                <motion.label
+                  className="text-sm font-poppins text-zinc-50"
+                  htmlFor={"message"}
+                >
+                  Anything else you'd like to share?{" "}
+                  <span className="text-zinc-400">(Optional)</span>
+                </motion.label>
+                <motion.textarea
+                  name="message"
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => updateForm(e.target.name, e.target.value)}
+                  id={kebabCase("Anything else you'd like to share")}
+                  className="w-full col-span-1 p-4 relative font-poppins bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-2xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+                  rows={3}
+                  placeholder={
+                    "E.g., specific requirements, timelines, or preferences."
+                  }
+                ></motion.textarea>
+              </motion.div>
+            </motion.div>
           </>
         );
     }
@@ -406,11 +610,11 @@ const RequstConsultation = () => {
         )}
       >
         <motion.div>
-          <motion.h1 className="text-3xl xl:text-4xl text-center font-bricolage font-bold tracking-wide">
+          <motion.h1 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide">
             Ready to Bring Your Vision to Life?
           </motion.h1>
 
-          <motion.h3 className="text-xl text-center font-poppins font-normal mt-2">
+          <motion.h3 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
             Take the first step toward crafting impactful digital solutions.
           </motion.h3>
         </motion.div>
@@ -450,7 +654,7 @@ const RequstConsultation = () => {
             onClick={onPrevious}
             text="Previous"
             className={cn(
-              "w-40 border-gray-600/80 hover:border-gray-600/5 hover:text-gray-100 text-gray-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+              "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
               getStep() === 1 ? "opacity-0 pointer-events-none" : "opacity-1"
             )}
           />
@@ -547,7 +751,10 @@ const InteractiveLeftButton = React.forwardRef<
   );
 });
 
-const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({ progress, className }) => {
+const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({
+  progress,
+  className,
+}) => {
   const scaleX = useSpring(0, {
     stiffness: 200,
     damping: 50,
@@ -561,7 +768,7 @@ const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({ progress, className 
   return (
     <motion.div
       className={cn(
-        "absolute inset-x-0 top-0 z-[2000] h-[2.5px] origin-left bg-gradient-to-r from-primary-500 via-indigo-500 to-purple-500",
+        "absolute inset-x-0 top-0 z-[2000] h-[2px] origin-left bg-gradient-to-r from-primary-500 via-indigo-500 to-purple-500",
         className
       )}
       style={{
@@ -570,7 +777,6 @@ const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({ progress, className 
     />
   );
 };
-
 
 InteractiveRightButton.displayName = "InteractiveRightButton";
 InteractiveLeftButton.displayName = "InteractiveLeftButton";

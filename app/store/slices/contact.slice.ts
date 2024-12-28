@@ -14,6 +14,7 @@ export type ContactForm = {
   name: string;
   subject: string;
   contact: string;
+  message: string;
   inquiry: {
     type: string;
     heading: string;
@@ -48,6 +49,7 @@ const contactSliceInitState: ContactState = {
     email: "",
     subject: "",
     contact: "",
+    message: "",
     inquiry: {
       type: "",
       heading: "",

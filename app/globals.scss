@@ -188,3 +188,61 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.react-tel-input .selected-flag {
+  // border: 1px solid red !important;
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+  background: rgb(24 24 27 / 0.9) !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: rgb(63 63 70 / 0.8) !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: rgb(63 63 70 / 0.8) !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  color: #f4f4f5 !important;
+  background: rgb(63 63 70 / 0.5) !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  color: #f4f4f5 !important;
+  background: rgb(63 63 70 / 0.9) !important;
+}
+
+.react-tel-input .country-list {
+  &:hover,
+  &:focus,
+  &:active {
+    color: #f4f4f5 !important;
+    background: rgb(113 113 122 / 0.8) !important;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: hsl(var(--background));
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--background));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background-image: -webkit-linear-gradient(
+      90deg,
+      rgba(0, 56, 56, 0.6) 0%,
+      rgba(56, 56, 56, 0.7) 25%,
+      rgba(56, 56, 56, 0.95) 75%
+    );
+  }
+}
