@@ -129,6 +129,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
+        move: "move 5s linear infinite",
         rainbow: "rainbow var(--speed, 3s) infinite linear",
         aurora: "aurora 60s linear infinite",
         meteor: "meteor 5s linear infinite",
@@ -139,6 +140,10 @@ export default {
         gradient: "gradient 8s linear infinite",
       },
       keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
         rainbow: {
           "0%": {
             "background-position": "0%",

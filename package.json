@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
     "@radix-ui/react-navigation-menu": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.1",
     "@tabler/icons-react": "^3.26.0",
     "alabura.com": "file:",
     "class-variance-authority": "^0.7.1",

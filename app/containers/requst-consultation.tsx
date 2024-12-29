@@ -624,7 +624,7 @@ const RequstConsultation = () => {
 
       <motion.div
         className={cn(
-          "section h-auto grid gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]"
+          "section h-auto grid gap-8 xl:gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]"
         )}
       >
         <motion.div>

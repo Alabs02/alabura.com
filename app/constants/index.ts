@@ -8,6 +8,9 @@ export const ImagePath = {
   BRAND_LOGO_DARK: "/images/alabura-dark.webp",
   BRAND_LOGO_LIGHT: "/images/alabura-light.webp",
 
+  FROG_SEO_LOGO: "/images/frog-seo.webp",
+  SEM_RUSH_LOGO: "/images/semrush.webp",
+
   PERKS_ICON: "/images/perks.svg",
   GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",
