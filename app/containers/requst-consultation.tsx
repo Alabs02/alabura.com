@@ -124,17 +124,6 @@ const RequstConsultation = () => {
     }
   };
 
-  // const hasFilledOutStepForm = () => {
-  //   switch (getStep()) {
-  //     case 1:
-  //       return isEmpty(getForm().subject);
-  //     case 2:
-  //       return isEmpty(getForm().inquiry);
-  //     default:
-  //       return false;
-  //   }
-  // };
-
   const calculateProgress = (currentStep: number, totalSteps: number) => {
     setProgress(((currentStep - 1) / totalSteps) * 100);
   };
@@ -639,13 +628,13 @@ const RequstConsultation = () => {
         )}
       >
         <motion.div>
-          <motion.h1 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide">
+          <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide">
             Ready to Bring Your Vision to Life?
-          </motion.h1>
+          </motion.h2>
 
-          <motion.h3 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
+          <motion.h4 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
             Take the first step toward crafting impactful digital solutions.
-          </motion.h3>
+          </motion.h4>
         </motion.div>
 
         <AnimatePresence mode={"wait"}>

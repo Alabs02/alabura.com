@@ -9,6 +9,7 @@ export const ImagePath = {
   BRAND_LOGO_LIGHT: "/images/alabura-light.webp",
 
   PERKS_ICON: "/images/perks.svg",
+  GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",
   VERCEL_ICON: "/images/vercel.svg",
   ARROW_DOWN_WHITE: "/images/arrow-down-white.svg",
@@ -103,6 +104,7 @@ export const Perks = {
 };
 
 export const GlobalCollaboration = {
+  src: ImagePath.GLOBE_ICON,
   heading: "Global Collaboration",
   content: "Partnered with teams across 5 countries to deliver results.",
 };

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import {
-  Globe,
   FlipWords,
   Highlight,
   NumberTicker,
@@ -13,6 +12,7 @@ import {
   ShootingStars,
   StarsBackground,
   AuroraBackground,
+  ContactPanel,
 } from "@/components/ui";
 
 // CONSTANTS
@@ -29,36 +29,8 @@ import {
   ProjectsDelivered,
 } from "@/constants";
 
-import { COBEOptions } from "cobe";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
-const GLOBE_CONFIG: COBEOptions = {
-  width: 800,
-  height: 800,
-  onRender: () => {},
-  devicePixelRatio: 2,
-  phi: 0,
-  theta: 0.1,
-  dark: 0.1,
-  diffuse: 0.6,
-  mapSamples: 16000,
-  mapBrightness: 0.9,
-  baseColor: [0.7, 0.9, 1],
-  markerColor: [0.05, 0.2, 0.4],
-  glowColor: [0.05, 0.2, 0.4],
-  markers: [
-    { location: [14.5995, 120.9842], size: 0.05 },
-    { location: [19.076, 72.8777], size: 0.15 },
-    { location: [23.8103, 90.4125], size: 0.08 },
-    { location: [30.0444, 31.2357], size: 0.1 },
-    { location: [39.9042, 116.4074], size: 0.12 },
-    { location: [-23.5505, -46.6333], size: 0.15 },
-    { location: [19.4326, -99.1332], size: 0.15 },
-    { location: [40.7128, -74.006], size: 0.15 },
-    { location: [34.6937, 135.5022], size: 0.08 },
-    { location: [41.0082, 28.9784], size: 0.1 },
-  ],
-};
 
 const Hero = () => {
   const [canBounce, setCanBounce] = useState<boolean>(true);
@@ -161,9 +133,10 @@ const Hero = () => {
             </motion.div>
 
             <motion.div className="flex flex-col gap-y-4">
-              <motion.div className="relative h-12 w-12 overflow-hidden p-px rounded">
-                <Globe config={GLOBE_CONFIG} />
+            <motion.div className="relative h-12 w-12 overflow-hidden p-px rounded">
+                <Image src={GlobalCollaboration.src} alt={""} fill priority />
               </motion.div>
+
 
               <motion.div className="flex flex-col gap-y-2 w-full h-28">
                 <motion.h4 className="text-base xl:text-lg text-primary-content tracking-wide font-bricolage font-bold">
@@ -176,16 +149,20 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div className="-mt-7">
-            <ShimmerButton
-              className="shadow-2xl py-3 px-6 space-x-2"
-              background="linear-gradient(135deg, #3d91e6, #6f5ce8, #9E00FF)"
-            >
-              <span className="whitespace-pre-wrap text-center text-sm lg:text-lg leading-6 uppercase tracking-wide font-medium text-white font-poppins">
-                {HeroBtnCopy}
-              </span>
-              <ArrowRight />
-            </ShimmerButton>
+          <motion.div className="-mt-7 flex items-center space-x-4 xl:space-x-6">
+          <ContactPanel
+              icon={"icon-email"}
+              heading={"Email"}
+              subheading={"usmanunfolds@alabura.com"}
+              clipBoardText={"usmanunfolds@alabura.com"}
+            />
+
+            <ContactPanel
+              icon={"icon-phone-call"}
+              heading={"Contact"}
+              subheading={"+234 902 766 1950"}
+              clipBoardText={"+2349027661950"}
+            />
           </motion.div>
         </motion.div>
       </motion.div>

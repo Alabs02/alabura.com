@@ -1,8 +1,9 @@
 "use client";
 
 // CONTAINERS
-import { Hero, Noise, RequstConsultation } from "@/containers";
-import { ToastConfig } from "./components/ui";
+import { Hero, Noise, RequstConsultation, Services } from "@/containers";
+import { DotPattern, ToastConfig } from "@/components/ui";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -17,6 +18,23 @@ export default function Home() {
         </div>
 
         <Noise />
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <Services />
+        </div>
+
+        <DotPattern
+          width={20}
+          height={20}
+          cx={1}
+          cy={1}
+          cr={1}
+          className={cn(
+            "-top-2 [mask-image:linear-gradient(to_bottom_right,transparent,white,transparent,transparent,transparent)]"
+          )}
+        />
       </section>
 
       <ToastConfig />
