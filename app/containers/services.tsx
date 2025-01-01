@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   AnimatedBeam,
@@ -13,30 +13,44 @@ import {
   FeatureCardDescription,
   FeatureCardTitle,
   FrontendSkeleton,
+  HeadingChip,
   MobileSkeleton,
+  RainbowButton,
   SEOIcons,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { UI } from "@/models";
+import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   return (
     <>
       <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
-        <motion.div className="w-full mb-8 xl:mb-10">
-          <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide">
-            <span className="bg-gradient-to-b from-primary-300 via-indigo-300 to-purple-300 bg-clip-text text-transparent">
+        <motion.div className="flex flex-col xl:flex-row xl:justify-between items-center gap-4 xl:mb-12">
+          <motion.div className="xl:w-[75%]">
+            <HeadingChip>
               Core Services
-            </span>{" "}
-            - What I Do Best
-          </motion.h2>
+            </HeadingChip>
 
-          <motion.h4 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
-            From crafting stunning interfaces to securing systems, here’s how I
-            turn ideas into impactful digital experiences.
-          </motion.h4>
+            <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center lg:text-left font-bricolage font-bold tracking-wide xl:mt-12">
+              What I Do Best
+            </motion.h2>
+
+            <motion.h4 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal xl:mt-6">
+              From crafting stunning interfaces to securing systems, here’s how
+              I turn ideas into impactful digital experiences.
+            </motion.h4>
+          </motion.div>
+
+          <RainbowButton
+            className={cn("inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]")}
+          >
+            <span>{"Explore Services"}</span>
+            <ArrowRight className="group-hover:rotate-45 transition-all duration-300" />
+          </RainbowButton>
         </motion.div>
 
-        <motion.div className="w-full grid grid-cols-12 grid-rows-[auto] gap-4">
+        <motion.div className="w-full grid grid-cols-12 grid-rows-[auto] gap-4 transition-all duration-300">
           <div className="col-span-12 lg:col-span-6 xl:col-span-4">
             <AnimatedFeaturecard
               heading={"Frontend Development"}
@@ -71,7 +85,7 @@ const Services = () => {
           <div className="col-span-12 lg:col-span-6 xl:col-span-6">
             <AnimatedFeaturecard
               showGradient={false}
-              heading={"App Optimization & SEO"}
+              heading={"Web Application Optimization & SEO"}
               subheading={
                 "Enhancing performance and visibility through tailored optimization strategies."
               }
@@ -109,28 +123,21 @@ const Services = () => {
   );
 };
 
-export type AnimatedFeatureCardProps = {
-  cta?: string;
-  heading: string;
-  subheading: string;
-  className?: string;
-  showGradient?: boolean;
-  containerClassName?: string;
-  Skeleton: React.ElementType;
-};
-
-const AnimatedFeaturecard: React.FC<AnimatedFeatureCardProps> = ({
+const AnimatedFeaturecard: React.FC<UI.AnimatedFeatureCardProps> = ({
   cta,
   heading,
   subheading,
   className,
   Skeleton,
-  showGradient = true, 
-  containerClassName
+  showGradient = true,
+  containerClassName,
 }) => {
   return (
     <FeatureCard className={cn("className")}>
-      <CardSkeletonContainer showGradient={showGradient} className={containerClassName}>
+      <CardSkeletonContainer
+        showGradient={showGradient}
+        className={containerClassName}
+      >
         <Skeleton />
       </CardSkeletonContainer>
       <FeatureCardTitle>{heading}</FeatureCardTitle>
@@ -160,17 +167,17 @@ export function AnimatedBeamMultipleOutputForSEO({
     >
       <div className="flex size-full flex-row items-stretch justify-between gap-10 max-w-lg">
         <div className="flex flex-col justify-center gap-2">
-          <Circle ref={div1Ref}>
-            <SEOIcons.frogSEO />
-          </Circle>
           <Circle ref={div2Ref}>
             <SEOIcons.semRush />
           </Circle>
-          <Circle ref={div3Ref}>
-            <SEOIcons.googleAnalytics />
+          <Circle ref={div2Ref}>
+            <SEOIcons.chromeLightHouse />
           </Circle>
           <Circle ref={div4Ref}>
             <SEOIcons.googlePageSpeed />
+          </Circle>
+          <Circle ref={div3Ref}>
+            <SEOIcons.googleAnalytics />
           </Circle>
           <Circle ref={div5Ref}>
             <SEOIcons.openai />
@@ -178,7 +185,7 @@ export function AnimatedBeamMultipleOutputForSEO({
         </div>
         <div className="flex flex-col justify-center">
           <Circle ref={div6Ref} className="size-16">
-            <SEOIcons.brandLogo />
+            <SEOIcons.seo />
           </Circle>
         </div>
         <div className="flex flex-col justify-center">

@@ -11,7 +11,7 @@ import {
 import { UI } from "@/models";
 import toLower from "lodash/toLower";
 import { cn } from "@/lib/utils";
-import { MagicCard, RainbowButton } from "@/components/ui";
+import { HeadingChip, MagicCard, RainbowButton } from "@/components/ui";
 import { useBoundStore } from "@/store";
 import isEqual from "lodash/isEqual";
 import kebabCase from "lodash/kebabCase";
@@ -627,8 +627,12 @@ const RequstConsultation = () => {
           "section h-auto grid gap-8 xl:gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]"
         )}
       >
-        <motion.div>
-          <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide">
+        <motion.div className="flex flex-col items-center">
+          <HeadingChip>
+            Request Consultation
+          </HeadingChip>
+          
+          <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center font-bricolage font-bold tracking-wide xl:mt-12">
             Ready to Bring Your Vision to Life?
           </motion.h2>
 
@@ -690,7 +694,7 @@ const RequstConsultation = () => {
           <RainbowButton
             onClick={onNext}
             className={cn(
-              "!rounded-full font-poppins",
+              "uppercase tracking-wide text-[15px] font-poppins !font-medium !rounded-full hover:text-zinc-950",
               getStep() < 4 ? "opacity-0 hidden" : "inline-flex opacity-1"
             )}
           >
@@ -702,10 +706,10 @@ const RequstConsultation = () => {
   );
 };
 
-const Noise = () => {
+const Noise: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
-      className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
+      className={cn("absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]", className)}
       style={{
         backgroundImage: `url(${ImagePath.NOISE})`,
         backgroundSize: "30%",

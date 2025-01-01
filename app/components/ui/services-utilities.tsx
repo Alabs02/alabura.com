@@ -62,7 +62,7 @@ export const AngularLogo = ({ className }: { className?: string }) => {
       preserveAspectRatio="xMidYMid"
       className={className}
     >
-      <g clip-path="url(#a)">
+      <g clipPath="url(#a)">
         <path
           _ngcontent-ng-c249881476=""
           fill="url(#b)"
@@ -84,31 +84,31 @@ export const AngularLogo = ({ className }: { className?: string }) => {
           y2="129.722"
           gradientUnits="userSpaceOnUse"
         >
-          <stop _ngcontent-ng-c249881476="" stop-color="#E40035"></stop>
+          <stop _ngcontent-ng-c249881476="" stopColor="#E40035"></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset=".24"
-            stop-color="#F60A48"
+            stopColor="#F60A48"
           ></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset=".352"
-            stop-color="#F20755"
+            stopColor="#F20755"
           ></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset=".494"
-            stop-color="#DC087D"
+            stopColor="#DC087D"
           ></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset=".745"
-            stop-color="#9717E7"
+            stopColor="#9717E7"
           ></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset="1"
-            stop-color="#6C00F5"
+            stopColor="#6C00F5"
           ></stop>
         </linearGradient>
         <linearGradient
@@ -120,12 +120,12 @@ export const AngularLogo = ({ className }: { className?: string }) => {
           y2="160.344"
           gradientUnits="userSpaceOnUse"
         >
-          <stop _ngcontent-ng-c249881476="" stop-color="#FF31D9"></stop>
+          <stop _ngcontent-ng-c249881476="" stopColor="#FF31D9"></stop>
           <stop
             _ngcontent-ng-c249881476=""
             offset="1"
-            stop-color="#FF5BE1"
-            stop-opacity="0"
+            stopColor="#FF5BE1"
+            stopOpacity="0"
           ></stop>
         </linearGradient>
         <clipPath _ngcontent-ng-c249881476="" id="a">
@@ -184,8 +184,8 @@ export const TailwindCSSLogo = ({ className }: { className?: string }) => {
           y2="67.5555556%"
           id="linearGradient-1"
         >
-          <stop stop-color="#2298BD" offset="0%"></stop>
-          <stop stop-color="#0ED7B5" offset="100%"></stop>
+          <stop stopColor="#2298BD" offset="0%"></stop>
+          <stop stopColor="#0ED7B5" offset="100%"></stop>
         </linearGradient>
       </defs>
       <g>
@@ -212,8 +212,8 @@ export const LottieLogo = ({ className }: { className?: string }) => {
       )}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M16.1947 0H47.8053C56.7493 0 63.9999 7.25065 63.9999 16.1947V47.8053C63.9999 56.7493 56.7493 64 47.8053 64H16.1947C7.2506 64 0 56.7493 0 47.8053V16.1947C0 7.25065 7.2506 0 16.1947 0ZM30.2792 28.4924C33.5603 22.1766 37.6337 14.3356 48.6489 14.3356C49.0645 14.3352 49.4761 14.4167 49.8601 14.5756C50.2441 14.7344 50.593 14.9674 50.8869 15.2613C51.1807 15.5552 51.4138 15.9041 51.5726 16.2881C51.7314 16.6721 51.813 17.0837 51.8125 17.4993C51.813 17.9149 51.7314 18.3264 51.5726 18.7105C51.4138 19.0945 51.1807 19.4434 50.8869 19.7373C50.593 20.0311 50.2441 20.2642 49.8601 20.423C49.4761 20.5818 49.0645 20.6634 48.6489 20.6629C41.9582 20.6629 39.3623 24.7351 35.8839 31.4388L33.7392 35.4786L33.7304 35.4955C30.4514 41.8134 26.3766 49.6647 15.3543 49.6647C14.5152 49.6647 13.7105 49.3314 13.1172 48.7381C12.5239 48.1448 12.1906 47.3401 12.1906 46.501C12.1906 45.662 12.5239 44.8573 13.1172 44.264C13.7105 43.6707 14.5152 43.3374 15.3543 43.3374C22.045 43.3374 24.6408 39.2652 28.1224 32.5615L30.264 28.5218L30.2792 28.4924Z"
         className="c-PJLV c-PJLV-gDQMhN-appearance-default"
       ></path>
@@ -239,8 +239,8 @@ export const FlutterLogo = ({ className }: { className?: string }) => {
           y2="52.9192657%"
           id="linearGradient-1"
         >
-          <stop stop-color="#000000" offset="0%"></stop>
-          <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+          <stop stopColor="#000000" offset="0%"></stop>
+          <stop stopColor="#000000" stopOpacity="0" offset="100%"></stop>
         </linearGradient>
       </defs>
       <g>
@@ -261,7 +261,7 @@ export const FlutterLogo = ({ className }: { className?: string }) => {
           points="71.5995742 230.364072 120.401085 181.562561 169.842046 230.821136 121.132827 279.531454"
         ></polygon>
         <polygon
-          fill-opacity="0.8"
+          fillOpacity="0.8"
           fill="url(#linearGradient-1)"
           points="121.132827 279.531454 161.692896 266.072227 165.721875 234.941308"
         ></polygon>
@@ -327,15 +327,15 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="89.755%"
           id="b"
         >
-          <stop stop-color="#41873F" offset="0%" />
+          <stop stopColor="#41873F" offset="0%" />
 
-          <stop stop-color="#418B3D" offset="32.88%" />
+          <stop stopColor="#418B3D" offset="32.88%" />
 
-          <stop stop-color="#419637" offset="63.52%" />
+          <stop stopColor="#419637" offset="63.52%" />
 
-          <stop stop-color="#3FA92D" offset="93.19%" />
+          <stop stopColor="#3FA92D" offset="93.19%" />
 
-          <stop stop-color="#3FAE2A" offset="100%" />
+          <stop stopColor="#3FAE2A" offset="100%" />
         </linearGradient>
 
         <path
@@ -350,13 +350,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="-18.306%"
           id="d"
         >
-          <stop stop-color="#41873F" offset="13.76%" />
+          <stop stopColor="#41873F" offset="13.76%" />
 
-          <stop stop-color="#54A044" offset="40.32%" />
+          <stop stopColor="#54A044" offset="40.32%" />
 
-          <stop stop-color="#66B848" offset="71.36%" />
+          <stop stopColor="#66B848" offset="71.36%" />
 
-          <stop stop-color="#6CC04A" offset="90.81%" />
+          <stop stopColor="#6CC04A" offset="90.81%" />
         </linearGradient>
 
         <linearGradient
@@ -366,13 +366,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="13.43%"
           id="e"
         >
-          <stop stop-color="#6CC04A" offset="9.192%" />
+          <stop stopColor="#6CC04A" offset="9.192%" />
 
-          <stop stop-color="#66B848" offset="28.64%" />
+          <stop stopColor="#66B848" offset="28.64%" />
 
-          <stop stop-color="#54A044" offset="59.68%" />
+          <stop stopColor="#54A044" offset="59.68%" />
 
-          <stop stop-color="#41873F" offset="86.24%" />
+          <stop stopColor="#41873F" offset="86.24%" />
         </linearGradient>
 
         <linearGradient
@@ -382,13 +382,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="49.997%"
           id="f"
         >
-          <stop stop-color="#6CC04A" offset="9.192%" />
+          <stop stopColor="#6CC04A" offset="9.192%" />
 
-          <stop stop-color="#66B848" offset="28.64%" />
+          <stop stopColor="#66B848" offset="28.64%" />
 
-          <stop stop-color="#54A044" offset="59.68%" />
+          <stop stopColor="#54A044" offset="59.68%" />
 
-          <stop stop-color="#41873F" offset="86.24%" />
+          <stop stopColor="#41873F" offset="86.24%" />
         </linearGradient>
 
         <linearGradient
@@ -398,13 +398,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="36.21%"
           id="g"
         >
-          <stop stop-color="#6CC04A" offset="9.192%" />
+          <stop stopColor="#6CC04A" offset="9.192%" />
 
-          <stop stop-color="#66B848" offset="28.64%" />
+          <stop stopColor="#66B848" offset="28.64%" />
 
-          <stop stop-color="#54A044" offset="59.68%" />
+          <stop stopColor="#54A044" offset="59.68%" />
 
-          <stop stop-color="#41873F" offset="86.24%" />
+          <stop stopColor="#41873F" offset="86.24%" />
         </linearGradient>
 
         <linearGradient
@@ -414,13 +414,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="50.275%"
           id="h"
         >
-          <stop stop-color="#6CC04A" offset="9.192%" />
+          <stop stopColor="#6CC04A" offset="9.192%" />
 
-          <stop stop-color="#66B848" offset="28.64%" />
+          <stop stopColor="#66B848" offset="28.64%" />
 
-          <stop stop-color="#54A044" offset="59.68%" />
+          <stop stopColor="#54A044" offset="59.68%" />
 
-          <stop stop-color="#41873F" offset="86.24%" />
+          <stop stopColor="#41873F" offset="86.24%" />
         </linearGradient>
 
         <linearGradient
@@ -430,15 +430,15 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
           y2="201.605%"
           id="i"
         >
-          <stop stop-color="#41873F" offset="0%" />
+          <stop stopColor="#41873F" offset="0%" />
 
-          <stop stop-color="#418B3D" offset="32.88%" />
+          <stop stopColor="#418B3D" offset="32.88%" />
 
-          <stop stop-color="#419637" offset="63.52%" />
+          <stop stopColor="#419637" offset="63.52%" />
 
-          <stop stop-color="#3FA92D" offset="93.19%" />
+          <stop stopColor="#3FA92D" offset="93.19%" />
 
-          <stop stop-color="#3FAE2A" offset="100%" />
+          <stop stopColor="#3FAE2A" offset="100%" />
         </linearGradient>
       </defs>
 
@@ -479,7 +479,7 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
 
             <path
               fill="url(#e)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M50.391.809l-.693.347h.924l-.231-.347z"
               transform="translate(0 -9.246)"
             />
@@ -487,13 +487,13 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
             <path
               d="M106.792 105.636c1.387-.809 2.427-2.196 2.89-3.698L56.053 10.402c-1.387-.231-2.89-.116-4.16.693L3.351 39.065l52.355 95.465a8.057 8.057 0 0 0 2.196-.693l48.889-28.2z"
               fill="url(#f)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               transform="translate(0 -9.246)"
             />
 
             <path
               fill="url(#g)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M111.3 104.712l-.347-.578v.809l.346-.231z"
               transform="translate(0 -9.246)"
             />
@@ -501,14 +501,14 @@ export const NodeJSLogo = ({ className }: { className?: string }) => {
             <path
               d="M106.792 105.636l-48.773 28.085a6.973 6.973 0 0 1-2.196.693l.925 1.734 54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814z"
               fill="url(#h)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               transform="translate(0 -9.246)"
             />
 
             <path
               d="M106.792 105.636l-48.773 28.085a6.973 6.973 0 0 1-2.196.693l.925 1.734 54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814z"
               fill="url(#i)"
-              fill-rule="evenodd"
+              fillRule="evenodd"
               transform="translate(0 -9.246)"
             />
           </g>
@@ -599,14 +599,14 @@ export const PythonLogo = ({ className }: { className?: string }) => {
       className={className}
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M13.0164 2C10.8193 2 9.03825 3.72453 9.03825 5.85185V8.51852H15.9235V9.25926H5.97814C3.78107 9.25926 2 10.9838 2 13.1111L2 18.8889C2 21.0162 3.78107 22.7407 5.97814 22.7407H8.27322V19.4815C8.27322 17.3542 10.0543 15.6296 12.2514 15.6296H19.5956C21.4547 15.6296 22.9617 14.1704 22.9617 12.3704V5.85185C22.9617 3.72453 21.1807 2 18.9836 2H13.0164ZM12.0984 6.74074C12.8589 6.74074 13.4754 6.14378 13.4754 5.40741C13.4754 4.67103 12.8589 4.07407 12.0984 4.07407C11.3378 4.07407 10.7213 4.67103 10.7213 5.40741C10.7213 6.14378 11.3378 6.74074 12.0984 6.74074Z"
         fill="url(#paint0_linear_87_8204)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18.9834 30C21.1805 30 22.9616 28.2755 22.9616 26.1482V23.4815L16.0763 23.4815L16.0763 22.7408L26.0217 22.7408C28.2188 22.7408 29.9998 21.0162 29.9998 18.8889V13.1111C29.9998 10.9838 28.2188 9.25928 26.0217 9.25928L23.7266 9.25928V12.5185C23.7266 14.6459 21.9455 16.3704 19.7485 16.3704L12.4042 16.3704C10.5451 16.3704 9.03809 17.8296 9.03809 19.6296L9.03809 26.1482C9.03809 28.2755 10.8192 30 13.0162 30H18.9834ZM19.9015 25.2593C19.1409 25.2593 18.5244 25.8562 18.5244 26.5926C18.5244 27.329 19.1409 27.9259 19.9015 27.9259C20.662 27.9259 21.2785 27.329 21.2785 26.5926C21.2785 25.8562 20.662 25.2593 19.9015 25.2593Z"
         fill="url(#paint1_linear_87_8204)"
       />
@@ -619,8 +619,8 @@ export const PythonLogo = ({ className }: { className?: string }) => {
           y2="22.7407"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#327EBD" />
-          <stop offset="1" stop-color="#1565A7" />
+          <stop stopColor="#327EBD" />
+          <stop offset="1" stopColor="#1565A7" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_87_8204"
@@ -630,8 +630,8 @@ export const PythonLogo = ({ className }: { className?: string }) => {
           y2="30"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFDA4B" />
-          <stop offset="1" stop-color="#F9C600" />
+          <stop stopColor="#FFDA4B" />
+          <stop offset="1" stopColor="#F9C600" />
         </linearGradient>
       </defs>
     </svg>
@@ -647,8 +647,8 @@ export const SynkLogo = ({ className }: { className?: string }) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       className={"ml-[14px]"}
     >
-      <g clip-path="url(#clip0_9532_31065)">
-        <g clip-path="url(#clip1_9532_31065)">
+      <g clipPath="url(#clip0_9532_31065)">
+        <g clipPath="url(#clip1_9532_31065)">
           <path
             d="M32.03 11.6196C31.6033 11.5001 31.1568 11.3806 30.6905 11.2667C30.8377 11.8243 30.9193 12.3974 30.9336 12.9742V13.384L28.9837 18.6716C29.9728 27.8267 29.4895 29.076 29.3313 29.4858C29.0798 30.1375 28.4072 31.1933 27.2797 32.7301L28.3874 43.0377L32.4172 40.1292C32.5816 40.0107 32.7156 39.8543 32.808 39.6732C32.9003 39.492 32.9485 39.2913 32.9485 39.0877V12.849C32.9474 12.5718 32.8574 12.3023 32.6919 12.0808C32.5264 11.8593 32.2942 11.6975 32.03 11.6196Z"
             fill="#030328"
@@ -704,8 +704,8 @@ export const OwaspZapLogo = ({ className }: { className?: string }) => {
           r="41.32"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#4386ff" />
-          <stop offset="1" stop-color="#00549b" />
+          <stop offset="0" stopColor="#4386ff" />
+          <stop offset="1" stopColor="#00549b" />
         </radialGradient>
       </defs>
       <g>
@@ -1013,14 +1013,6 @@ export const AppSecuritySkeleton = () => {
   const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
   const sequence = [
     [
-      ".circle-1",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-    [
       ".circle-2",
       {
         scale,
@@ -1043,15 +1035,7 @@ export const AppSecuritySkeleton = () => {
         transform,
       },
       { duration: 0.8 },
-    ],
-    [
-      ".circle-5",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
+    ]
   ];
 
   useEffect(() => {
@@ -1064,9 +1048,6 @@ export const AppSecuritySkeleton = () => {
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
-        <FeatureContainer className="h-9 w-9 circle-1">
-          <></>
-        </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-2">
           <BurpeSuitLogo className="h-8 w-8" />
         </FeatureContainer>
@@ -1075,9 +1056,6 @@ export const AppSecuritySkeleton = () => {
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-4">
           <SynkLogo className="h-8 w-8" />
-        </FeatureContainer>
-        <FeatureContainer className="h-9 w-9 circle-5">
-          <></>
         </FeatureContainer>
       </div>
 
@@ -1131,13 +1109,13 @@ export const CodeSecuritySkeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <FeatureContainer className="h-14 w-14 circle-2">
-          <OwaspZapLogo className="h-8 w-8" />
+          <OwaspZapLogo className="h-8 w-8"/>
         </FeatureContainer>
         <FeatureContainer className="circle-3 h-[72px] w-[72px]">
-          <GitLogo className="h-12 w-12" />
+          <GitLogo className="h-12 w-12"/>
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-4">
-          <SynkLogo className="h-8 w-8" />
+          <SynkLogo className="h-8 w-8"/>
         </FeatureContainer>
       </div>
 

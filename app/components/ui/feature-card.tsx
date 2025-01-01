@@ -1,90 +1,8 @@
 "use client";
 
-import { animate, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-const Skeleton = () => {
-  const scale = [1, 1.1, 1];
-  const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
-  const sequence = [
-    [
-      ".circle-1",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-    [
-      ".circle-2",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-    [
-      ".circle-3",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-    [
-      ".circle-4",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-    [
-      ".circle-5",
-      {
-        scale,
-        transform,
-      },
-      { duration: 0.8 },
-    ],
-  ];
-
-  useEffect(() => {
-    animate(sequence, {
-      // @ts-ignore
-      repeat: Infinity,
-      repeatDelay: 1,
-    });
-  }, []);
-  return (
-    <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
-      <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
-        <FeatureContainer className="h-8 w-8 circle-1">
-          <ClaudeLogo className="h-4 w-4 " />
-        </FeatureContainer>
-        <FeatureContainer className="h-12 w-12 circle-2">
-          <ClaudeLogo className="h-4 w-4 " />
-        </FeatureContainer>
-        <FeatureContainer className="circle-3">
-          <OpenAILogo className="h-8 w-8 text-white" />
-        </FeatureContainer>
-        <FeatureContainer className="h-12 w-12 circle-4">
-          <MetaIconOutline className="h-6 w-6 " />
-        </FeatureContainer>
-        <FeatureContainer className="h-8 w-8 circle-5">
-          <GeminiLogo className="h-4 w-4 " />
-        </FeatureContainer>
-      </div>
-
-      <div className="h-40 w-px absolute top-20 m-auto z-40 bg-gradient-to-b from-transparent via-secondary to-transparent animate-move">
-        <div className="w-10 h-32 top-1/2 -translate-y-1/2 absolute -left-10">
-          <Sparkles />
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const Sparkles = () => {
   const randomMove = () => Math.random() * 2 - 1;
@@ -261,6 +179,7 @@ export const OpenAILogo = ({ className }: { className?: string }) => {
     </svg>
   );
 };
+
 export const GeminiLogo = ({ className }: { className?: string }) => {
   return (
     <svg

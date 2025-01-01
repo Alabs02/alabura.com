@@ -1,7 +1,17 @@
 "use client";
 
 // CONTAINERS
-import { Hero, Noise, RequstConsultation, Services } from "@/containers";
+import {
+  Approach,
+  Hero,
+  Noise,
+  RequstConsultation,
+  Services,
+  Technologies,
+  TechnologiesArtifactTopLeft,
+  TechnologiesArtifactTopRight,
+  TechnologiesArtifactBottomRight
+} from "@/containers";
 import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +45,22 @@ export default function Home() {
             "-top-2 [mask-image:linear-gradient(to_bottom_right,transparent,white,transparent,transparent,transparent)]"
           )}
         />
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-900">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <Approach />
+        </div>
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <Technologies />
+        </div>
+
+        <TechnologiesArtifactTopRight />
+        <TechnologiesArtifactTopLeft />
+        <TechnologiesArtifactBottomRight />
       </section>
 
       <ToastConfig />

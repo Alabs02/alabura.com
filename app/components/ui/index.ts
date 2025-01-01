@@ -22,6 +22,7 @@ export * from "./sparkles-text";
 export * from "./number-ticker";
 export * from "./toast-config";
 export * from "./feature-card";
+export * from "./heading-chip";
 export * from "./card-hover-effect";
 export * from "./aurora-background";
 export * from "./animated-shiny-text";
