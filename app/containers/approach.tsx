@@ -1,12 +1,14 @@
 "use client";
 
 import React, { CSSProperties, FC, forwardRef, useRef } from "react";
-import {
-  motion,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { UI } from "@/models";
-import { AnimatedBeam, HeadingChip } from "@/components/ui";
+import {
+  AnimatedBeam,
+  BackgroundBeamsWithCollision,
+  HeadingChip,
+} from "@/components/ui";
 import { ImagePath } from "@/constants";
 import Image from "next/image";
 import {
@@ -21,86 +23,90 @@ import {
 
 const Approach = () => {
   return (
-    <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
-      <motion.div className="flex flex-col items-center">
-        <HeadingChip>
-          My Approach
-        </HeadingChip>
+    <BackgroundBeamsWithCollision>
+      <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
+        <motion.div className="flex flex-col items-center">
+          <HeadingChip>My Approach</HeadingChip>
 
-        <motion.div className="group flex flex-row items-center justify-center relative rounded-full bg-gradient-to-r from-purple-500 via-[#ffaa40] to-pink-500 p-[1px] transition-shadow duration-500 ease-out [--bg-size:300%] mt-6">
-          <div className="flex flex-row items-center justify-center w-full h-full bg-zinc-950 rounded-full px-4 py-1.5 z-[2]">
-            🛠️
-            <ShinyText className="flex flex-row items-center justify-center w-full h-full">
-              <div className="mx-3 h-4 w-px bg-zinc-50/90" />
-              <motion.h6 className="uppercase tracking-wider text-center text-zinc-50 font-light font-poppins text-base lg:text-lg">
-                <motion.span className="text-purple-500">Grit</motion.span> +{" "}
-                <motion.span className="text-[#ffaa40]">Agility</motion.span> +{" "}
-                <motion.span className="text-pink-500">Integrity</motion.span> ={" "}
-                <motion.span className="bg-gradient-to-r bg-clip-text from-purple-500 via-[#ffaa40] to-pink-500 text-transparent">
-                  The GAIN Approach
-                </motion.span>
-              </motion.h6>
-            </ShinyText>
-          </div>
+          <motion.div className="group flex flex-row items-center justify-center relative rounded-full bg-gradient-to-r from-purple-500 via-[#ffaa40] to-pink-500 p-[1px] transition-shadow duration-500 ease-out [--bg-size:300%] mt-6">
+            <div className="flex flex-row items-center justify-center w-full h-full bg-zinc-950 rounded-full px-4 py-1.5 z-[2]">
+              🛠️
+              <ShinyText className="flex flex-row items-center justify-center w-full h-full">
+                <div className="mx-3 h-4 w-px bg-zinc-50/90" />
+                <motion.h6 className="uppercase tracking-wider text-center text-zinc-50 font-light font-poppins text-base lg:text-lg">
+                  <motion.span className="text-purple-500">Grit</motion.span> +{" "}
+                  <motion.span className="text-[#ffaa40]">Agility</motion.span>{" "}
+                  +{" "}
+                  <motion.span className="text-pink-500">Integrity</motion.span>{" "}
+                  ={" "}
+                  <motion.span className="bg-gradient-to-r bg-clip-text from-purple-500 via-[#ffaa40] to-pink-500 text-transparent">
+                    The GAIN Approach
+                  </motion.span>
+                </motion.h6>
+              </ShinyText>
+            </div>
+          </motion.div>
+
+          <motion.h2 className="text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
+            A Time-Tested Framework for Excellence
+          </motion.h2>
+
+          <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
+            Over the years, I’ve refined a pattern grounded in{" "}
+            <i className="text-zinc-50">grit</i>,{" "}
+            <i className="text-zinc-50">agile principles</i>, and{" "}
+            <i className="text-zinc-50">integrity</i>. This approach ensures
+            every solution I craft is not only robust but also tailored to meet
+            the <i className="text-zinc-50">highest standards</i>. It looks like
+            this:
+          </motion.h4>
         </motion.div>
 
-        <motion.h2 className="text-3xl xl:text-4xl text-center text-zinc-50 font-extrabold font-bricolage tracking-wide mt-12">
-          A Time-Tested Framework for Excellence
-        </motion.h2>
+        <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-10">
+          <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
+            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+              Collaboration & Understanding:{" "}
+              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+                The Foundation of GAIN
+              </span>
+            </motion.h6>
+            <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
+              The GAIN Approach starts with engaging stakeholders to align their
+              vision with reality.
+            </motion.p>
+            <CollaborationBeam className="mt-4" />
+          </div>
 
-        <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
-          Over the years, I’ve refined a pattern grounded in{" "}
-          <i className="text-zinc-50">grit</i>,{" "}
-          <i className="text-zinc-50">agile principles</i>, and{" "}
-          <i className="text-zinc-50">integrity</i>. This approach ensures every
-          solution I craft is not only robust but also tailored to meet the{" "}
-          <i className="text-zinc-50">highest standards</i>. It looks like this:
-        </motion.h4>
+          <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
+            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+              A Tailored Approach:{" "}
+              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+                Agile in Action
+              </span>
+            </motion.h6>
+            <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
+              Through research, design, and development, I craft solutions that
+              adapt to your unique needs.
+            </motion.p>
+            <ProcessBeam className="mt-4" />
+          </div>
+
+          <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
+            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+              Delivering Results:{" "}
+              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+                Turning Grit Into Gains
+              </span>
+            </motion.h6>
+            <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
+              Every effort converges into a single goal—delivering results that
+              create lasting value.
+            </motion.p>
+            <DeliveryBeam className="mt-4" />
+          </div>
+        </motion.div>
       </motion.div>
-
-      <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-10">
-        <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-          <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
-            Collaboration & Understanding:{" "}
-            <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
-              The Foundation of GAIN
-            </span>
-          </motion.h6>
-          <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
-            The GAIN Approach starts with engaging stakeholders to align their vision with reality.
-          </motion.p>
-          <CollaborationBeam className="mt-4" />
-        </div>
-
-        <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-          <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
-            A Tailored Approach:{" "}
-            <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
-              Agile in Action
-            </span>
-          </motion.h6>
-          <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
-            Through research, design, and development, I craft solutions that
-            adapt to your unique needs.
-          </motion.p>
-          <ProcessBeam className="mt-4" />
-        </div>
-
-        <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-          <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
-            Delivering Results:{" "}
-            <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
-              Turning Grit Into Gains
-            </span>
-          </motion.h6>
-          <motion.p className="text-center text-zinc-50 font-poppins font-light text-sm xl:text-base">
-            Every effort converges into a single goal—delivering results that
-            create lasting value.
-          </motion.p>
-          <DeliveryBeam className="mt-4" />
-        </div>
-      </motion.div>
-    </motion.div>
+    </BackgroundBeamsWithCollision>
   );
 };
 
@@ -533,8 +539,10 @@ const Icons = {
   ),
 
   gain: () => (
-    <motion.h6 className="text-[13px] font-bricolage uppercase font-bold text-indigo-600 tracking-wide">gain</motion.h6>
-  )
+    <motion.h6 className="text-[13px] font-bricolage uppercase font-bold text-indigo-600 tracking-wide">
+      gain
+    </motion.h6>
+  ),
 };
 
 Circle.displayName = "Circle";

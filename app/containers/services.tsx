@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   AnimatedBeam,
-  AppSecuritySkeleton,
+  DesignSkeleton,
   BackendSkeleton,
   CardSkeletonContainer,
   Circle,
@@ -32,7 +32,7 @@ const Services = () => {
               Core Services
             </HeadingChip>
 
-            <motion.h2 className="text-3xl xl:text-4xl text-zinc-50 text-center lg:text-left font-bricolage font-bold tracking-wide xl:mt-12">
+            <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center lg:text-left font-bricolage font-bold tracking-wide xl:mt-12">
               What I Do Best
             </motion.h2>
 
@@ -97,12 +97,12 @@ const Services = () => {
 
           <div className="col-span-12 lg:col-span-6 xl:col-span-3">
             <AnimatedFeaturecard
-              heading={"Application Security Scans"}
+              heading={"UI/UX Design & Audits"}
               subheading={
-                "Identifying vulnerabilities to safeguard your systems."
+                "Enhancing usability with intuitive designs and audits."
               }
               className={""}
-              Skeleton={AppSecuritySkeleton}
+              Skeleton={DesignSkeleton}
               containerClassName="h-[16rem] md:h-[20rem] rounded-2xl"
             />
           </div>

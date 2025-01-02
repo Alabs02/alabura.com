@@ -29,3 +29,4 @@ export * from "./animated-shiny-text";
 export * from "./animated-gradient-text";
 export * from "./services-utilities";
 export * from "./interactive-hover-button";
+export * from "./background-beams-with-collision";

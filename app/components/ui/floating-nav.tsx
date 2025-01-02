@@ -11,6 +11,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
+  easeInOut,
 } from "framer-motion";
 
 // UTILS
@@ -53,12 +54,24 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
           opacity: visible ? 1 : 0,
         }}
         transition={{
+          type: "tween",
+          ease: easeInOut,
           duration: 0.3,
         }}
-        className="fixed top-5 inset-x-0 z-[5000] flex items-center justify-center max-w-fit mx-auto rounded-full md:space-x-4 lg:space-x-6 py-3 px-6 border border-primary-200/20 bg-background/70 backdrop-blur-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+        className="fixed top-5 inset-x-0 z-[5000] flex items-center justify-center max-w-fit mx-auto rounded-full md:space-x-4 lg:space-x-6 py-3 px-6 border border-zinc-200/25 bg-zinc-950/75 backdrop-blur-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
       >
         <Link href="/" prefetch passHref>
-          <motion.div className="group relative h-6 w-6 xl:h-7 xl:w-7 grid place-items-center">
+          <motion.div
+            transition={{
+              type: "tween",
+              ease: easeInOut,
+              duration: 0.3,
+            }}
+            whileHover={{
+              scale: 1.1,
+            }}
+            className="group relative h-6 w-6 xl:h-7 xl:w-7 grid place-items-center"
+          >
             <Image
               src={ImagePath.BRAND_LOGO_LIGHT}
               alt="Alabura's Brand Logo"

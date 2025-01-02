@@ -40,7 +40,7 @@ const Hero = () => {
       <motion.div className="section h-auto grid grid-cols-12 lg:gap-6 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
         <motion.div className="col-span-12 lg:col-span-12 flex flex-col gap-y-10 xl:gap-y-12 2xl:gap-y-14">
           <motion.h1 className="text-4xl xl:text-5xl 2xl:text-[58px] tracking-normal shadow-sm font-extrabold font-bricolage">
-            <motion.span className="bg-gradient-to-r from-primary-50 via-indigo-50 to-purple-50 bg-clip-text text-transparent !leading-relaxed">
+            <motion.span className="bg-gradient-to-b from-primary-50 to-purple-100 bg-clip-text text-transparent !leading-relaxed">
               {Intro},
             </motion.span>
             <br />
@@ -60,7 +60,7 @@ const Hero = () => {
             </motion.h3>
 
             <motion.div className="flex items-end justify-between w-full">
-              <motion.p className="text-lg xl:text-2xl xl:!leading-9 2xl:!leading-relaxed font-normal tracking-wide text-primary-content xl:max-w-[62%] 2xl:max-w-[69%] font-poppins">
+              <motion.p className="text-lg xl:text-2xl xl:!leading-9 2xl:!leading-relaxed font-normal tracking-wide text-zinc-50 xl:max-w-[62%] 2xl:max-w-[69%] font-poppins">
                 {HeroSubContent}
               </motion.p>
 
@@ -103,15 +103,15 @@ const Hero = () => {
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full h-28">
-                <motion.h4 className="text-base xl:text-lg text-primary-content tracking-wide font-bricolage font-bold">
+                <motion.h4 className="text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   <NumberTicker
                     value={ProjectsDelivered.stat}
                     delay={1}
-                    className="text-base 2xl:text-[18px] text-primary-content font-bricolage"
+                    className="text-base 2xl:text-[18px] text-zinc-50 font-bricolage"
                   />
                   {"+"} {ProjectsDelivered.heading}
                 </motion.h4>
-                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-primary-content/80">
+                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {ProjectsDelivered.content}
                 </motion.p>
               </motion.div>
@@ -123,10 +123,10 @@ const Hero = () => {
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full h-28">
-                <motion.h4 className="text-base xl:text-lg text-primary-content tracking-wide font-bricolage font-bold">
+                <motion.h4 className="text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   {Perks.heading}
                 </motion.h4>
-                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-primary-content/80">
+                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {Perks.content}
                 </motion.p>
               </motion.div>
@@ -139,10 +139,10 @@ const Hero = () => {
 
 
               <motion.div className="flex flex-col gap-y-2 w-full h-28">
-                <motion.h4 className="text-base xl:text-lg text-primary-content tracking-wide font-bricolage font-bold">
+                <motion.h4 className="text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   {GlobalCollaboration.heading}
                 </motion.h4>
-                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-primary-content/80">
+                <motion.p className="text-xs lg:text-sm max-w-[12rem] xl:max-w-[14rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {GlobalCollaboration.content}
                 </motion.p>
               </motion.div>

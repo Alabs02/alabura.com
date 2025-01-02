@@ -21,6 +21,7 @@ export const ImagePath = {
   SYNK_LOGO: "/images/synk.webp",
   JENKINS_LOGO: "/images/jenkins.svg",
   TERRAFORM_LOGO: "/images/terraform.svg",
+  RIVERPOD_LOGO: "/images/riverpod-logo.svg",
 
   PYTHON_LOGO: "/images/python.svg",
   JAVASCRIPT_LOGO: "/images/js.svg",

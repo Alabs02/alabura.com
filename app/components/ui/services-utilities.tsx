@@ -4,6 +4,9 @@ import { cn } from "@/lib/utils";
 import { animate } from "framer-motion";
 import { useEffect } from "react";
 import { FeatureContainer, Sparkles } from "./feature-card";
+import { ImagePath } from "@/constants";
+import Image from "next/image";
+import { TechIcons } from "@/containers";
 
 export const ReactLogo = ({ className }: { className?: string }) => {
   return (
@@ -305,6 +308,20 @@ export const NativeScriptLogo = ({ className }: { className?: string }) => {
         ></path>
       </g>
     </svg>
+  );
+};
+
+export const RiverPodLogo = ({ className }: { className?: string }) => {
+  return (
+    <div className={cn("size-8 relative", className)}>
+      <Image
+        src={ImagePath.RIVERPOD_LOGO}
+        alt={""}
+        fill
+        priority
+        draggable={false}
+      />
+    </div>
   );
 };
 
@@ -733,7 +750,7 @@ export const BurpeSuitLogo = ({ className }: { className?: string }) => {
       viewBox="0 0 44 44"
       xmlSpace="preserve"
       preserveAspectRatio="xMidYMid"
-      className={cn("burpe-suit scale-90 ml-3",)}
+      className={cn("burpe-suit scale-90 ml-3")}
     >
       <rect x="0" y="7.1" fill="#FF6633" width="30.9" height="30.9" />
       <polygon
@@ -758,6 +775,26 @@ export const GitLogo = ({ className }: { className?: string }) => {
       <g>
         <path d="M15,5.6,10.4,1A3.4,3.4,0,0,0,5.78.86L7.66,2.74a1.25,1.25,0,0,1,1.67,1.2V4a1.23,1.23,0,0,1-.08.38l2.45,2.4a1.17,1.17,0,0,1,.37-.08A1.3,1.3,0,1,1,10.77,8h0a1.17,1.17,0,0,1,.08-.37L8.6,5.38v5.23a1.28,1.28,0,0,1,.73,1.15,1.3,1.3,0,0,1-2.6,0,1.27,1.27,0,0,1,.67-1.11V5.07A1.27,1.27,0,0,1,6.73,4a1.17,1.17,0,0,1,.08-.37l-1.9-1.9L1,5.6a3.38,3.38,0,0,0,0,4.79H1L5.6,15a3.38,3.38,0,0,0,4.79,0h0L15,10.4a3.38,3.38,0,0,0,0-4.79Z" />
       </g>
+    </svg>
+  );
+};
+
+export const LookaLogo = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 813.39 813.39"
+      className={className}
+    >
+      <path
+        fill="#5340ff"
+        d="M319.36 148.98l221.39 128.86c35.78 20.82 57.81 59.08 57.87 100.47l.63 435.08 265.24-148.98V232.27c0-41.54-22.13-79.93-58.07-100.76L579.43 0 319.36 148.98z"
+      />
+      <path
+        fill="#5340ff"
+        d="M545.13 664.41l-221.4-128.86c-35.78-20.82-57.81-59.08-57.87-100.47L265.24 0 0 148.98v432.14c0 41.54 22.13 79.93 58.07 100.76L285.06 813.4l260.07-148.99zM2170.82 481.94c0 146.88-106.26 253.89-246.96"
+      />
     </svg>
   );
 };
@@ -910,7 +947,7 @@ export const MobileSkeleton = () => {
           <FlutterLogo className="h-12 w-12" />
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-4">
-          <NativeScriptLogo className="h-8 w-8" />
+          <RiverPodLogo className="h-8 w-8" />
         </FeatureContainer>
         <FeatureContainer className="h-9 w-9 circle-5">
           <LottieLogo className="h-6 w-6" />
@@ -1008,7 +1045,7 @@ export const BackendSkeleton = () => {
   );
 };
 
-export const AppSecuritySkeleton = () => {
+export const DesignSkeleton = () => {
   const scale = [1, 1.1, 1];
   const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
   const sequence = [
@@ -1035,7 +1072,7 @@ export const AppSecuritySkeleton = () => {
         transform,
       },
       { duration: 0.8 },
-    ]
+    ],
   ];
 
   useEffect(() => {
@@ -1049,13 +1086,17 @@ export const AppSecuritySkeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <FeatureContainer className="h-14 w-14 circle-2">
-          <BurpeSuitLogo className="h-8 w-8" />
+          <LookaLogo className="h-8 w-8" />
         </FeatureContainer>
         <FeatureContainer className="circle-3 h-[72px] w-[72px]">
-          <OwaspZapLogo className="h-12 w-12" />
+          <div className="size-12 grid place-items-center relative">
+            <TechIcons.figma />
+          </div>
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-4">
-          <SynkLogo className="h-8 w-8" />
+          <div className="size-8 grid place-items-center relative">
+            <TechIcons.canva />
+          </div>
         </FeatureContainer>
       </div>
 
@@ -1109,13 +1150,23 @@ export const CodeSecuritySkeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <FeatureContainer className="h-14 w-14 circle-2">
-          <OwaspZapLogo className="h-8 w-8"/>
+          <OwaspZapLogo className="h-8 w-8" />
         </FeatureContainer>
         <FeatureContainer className="circle-3 h-[72px] w-[72px]">
-          <GitLogo className="h-12 w-12"/>
+          <div className="h-[72px] w-[72px] grid place-items-center relative p-px rounded-full">
+            <Image
+              src={ImagePath.SYNK_LOGO}
+              alt={""}
+              height={100}
+              width={100}
+              priority
+              draggable={false}
+              className="object-contain h-[62px] w-[62px] scale-105"
+            />
+          </div>
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-4">
-          <SynkLogo className="h-8 w-8"/>
+          <GitLogo className="h-8 w-8" />
         </FeatureContainer>
       </div>
 
