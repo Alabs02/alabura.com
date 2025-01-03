@@ -8,13 +8,20 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   output: "standalone",
   reactStrictMode: true,
   images: {
-    domains: ["assets.aceternity.com"],
+    domains: ["assets.aceternity.com", "images.unsplash.com"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "assets.aceternity.com",
         port: '',
         pathname: "/demos/**",
+        search: ""
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: '',
+        pathname: "/**",
         search: ""
       }
     ],

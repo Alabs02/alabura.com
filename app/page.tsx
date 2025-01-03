@@ -14,7 +14,7 @@ import {
   ProjectsHighlight,
   GridHeroPattern,
 } from "@/containers";
-import { DotPattern, Spotlight, ToastConfig } from "@/components/ui";
+import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
