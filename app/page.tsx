@@ -10,9 +10,11 @@ import {
   Technologies,
   TechnologiesArtifactTopLeft,
   TechnologiesArtifactTopRight,
-  TechnologiesArtifactBottomRight
+  TechnologiesArtifactBottomRight,
+  ProjectsHighlight,
+  GridHeroPattern,
 } from "@/containers";
-import { DotPattern, ToastConfig } from "@/components/ui";
+import { DotPattern, Spotlight, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -61,6 +63,14 @@ export default function Home() {
         <TechnologiesArtifactTopRight />
         <TechnologiesArtifactTopLeft />
         <TechnologiesArtifactBottomRight />
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <ProjectsHighlight />
+        </div>
+
+        <GridHeroPattern />
       </section>
 
       <ToastConfig />

@@ -7,6 +7,7 @@ export type ScrollProgressProps = {
 }
 
 export type FloatingNavItem = {
+  id: string;
   label: string;
   href?: string;
   icon?: JSX.Element;
@@ -14,6 +15,7 @@ export type FloatingNavItem = {
 }
 
 export type SubItems = {
+  id: string;
   href: string;
   title: string;
   description: string;

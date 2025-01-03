@@ -20,7 +20,7 @@ export const AnimatedMenu: FC<
     active: string | null;
     setActive: React.Dispatch<React.SetStateAction<string | null>>;
   }
-> = ({ href, label, active, subItems, setActive }) => {
+> = ({ id, href, label, active, subItems, setActive }) => {
   const pathname = usePathname();
   const activeRoute = pathname.includes(href ? href : "");
 
@@ -28,6 +28,7 @@ export const AnimatedMenu: FC<
 
   return (
     <MenuItem
+      key={`animated-menu-${id}`}
       setActive={setActive}
       active={active}
       item={label}
@@ -41,10 +42,7 @@ export const AnimatedMenu: FC<
           className="2xl:text-lg lg:text-base text-sm text-primary-400 font-medium font-bricolage"
           text="Have a Vision? Let's turn it into reality."
         />
-        <InteractiveHoverButton
-          text={HeroBtnCopy}
-          className="!w-auto"
-        />
+        <InteractiveHoverButton text={HeroBtnCopy} className="!w-auto" />
       </div>
     </MenuItem>
   );

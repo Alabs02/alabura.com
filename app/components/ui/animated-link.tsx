@@ -16,12 +16,13 @@ export const AnimatedLink: FC<
     suffix?: React.ReactNode;
     prefix?: React.ReactNode;
   }
-> = ({ label, href, className, prefix, suffix }) => {
+> = ({ id, label, href, className, prefix, suffix }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
   return href ? (
     <Link
+      key={`animated-link-${id}`}
       data-hover-label={label}
       href={href}
       prefetch={true}

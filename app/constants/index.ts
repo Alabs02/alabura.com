@@ -1,6 +1,23 @@
 import { UI } from "@/models";
 import { nanoid } from "nanoid";
-import { GraduationCap, Handshake, Lightbulb, Rocket, SquareUserRound, Building2, Code, Smartphone, Server, Brush, ShieldCheck, Timer, BarChart, UsersRound, Gauge, Workflow } from "lucide-react";
+import {
+  GraduationCap,
+  Handshake,
+  Lightbulb,
+  Rocket,
+  SquareUserRound,
+  Building2,
+  Code,
+  Smartphone,
+  Server,
+  Brush,
+  ShieldCheck,
+  Timer,
+  BarChart,
+  UsersRound,
+  Gauge,
+  Workflow,
+} from "lucide-react";
 
 export const ImagePath = {
   NOISE: "/images/noise.webp",
@@ -42,63 +59,76 @@ export const ImagePath = {
 
 export const NavItems: UI.FloatingNavItem[] = [
   {
+    id: nanoid(),
     label: "Home",
     href: "/",
   },
   {
+    id: nanoid(),
     label: "About",
     href: "/about-alabura-usman",
   },
   {
+    id: nanoid(),
     label: "Services",
     href: "/services",
     subItems: [
       {
+        id: nanoid(),
         title: "Modern Web App Development",
         href: "/docs/primitives/alert-dialog",
         description: "Creating responsive and scalable web applications.",
       },
       {
+        id: nanoid(),
         title: "Mobile App Development",
         href: "/docs/primitives/alert-dialog",
         description: "Building intuitive mobile apps for Android and iOS.",
       },
       {
+        id: nanoid(),
         title: "Backend Development",
         href: "/docs/primitives/alert-dialog",
         description: "Developing secure and efficient server-side systems.",
       },
       {
+        id: nanoid(),
         title: "IT Consulting",
         href: "/docs/primitives/hover-card",
         description: "Providing IT strategies aligned with business goals.",
       },
       {
+        id: nanoid(),
         title: "UI/UX Design & Audit",
         href: "/docs/primitives/progress",
         description: "Enhancing usability with intuitive designs and audits.",
       },
       {
+        id: nanoid(),
         title: "Application Security",
         href: "/docs/primitives/scroll-area",
         description: "Safeguarding systems through proactive risk mitigation.",
       },
       {
+        id: nanoid(),
         title: "Agile Project Management",
         href: "/docs/primitives/tabs",
         description: "Ensuring timely delivery with agile frameworks.",
       },
       {
+        id: nanoid(),
         title: "Data Analytics, Insights, & Audit",
         href: "/docs/primitives/tooltip",
         description: "Transforming data into actionable business insights.",
       },
       {
+        id: nanoid(),
         title: "SEO & Performance Optimization",
         href: "/docs/primitives/tooltip",
         description: "Improving visibility and performance with analytics.",
       },
       {
+        id: nanoid(),
         title: "Training & Mentorship",
         href: "/docs/primitives/tooltip",
         description: "Empowering teams through tailored training programs.",
@@ -106,10 +136,12 @@ export const NavItems: UI.FloatingNavItem[] = [
     ],
   },
   {
+    id: nanoid(),
     label: "Portfolio",
     href: "/portfolio",
   },
   {
+    id: nanoid(),
     label: "Insights",
     href: "/insights",
   },
@@ -119,7 +151,8 @@ export const ProjectsDelivered = {
   stat: 20,
   src: ImagePath.ROCKET_ICON,
   heading: "Projects Delivered",
-  content: "Across industries like fintech, edtech, proptech, logistics, and retail.",
+  content:
+    "Across industries like fintech, edtech, proptech, logistics, and retail.",
 };
 
 export const Perks = {
@@ -179,7 +212,7 @@ export const goals = [
     code: "training-&-mentorship",
     heading: "Training & Mentorship",
     subheading: "Empowering your team with tailored learning and guidance.",
-  }
+  },
 ];
 
 export const inquiry = {
@@ -197,7 +230,7 @@ export const inquiry = {
       code: "launch-a-project_for-an-organization",
       heading: "For an Organization",
       subheading: "Bigger, team-based or institutional projects.",
-    }
+    },
   ],
   "collaborate-long-term": [
     {
@@ -213,7 +246,7 @@ export const inquiry = {
       code: "collaborate-long-term_for-an-organization",
       heading: "For an Organization",
       subheading: "Companies seeking integrated, long-term partnerships.",
-    }
+    },
   ],
   "training-mentorship": [
     {
@@ -228,9 +261,10 @@ export const inquiry = {
       Icon: Building2,
       code: "training-mentorship_for-an-organization",
       heading: "For an Organization",
-      subheading: "Team-based training or leadership programs for a company/institution.",
-    }
-  ]
+      subheading:
+        "Team-based training or leadership programs for a company/institution.",
+    },
+  ],
 };
 
 export const inquiryServices = {
@@ -240,7 +274,8 @@ export const inquiryServices = {
       Icon: Code,
       code: "frontend-development",
       heading: "Frontend Development",
-      subheading: "Bring your ideas to life with responsive and visually appealing user interfaces.",
+      subheading:
+        "Bring your ideas to life with responsive and visually appealing user interfaces.",
     },
     {
       id: nanoid(),
@@ -254,21 +289,24 @@ export const inquiryServices = {
       Icon: Server,
       code: "backend-development",
       heading: "Backend Development",
-      subheading: "Create secure, efficient backend systems tailored to your personal projects.",
+      subheading:
+        "Create secure, efficient backend systems tailored to your personal projects.",
     },
     {
       id: nanoid(),
       Icon: Brush,
       code: "ui-ux-design",
       heading: "UI/UX Design & Audit",
-      subheading: "Design captivating interfaces and conduct usability audits for your applications.",
+      subheading:
+        "Design captivating interfaces and conduct usability audits for your applications.",
     },
     {
       id: nanoid(),
       Icon: ShieldCheck,
       code: "application-security",
       heading: "Application Security",
-      subheading: "Safeguard your personal applications with proactive security measures.",
+      subheading:
+        "Safeguard your personal applications with proactive security measures.",
     },
   ],
   "launch-a-project_for-an-organization": [
@@ -277,64 +315,73 @@ export const inquiryServices = {
       Icon: Code,
       code: "frontend-development",
       heading: "Frontend Development",
-      subheading: "Develop scalable, responsive, and visually stunning web solutions for your organization.",
+      subheading:
+        "Develop scalable, responsive, and visually stunning web solutions for your organization.",
     },
     {
       id: nanoid(),
       Icon: Smartphone,
       code: "mobile-app-development",
       heading: "Mobile App Development",
-      subheading: "Deliver customized mobile applications that align with your team's goals and customers' needs.",
+      subheading:
+        "Deliver customized mobile applications that align with your team's goals and customers' needs.",
     },
     {
       id: nanoid(),
       Icon: Server,
       code: "backend-development",
       heading: "Backend Development",
-      subheading: "Architect robust server-side systems to handle your organization's demands efficiently.",
+      subheading:
+        "Architect robust server-side systems to handle your organization's demands efficiently.",
     },
     {
       id: nanoid(),
       Icon: Lightbulb,
       code: "it-consulting",
       heading: "IT Consulting",
-      subheading: "Provide strategic IT guidance to align technology with your business objectives.",
+      subheading:
+        "Provide strategic IT guidance to align technology with your business objectives.",
     },
     {
       id: nanoid(),
       Icon: Brush,
       code: "ui-ux-design",
       heading: "UI/UX Design & Audit",
-      subheading: "Optimize user engagement with well-designed and user-centric interfaces.",
+      subheading:
+        "Optimize user engagement with well-designed and user-centric interfaces.",
     },
     {
       id: nanoid(),
       Icon: ShieldCheck,
       code: "application-security",
       heading: "Application Security",
-      subheading: "Enhance your organization's cybersecurity to prevent risks and vulnerabilities.",
+      subheading:
+        "Enhance your organization's cybersecurity to prevent risks and vulnerabilities.",
     },
     {
       id: nanoid(),
       Icon: Timer,
       code: "agile-project-management",
       heading: "Agile Project Management",
-      subheading: "Streamline project delivery using agile methodologies for maximum efficiency.",
+      subheading:
+        "Streamline project delivery using agile methodologies for maximum efficiency.",
     },
     {
       id: nanoid(),
       Icon: BarChart,
       code: "data-analytics",
       heading: "Data Analytics, Insights, & Audit",
-      subheading: "Turn data into actionable insights to drive business decisions effectively.",
+      subheading:
+        "Turn data into actionable insights to drive business decisions effectively.",
     },
     {
       id: nanoid(),
       Icon: Gauge,
       code: "seo-performance-optimization",
       heading: "SEO & Performance Optimization",
-      subheading: "Improve search visibility and optimize performance with in-depth analytics.",
-    }
+      subheading:
+        "Improve search visibility and optimize performance with in-depth analytics.",
+    },
   ],
   "collaborate-long-term_for-yourself": [
     {
@@ -342,28 +389,32 @@ export const inquiryServices = {
       Icon: Code,
       code: "frontend-support",
       heading: "Ongoing Frontend Support",
-      subheading: "Maintain and enhance your web interfaces with continuous improvements and updates.",
+      subheading:
+        "Maintain and enhance your web interfaces with continuous improvements and updates.",
     },
     {
       id: nanoid(),
       Icon: Server,
       code: "backend-support",
       heading: "Ongoing Backend Support",
-      subheading: "Ensure your server-side systems are secure, efficient, and scalable over time.",
+      subheading:
+        "Ensure your server-side systems are secure, efficient, and scalable over time.",
     },
     {
       id: nanoid(),
       Icon: Smartphone,
       code: "mobile-support",
       heading: "Ongoing Mobile Support",
-      subheading: "Keep your mobile applications up-to-date and optimized for the latest platforms.",
+      subheading:
+        "Keep your mobile applications up-to-date and optimized for the latest platforms.",
     },
     {
       id: nanoid(),
       Icon: Rocket,
       code: "scalable-solutions",
       heading: "Scalable Solutions",
-      subheading: "Develop long-term, scalable solutions for evolving personal projects.",
+      subheading:
+        "Develop long-term, scalable solutions for evolving personal projects.",
     },
   ],
   "collaborate-long-term_for-an-organization": [
@@ -372,49 +423,57 @@ export const inquiryServices = {
       Icon: Code,
       code: "frontend-support",
       heading: "Ongoing Frontend Support",
-      subheading: "Deliver seamless, optimized user interfaces with continuous frontend updates.",
+      subheading:
+        "Deliver seamless, optimized user interfaces with continuous frontend updates.",
     },
     {
       id: nanoid(),
       Icon: Server,
       code: "backend-support",
       heading: "Ongoing Backend Support",
-      subheading: "Maintain robust and scalable backend systems to meet organizational needs.",
+      subheading:
+        "Maintain robust and scalable backend systems to meet organizational needs.",
     },
     {
       id: nanoid(),
       Icon: Smartphone,
       code: "mobile-support",
       heading: "Ongoing Mobile Support",
-      subheading: "Ensure mobile applications are optimized and aligned with business goals.",
+      subheading:
+        "Ensure mobile applications are optimized and aligned with business goals.",
     },
     {
       id: nanoid(),
       Icon: UsersRound,
       code: "team-integration",
       heading: "Team Integration",
-      subheading: "Embed skilled professionals into your team for long-term collaboration.",
+      subheading:
+        "Embed skilled professionals into your team for long-term collaboration.",
     },
     {
       id: nanoid(),
       Icon: Workflow,
       code: "continuous-improvement",
       heading: "Continuous Improvement",
-      subheading: "Enhance processes and systems with iterative improvements for sustained success.",
+      subheading:
+        "Enhance processes and systems with iterative improvements for sustained success.",
     },
     {
       id: nanoid(),
       Icon: ShieldCheck,
       code: "cybersecurity-partnership",
       heading: "Cybersecurity Partnership",
-      subheading: "Develop and execute long-term strategies to safeguard your organization's assets.",
+      subheading:
+        "Develop and execute long-term strategies to safeguard your organization's assets.",
     },
   ],
 };
 
 export const inquiryQuestionHeadings = {
-  "explore-possibilities-heading": "Let’s explore together! Share your challenges, goals, or areas of interest so we can tailor a solution just for you.",
-  "training-mentorship-heading": "Tell me more about the training or mentorship you’re looking for. The more details you provide, the better I can tailor our services to meet your needs.",
+  "explore-possibilities-heading":
+    "Let’s explore together! Share your challenges, goals, or areas of interest so we can tailor a solution just for you.",
+  "training-mentorship-heading":
+    "Tell me more about the training or mentorship you’re looking for. The more details you provide, the better I can tailor our services to meet your needs.",
 };
 
 export const inquiryQuestions = {
@@ -422,47 +481,52 @@ export const inquiryQuestions = {
     {
       id: nanoid(),
       label: "What challenges are you currently facing?",
-      placeholder: "E.g., improving website performance, scaling a mobile app, securing backend systems",
+      placeholder:
+        "E.g., improving website performance, scaling a mobile app, securing backend systems",
       fieldType: "multi-line",
-      isRequired: true
+      isRequired: true,
     },
     {
       id: nanoid(),
       label: "What are your goals or areas of interest?",
-      placeholder: "E.g., launching a new product, optimizing workflows, exploring AI solutions.",
+      placeholder:
+        "E.g., launching a new product, optimizing workflows, exploring AI solutions.",
       fieldType: "multi-line",
-      isRequired: false
+      isRequired: false,
     },
     {
       id: nanoid(),
       label: "Any other details you'd like to share?",
-      placeholder: "E.g., preferred timelines, budget considerations, or existing tools you use.",
+      placeholder:
+        "E.g., preferred timelines, budget considerations, or existing tools you use.",
       fieldType: "multi-line",
-      isRequired: false
-    }
+      isRequired: false,
+    },
   ],
   "training-mentorship": [
     {
       id: nanoid(),
       label: "What is the focus of the training or mentorship?",
-      placeholder: "E.g., upskilling in frontend development, mobile development, or team collaboration.",
+      placeholder:
+        "E.g., upskilling in frontend development, mobile development, or team collaboration.",
       fieldType: "single-line",
-      isRequired: true
+      isRequired: true,
     },
     {
       id: nanoid(),
       label: "What are the specific goals or outcomes you want to achieve?",
-      placeholder: "E.g., improving team efficiency, preparing for an upcoming project, mastering agile methodologies.",
+      placeholder:
+        "E.g., improving team efficiency, preparing for an upcoming project, mastering agile methodologies.",
       fieldType: "multi-line",
-      isRequired: false
+      isRequired: false,
     },
     {
       id: nanoid(),
       label: "Are there any other details you'd like to share?",
-      placeholder: "E.g., preferred timelines, team size, or any tools/resources you use.",
+      placeholder:
+        "E.g., preferred timelines, team size, or any tools/resources you use.",
       fieldType: "multi-line",
-      isRequired: false
+      isRequired: false,
     },
-  ]
-}
-
+  ],
+};

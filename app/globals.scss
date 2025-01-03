@@ -1,5 +1,4 @@
-@import "./styles/utils.scss";
-@import "./styles/floating-nav.scss";
+@forward "./styles/utils.scss";
 
 @tailwind base;
 @tailwind components;
