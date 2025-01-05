@@ -32,3 +32,4 @@ export * from "./interactive-hover-button";
 export * from "./background-beams-with-collision";
 export * from "./word-rotate";
 export * from "./spotlight";
+export * from "./tooltip";

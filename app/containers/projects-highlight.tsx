@@ -3,96 +3,120 @@
 import React, { memo, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { HeadingChip, WordRotate } from "@/components/ui";
 import Image from "next/Image";
 import Link from "next/link";
 
 import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-import { ExternalLink } from "lucide-react";
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  HeadingChip,
+  WordRotate,
+  RainbowButton,
+} from "@/components/ui";
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-900 to-neutral-800"></div>
-);
+import { ArrowRight, ExternalLink, View } from "lucide-react";
+import { ImagePath } from "@/constants";
 
-const items = [
+const projects = [
   {
     asset: {
       alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
+      src: ImagePath.ONECOPY_AI,
+      href: "https://app.onecopy.ai/",
+      previewHref: "/app.onecopy.ai",
     },
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    asset: {
-      alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
-    },
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    asset: {
-      alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
-    },
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    asset: {
-      alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
-    },
-    title: "The Power of Communication",
+    category: "AI & Content Creation",
+    title: "Onecopy Business AI",
+    fullTitle: "Onecopy Business Marketing AI",
     description:
-      "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+      "An intelligent content generation platform leveraging advanced AI models to create tailored, high-quality copy for businesses and individuals, enhancing productivity and creativity.",
+    icon: ImagePath.ONECOPY_AI_LOGO,
   },
   {
     asset: {
       alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
+      src: ImagePath.MYLANDLORD_HEAVEN_PAGE,
+      href: "https://mylandlordheaven.com/",
+      previewHref: "/mylandlordheaven.com",
     },
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
-    header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    category: "PropTech",
+    title: "MyLandlordHeaven",
+    fullTitle: "Elevating Property Ownership Experience",
+    description:
+      "MyLandlordHeaven offers landlords guaranteed rental income, property upgrade financing, and comprehensive management services, ensuring optimized returns and peace of mind.",
+    icon: ImagePath.MYLANDLORD_HEAVEN_LOGO,
   },
   {
     asset: {
       alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
+      src: ImagePath.GRADELY_PAGE,
+      href: "https://www.gradely.co/",
+      previewHref: "/gradely.co",
     },
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    category: "EdTech",
+    title: "Gradely",
+    fullTitle: "Revolutionizing Personalized Education",
+    description:
+      "A personalized learning platform for primary and secondary students, leveraging adaptive assessments and interactive lessons to close learning gaps and build subject mastery.",
+    icon: ImagePath.GRADELY_LOGO,
   },
   {
     asset: {
       alt: "",
-      src: "/images/martin-baron-unsplash.jpg",
+      src: ImagePath.PHC_TRACKA,
+      href: "https://www.phctracka.org/",
+      previewHref: "/phctracka.org",
     },
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    category: "Healthcare & Civic Tech",
+    title: "PHC Accountability Tracka",
+    fullTitle: "Primary Health Care Accountability Tracka",
+    description:
+      "A community-driven platform empowering citizens to report and monitor the state of primary healthcare centers, providing actionable insights for advocacy and fostering accountability among stakeholders.",
+    icon: ImagePath.PHC_LOGO,
+  },
+  {
+    asset: {
+      alt: "",
+      src: ImagePath.LIVEABLE_PAGE,
+      href: "https://www.liveable.ng/",
+      previewHref: "/liveable.ng",
+    },
+    category: "UrbanTech & PropTech",
+    title: "Liveable",
+    fullTitle: "Transforming Urban Living Spaces",
+    description:
+      "Liveable is a platform dedicated to enhancing the quality of urban living by providing innovative solutions for sustainable and efficient housing in Nigeria.",
+    icon: ImagePath.LIVEABLE_LOGO,
+  },
+  {
+    asset: {
+      alt: "",
+      src: ImagePath.SSAF_LOGISTICS_PAGE,
+      href: "https://www.ssaflogistics.com/",
+      previewHref: "/ssaflogistics.com",
+    },
+    category: "Logistics & Supply Chain",
+    title: "SSAF Logistics",
+    fullTitle: "Transforming Urban Living Spaces",
+    description:
+      "SSAF Logistics specializes in transporting project-critical cargo to challenging destinations, ensuring timely and efficient delivery.",
+    icon: ImagePath.SSAF_LOGISTICS_LOGO,
+  },
+  {
+    asset: {
+      alt: "",
+      src: ImagePath.SIMS_PAGE,
+      href: "https://sims.plsmoe-gov.ng/",
+      previewHref: "/sims.plsmoe-gov.ng",
+    },
+    category: "EdTech & GovTech",
+    title: "SIMS",
+    fullTitle: "Revolutionizing Educational Administration in Plateau State",
+    description:
+      "SIMS, the cloud-based platform of the Plateau State Ministry of Education, streamlines school management by integrating student records, academic progress, and communication tools for efficiency and compliance.",
+    icon: ImagePath.SIMS_LOGO,
   },
 ];
 
@@ -119,15 +143,18 @@ const ProjectsHighlight = () => {
           </motion.h4>
 
           <div className="w-full mt-12">
-            <motion.div className="grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
-              {items.map((item, i) => (
+            <motion.div className="grid lg:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+              {projects.map((project, i) => (
                 <ProjectCard
                   key={i}
-                  asset={item.asset}
-                  description={item.description}
-                  header={item.header}
-                  icon={item.icon}
-                  className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                  index={i}
+                  asset={project.asset}
+                  title={project.title}
+                  fullTitle={project.fullTitle}
+                  category={project.category}
+                  description={project.description}
+                  icon={project.icon}
+                  className={i === 0 || i === 3 ? "lg:col-span-2" : ""}
                 />
               ))}
             </motion.div>
@@ -139,38 +166,47 @@ const ProjectsHighlight = () => {
 };
 
 const ProjectCard = ({
+  index,
   className,
   title,
+  fullTitle,
+  category,
+  overviewHref,
   description,
-  header,
   icon,
   asset,
 }: {
+  index: number;
+  category: string;
   className?: string;
   title?: string | React.ReactNode;
+  fullTitle?: string | React.ReactNode;
+  overviewHref?: string;
   description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
-  asset: { src: string; alt: string };
+  icon?: string;
+  asset: { src: string; alt: string; href: string; previewHref: string };
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input shadow-none p-4 bg-zinc-950 border border-zinc-200/20 justify-between flex flex-col space-y-4",
+        "relative row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input shadow-none p-4 bg-zinc-950 border border-zinc-200/20 overflow-hidden",
         className
       )}
     >
-      <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl shadow-none border-none bg-gradient-to-br from-neutral-900 to-neutral-800 group/media hover:from-zinc-950/85 hover:to-zinc-950/85 relative overflow-hidden transition-all duration-400">
+      <motion.div
+        className="flex relative w-full mb-4 min-h-[calc(40%-16px+32px)] group-hover/bento:min-h-[calc(40%-16px)] shadow-none bg-gradient-to-br from-neutral-900 to-neutral-800 group/media hover:from-zinc-950/85 hover:to-zinc-950/85 overflow-hidden transition-all duration-300 !border-none"
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+      >
         <Image
           src={asset.src}
           alt={asset.alt}
-          width={100}
-          height={100}
+          fill
           priority
           draggable={false}
-          className="size-full object-cover object-center rounded-xl"
+          className="size-full object-cover object-top rounded-xl"
         />
         <AnimatePresence mode="wait">
           <motion.div
@@ -180,50 +216,136 @@ const ProjectCard = ({
               duration: 0.4,
             }}
             className="absolute inset-0 z-[2100] bg-zinc-950/85 grid place-items-center group-hover/media:backdrop-blur-sm origin-left right-full group-hover/media:right-[-2px] transition-all duration-400 delay-75 ease-in-out will-change-transform"
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
           >
-            <Link href={'/about-alabura-usman'} target="_blank" passHref>
-            <motion.button
-              initial={{
-                scale: 0,
-                opacity: 0,
-              }}
-              animate={{
-                scale: isHovered ? 1 : 0,
-                opacity: isHovered ? 1 : 0,
-              }}
-              transition={{
-                type: "tween",
-                duration: 0.3,
-                ease: "easeInOut",
-              }}
-              whileTap={{
-                scale: 0.9,
-              }}
-              className="cursor-pointer bg-zinc-950 no-underline group/media-btn relative py-1.5 px-4 ring-1 ring-secondary-50/15 shadow-2xl shadow-black rounded-full p-px inline-block text-secondary-50 hover:bg-secondary-50 hover:text-zinc-950 transition-all duration-300 will-change-auto"
-            >
-              <div className="relative flex space-x-2 items-center z-10 rounded-full">
-                <h6 className="text-inherit lowercase text-sm lg:text-[15px] font-poppins font-medium tracking-wide">
-                  /ui.aceternity.com
-                </h6>
-                <ExternalLink size={16} />
-              </div>
-              <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-secondary/0 via-secondary/90 to-secondary/0 group-hover/media-btn:from-secondary/0 group-hover/media-btn:via-cyan-500 group-hover/media-btn:to-secondary/0 transition-all duration-500"></span>
-            </motion.button>
+            <Link href={asset.href} target="_blank" passHref>
+              <motion.button
+                initial={{
+                  scale: 0,
+                  opacity: 0,
+                }}
+                animate={{
+                  scale: isHovered ? 1 : 0,
+                  opacity: isHovered ? 1 : 0,
+                }}
+                transition={{
+                  type: "tween",
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
+                className="cursor-pointer bg-zinc-950 no-underline group/media-btn relative py-1.5 px-4 ring-1 ring-cyan-50/15 shadow-2xl shadow-black rounded-full p-px inline-block text-cyan-50 hover:bg-cyan-50 hover:text-zinc-950 transition-all duration-300 will-change-auto"
+              >
+                <div className="relative flex space-x-2 items-center z-10 rounded-full">
+                  <h6 className="text-inherit lowercase text-sm lg:text-[15px] font-poppins font-medium tracking-wide">
+                    {asset.previewHref}
+                  </h6>
+                  <ExternalLink size={16} />
+                </div>
+                <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-cyan-500/0 via-cyan-500/90 to-cyan-500/0 group-hover/media-btn:from-cyan-500/0 group-hover/media-btn:via-cyan-500/80 group-hover/media-btn:to-cyan-500/0 transition-all duration-500"></span>
+              </motion.button>
             </Link>
           </motion.div>
         </AnimatePresence>
-      </div>
+      </motion.div>
 
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        {icon}
-        <div className="font-bricolage font-bold tracking-wide text-zinc-50/80 mb-2 mt-2">
-          {title}
+      <div className="flex flex-col justify-between border-none items-start transition-all duration-300 relative will-change-transform min-h-[calc(60%-32px)] group-hover/bento:min-h-[60%] overflow-hidden">
+        <div className="flex flex-col items-start space-y-2 w-full">
+          <div className="flex items-center justify-between w-full">
+            {icon ? (
+              <div className="size-6 relative overflow-hidden p-px">
+                <Image
+                  fill
+                  priority
+                  src={icon}
+                  alt={""}
+                  draggable={false}
+                  className="size-full object-contain object-center"
+                />
+              </div>
+            ) : null}
+
+            <motion.div
+              className={cn(
+                "ring-1 bg-zinc-950/85 no-underline cursor-default group relative shadow-2xl shadow-black rounded-full p-px inline-block",
+                {
+                  "ring-indigo-50/10": index === 0,
+                  "ring-slate-50/10": index === 1,
+                  "ring-cyan-50/10": index === 2,
+                  "ring-purple-50/10": index === 3,
+                  "ring-blue-50/10": index === 4,
+                  "ring-red-50/10": index === 5,
+                  "ring-[rgba(238,251,236,0.1)]": index === 6,
+                }
+              )}
+            >
+              <div
+                className={cn(
+                  "relative flex space-x-2 items-center z-10 rounded-full py-0.5 px-3",
+                  {
+                    "bg-indigo-950/20 text-indigo-50/90": index === 0,
+                    "bg-slate-950/20 text-slate-50/90": index === 1,
+                    "bg-cyan-950/20 text-cyan-50/90": index === 2,
+                    "bg-purple-950/20 text-purple-50/90": index === 3,
+                    "bg-blue-950/20 text-blue-50/90": index === 4,
+                    "bg-red-950/20 text-red-50/90": index === 5,
+                    "bg-[rgba(18,44,13,0.2)] text-[rgba(238,251,236,0.9)]":
+                      index === 6,
+                  }
+                )}
+              >
+                <span className="tracking-wide text-sm font-bricolage font-light">
+                  {category}
+                </span>
+              </div>
+
+              <span
+                className={cn(
+                  "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 to-white/0 transition-opacity duration-500",
+                  {
+                    "via-indigo-500/90": index === 0,
+                    "via-slate-500/90": index === 1,
+                    "via-cyan-500/90": index === 2,
+                    "via-purple-500/90": index === 3,
+                    "via-blue-700/90": index === 4,
+                    "via-error/90": index === 5,
+                    "via-[rgba(90,218,64,0.9)]": index === 6,
+                  }
+                )}
+              ></span>
+            </motion.div>
+          </div>
+
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <div className="font-bricolage font-bold text-base lg:text-lg tracking-wide text-zinc-50/75">
+                  {title}
+                </div>
+              </TooltipTrigger>
+              <TooltipContent className="z-[2500] bg-zinc-900 text-zinc-50/70 font-inter font-light tracking-wide">
+                <p>{fullTitle}</p>
+                <span
+                  className={cn(
+                    "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-secondary/0 via-secondary/90 to-secondary/0 transition-opacity duration-500"
+                  )}
+                ></span>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <div className="font-poopins tracking-wide font-normal text-sm text-zinc-50/85">
+            {description}
+          </div>
         </div>
-        <div className="font-sans font-normal text-xs text-neutral-zinc/90">
-          {description}
-        </div>
+
+        <Link href={""} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
+          <RainbowButton className="w-full !text-xs uppercase font-poppins text-zinc-50/80 space-x-2 rounded-full !py-0.5 px-2 h-8 mt-2">
+            <motion.span className="!text-xs">See Full Overview</motion.span>
+            <View size={17} />
+          </RainbowButton>
+        </Link>
       </div>
     </div>
   );

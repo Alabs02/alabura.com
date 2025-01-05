@@ -50,6 +50,27 @@ export const ImagePath = {
   ILLUS_LINES_DOWN: "/images/Illus-lines-down.webp",
   ILLUS_LINES_TOP: "/images/Illus-lines-top.webp",
 
+  ONECOPY_AI: "/images/onecopy-ai-dashboard.webp",
+  ONECOPY_AI_LOGO: "/images/onecopy-logo.webp",
+
+  PHC_LOGO: "/images/phc-logo.webp",
+  PHC_TRACKA: "/images/phc-tracka.webp",
+
+  GRADELY_PAGE: "/images/gradely-page.webp",
+  GRADELY_LOGO: "/images/gradely-logo.webp",
+
+  MYLANDLORD_HEAVEN_LOGO: "/images/mylandlord-heaven-logo.svg",
+  MYLANDLORD_HEAVEN_PAGE: "/images/mylandlord-heaven-page.webp",
+
+  LIVEABLE_LOGO: "/images/liveable-logo.svg", 
+  LIVEABLE_PAGE: "/images/liveable-page.webp",
+
+  SSAF_LOGISTICS_LOGO: "/images/ssaf-logistics.webp",
+  SSAF_LOGISTICS_PAGE: "/images/ssaf-logistics-page.webp",
+
+  SIMS_PAGE: "/images/sims-page.webp",
+  SIMS_LOGO: "/images/sims-logo.webp",
+
   PERKS_ICON: "/images/perks.svg",
   GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",
