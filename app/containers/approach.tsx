@@ -62,7 +62,7 @@ const Approach = () => {
           </motion.h4>
         </motion.div>
 
-        <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-10">
+        <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-12">
           <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
             <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
               Collaboration & Understanding:{" "}

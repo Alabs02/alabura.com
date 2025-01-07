@@ -362,14 +362,14 @@ const GridHeroPattern = memo(() => {
     <>
       <div
         className={cn(
-          "absolute top-0 w-full h-[50%] z-[500] flex bg-black overflow-hidden",
+          "absolute top-0 w-full h-[60%] z-[500] flex bg-black overflow-hidden",
           "[mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]"
         )}
       >
         {columns.map((col) => (
           <div
             key={`col-${col}`}
-            className="grid grid-rows-8 -mt-12 opacity-[0.98]"
+            className="grid grid-rows-8 -mt-12"
           >
             {rows.map((row) => (
               <motion.div
@@ -377,8 +377,8 @@ const GridHeroPattern = memo(() => {
                 className={cn(
                   "inline-block size-12",
                   (row + col) % 2 === 0
-                    ? "bg-zinc-900/50"
-                    : "border border-zinc-900/50 shadow-[inset_0_0_4px_4px_rgb(0,0,0/0.05)] shadow-zinc-800/50"
+                    ? "bg-zinc-900/80"
+                    : "border border-zinc-900/80 shadow-[inset_0_0_4px_4px_rgb(0,0,0/0.2)] shadow-zinc-800/50"
                 )}
               />
             ))}
@@ -386,7 +386,7 @@ const GridHeroPattern = memo(() => {
         ))}
       </div>
 
-      <div className="absolute top-0 h-[50%] w-full z-[600] [background-image:radial-gradient(88%_100%_at_top,rgba(0,0,0,0),rgba(0,0,0,0.90))]"></div>
+      <div className="absolute top-0 h-[50%] w-full z-[600] [background-image:radial-gradient(88%_100%_at_top,rgba(0,0,0,0),rgba(0,0,0,0.05))]"></div>
     </>
   );
 });

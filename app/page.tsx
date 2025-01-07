@@ -13,6 +13,8 @@ import {
   TechnologiesArtifactBottomRight,
   ProjectsHighlight,
   GridHeroPattern,
+  WorkHistory,
+  Recommendations,
 } from "@/containers";
 import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
@@ -71,6 +73,20 @@ export default function Home() {
         </div>
 
         <GridHeroPattern />
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-900/75">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <WorkHistory />
+        </div>
+
+      </section>
+
+      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
+        <div className="flex flex-col items-center w-full h-full relative">
+          <Recommendations />
+        </div>
+
       </section>
 
       <ToastConfig />

@@ -42,6 +42,18 @@ export type AnimatedFeatureCardProps = {
   Skeleton: React.ElementType;
 };
 
+export type TimelineEntry = {
+  id: string;
+  positionTitle: string;
+  companyName: string;
+  dates: {
+    start: string;
+    end: string;
+  };
+  location: string;
+  content: React.JSX.Element;
+}
+
 export type InteractiveButtonProps = MotionProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
   text?: string;
 }
