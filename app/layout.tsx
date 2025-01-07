@@ -1,11 +1,17 @@
+// STYLES
+import "./globals.scss";
+import "../public/font-icons/icons.css";
+
 import type { Metadata } from "next";
 import clsx from "clsx";
 
 // PLUGINS
-import { inter, poppins, workSans } from "@/plugins";
+import { inter, poppins, bricolageGrotesque } from "@/plugins";
 
-// STYLES
-import "./globals.scss";
+import { FloatingNav } from "@/components/ui";
+
+// CONSTANTS
+import { NavItems } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,9 +36,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -45,9 +51,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={clsx(workSans.variable, inter.variable, poppins.variable)}
+      className={clsx(
+        bricolageGrotesque.variable,
+        inter.variable,
+        poppins.variable,
+        "scroll-smooth overflow-y-auto overflow-x-hidden"
+      )}
     >
-      <body className="antialiased min-h-screen w-full">{children}</body>
+      <body className="antialiased w-full min-h-screen flex flex-col items-center bg-background">
+        <FloatingNav navItems={NavItems} />
+
+        {children}
+      </body>
     </html>
   );
 }

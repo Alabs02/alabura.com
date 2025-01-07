@@ -8,13 +8,29 @@ const nextConfig: NextConfig = withBundleAnalyzer({
   output: "standalone",
   reactStrictMode: true,
   images: {
-    domains: [],
+    domains: ["assets.aceternity.com", "images.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.aceternity.com",
+        port: '',
+        pathname: "/demos/**",
+        search: ""
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: '',
+        pathname: "/**",
+        search: ""
+      }
+    ],
     deviceSizes: [640, 750, 1080, 1200],
     imageSizes: [16, 32, 48, 64, 128],
   },
   experimental: {
     cssChunking: true,
-    useLightningcss: true,
+    // useLightningcss: true,
     webVitalsAttribution: ['CLS', 'LCP'],
     turbo: {
       moduleIdStrategy: 'deterministic',
