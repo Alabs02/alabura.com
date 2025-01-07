@@ -7,6 +7,7 @@ import clsx from "clsx";
 import debounce from "lodash/debounce";
 import { ChevronDown } from "lucide-react";
 import { AnimatedLink } from "./animated-link";
+import { nanoid } from "nanoid";
 
 const transition = {
   type: "spring",
@@ -35,7 +36,7 @@ export const MenuItem = ({
 
   return (
     <div onMouseEnter={updateActiveState} className="relative">
-      <AnimatedLink label={item} className={clsx(active && "!text-primary-200/95", !active && "animated-link")} suffix={<ChevronDown
+      <AnimatedLink id={nanoid()} label={item} className={clsx(active && "!text-primary-200/95", !active && "animated-link")} suffix={<ChevronDown
           className={clsx(
             "relative top-[1px] h-4 w-4 transition duration-500 group-hover:rotate-180",
             { "group-data-[state=open]:rotate-180": active }
