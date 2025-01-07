@@ -310,7 +310,7 @@ const WorkHistory = () => {
           </motion.h2>
 
           <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
-            I've had the privilege of working alongside world-class
+            I&apos;ve had the privilege of working alongside world-class
             professionals at exceptional companies, gaining invaluable
             experience and contributing to impactful projects.
           </motion.h4>

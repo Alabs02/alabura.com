@@ -16,7 +16,7 @@ import {
   RainbowButton,
 } from "@/components/ui";
 
-import { ArrowRight, ExternalLink, View } from "lucide-react";
+import { ExternalLink, View } from "lucide-react";
 import { ImagePath } from "@/constants";
 
 const projects = [
@@ -154,6 +154,7 @@ const ProjectsHighlight = () => {
                   category={project.category}
                   description={project.description}
                   icon={project.icon}
+                  overviewHref={""}
                   className={i === 0 || i === 3 ? "lg:col-span-2" : ""}
                 />
               ))}
@@ -181,7 +182,7 @@ const ProjectCard = ({
   className?: string;
   title?: string | React.ReactNode;
   fullTitle?: string | React.ReactNode;
-  overviewHref?: string;
+  overviewHref: string;
   description?: string | React.ReactNode;
   icon?: string;
   asset: { src: string; alt: string; href: string; previewHref: string };
@@ -340,7 +341,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <Link href={""} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
+        <Link href={overviewHref} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
           <RainbowButton className="w-full !text-xs uppercase font-poppins text-zinc-50/80 space-x-2 rounded-full !py-0.5 px-2 h-8 mt-2">
             <motion.span className="!text-xs">See Full Overview</motion.span>
             <View size={17} />
