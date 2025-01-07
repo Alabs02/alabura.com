@@ -662,7 +662,7 @@ export const SynkLogo = ({ className }: { className?: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className={"ml-[14px]"}
+      className={cn("ml-[14px]", className)}
     >
       <g clipPath="url(#clip0_9532_31065)">
         <g clipPath="url(#clip1_9532_31065)">
@@ -750,7 +750,7 @@ export const BurpeSuitLogo = ({ className }: { className?: string }) => {
       viewBox="0 0 44 44"
       xmlSpace="preserve"
       preserveAspectRatio="xMidYMid"
-      className={cn("burpe-suit scale-90 ml-3")}
+      className={cn("burpe-suit scale-90 ml-3", className)}
     >
       <rect x="0" y="7.1" fill="#FF6633" width="30.9" height="30.9" />
       <polygon
@@ -847,7 +847,7 @@ export const FrontendSkeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });
@@ -929,7 +929,7 @@ export const MobileSkeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });
@@ -1011,7 +1011,7 @@ export const BackendSkeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });
@@ -1077,7 +1077,7 @@ export const DesignSkeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });
@@ -1141,7 +1141,7 @@ export const CodeSecuritySkeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });

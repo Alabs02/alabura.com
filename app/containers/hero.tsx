@@ -8,7 +8,6 @@ import {
   FlipWords,
   Highlight,
   NumberTicker,
-  ShimmerButton,
   ShootingStars,
   StarsBackground,
   AuroraBackground,
@@ -18,7 +17,6 @@ import {
 // CONSTANTS
 import {
   GlobalCollaboration,
-  HeroBtnCopy,
   HeroSecondaryCopy,
   HeroSubContent,
   HeroSubHeadingCopyFirst,
@@ -29,7 +27,6 @@ import {
   ProjectsDelivered,
 } from "@/constants";
 
-import { ArrowRight, PhoneCall } from "lucide-react";
 
 
 const Hero = () => {

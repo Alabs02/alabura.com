@@ -7,7 +7,7 @@ import Image from "next/image";
 // LIB
 import { ImagePath } from "@/constants";
 import { HeadingChip, SEOIcons } from "@/components/ui";
-import { Noise } from "./requst-consultation";
+import { Noise } from "./request-consultation";
 import { nanoid } from "nanoid";
 import { cn } from "@/lib/utils";
 
@@ -823,19 +823,19 @@ const FlutterLogo = ({ className }: { className?: string }) => {
   );
 };
 
-const RiverPodLogo = ({ className }: { className?: string }) => {
-  return (
-    <div className={cn("size-8 relative", className)}>
-      <Image
-        src={ImagePath.RIVERPOD_LOGO}
-        alt={""}
-        fill
-        priority
-        draggable={false}
-      />
-    </div>
-  );
-};
+// const RiverPodLogo = ({ className }: { className?: string }) => {
+//   return (
+//     <div className={cn("size-8 relative", className)}>
+//       <Image
+//         src={ImagePath.RIVERPOD_LOGO}
+//         alt={""}
+//         fill
+//         priority
+//         draggable={false}
+//       />
+//     </div>
+//   );
+// };
 
 const NestJSLogo = ({ className }: { className?: string }) => {
   return (

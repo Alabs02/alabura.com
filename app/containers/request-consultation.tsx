@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, useSpring, useScroll } from "framer-motion";
+import { motion, AnimatePresence, useSpring } from "framer-motion";
 import {
   goals,
   ImagePath,
@@ -27,7 +27,6 @@ const CACHE_EXPIRATION = 24 * 60 * 60 * 1000;
 
 const RequstConsultation = () => {
   const {
-    step,
     updateForm,
     getStep,
     getForm,
@@ -270,7 +269,7 @@ const RequstConsultation = () => {
       case 1:
         return (
           <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6">
-            {goals.map(({ id, Icon, code, heading, subheading }) => (
+            {goals.map(({ id, Icon, heading, subheading }) => (
               <motion.button
                 key={id}
                 initial={{
@@ -588,7 +587,7 @@ const RequstConsultation = () => {
                   className="text-sm font-poppins text-zinc-50"
                   htmlFor={"message"}
                 >
-                  Anything else you'd like to share?{" "}
+                  Anything else you&apos;d like to share?{" "}
                   <span className="text-zinc-400">(Optional)</span>
                 </motion.label>
                 <motion.textarea

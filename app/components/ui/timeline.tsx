@@ -1,12 +1,11 @@
 "use client";
 import { UI } from "@/models";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
 } from "framer-motion";
-import { type AnimationProps, type HTMLMotionProps } from "motion/react";
+import { type AnimationProps } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ChevronUp } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
@@ -162,3 +161,6 @@ export const AccordionBtn = React.forwardRef<
     </motion.button>
   );
 });
+
+AccordionBtn.displayName = "AccordionBtn";
+Timeline.displayName = "Timeline";

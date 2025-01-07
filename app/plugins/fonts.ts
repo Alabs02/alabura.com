@@ -1,4 +1,4 @@
-import { Work_Sans, Inter, Poppins, Bricolage_Grotesque } from "next/font/google";
+import { Inter, Poppins, Bricolage_Grotesque } from "next/font/google";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--bricolage",

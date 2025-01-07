@@ -93,12 +93,10 @@ export const ProductItem = ({
   title,
   description,
   href,
-  src,
 }: {
   title: string;
   description: string;
   href: string;
-  src: string;
 }) => {
   return (
     <Link href={href} className="flex space-x-2 transition duration-300 border border-transparent bg-transparent hover:backdrop-blur-md hover:shadow-md hover:bg-primary-900/55 p-2 hover:border-primary-200/20 active:border-primary focus:border-primary-200/95 rounded-lg">

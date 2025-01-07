@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect, useId, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { AnimatedLink, AnimatedMenu, RainbowButton } from "@/components/ui";
 import isEmpty from "lodash/isEmpty";
 import Image from "next/image";

@@ -124,7 +124,6 @@ const Services = () => {
 };
 
 const AnimatedFeaturecard: React.FC<UI.AnimatedFeatureCardProps> = ({
-  cta,
   heading,
   subheading,
   className,
@@ -133,7 +132,7 @@ const AnimatedFeaturecard: React.FC<UI.AnimatedFeatureCardProps> = ({
   containerClassName,
 }) => {
   return (
-    <FeatureCard className={cn("className")}>
+    <FeatureCard className={cn(className)}>
       <CardSkeletonContainer
         showGradient={showGradient}
         className={containerClassName}

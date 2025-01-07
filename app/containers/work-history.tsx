@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { HeadingChip, Timeline } from "@/components/ui";
-import Image from "next/image";
 import { UI } from "@/models";
 import { nanoid } from "nanoid";
 
