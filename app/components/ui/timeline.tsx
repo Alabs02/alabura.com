@@ -63,7 +63,7 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
                     {item.companyName}
                   </h3>
 
-                  <h4 className="font-bricolage font-extrabold text-lg md:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-cyan-500 via-secondary-600 to-cyan-700">
+                  <h4 className="font-bricolage font-extrabold text-lg md:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                     {item.positionTitle}
                   </h4>
                 </div>

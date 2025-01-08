@@ -7,3 +7,4 @@ export * from "./projects-highlight";
 export * from "./work-history";
 export * from "./recommendations";
 export * from "./prestigious-brands";
+export * from "./footer";

@@ -81,7 +81,7 @@ const PrestigiousBrands = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="relative mb-10 xl:mb-12 2xl:mb-16 bg-neutral-900/50 overflow-hidden size-full">
+      <motion.div className="relative mb-10 xl:mb-12 2xl:mb-16 bg-neutral-950/50 overflow-hidden size-full">
         <div className="flex flex-col gap-y-6 items-center justify-center w-full">
           <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map((brand) => (
@@ -121,8 +121,8 @@ const PrestigiousBrands = () => {
               </div>
             ))}
           </Marquee>
-          <div className="pointer-events-none absolute z-[2500] inset-y-0 left-0 w-1/3 bg-gradient-to-r from-neutral-900"></div>
-          <div className="pointer-events-none absolute z-[2500] inset-y-0 right-0 w-1/3 bg-gradient-to-l from-neutral-900"></div>
+          <div className="pointer-events-none absolute z-[2500] inset-y-0 left-0 w-1/3 bg-gradient-to-r from-neutral-950"></div>
+          <div className="pointer-events-none absolute z-[2500] inset-y-0 right-0 w-1/3 bg-gradient-to-l from-neutral-950"></div>
         </div>
       </motion.div>
     </>

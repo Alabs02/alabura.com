@@ -168,6 +168,7 @@ const Hero = () => {
         className="z-[1000]"
         starColor="#9E00FF"
         trailColor="#3d91e6"
+        
       />
       <StarsBackground className="z-[1000] top-[-100px]" />
 

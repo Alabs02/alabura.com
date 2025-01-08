@@ -16,6 +16,7 @@ import {
   WorkHistory,
   Recommendations,
   PrestigiousBrands,
+  Footer,
 } from "@/containers";
 import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
@@ -89,11 +90,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-auto grid grid-cols-1 relative overflow-hidden top-[95px] bg-neutral-900/90">
+      <section className="w-full h-auto grid grid-cols-1 relative overflow-hidden top-[95px] bg-gradient-to-b from-neutral-900/90 via-neutral-900/50 to-neutral-950">
         <div className="flex flex-col items-center w-full h-full relative">
           <PrestigiousBrands />
         </div>
       </section>
+
+      <Footer />
 
       <ToastConfig />
     </>

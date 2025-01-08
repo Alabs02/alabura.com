@@ -114,7 +114,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(160, 202, 243, ${star.opacity})`;
+        ctx.fillStyle = `rgba(0, 206, 209, ${star.opacity})`;
         ctx.fill();
 
         if (star.twinkleSpeed !== null) {
