@@ -286,4 +286,6 @@ const InteractiveRightButton = React.forwardRef<
 });
 
 Footer.displayName = "Footer";
+InteractiveRightButton.displayName = "InteractiveRightButton";
+
 export { Footer };
