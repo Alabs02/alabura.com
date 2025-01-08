@@ -58,7 +58,7 @@ const Footer = () => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
+                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Linkedin />
                   </motion.button>
@@ -85,9 +85,18 @@ const Footer = () => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
+                    className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
-                    <XIcon />
+                    <svg
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0.254 0.25 500 451.95400000000006"
+                    >
+                      <path
+                        d="M394.033.25h76.67L303.202 191.693l197.052 260.511h-154.29L225.118 294.205 86.844 452.204H10.127l179.16-204.77L.254.25H158.46l109.234 144.417zm-26.908 406.063h42.483L135.377 43.73h-45.59z"
+                        fill="currentColor"
+                      />
+                    </svg>
                   </motion.button>
                 </Link>
 
@@ -112,7 +121,7 @@ const Footer = () => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
+                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Github />
                   </motion.button>
@@ -139,14 +148,14 @@ const Footer = () => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
+                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Codepen />
                   </motion.button>
                 </Link>
 
                 <Link
-                  href={"http://codepen.io/pen/?editors=0012"}
+                  href={"https://medium.com/@alabura.usman"}
                   target="_blank"
                   passHref
                 >
@@ -166,9 +175,15 @@ const Footer = () => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                    className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
+                    className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
-                    <Codepen />
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 1024 1024"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M834.7 279.8l61.3-58.9V208H683.7L532.4 586.4 360.3 208H137.7v12.9l71.6 86.6c7 6.4 10.6 15.8 9.7 25.2V673c2.2 12.3-1.7 24.8-10.3 33.7L128 805v12.7h228.6v-12.9l-80.6-98a39.99 39.99 0 0 1-11.1-33.7V378.7l200.7 439.2h23.3l172.6-439.2v349.9c0 9.2 0 11.1-6 17.2l-62.1 60.3V819h301.2v-12.9l-59.9-58.9c-5.2-4-7.9-10.7-6.8-17.2V297a18.1 18.1 0 0 1 6.8-17.2z" />
+                    </svg>
                   </motion.button>
                 </Link>
               </div>
