@@ -34,3 +34,4 @@ export * from "./word-rotate";
 export * from "./spotlight";
 export * from "./tooltip";
 export * from "./timeline";
+export * from "./marquee";

@@ -166,7 +166,7 @@ export function AnimatedBeamMultipleOutputForSEO({
     >
       <div className="flex size-full flex-row items-stretch justify-between gap-10 max-w-lg">
         <div className="flex flex-col justify-center gap-2">
-          <Circle ref={div2Ref}>
+          <Circle ref={div1Ref}>
             <SEOIcons.semRush />
           </Circle>
           <Circle ref={div2Ref}>

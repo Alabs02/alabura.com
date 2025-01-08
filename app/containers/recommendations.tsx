@@ -113,19 +113,21 @@ const Recommendations = () => {
     <>
       <motion.div className="section gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
         <div className="grid grid-cols-12 gap-8 lg:gap-12 xl:pb-[6rem]">
-          <div className="col-span-12 lg:col-span-5 flex flex-col items-center lg:items-start justify-start lg:justify-center">
-            <div className="inline-block">
-              <HeadingChip>ENDORSEMENTS</HeadingChip>
+          <div className="col-span-12 lg:col-span-5">
+            <div className="flex flex-col items-center lg:items-start justify-start transform-gpu will-change-transform lg:translate-y-60">
+              <div className="inline-block">
+                <HeadingChip>ENDORSEMENTS</HeadingChip>
+              </div>
+
+              <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide my-6">
+                Voices of Impact
+              </motion.h2>
+
+              <motion.h4 className="text-xl text-center lg:text-left text-zinc-50/80 font-poppins font-light">
+                Insights from exceptional professionals who&apos;ve experienced
+                the value, precision, and dedication I bring to every project.
+              </motion.h4>
             </div>
-
-            <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-6">
-              Voices of Impact
-            </motion.h2>
-
-            <motion.h4 className="text-xl text-center lg:text-left text-zinc-50/80 font-poppins font-light mt-6">
-              Insights from exceptional professionals who&apos;ve experienced
-              the value, precision, and dedication I bring to every project.
-            </motion.h4>
           </div>
 
           <div className="col-span-12 lg:col-span-7">
@@ -167,7 +169,7 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
                 fill
                 priority
                 draggable={false}
-                className="size-full"
+                className="size-full -skew-x-6"
               />
             </div>
           </div>
@@ -182,7 +184,7 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
           </div>
         </div>
 
-        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-base tracking-[0.015em] text-pretty">
+        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-[15px] leading-6 lg:text-base tracking-[0.015em] text-pretty">
           {comment()}
         </div>
       </motion.div>
