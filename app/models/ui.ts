@@ -54,6 +54,14 @@ export type TimelineEntry = {
   content: React.JSX.Element;
 }
 
+export type EndorsementCardProps  = React.HTMLAttributes<HTMLDivElement> & {
+  id: string;
+  name: string;
+  imageSrc: string;
+  position: string;
+  comment: () => React.JSX.Element;
+}
+
 export type InteractiveButtonProps = MotionProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
   text?: string;
 }

@@ -71,6 +71,11 @@ export const ImagePath = {
   SIMS_PAGE: "/images/sims-page.webp",
   SIMS_LOGO: "/images/sims-logo.webp",
 
+  MESH_PORTRAITE: "/images/mesh.webp",
+  CHRIS_IYAMA_PORTRAITE: "/images/chris-iyama.webp",
+  SEGUN_PORTRAITE: "/images/segun.webp",
+  UCHE_NICK_PORTRAITE: "/images/nick-uche.webp",
+
   PERKS_ICON: "/images/perks.svg",
   GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",

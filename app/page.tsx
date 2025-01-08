@@ -82,7 +82,7 @@ export default function Home() {
 
       </section>
 
-      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
+      <section className="w-full h-auto grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
         <div className="flex flex-col items-center w-full h-full relative">
           <Recommendations />
         </div>
