@@ -76,6 +76,16 @@ export const ImagePath = {
   SEGUN_PORTRAITE: "/images/segun.webp",
   UCHE_NICK_PORTRAITE: "/images/nick-uche.webp",
 
+  ACRONIS_FULL_LOGO: "/images/acronis-full.webp",
+  LIVEABLE_FULL_LOGO: "/images/liveable-logo-full.webp",
+  MYLANDLORD_HEAVEN_FULL_LOGO: "/images/mylandlord-heaven-full.webp",
+  GRADELY_FULL_LOGO: "/images/gradely-logo-full.webp",
+  BUDGIT_FULL_LOGO: "/images/budgit-logo-full.webp",
+  FBN_QUEST_FULL_LOGO: "/images/fbn-quest-full.webp",
+  SBSC_FULL_LOGO: "/images/sbsc-colour-full.webp",
+  ASTRO_MARKETER_FULL_LOGO: "/images/astro-marketer-full.webp",
+  PLATEAU_STATE_FULL_LOGO: "/images/plateau-state-government-logo-full.webp",
+
   PERKS_ICON: "/images/perks.svg",
   GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",

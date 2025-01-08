@@ -89,7 +89,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-auto grid grid-cols-1 relative overflow-hidden top-[95px]">
+      <section className="w-full h-auto grid grid-cols-1 relative overflow-hidden top-[95px] bg-neutral-900/90">
         <div className="flex flex-col items-center w-full h-full relative">
           <PrestigiousBrands />
         </div>
