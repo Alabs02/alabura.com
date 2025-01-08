@@ -176,11 +176,11 @@ export const NavItems: UI.FloatingNavItem[] = [
     label: "Projects",
     href: "/projects",
   },
-  {
-    id: nanoid(),
-    label: "Insights",
-    href: "/insights",
-  },
+  // {
+  //   id: nanoid(),
+  //   label: "Insights",
+  //   href: "/insights",
+  // },
 ];
 
 export const ProjectsDelivered = {
