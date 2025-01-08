@@ -5,7 +5,7 @@ import { ArrowRight, MoveUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { UI } from "@/models";
 import Link from "next/link";
-import { Github, Codepen, Linkedin, XIcon } from "lucide-react";
+import { Github, Codepen, Linkedin } from "lucide-react";
 import { nanoid } from "nanoid";
 
 const Footer = () => {
