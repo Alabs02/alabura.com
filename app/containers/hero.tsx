@@ -12,7 +12,6 @@ import {
   StarsBackground,
   AuroraBackground,
   ContactPanel,
-  AmoebaButton,
 } from "@/components/ui";
 
 // CONSTANTS
