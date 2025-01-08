@@ -627,10 +627,8 @@ const RequstConsultation = () => {
         )}
       >
         <motion.div className="flex flex-col items-center">
-          <HeadingChip>
-            Request Consultation
-          </HeadingChip>
-          
+          <HeadingChip>Request Consultation</HeadingChip>
+
           <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center font-bricolage font-bold tracking-wide xl:mt-12">
             Ready to Bring Your Vision to Life?
           </motion.h2>
@@ -683,7 +681,7 @@ const RequstConsultation = () => {
             onClick={onNext}
             text="Next"
             className={cn(
-              "border-primary-300/40 hover:border-primary-200/5 text-primary-400 hover:text-primary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+              "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
               getStep() > 3
                 ? "opacity-0 pointer-events-none hidden"
                 : "opacity-1 block"
@@ -708,7 +706,10 @@ const RequstConsultation = () => {
 const Noise: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
-      className={cn("absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]", className)}
+      className={cn(
+        "absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]",
+        className
+      )}
       style={{
         backgroundImage: `url(${ImagePath.NOISE})`,
         backgroundSize: "30%",

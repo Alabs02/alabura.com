@@ -27,8 +27,8 @@ export const AnimatedLink: FC<
       href={href}
       prefetch={true}
       className={clsx(
-        "text-sm md:text-[15px] leading-6 tracking-normal font-medium font-poppins text-primary-content hover:text-primary-200/95 active:text-primary focus:text-primary transition-colors duration-300",
-        isActive && "!text-primary-200/95 font-semibold",
+        "text-sm md:text-[15px] leading-6 tracking-normal font-medium font-poppins text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-colors duration-300",
+        isActive && "!text-secondary-300/95 font-semibold",
         !isActive && "animated-link",
         className
       )}
@@ -42,7 +42,7 @@ export const AnimatedLink: FC<
       data-state={label ? "open" : "close"}
       data-hover-label={label}
       className={clsx(
-        "group !flex items-center gap-x-1 text-sm md:text-[15px] leading-6 tracking-normal font-medium font-poppins text-primary-content hover:text-primary-200/95 active:text-primary focus:text-primary transition-colors duration-300",
+        "group !flex items-center gap-x-1 text-sm md:text-[15px] leading-6 tracking-normal font-medium font-poppins text-[inherit] transition-colors duration-300",
         className
       )}
     >

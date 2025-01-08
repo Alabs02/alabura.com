@@ -107,7 +107,7 @@ export const NavItems: UI.FloatingNavItem[] = [
   {
     id: nanoid(),
     label: "Services",
-    href: "/services",
+    href: "/#services",
     subItems: [
       {
         id: nanoid(),
@@ -173,8 +173,8 @@ export const NavItems: UI.FloatingNavItem[] = [
   },
   {
     id: nanoid(),
-    label: "Portfolio",
-    href: "/portfolio",
+    label: "Projects",
+    href: "/projects",
   },
   {
     id: nanoid(),
@@ -214,7 +214,7 @@ export const HeroSecondaryCopy = [
 export const HeroSubContent =
   "I partner with businesses to ideate, architect, design, and build market-leading digital solutions. Through applied creativity and digital transformation, I leave a positive dent on every challenge I tackle.";
 
-export const HireButtonCopy = "Hire Me";
+export const HireButtonCopy = "Discuss a  Project";
 export const DiscussProjectBtnCopy = "Start Your Next Breakthrough";
 export const HeroBtnCopy = "Let’s Discuss Your Next Project";
 export const HeroSubHeadingCopyFirst = "You Bring the Vision";

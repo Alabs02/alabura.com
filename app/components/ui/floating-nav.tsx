@@ -14,7 +14,6 @@ import {
   easeInOut,
 } from "framer-motion";
 
-
 // MODELS
 import { UI } from "@/models";
 import { HireButtonCopy, ImagePath } from "@/constants";
@@ -100,20 +99,11 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
             </motion.div>
           </Link>
 
-          {navItems.map((navItem) =>
-            isEmpty(navItem?.subItems) ? (
-              <AnimatedLink key={navItem.id} {...navItem} />
-            ) : mounted ? (
-              <AnimatedMenu
-                key={navItem.id}
-                active={active}
-                setActive={setActive}
-                {...navItem}
-              />
-            ) : null
-          )}
+          {navItems.map((navItem) => (
+            <AnimatedLink key={navItem.id} {...navItem} />
+          ))}
 
-          <RainbowButton className="!rounded-full font-poppins">
+          <RainbowButton className="!rounded-full font-poppins uppercase !font-normal tracking-wide">
             {HireButtonCopy}
           </RainbowButton>
         </motion.nav>
