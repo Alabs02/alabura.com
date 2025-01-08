@@ -47,8 +47,8 @@ export const ImagePath = {
   PHP_LOGO: "/images/php.svg",
 
   WAVY_LINES: "/images/wavy-lines.webp",
-  ILLUS_LINES_DOWN: "/images/Illus-lines-down.webp",
-  ILLUS_LINES_TOP: "/images/Illus-lines-top.webp",
+  ILLUS_LINES_DOWN: "/images/illus-lines-down.webp",
+  ILLUS_LINES_TOP: "/images/illus-lines-top.webp",
 
   ONECOPY_AI: "/images/onecopy-ai-dashboard.webp",
   ONECOPY_AI_LOGO: "/images/onecopy-logo.webp",
