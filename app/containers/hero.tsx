@@ -12,6 +12,7 @@ import {
   StarsBackground,
   AuroraBackground,
   ContactPanel,
+  AmoebaButton,
 } from "@/components/ui";
 
 // CONSTANTS
@@ -26,8 +27,6 @@ import {
   Perks,
   ProjectsDelivered,
 } from "@/constants";
-
-
 
 const Hero = () => {
   const [canBounce, setCanBounce] = useState<boolean>(true);
@@ -130,10 +129,9 @@ const Hero = () => {
             </motion.div>
 
             <motion.div className="flex flex-col gap-y-4">
-            <motion.div className="relative h-12 w-12 overflow-hidden p-px rounded">
+              <motion.div className="relative h-12 w-12 overflow-hidden p-px rounded">
                 <Image src={GlobalCollaboration.src} alt={""} fill priority />
               </motion.div>
-
 
               <motion.div className="flex flex-col gap-y-2 w-full h-28">
                 <motion.h4 className="text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
@@ -147,7 +145,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div className="-mt-7 flex items-center space-x-4 xl:space-x-6">
-          <ContactPanel
+            <ContactPanel
               icon={"icon-email"}
               heading={"Email"}
               subheading={"usmanunfolds@alabura.com"}
@@ -164,11 +162,43 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
+      <motion.div className="absolute z-[3000] right-[15%] top-[70%] -translate-y-[70%]">
+      <motion.button
+                onMouseEnter={() => setCanBounce(false)}
+                onMouseLeave={() => setCanBounce(true)}
+                className="relative 2xl:flex h-16 w-12 items-end hidden"
+                animate={
+                  canBounce
+                    ? {
+                        y: [0, -10, 0],
+                      }
+                    : { y: [0, 0, 0] }
+                }
+                transition={
+                  canBounce
+                    ? {
+                        type: "tween",
+                        delay: 1,
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }
+                    : { duration: 1, type: "tween" }
+                }
+              >
+                <Image
+                  src={ImagePath.ARROW_DOWN_WHITE}
+                  alt={""}
+                  fill
+                  priority
+                />
+              </motion.button>
+      </motion.div>
+
       <ShootingStars
         className="z-[1000]"
         starColor="#9E00FF"
         trailColor="#3d91e6"
-        
       />
       <StarsBackground className="z-[1000] top-[-100px]" />
 
