@@ -1,8 +1,7 @@
 "use client";
 
-import React, { FC, useEffect, useState } from "react";
-import { AnimatedLink, AnimatedMenu, RainbowButton } from "@/components/ui";
-import isEmpty from "lodash/isEmpty";
+import React, { FC, useState } from "react";
+import { AnimatedLink, RainbowButton } from "@/components/ui";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,8 +21,6 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
-  const [active, setActive] = useState<string | null>(null);
-  const [mounted, setMounted] = useState<boolean>(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -41,19 +38,10 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
     }
   });
 
-  useEffect(() => {
-    setMounted(true);
-
-    return () => {
-      setMounted(false);
-    };
-  }, []);
-
   return (
     <>
       <AnimatePresence mode="wait">
         <motion.nav
-          onMouseLeave={() => setActive(null)}
           initial={{
             opacity: 1,
           }}
