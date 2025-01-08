@@ -178,13 +178,13 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
             <h4 className="font-bricolage font-bold text-base md:text-lg 2xl:text-xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-50 via-zinc-50 to-zinc-700">
               {name}
             </h4>
-            <h6 className="font-bricolage font-thin text-sm text-zinc-50/80">
+            <h6 className="font-bricolage font-thin text-[12.5px] 2xl:text-sm text-zinc-50/80">
               {position}
             </h6>
           </div>
         </div>
 
-        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-[15px] leading-6 lg:text-base tracking-[0.015em] text-pretty">
+        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-[14.5px] leading-5 2xl:text-base tracking-[0.015em] text-pretty">
           {comment()}
         </div>
       </motion.div>
