@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { AnimatedLink, ShootingStars, StarsBackground } from "@/components/ui";
@@ -9,6 +11,15 @@ import { Github, Codepen, Linkedin } from "lucide-react";
 import { nanoid } from "nanoid";
 
 const Footer = () => {
+  const backToTop = () => {
+    if (window) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    }
+  }
+
   return (
     <>
       <motion.div className="w-full relative overflow-hidden top-[95px] flex flex-col items-center bg-gradient-to-b from-neutral-950 via-background to-background">
@@ -240,6 +251,7 @@ const Footer = () => {
           whileTap={{
             scale: 0.9,
           }}
+          onClick={backToTop}
           className="w-[80%] cursor-pointer bg-black no-underline group/move-up absolute ring-1 ring-secondary-50/15 shadow-2xl shadow-black !rounded-t-[32px] text-secondary-50 hover:bg-secondary-50 hover:text-zinc-950 transition-all duration-300 will-change-auto flex items-center space-x-2 bottom-0 z-[2500]"
         >
           <div className="relative h-full w-full p-6">

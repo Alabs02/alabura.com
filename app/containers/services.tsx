@@ -21,6 +21,7 @@ import {
 import { cn } from "@/lib/utils";
 import { UI } from "@/models";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -28,9 +29,7 @@ const Services = () => {
       <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
         <motion.div className="flex flex-col xl:flex-row xl:justify-between items-center gap-4 xl:mb-12">
           <motion.div className="xl:w-[75%]">
-            <HeadingChip>
-              Core Services
-            </HeadingChip>
+            <HeadingChip>Core Services</HeadingChip>
 
             <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center lg:text-left font-bricolage font-bold tracking-wide xl:mt-12">
               What I Do Best
@@ -42,12 +41,16 @@ const Services = () => {
             </motion.h4>
           </motion.div>
 
-          <RainbowButton
-            className={cn("inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]")}
-          >
-            <span>{"Explore Services"}</span>
-            <ArrowRight className="group-hover:rotate-45 transition-all duration-300" />
-          </RainbowButton>
+          <Link href={"/#technologies"} passHref>
+            <RainbowButton
+              className={cn(
+                "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
+              )}
+            >
+              <span>{"Explore Services"}</span>
+              <ArrowRight className="group-hover:rotate-45 transition-all duration-300" />
+            </RainbowButton>
+          </Link>
         </motion.div>
 
         <motion.div className="w-full grid grid-cols-12 grid-rows-[auto] gap-4 transition-all duration-300">

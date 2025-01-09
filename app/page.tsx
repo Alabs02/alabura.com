@@ -38,7 +38,7 @@ export default function Home() {
         <Noise />
       </section>
 
-      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
+      <section id="services" className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
         <div className="flex flex-col items-center w-full h-full relative">
           <Services />
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
+      <section id="technologies" className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px] bg-zinc-950">
         <div className="flex flex-col items-center w-full h-full relative">
           <Technologies />
         </div>
@@ -71,7 +71,7 @@ export default function Home() {
         <TechnologiesArtifactBottomRight />
       </section>
 
-      <section className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
+      <section id="projects" className="w-full min-h-screen grid grid-cols-1 relative overflow-hidden top-[95px]">
         <div className="flex flex-col items-center w-full h-full relative">
           <ProjectsHighlight />
         </div>
