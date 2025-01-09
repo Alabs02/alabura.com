@@ -1,17 +1,15 @@
 // STYLES
 import "./globals.scss";
+import "lenis/dist/lenis.css";
 import "../public/font-icons/icons.css";
 
 import type { Metadata } from "next";
 import clsx from "clsx";
+import { RealViewport } from "@/real-viewport";
+import { ReactLenis } from "@/lib/lenis";
 
 // PLUGINS
 import { inter, poppins, bricolageGrotesque } from "@/plugins";
-
-import { FloatingNav } from "@/components/ui";
-
-// CONSTANTS
-import { NavItems } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -51,18 +49,22 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      dir="ltr"
       className={clsx(
         bricolageGrotesque.variable,
         inter.variable,
         poppins.variable,
         "scroll-smooth overflow-y-auto overflow-x-hidden"
       )}
+      suppressHydrationWarning
     >
-      <body className="antialiased w-full min-h-screen flex flex-col items-center bg-background">
-        <FloatingNav navItems={NavItems} />
+      <ReactLenis root>
+        <body className="antialiased w-full min-h-screen flex flex-col items-center bg-background">
+          <RealViewport />
 
-        {children}
-      </body>
+          {children}
+        </body>
+      </ReactLenis>
     </html>
   );
 }

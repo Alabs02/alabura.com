@@ -21,9 +21,11 @@ import {
 import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
+import { Wrapper } from "@/wrapper";
+
 export default function Home() {
   return (
-    <>
+    <Wrapper>
       <header className="w-full min-h-screen flex flex-col items-center relative top-[95px]">
         <Hero />
       </header>
@@ -99,6 +101,6 @@ export default function Home() {
       <Footer />
 
       <ToastConfig />
-    </>
+    </Wrapper>
   );
 }
