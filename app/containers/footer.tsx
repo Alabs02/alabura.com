@@ -15,10 +15,10 @@ const Footer = () => {
     if (window) {
       window.scrollTo({
         top: 0,
-        behavior: "smooth"
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
 
   return (
     <>
@@ -37,12 +37,14 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center justify-end w-full self-end">
-            <InteractiveRightButton
-              text="Let's Discuss"
-              className={cn(
-                "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
-              )}
-            />
+            <Link href={"/#request-consultation"} passHref>
+              <InteractiveRightButton
+                text="Let's Discuss"
+                className={cn(
+                  "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
+                )}
+              />
+            </Link>
           </div>
 
           <div className="flex flex-col gap-y-4 w-full">

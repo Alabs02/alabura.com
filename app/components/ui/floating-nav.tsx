@@ -91,9 +91,11 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
             <AnimatedLink key={navItem.id} {...navItem} />
           ))}
 
-          <RainbowButton className="!rounded-full font-poppins uppercase !font-normal tracking-wide">
-            {HireButtonCopy}
-          </RainbowButton>
+          <Link href={"/#request-consultation"} passHref>
+            <RainbowButton className="!rounded-full font-poppins uppercase !font-normal tracking-wide">
+              {HireButtonCopy}
+            </RainbowButton>
+          </Link>
         </motion.nav>
       </AnimatePresence>
     </>
