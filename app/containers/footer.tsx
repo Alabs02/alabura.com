@@ -9,6 +9,8 @@ import { UI } from "@/models";
 import Link from "next/link";
 import { Github, Codepen, Linkedin } from "lucide-react";
 import { nanoid } from "nanoid";
+import Image from "next/image";
+import { ImagePath } from "@/constants";
 
 const Footer = () => {
   const backToTop = () => {
@@ -48,7 +50,79 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-y-4 w-full">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-y-4 lg:gap-y-0">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-y-4 lg:gap-y-0">
+              <div className="flex flex-col gap-y-2">
+                <div className="flex items-center space-x-4">
+                  <div className="size-14 relative overflow-hidden">
+                    <Image
+                      src={ImagePath.BRAND_LOGO_LIGHT}
+                      alt={""}
+                      fill
+                      priority
+                      draggable={false}
+                      className="size-full object-contain"
+                    />
+                  </div>
+
+                  <h4 className="text-xl lg:text-2xl uppercase font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                    Alabura Usman
+                  </h4>
+                </div>
+
+                <Link
+                  href="mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
+                  className="flex items-center space-x-2 text-sm lg:text-base font-poppins font-light text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-all duration-300 will-change-auto"
+                  passHref
+                >
+                  <i className="icon-email"></i>
+                  <span>usmanunfolds@alabura.com</span>
+                </Link>
+
+                <Link
+                  href="tel:+2349027661950"
+                  className="flex items-center space-x-2 text-sm lg:text-base font-poppins font-light text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-all duration-300 will-change-auto"
+                  passHref
+                >
+                  <i className="icon-phone-call"></i>
+                  <span>+234 902 766 1950</span>
+                </Link>
+              </div>
+
+              <div className="flex flex-col items-end justify-end">
+                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
+                  &copy; {new Date().getFullYear()} Alabura Usman. All Rights
+                  Reserved.
+                </p>
+                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
+                  Delivering Impact, One Project at a Time.
+                </p>
+              </div>
+            </div>
+
+            <div className="h-px w-full bg-gradient-to-r from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
+
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+              <div className="flex items-center space-x-2 lg:space-x-4">
+                <AnimatedLink
+                  id={nanoid()}
+                  label="Services"
+                  href="/#services"
+                  className="uppercase tracking-wide !font-normal"
+                />
+                <AnimatedLink
+                  id={nanoid()}
+                  label="About"
+                  href="/about-alabura-usman"
+                  className="uppercase tracking-wide !font-normal"
+                />
+                <AnimatedLink
+                  id={nanoid()}
+                  label="Projects"
+                  href="/#projects"
+                  className="uppercase tracking-wide !font-normal"
+                />
+              </div>
+
               <div className="flex items-center space-x-2 lg:space-x-4">
                 <Link
                   href={"https://www.linkedin.com/in/usmanunfolds/"}
@@ -200,39 +274,6 @@ const Footer = () => {
                   </motion.button>
                 </Link>
               </div>
-
-              <div className="flex flex-col items-end justify-end">
-                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
-                  &copy; {new Date().getFullYear()} Alabura Usman. All Rights
-                  Reserved.
-                </p>
-                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
-                  Delivering Impact, One Project at a Time.
-                </p>
-              </div>
-            </div>
-
-            <div className="h-px w-full bg-gradient-to-r from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
-
-            <div className="flex items-center space-x-2 lg:space-x-4">
-              <AnimatedLink
-                id={nanoid()}
-                label="Services"
-                href="/#services"
-                className="uppercase tracking-wide !font-normal"
-              />
-              <AnimatedLink
-                id={nanoid()}
-                label="About"
-                href="/about-alabura-usman"
-                className="uppercase tracking-wide !font-normal"
-              />
-              <AnimatedLink
-                id={nanoid()}
-                label="Projects"
-                href="/#projects"
-                className="uppercase tracking-wide !font-normal"
-              />
             </div>
           </div>
 

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   FlipWords,
@@ -59,35 +60,37 @@ const Hero = () => {
                 {HeroSubContent}
               </motion.p>
 
-              <motion.button
-                onMouseEnter={() => setCanBounce(false)}
-                onMouseLeave={() => setCanBounce(true)}
-                className="relative lg:flex h-16 w-12 items-end hidden 2xl:hidden"
-                animate={
-                  canBounce
-                    ? {
-                        y: [0, -10, 0],
-                      }
-                    : { y: [0, 0, 0] }
-                }
-                transition={
-                  canBounce
-                    ? {
-                        delay: 1,
-                        duration: 1.5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                      }
-                    : { duration: 1 }
-                }
-              >
-                <Image
-                  src={ImagePath.ARROW_DOWN_WHITE}
-                  alt={""}
-                  fill
-                  priority
-                />
-              </motion.button>
+              <Link href={"/#request-consultation"} passHref>
+                <motion.button
+                  onMouseEnter={() => setCanBounce(false)}
+                  onMouseLeave={() => setCanBounce(true)}
+                  className="relative lg:flex h-16 w-12 items-end hidden 2xl:hidden"
+                  animate={
+                    canBounce
+                      ? {
+                          y: [0, -10, 0],
+                        }
+                      : { y: [0, 0, 0] }
+                  }
+                  transition={
+                    canBounce
+                      ? {
+                          delay: 1,
+                          duration: 1.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                        }
+                      : { duration: 1 }
+                  }
+                >
+                  <Image
+                    src={ImagePath.ARROW_DOWN_WHITE}
+                    alt={""}
+                    fill
+                    priority
+                  />
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -162,36 +165,33 @@ const Hero = () => {
       </motion.div>
 
       <motion.div className="absolute z-[3000] right-[15%] top-[70%] -translate-y-[70%]">
-      <motion.button
-                onMouseEnter={() => setCanBounce(false)}
-                onMouseLeave={() => setCanBounce(true)}
-                className="relative 2xl:flex h-16 w-12 items-end hidden"
-                animate={
-                  canBounce
-                    ? {
-                        y: [0, -10, 0],
-                      }
-                    : { y: [0, 0, 0] }
-                }
-                transition={
-                  canBounce
-                    ? {
-                        type: "tween",
-                        delay: 1,
-                        duration: 1.5,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                      }
-                    : { duration: 1, type: "tween" }
-                }
-              >
-                <Image
-                  src={ImagePath.ARROW_DOWN_WHITE}
-                  alt={""}
-                  fill
-                  priority
-                />
-              </motion.button>
+        <Link href={"/#request-consultation"} passHref>
+          <motion.button
+            onMouseEnter={() => setCanBounce(false)}
+            onMouseLeave={() => setCanBounce(true)}
+            className="relative 2xl:flex h-16 w-12 items-end hidden"
+            animate={
+              canBounce
+                ? {
+                    y: [0, -10, 0],
+                  }
+                : { y: [0, 0, 0] }
+            }
+            transition={
+              canBounce
+                ? {
+                    type: "tween",
+                    delay: 1,
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                  }
+                : { duration: 1, type: "tween" }
+            }
+          >
+            <Image src={ImagePath.ARROW_DOWN_WHITE} alt={""} fill priority />
+          </motion.button>
+        </Link>
       </motion.div>
 
       <ShootingStars
