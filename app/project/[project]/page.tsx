@@ -14,10 +14,6 @@ import { nanoid } from "nanoid";
 import kebabCase from "lodash/kebabCase";
 import { useRouter } from "next/navigation";
 
-const dummyText =
-  "Class54 is an innovative Ed-Tech startup dedicated to transforming the landscape of exam preparation. We specialize in curating an extensive database of examination questions and answers from past years, covering a wide range of critical standardized tests, including WASSCE, NECO, JAMB, GCE, and more. Our primary focus is to empower secondary school students, offering them a subscription-based platform that grants access to a wealth of exam resources.";
-
-
 
 const projectDetails: any = {
   "my-landlord-heaven": {
@@ -607,7 +603,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
 
@@ -617,7 +613,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
 
@@ -627,7 +623,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
 
@@ -637,7 +633,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
 
@@ -647,7 +643,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
 
@@ -657,7 +653,7 @@ const ProjectOverview = () => {
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {dummyText}
+                {""}
               </p>
             </div>
           </div>
