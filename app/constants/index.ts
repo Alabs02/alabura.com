@@ -49,6 +49,7 @@ export const ImagePath = {
   WAVY_LINES: "/images/wavy-lines.webp",
   ILLUS_LINES_DOWN: "/images/illus-lines-down.webp",
   ILLUS_LINES_TOP: "/images/illus-lines-top.webp",
+  ILLUS_LINE_TOP_PROJECT: "/images/illus-line-top-project.webp",
 
   ONECOPY_AI: "/images/onecopy-ai-dashboard.webp",
   ONECOPY_AI_LOGO: "/images/onecopy-logo.webp",

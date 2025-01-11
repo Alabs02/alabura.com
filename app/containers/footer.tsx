@@ -12,7 +12,7 @@ import { nanoid } from "nanoid";
 import Image from "next/image";
 import { ImagePath } from "@/constants";
 
-const Footer = () => {
+const Footer: React.FC<{ className?: string }> = ({ className }) => {
   const backToTop = () => {
     if (window) {
       window.scrollTo({
@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <>
-      <motion.div className="w-full relative overflow-hidden top-[95px] flex flex-col items-center bg-gradient-to-b from-neutral-950 via-background to-background">
+      <motion.div className={cn("w-full relative overflow-hidden top-[95px] flex flex-col items-center bg-gradient-to-b from-neutral-950 via-background to-background", className)}>
         <div className="section flex flex-col items-start h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
           <div className="flex flex-col gap-y-0.5 w-[80%] items-end self-end">
             <h3 className="text-4xl lg:text-7xl 2xl:text-8xl font-bricolage font-extrabold text-transparent bg-gradient-to-b bg-clip-text from-neutral-200 to-neutral-600">

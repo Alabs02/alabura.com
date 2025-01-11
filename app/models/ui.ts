@@ -62,6 +62,18 @@ export type EndorsementCardProps  = React.HTMLAttributes<HTMLDivElement> & {
   comment: () => React.JSX.Element;
 }
 
+export type GridPatternProps = {
+  width?: number;
+  height?: number;
+  x?: number;
+  y?: number;
+  // squares?: Array<[x: number, y: number]>;
+  squares?: number[][];
+  strokeDasharray?: string;
+  className?: string;
+  [key: string]: unknown;
+}
+
 export type InteractiveButtonProps = MotionProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
   text?: string;
 }

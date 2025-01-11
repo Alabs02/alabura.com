@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import kebabCase from "lodash/kebabCase";
 
 import {
   Tooltip,
@@ -42,7 +43,7 @@ const projects = [
       previewHref: "/mylandlordheaven.com",
     },
     category: "PropTech",
-    title: "MyLandlordHeaven",
+    title: "My Landlord Heaven",
     fullTitle: "Elevating Property Ownership Experience",
     description:
       "MyLandlordHeaven offers landlords guaranteed rental income, property upgrade financing, and comprehensive management services, ensuring optimized returns and peace of mind.",
@@ -99,7 +100,7 @@ const projects = [
     },
     category: "Logistics & Supply Chain",
     title: "SSAF Logistics",
-    fullTitle: "Transforming Urban Living Spaces",
+    fullTitle: "Optimizing Logistics Operations via innovation",
     description:
       "SSAF Logistics specializes in transporting project-critical cargo to challenging destinations, ensuring timely and efficient delivery.",
     icon: ImagePath.SSAF_LOGISTICS_LOGO,
@@ -154,7 +155,6 @@ const ProjectsHighlight = () => {
                   category={project.category}
                   description={project.description}
                   icon={project.icon}
-                  overviewHref={""}
                   className={i === 0 || i === 3 ? "lg:col-span-2" : ""}
                 />
               ))}
@@ -172,7 +172,6 @@ const ProjectCard = ({
   title,
   fullTitle,
   category,
-  overviewHref,
   description,
   icon,
   asset,
@@ -180,9 +179,8 @@ const ProjectCard = ({
   index: number;
   category: string;
   className?: string;
-  title?: string | React.ReactNode;
+  title?: string;
   fullTitle?: string | React.ReactNode;
-  overviewHref: string;
   description?: string | React.ReactNode;
   icon?: string;
   asset: { src: string; alt: string; href: string; previewHref: string };
@@ -341,7 +339,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <Link href={overviewHref} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
+        <Link href={`/project/${kebabCase(title)}`} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
           <RainbowButton className="w-full !text-xs uppercase font-poppins text-zinc-50/80 space-x-2 rounded-full !py-0.5 px-2 h-8 mt-2">
             <motion.span className="!text-xs">See Full Overview</motion.span>
             <View size={17} />
