@@ -2961,5 +2961,14 @@ const GridPattern = ({
   );
 };
 
+Card.displayName = "Card";
+Carousel.displayName = "Carousel";
+BlurImage.displayName = "BlurImage";
+GridPattern.displayName = "GridPattern";
 ProjectOverview.displayName = "ProjectOverview";
+CarouselContext.displayName = "CarouselContext";
+InteractiveRightButton.displayName = "InteractiveRightButton";
+InteractiveLeftButton.displayName = "InteractiveLeftButton";
+ProjectOverview.displayName = "ProjectOverview";
+projectDetails.displayName = "projectDetails";
 export default ProjectOverview;
