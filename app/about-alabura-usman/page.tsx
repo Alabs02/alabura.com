@@ -14,7 +14,7 @@ const AboutAlaburaUsman = () => {
     [10, 6],
     [9, 7],
   ];
-  
+
   return (
     <Wrapper footer="!top-0">
       <header className="w-full min-h-screen flex flex-col items-center relative bg-gradient-to-b from-background to-background">
@@ -24,7 +24,7 @@ const AboutAlaburaUsman = () => {
 
             <h3 className="text-4xl lg:text-5xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
               Alabura Usman
-              </h3>
+            </h3>
 
             {/* <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-ful max-w-[70%] mt-2">
             </p> */}
@@ -59,7 +59,7 @@ const AboutAlaburaUsman = () => {
       </header>
     </Wrapper>
   );
-}
+};
 
 const GridPattern = ({
   width = 40,
