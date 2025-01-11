@@ -2961,4 +2961,5 @@ const GridPattern = ({
   );
 };
 
+ProjectOverview.displayName = "ProjectOverview";
 export default ProjectOverview;
