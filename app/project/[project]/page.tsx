@@ -17,32 +17,7 @@ import { useRouter } from "next/navigation";
 const dummyText =
   "Class54 is an innovative Ed-Tech startup dedicated to transforming the landscape of exam preparation. We specialize in curating an extensive database of examination questions and answers from past years, covering a wide range of critical standardized tests, including WASSCE, NECO, JAMB, GCE, and more. Our primary focus is to empower secondary school students, offering them a subscription-based platform that grants access to a wealth of exam resources.";
 
-type CarouselProps = {
-  items: React.JSX.Element[];
-  initialScroll?: number;
-};
 
-type Card = {
-  src: string;
-  title: string;
-  category: string;
-  content: any;
-};
-
-const data = [
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <div />,
-  },
-  {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    content: <div />,
-  },
-];
 
 const projectDetails: any = {
   "my-landlord-heaven": {
@@ -464,8 +439,6 @@ const ProjectOverview = () => {
     notFound();
   }
 
-  // const project = await fetchProjectBySlug(slug);
-
   useEffect(() => {
     console.log({ project });
   }, [project]);
@@ -610,7 +583,7 @@ const ProjectOverview = () => {
 
       <section className="w-full min-h-screen flex flex-col items-center relative bg-zinc-900">
         <div className="section relative grid grid-cols-12 grid-rows-[auto] h-full gap-6 lg:gap-8 2xl:gap-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
-          <div className="col-span-12 lg:col-span-2 2xl:col-span-1">
+          <div className="col-span-12 lg:col-span-1">
             <div className="w-auto h-12 relative overflow-hidden flex items-start justify-start">
               <Image
                 src={projectAnalysis?.logo}
@@ -627,7 +600,7 @@ const ProjectOverview = () => {
             <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
           </div>
 
-          <div className="col-span-12 lg:col-span-9 2xl:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
+          <div className="col-span-12 lg:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
             <div className="w-full flex flex-col gap-y-4 items-start">
               <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                 Project Description
@@ -793,7 +766,7 @@ const CarouselContext = createContext<{
   currentIndex: 0,
 });
 
-const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
+const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -914,7 +887,7 @@ const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   );
 };
 
-const Card = ({ card, layout = false }: { card: Card; layout?: boolean }) => {
+const Card = ({ card, layout = false }: { card: UI.Card; layout?: boolean }) => {
   return (
     <>
       <motion.button

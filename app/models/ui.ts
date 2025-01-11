@@ -62,6 +62,18 @@ export type EndorsementCardProps  = React.HTMLAttributes<HTMLDivElement> & {
   comment: () => React.JSX.Element;
 }
 
+export type CarouselProps = {
+  items: React.JSX.Element[];
+  initialScroll?: number;
+};
+
+export type Card = {
+  src: string;
+  title: string;
+  category: string;
+  content: any;
+};
+
 export type GridPatternProps = {
   width?: number;
   height?: number;
