@@ -10,6 +10,9 @@ import { useParams, notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import React, { createContext, useEffect, useId, useState } from "react";
+import { nanoid } from "nanoid";
+import kebabCase from "lodash/kebabCase";
+import { useRouter } from "next/navigation";
 
 const dummyText =
   "Class54 is an innovative Ed-Tech startup dedicated to transforming the landscape of exam preparation. We specialize in curating an extensive database of examination questions and answers from past years, covering a wide range of critical standardized tests, including WASSCE, NECO, JAMB, GCE, and more. Our primary focus is to empower secondary school students, offering them a subscription-based platform that grants access to a wealth of exam resources.";
@@ -41,10 +44,361 @@ const data = [
   },
 ];
 
+const projectDetails: any = {
+  "my-landlord-heaven": {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.MYLANDLORD_HEAVEN_PAGE,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "Next Js",
+      },
+      {
+        id: nanoid(),
+        title: "React Js",
+      },
+      {
+        id: nanoid(),
+        title: "Redux",
+      },
+      {
+        id: nanoid(),
+        title: "Laravel",
+      },
+      {
+        id: nanoid(),
+        title: "MySQL DB",
+      },
+      {
+        id: nanoid(),
+        title: "Docker",
+      },
+    ],
+    title: "My Landlord Heaven",
+    category: "PropTech",
+    logo: ImagePath.MYLANDLORD_HEAVEN_LOGO,
+    fullTitle: "Elevating Property Ownership Experience",
+    description:
+      "MyLandlordHeaven offers landlords guaranteed rental income, property upgrade financing, and comprehensive management services, ensuring optimized returns and peace of mind.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  "onecopy-business-ai": {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.ONECOPY_AI,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "Vue Js",
+      },
+      {
+        id: nanoid(),
+        title: "Vuex",
+      },
+      {
+        id: nanoid(),
+        title: "GSAP",
+      },
+      {
+        id: nanoid(),
+        title: "Tailwind CSS",
+      },
+      {
+        id: nanoid(),
+        title: "SASS",
+      },
+      {
+        id: nanoid(),
+        title: "Daisy UI",
+      },
+    ],
+    title: "Onecopy Business AI",
+    category: "AI & Content Creation",
+    logo: ImagePath.ONECOPY_AI_LOGO,
+    fullTitle: "Onecopy Business Marketing AI",
+    description:
+      "An intelligent content generation platform leveraging advanced AI models to create tailored, high-quality copy for businesses and individuals, enhancing productivity and creativity.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  "phc-accountability-tracka": {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.PHC_TRACKA,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "Next Js",
+      },
+      {
+        id: nanoid(),
+        title: "React Js",
+      },
+      {
+        id: nanoid(),
+        title: "Recoil",
+      },
+      {
+        id: nanoid(),
+        title: "Tailwind CSS",
+      },
+      {
+        id: nanoid(),
+        title: "SASS",
+      },
+      {
+        id: nanoid(),
+        title: "Node Js",
+      },
+    ],
+    title: "PHC Accountability Tracka",
+    category: "Healthcare & Civic Tech",
+    logo: ImagePath.PHC_LOGO,
+    fullTitle: "Primary Health Care Accountability Tracka",
+    description:
+      "A community-driven platform empowering citizens to report and monitor the state of primary healthcare centers, providing actionable insights for advocacy and fostering accountability among stakeholders.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  gradely: {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.GRADELY_PAGE,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "Vue Js",
+      },
+      {
+        id: nanoid(),
+        title: "Vuex",
+      },
+      {
+        id: nanoid(),
+        title: "SASS",
+      },
+      {
+        id: nanoid(),
+        title: "Laravel",
+      },
+      {
+        id: nanoid(),
+        title: "MySQL DB",
+      },
+    ],
+    title: "Gradely",
+    category: "EdTech",
+    logo: ImagePath.GRADELY_LOGO,
+    fullTitle: "Revolutionizing Personalized Education",
+    description:
+      "A personalized learning platform for primary and secondary students, leveraging adaptive assessments and interactive lessons to close learning gaps and build subject mastery.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  liveable: {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.LIVEABLE_PAGE,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "Next Js",
+      },
+      {
+        id: nanoid(),
+        title: "Turbo Repo",
+      },
+      {
+        id: nanoid(),
+        title: "React Js",
+      },
+      {
+        id: nanoid(),
+        title: "Redux",
+      },
+      {
+        id: nanoid(),
+        title: "Laravel",
+      },
+      {
+        id: nanoid(),
+        title: "MySQL DB",
+      },
+      {
+        id: nanoid(),
+        title: "Docker",
+      },
+    ],
+    title: "Liveable",
+    category: "UrbanTech & PropTech",
+    logo: ImagePath.LIVEABLE_LOGO,
+    fullTitle: "Transforming Urban Living Spaces",
+    description:
+      "Liveable is a platform dedicated to enhancing the quality of urban living by providing innovative solutions for sustainable and efficient housing in Nigeria.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  "ssaf-logistics": {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.SSAF_LOGISTICS_PAGE,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "React Js",
+      },
+      {
+        id: nanoid(),
+        title: "Redux",
+      },
+      {
+        id: nanoid(),
+        title: "SASS",
+      },
+      {
+        id: nanoid(),
+        title: "Docker",
+      },
+    ],
+    title: "SSAF Logistics",
+    category: "Logistics & Supply Chain",
+    logo: ImagePath.SSAF_LOGISTICS_LOGO,
+    fullTitle: "Optimizing Logistics Operations via innovation",
+    description:
+      "SSAF Logistics specializes in transporting project-critical cargo to challenging destinations, ensuring timely and efficient delivery.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+  sims: {
+    images: [
+      {
+        id: nanoid(),
+        alt: "",
+        category: "",
+        title: "",
+        src: ImagePath.SIMS_PAGE,
+      },
+    ],
+    stack: [
+      {
+        id: nanoid(),
+        title: "React Js",
+      },
+      {
+        id: nanoid(),
+        title: "Redux",
+      },
+      {
+        id: nanoid(),
+        title: "Laravel",
+      },
+      {
+        id: nanoid(),
+        title: "Vue Js",
+      },
+      {
+        id: nanoid(),
+        title: "Vuex",
+      },
+      {
+        id: nanoid(),
+        title: "Docker",
+      },
+    ],
+    title: "SIMS",
+    category: "EdTech & GovTech",
+    logo: ImagePath.SIMS_LOGO,
+    fullTitle: "Revolutionizing Educational Administration in Plateau State",
+    description:
+      "SIMS, the cloud-based platform of the Plateau State Ministry of Education, streamlines school management by integrating student records, academic progress, and communication tools for efficiency and compliance.",
+    projectDesc: () => <></>,
+    projectJourney: () => <></>,
+    contributions: () => <></>,
+    solutions: () => <></>,
+    lessons: () => <></>,
+    results: () => <></>,
+  },
+};
+
 const ProjectOverview = () => {
   const { project } = useParams();
+  const router = useRouter();
 
-  const cards = data.map((card) => <Card key={card.src} card={card} />);
+  const projectAnalysis = projectDetails[project as any];
+
+  const cards = projectAnalysis?.images?.map((card: any) => (
+    <Card key={card.src} card={card} />
+  ));
+
+  const [canGoNext, setCanGoNext] = useState(true);
+  const [canGoBack, setCanGoBack] = useState(true);
+
+  useEffect(() => {
+    setCanGoBack(project !== "onecopy-business-ai");
+    setCanGoNext(project !== "sims");
+  }, [project]);
 
   const patterns = [
     [17, 1],
@@ -54,7 +408,57 @@ const ProjectOverview = () => {
     [9, 7],
   ];
 
-  const stack = [1, 2, 3, 4, 5, 6];
+  const onNext = () => {
+    switch (project) {
+      case "onecopy-business-ai":
+        router.push(`/project/my-landlord-heaven`);
+        return;
+      case "my-landlord-heaven":
+        router.push(`/project/gradely`);
+        return;
+      case "gradely":
+        router.push(`/project/phc-accountability-tracka`);
+        return;
+      case "phc-accountability-tracka":
+        router.push(`/project/liveable`);
+        return;
+      case "liveable":
+        router.push(`/project/ssaf-logistics`);
+        return;
+      case "ssaf-logistics":
+        router.push(`/project/sims`);
+        return;
+      default:
+        router.push(`/project/onecopy-business-ai`);
+        return;
+    }
+  };
+
+  const onPrevious = () => {
+    switch (project) {
+      case "my-landlord-heaven":
+        router.push(`/project/onecopy-business-ai`);
+        return;
+      case "gradely":
+        router.push(`/project/my-landlord-heaven`);
+        return;
+      case "phc-accountability-tracka":
+        router.push(`/project/gradely`);
+        return;
+      case "liveable":
+        router.push(`/project/phc-accountability-tracka`);
+        return;
+      case "ssaf-logistics":
+        router.push(`/project/liveable`);
+        return;
+      case "sims":
+        router.push(`/project/ssaf-logistics`);
+        return;
+      default:
+        router.push(`/project/onecopy-business-ai`);
+        return;
+    }
+  };
 
   if (!project) {
     notFound();
@@ -74,63 +478,96 @@ const ProjectOverview = () => {
             <HeadingChip>Project Overview</HeadingChip>
 
             <h3 className="text-4xl lg:text-5xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-              Gradely LMS - Edtech
+              {projectAnalysis?.title} - {projectAnalysis?.category}
             </h3>
 
             <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-ful max-w-[70%] mt-2">
-              Embark on a journey where vision becomes reality. A display of
-              well crafted projects, reflecting dedication and creativity fused
-              into a tangible masterpiece.
+              {projectAnalysis?.description}
             </p>
 
             <div className="flex items-center flex-wrap space-x-4 mt-4">
-              {stack.map((item, index) => (
+              {projectAnalysis?.stack.map((item: any) => (
                 <motion.div
-                  key={index}
+                  key={item?.id}
                   className={cn(
-                    "ring-1 bg-zinc-950/85 no-underline cursor-default group relative shadow-2xl shadow-black rounded-full p-px inline-block",
+                    "ring-1 ring-yellow-500/10 bg-zinc-950/85 no-underline cursor-default group relative shadow-2xl shadow-black rounded-full p-px inline-block",
                     {
-                      "ring-indigo-50/10": index === 0,
-                      "ring-slate-50/10": index === 1,
-                      "ring-cyan-50/10": index === 2,
-                      "ring-purple-50/10": index === 3,
-                      "ring-blue-50/10": index === 4,
-                      "ring-red-50/10": index === 5,
-                      "ring-[rgba(238,251,236,0.1)]": index === 6,
+                      "ring-indigo-50/10": kebabCase(item?.title) === "recoil",
+                      "ring-pink-50/10": kebabCase(item?.title) === "sass",
+                      "ring-slate-50/10": kebabCase(item?.title) === "next-js",
+                      "ring-cyan-50/10": kebabCase(item?.title) === "vuex",
+                      "ring-secondary-50/10":
+                        kebabCase(item?.title) === "vue-js",
+                      "ring-purple-50/10": kebabCase(item?.title) === "redux",
+                      "ring-green-50/10":
+                        kebabCase(item?.title) === "daisy-ui" ||
+                        kebabCase(item?.title) === "gsap" ||
+                        kebabCase(item?.title) === "node-js",
+                      "ring-blue-50/10":
+                        kebabCase(item?.title) === "react-js" ||
+                        kebabCase(item?.title) === "docker" ||
+                        kebabCase(item?.title) === "tailwind-css",
+                      "ring-red-50/10": kebabCase(item?.title) === "laravel",
                     }
                   )}
                 >
                   <div
                     className={cn(
-                      "relative flex space-x-2 items-center z-10 rounded-full py-0.5 px-3",
+                      "relative bg-yellow-950/20 text-yellow-50/90 flex space-x-2 items-center z-10 rounded-full py-0.5 px-3",
                       {
-                        "bg-indigo-950/20 text-indigo-50/90": index === 0,
-                        "bg-slate-950/20 text-slate-50/90": index === 1,
-                        "bg-cyan-950/20 text-cyan-50/90": index === 2,
-                        "bg-purple-950/20 text-purple-50/90": index === 3,
-                        "bg-blue-950/20 text-blue-50/90": index === 4,
-                        "bg-red-950/20 text-red-50/90": index === 5,
-                        "bg-[rgba(18,44,13,0.2)] text-[rgba(238,251,236,0.9)]":
-                          index === 6,
+                        "bg-indigo-950/20 text-indigo-50/90":
+                          kebabCase(item?.title) === "recoil",
+                        "bg-pink-950/20 text-pink-50/90":
+                          kebabCase(item?.title) === "sass",
+                        "bg-slate-950/20 text-slate-50/90":
+                          kebabCase(item?.title) === "next-js",
+                        "bg-cyan-950/20 text-cyan-50/90":
+                          kebabCase(item?.title) === "vuex",
+                        "bg-secondary-950/20 text-secondary-50/90":
+                          kebabCase(item?.title) === "vue-js",
+                        "bg-purple-950/20 text-purple-50/90":
+                          kebabCase(item?.title) === "redux",
+                        "bg-green-950/20 text-green-50/90":
+                          kebabCase(item?.title) === "daisy-ui" ||
+                          kebabCase(item?.title) === "gsap" ||
+                          kebabCase(item?.title) === "node-js",
+                        "bg-blue-950/20 text-blue-50/90":
+                          kebabCase(item?.title) === "react-js" ||
+                          kebabCase(item?.title) === "docker" ||
+                          kebabCase(item?.title) === "tailwind-css",
+                        "bg-red-950/20 text-red-50/90":
+                          kebabCase(item?.title) === "laravel",
                       }
                     )}
                   >
                     <span className="tracking-wide text-sm lg:text-base font-bricolage font-light">
-                      {"Docker"}
+                      {item?.title}
                     </span>
                   </div>
 
                   <span
                     className={cn(
-                      "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 to-white/0 transition-opacity duration-500",
+                      "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 via-yellow-500/90 to-white/0 transition-opacity duration-500",
                       {
-                        "via-indigo-500/90": index === 0,
-                        "via-slate-500/90": index === 1,
-                        "via-cyan-500/90": index === 2,
-                        "via-purple-500/90": index === 3,
-                        "via-blue-700/90": index === 4,
-                        "via-error/90": index === 5,
-                        "via-[rgba(90,218,64,0.9)]": index === 6,
+                        "via-indigo-500/90":
+                          kebabCase(item?.title) === "recoil",
+                        "via-pink-500/90": kebabCase(item?.title) === "sass",
+                        "via-slate-500/90":
+                          kebabCase(item?.title) === "next-js",
+                        "via-cyan-500/90": kebabCase(item?.title) === "vuex",
+                        "via-secondary-500/90":
+                          kebabCase(item?.title) === "vue-js",
+                        "via-purple-500/90": kebabCase(item?.title) === "redux",
+                        "via-green-500/90":
+                          kebabCase(item?.title) === "daisy-ui",
+                        "via-green-700/90":
+                          kebabCase(item?.title) === "gsap" ||
+                          kebabCase(item?.title) === "node-js",
+                        "via-blue-500/90":
+                          kebabCase(item?.title) === "react-js" ||
+                          kebabCase(item?.title) === "docker" ||
+                          kebabCase(item?.title) === "tailwind-css",
+                        "via-error/90": kebabCase(item?.title) === "laravel",
                       }
                     )}
                   ></span>
@@ -173,11 +610,11 @@ const ProjectOverview = () => {
 
       <section className="w-full min-h-screen flex flex-col items-center relative bg-zinc-900">
         <div className="section relative grid grid-cols-12 grid-rows-[auto] h-full gap-6 lg:gap-8 2xl:gap-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
-          <div className="col-span-12 lg:col-span-2">
+          <div className="col-span-12 lg:col-span-2 2xl:col-span-1">
             <div className="w-auto h-12 relative overflow-hidden flex items-start justify-start">
               <Image
-                src={ImagePath.GRADELY_FULL_LOGO}
-                alt={"Gradely Logo"}
+                src={projectAnalysis?.logo}
+                alt={""}
                 fill
                 priority
                 draggable={false}
@@ -190,7 +627,7 @@ const ProjectOverview = () => {
             <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
           </div>
 
-          <div className="col-span-12 lg:col-span-9 grid grid-cols-1 gap-y-6 lg:gap-y-10">
+          <div className="col-span-12 lg:col-span-9 2xl:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
             <div className="w-full flex flex-col gap-y-4 items-start">
               <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                 Project Description
@@ -204,6 +641,16 @@ const ProjectOverview = () => {
             <div className="w-full flex flex-col gap-y-4 items-start">
               <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                 Role & Achievements/Contributions
+              </h4>
+
+              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
+                {dummyText}
+              </p>
+            </div>
+
+            <div className="w-full flex flex-col gap-y-4 items-start">
+              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                Project Journey
               </h4>
 
               <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
@@ -242,19 +689,23 @@ const ProjectOverview = () => {
             </div>
           </div>
 
-          <div className="col-span-12 w-full flex flex-col lg:flex-row lg:justify-center md:space-x-4 2xl:space-x-6 pt-2">
+          <div className="col-span-12 w-full flex flex-col lg:flex-row lg:justify-center space-y-4 md:space-y-0 md:space-x-4 2xl:space-x-6 pt-2">
             <InteractiveLeftButton
-              onClick={() => {}}
+              onClick={onPrevious}
               text="Previous"
+              disabled={!canGoBack}
               className={cn(
-                "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300"
+                "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+                !canGoBack && "disabled:opacity-50 pointer-events-none"
               )}
             />
             <InteractiveRightButton
-              onClick={() => {}}
+              onClick={onNext}
               text="Next"
+              disabled={!canGoNext}
               className={cn(
-                "w-40 border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300"
+                "w-40 border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+                !canGoNext && "disabled:opacity-50 pointer-events-none"
               )}
             />
           </div>
@@ -506,10 +957,11 @@ const BlurImage = ({
   ...rest
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
+
   return (
     <Image
       className={cn(
-        "transition duration-300",
+        "transition duration-300 object-top",
         isLoading ? "blur-sm" : "blur-0",
         className
       )}
