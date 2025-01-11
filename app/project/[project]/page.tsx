@@ -14,7 +14,6 @@ import { nanoid } from "nanoid";
 import kebabCase from "lodash/kebabCase";
 import { useRouter } from "next/navigation";
 
-
 const projectDetails: any = {
   "my-landlord-heaven": {
     images: [
@@ -435,10 +434,6 @@ const ProjectOverview = () => {
     notFound();
   }
 
-  useEffect(() => {
-    console.log({ project });
-  }, [project]);
-
   return (
     <Wrapper footer="!top-0">
       <header className="w-full min-h-screen flex flex-col items-center relative bg-gradient-to-b from-background to-background">
@@ -599,22 +594,82 @@ const ProjectOverview = () => {
           <div className="col-span-12 lg:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
             <div className="w-full flex flex-col gap-y-4 items-start">
               <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Project Description
-              </h4>
-
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
-            </div>
-
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                 Role & Achievements/Contributions
               </h4>
 
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
+              <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+                <h6>
+                  <span className="font-medium">My Role:</span> UI/UX Engineer &
+                  Project Manager
+                </h6>
+
+                <p className="mt-2 mb-4">Key Contributions and Achievements:</p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Conducted{" "}
+                      <span className="font-medium">UI/UX audits</span>,
+                      modernizing outdated components into engaging,
+                      user-friendly designs.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Designed and implemented a bespoke{" "}
+                      <span className="font-medium">component library</span> and
+                      a custom{" "}
+                      <span className="font-medium">CSS icon library</span>,
+                      significantly accelerating development efficiency.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Spearheaded{" "}
+                      <span className="font-medium">
+                        sprint planning sessions
+                      </span>
+                      , managed sprint backlogs, and facilitated daily
+                      stand-ups, ensuring seamless team collaboration.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Enhanced the application&apos;s{" "}
+                      <span className="font-medium">copy and SEO</span>,
+                      improving visibility and engagement while integrating{" "}
+                      <span className="font-medium">Google Analytics</span> for
+                      data-driven user behavior insights.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Managed deployment on{" "}
+                      <span className="font-medium">DigitalOcean</span>,
+                      utilizing droplets and an Apache server for a robust
+                      hosting solution.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Convinced the CEO to introduce{" "}
+                      <span className="font-medium">tier names and logos</span>,
+                      adding personality and brand identity to the platform.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+              </div>
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -622,9 +677,39 @@ const ProjectOverview = () => {
                 Project Journey
               </h4>
 
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
+              <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+                <p className="mt-2 mb-4 font-medium">
+                  Key Contributions and Achievements:
+                </p>
+
+                <p className="pl-2.5">
+                  The project began with an in-depth{" "}
+                  <span className="font-medium">UI/UX audit</span> to identify
+                  pain points in the existing design. By transforming outdated
+                  components into modern, interactive ones, the platform became
+                  more engaging and intuitive.
+                </p>
+
+                <p className="my-4 pl-2.5">
+                  Development workflows were streamlined by creating a bespoke{" "}
+                  <span className="font-medium">component library</span> and a
+                  custom <span className="font-medium">CSS icon library</span>,
+                  saving the team valuable time. I also facilitated{" "}
+                  <span className="font-medium">agile ceremonies</span> like
+                  sprint planning and daily stand-ups, ensuring clear priorities
+                  and effective collaboration.
+                </p>
+
+                <p className="pl-2.5">
+                  As we progressed, I improved the platform&apos;s{" "}
+                  <span className="font-medium">content and SEO</span>, helping
+                  it rank better while integrating{" "}
+                  <span className="font-medium">Google Analytics</span> for
+                  actionable insights. Deployment was handled using{" "}
+                  <span className="font-medium">DigitalOcean droplets</span> and
+                  an Apache server, ensuring a smooth and scalable launch.
+                </p>
+              </div>
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -632,9 +717,77 @@ const ProjectOverview = () => {
                 Challenges & Solutions
               </h4>
 
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
+              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+                <p className="mt-2 mb-4 font-medium">
+                  Turning Obstacles into Opportunities:
+                </p>
+
+                <p className="font-medium pl-2.5 mb-4">
+                  <span className="font-light mr-2.5">1.</span>Requirement
+                  Changes Midway:
+                </p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>Frequent changes required quick adaptability.</span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">Solution:</span> Leveraged
+                      agile principles to reprioritize tasks and accommodate new
+                      requirements while maintaining progress.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+
+                <p className="font-medium pl-2.5 mt-8 mb-4">
+                  <span className="font-light mr-2.5">2.</span>Time Constraints:
+                </p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Limited time necessitated trade-offs in features.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">Solution:</span> Focused on
+                      delivering high-impact components first while deferring
+                      lower-priority features.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+
+                <p className="font-medium pl-2.5 mt-8 mb-4">
+                  <span className="font-light mr-2.5">3.</span>Unfamiliar
+                  Functionalities:
+                </p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Some components and features were entirely new to me.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">Solution:</span> Invested
+                      time in research and learning, ultimately delivering
+                      high-quality implementations.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+              </div>
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -642,9 +795,54 @@ const ProjectOverview = () => {
                 Lessons Learned
               </h4>
 
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
+              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+                <p className="mt-2 mb-4 font-medium">
+                  Insights for the Future:
+                </p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">Adaptability is Key:</span>{" "}
+                      Agile principles proved invaluable in navigating changing
+                      requirements and time constraints.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">
+                        Innovation through Collaboration:
+                      </span>{" "}
+                      Open communication with stakeholders, like the CEO, led to
+                      creative branding ideas that added significant value.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">Continuous Learning:</span>{" "}
+                      Tackling unfamiliar features enhanced my problem-solving
+                      skills and technical expertise.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      <span className="font-medium">
+                        Efficiency through Tools:
+                      </span>{" "}
+                      Developing custom libraries significantly streamlined
+                      workflows and will remain a best practice in future
+                      projects.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+              </div>
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -652,9 +850,64 @@ const ProjectOverview = () => {
                 Results and Impact
               </h4>
 
-              <p className="font-poppins font-normal text-sm text-pretty lg:text-base text-zinc-50/80">
-                {""}
-              </p>
+              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+                <p className="mt-2 mb-4 font-medium">
+                  Insights for the Future:
+                </p>
+
+                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Revamped UI/UX designs increased user engagement and
+                      satisfaction.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      The bespoke component library and custom CSS icon library
+                      reduced development time by{" "}
+                      <span className="font-medium">30%</span>, improving team
+                      productivity.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Enhanced SEO and copy boosted platform visibility,
+                      attracting more users and improving search rankings.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Google Analytics integration provided actionable insights,
+                      enabling data-driven decision-making.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      Successful deployment on DigitalOcean ensured a robust and
+                      scalable infrastructure for the platform.
+                    </span>
+                  </motion.li>
+
+                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                    <span>
+                      The new tier names and logos added personality and
+                      enhanced the brand’s appeal, positively resonating with
+                      users and stakeholders.
+                    </span>
+                  </motion.li>
+                </motion.ul>
+              </div>
             </div>
           </div>
 
@@ -883,7 +1136,13 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
   );
 };
 
-const Card = ({ card, layout = false }: { card: UI.Card; layout?: boolean }) => {
+const Card = ({
+  card,
+  layout = false,
+}: {
+  card: UI.Card;
+  layout?: boolean;
+}) => {
   return (
     <>
       <motion.button
