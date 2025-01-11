@@ -655,6 +655,18 @@ export const PythonLogo = ({ className }: { className?: string }) => {
   );
 };
 
+export const FastAPILogo = ({ className }: { className?: string }) => {
+  return (
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 154" className={className}>
+      <circle cx="77" cy="77" fill="#05998b" r="77" />
+      <path
+        d="M81.375 18.667l-38.75 70H77.5l-3.875 46.666 38.75-70H77.5z"
+        fill="#fff"
+      />
+    </svg>
+  );
+};
+
 export const SynkLogo = ({ className }: { className?: string }) => {
   return (
     <svg
@@ -1023,7 +1035,7 @@ export const BackendSkeleton = () => {
           <MySQLLogo className="h-6 w-6" />
         </FeatureContainer>
         <FeatureContainer className="h-14 w-14 circle-2">
-          <LaravelLogo className="h-8 w-8" />
+          <FastAPILogo className="h-8 w-8" />
         </FeatureContainer>
         <FeatureContainer className="circle-3 h-[72px] w-[72px]">
           <NodeJSLogo className="h-12 w-12" />
@@ -1032,7 +1044,7 @@ export const BackendSkeleton = () => {
           <NestJSLogo className="h-8 w-8" />
         </FeatureContainer>
         <FeatureContainer className="h-9 w-9 circle-5">
-          <PythonLogo className="h-6 w-6" />
+          <LaravelLogo className="h-6 w-6" />
         </FeatureContainer>
       </div>
 

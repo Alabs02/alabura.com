@@ -907,7 +907,6 @@ const MySQLLogo = ({ className }: { className?: string }) => {
   );
 };
 
-
 const OwaspZapLogo = ({ className }: { className?: string }) => {
   return (
     <svg
@@ -963,6 +962,18 @@ const LookaLogo = ({ className }: { className?: string }) => {
       <path
         fill="#5340ff"
         d="M545.13 664.41l-221.4-128.86c-35.78-20.82-57.81-59.08-57.87-100.47L265.24 0 0 148.98v432.14c0 41.54 22.13 79.93 58.07 100.76L285.06 813.4l260.07-148.99zM2170.82 481.94c0 146.88-106.26 253.89-246.96"
+      />
+    </svg>
+  );
+};
+
+const FastAPILogo = ({ className }: { className?: string }) => {
+  return (
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 154" className={className}>
+      <circle cx="77" cy="77" fill="#05998b" r="77" />
+      <path
+        d="M81.375 18.667l-38.75 70H77.5l-3.875 46.666 38.75-70H77.5z"
+        fill="#fff"
       />
     </svg>
   );
@@ -1038,6 +1049,10 @@ const backendTechnologies = [
   {
     Icon: NestJSLogo,
     name: "Nest Js",
+  },
+  {
+    Icon: FastAPILogo,
+    name: "FastAPI",
   },
   {
     Icon: LaravelLogo,
@@ -1181,16 +1196,16 @@ const programmingLanguages = [
     name: "TypeScript",
   },
   {
-    Icon: Icons.dart,
-    name: "Dart",
+    Icon: Icons.javascript,
+    name: "JavaScript",
   },
   {
     Icon: Icons.python,
     name: "Python",
   },
   {
-    Icon: Icons.javascript,
-    name: "JavaScript",
+    Icon: Icons.dart,
+    name: "Dart",
   },
   {
     Icon: Icons.php,

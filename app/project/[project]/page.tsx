@@ -375,6 +375,14 @@ const projectDetails: any = {
       },
       {
         id: nanoid(),
+        title: "Node Js",
+      },
+      {
+        id: nanoid(),
+        title: "Nest Js",
+      },
+      {
+        id: nanoid(),
         title: "GSAP",
       },
       {
@@ -1698,6 +1706,10 @@ const projectDetails: any = {
       },
       {
         id: nanoid(),
+        title: "Node Js",
+      },
+      {
+        id: nanoid(),
         title: "SASS",
       },
       {
@@ -2436,6 +2448,7 @@ const ProjectOverview = () => {
                       "ring-indigo-50/10": kebabCase(item?.title) === "recoil",
                       "ring-pink-50/10": kebabCase(item?.title) === "sass",
                       "ring-slate-50/10": kebabCase(item?.title) === "next-js",
+                      "ring-red-50/10": kebabCase(item?.title) === "nest-js" || kebabCase(item?.title) === "laravel",
                       "ring-cyan-50/10": kebabCase(item?.title) === "vuex",
                       "ring-secondary-50/10":
                         kebabCase(item?.title) === "vue-js",
@@ -2447,8 +2460,7 @@ const ProjectOverview = () => {
                       "ring-blue-50/10":
                         kebabCase(item?.title) === "react-js" ||
                         kebabCase(item?.title) === "docker" ||
-                        kebabCase(item?.title) === "tailwind-css",
-                      "ring-red-50/10": kebabCase(item?.title) === "laravel",
+                        kebabCase(item?.title) === "tailwind-css"
                     }
                   )}
                 >
@@ -2462,6 +2474,8 @@ const ProjectOverview = () => {
                           kebabCase(item?.title) === "sass",
                         "bg-slate-950/20 text-slate-50/90":
                           kebabCase(item?.title) === "next-js",
+                          "bg-red-950/20 text-red-50/90":
+                          kebabCase(item?.title) === "nest-js" || kebabCase(item?.title) === "laravel",
                         "bg-cyan-950/20 text-cyan-50/90":
                           kebabCase(item?.title) === "vuex",
                         "bg-secondary-950/20 text-secondary-50/90":
@@ -2476,8 +2490,6 @@ const ProjectOverview = () => {
                           kebabCase(item?.title) === "react-js" ||
                           kebabCase(item?.title) === "docker" ||
                           kebabCase(item?.title) === "tailwind-css",
-                        "bg-red-950/20 text-red-50/90":
-                          kebabCase(item?.title) === "laravel",
                       }
                     )}
                   >
@@ -2495,6 +2507,8 @@ const ProjectOverview = () => {
                         "via-pink-500/90": kebabCase(item?.title) === "sass",
                         "via-slate-500/90":
                           kebabCase(item?.title) === "next-js",
+                          "via-red-500/90":
+                          kebabCase(item?.title) === "nest-js",
                         "via-cyan-500/90": kebabCase(item?.title) === "vuex",
                         "via-secondary-500/90":
                           kebabCase(item?.title) === "vue-js",
