@@ -57,12 +57,288 @@ const projectDetails: any = {
     fullTitle: "Elevating Property Ownership Experience",
     description:
       "MyLandlordHeaven offers landlords guaranteed rental income, property upgrade financing, and comprehensive management services, ensuring optimized returns and peace of mind.",
-    projectDesc: () => <></>,
-    projectJourney: () => <></>,
-    contributions: () => <></>,
-    solutions: () => <></>,
-    lessons: () => <></>,
-    results: () => <></>,
+    projectJourney: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">
+            The Road to Seamless Collaboration:
+          </p>
+
+          <p className="pl-2.5">
+            The project began with a focus on building a shared{" "}
+            <span className="font-medium">component</span> library to unify the
+            team&apos;s efforts. Using{" "}
+            <span className="font-medium">Storybook</span>, I ensured components
+            were well-documented and reusable, streamlining development
+            workflows.
+          </p>
+
+          <p className="my-4 pl-2.5">
+            To address scalability, I set up a{" "}
+            <span className="font-medium">micro-frontend architecture</span>{" "}
+            that allowed independent services to communicate seamlessly, all
+            unified under one authentication service. Alongside these
+            architectural improvements, I created{" "}
+            <span className="font-medium">starter kits</span> and tools to
+            accelerate onboarding and project setup, documenting everything
+            comprehensively with <span className="font-medium">Docusaurus</span>.
+          </p>
+
+          <p className="pl-2.5">
+            A significant aspect of the journey was{" "}
+            <span className="font-medium">mentorship</span>, where I worked
+            closely with three engineers, identifying their challenges,
+            providing guidance, and fostering their growth into exceptional
+            professionals.
+          </p>
+        </div>
+      </>
+    ),
+    contributions: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+          <h6>
+            <span className="font-medium">My Role:</span> Senior Frontend
+            Engineer/Frontend Lead
+          </h6>
+
+          <p className="mt-2 mb-4">Key Contributions and Achievements:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Built a robust{" "}
+                <span className="font-medium">component library</span> for the
+                team, leveraging <span className="font-medium">Storybook</span>{" "}
+                for seamless documentation and collaboration.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Analyzed existing codebases and developed{" "}
+                <span className="font-medium">
+                  utility functions, custom hooks, an icon library, and
+                  React/Next.js starter kits,
+                </span>{" "}
+                all documented with{" "}
+                <span className="font-medium">Docusaurus</span>.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Established a scalable{" "}
+                <span className="font-medium">micro-frontend architecture</span>
+                , integrating multiple services with a unified authentication
+                system.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Mentored{" "}
+                <span className="font-medium">three frontend engineers</span>,
+                nurturing their growth and enhancing team productivity.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Actively participated in{" "}
+                <span className="font-medium">
+                  sprint planning, strategic meetings, and code reviews
+                </span>
+                , driving high-quality deliverables.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    solutions: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">
+            Turning Obstacles into Opportunities:
+          </p>
+
+          <p className="font-medium pl-2.5 mb-4">
+            <span className="font-light mr-2.5">1.</span>Legacy Codebase and Inconsistencies:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                The existing codebase lacked standardization and reusable tools.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Developed utility
+                functions, custom hooks, and a React/Next.js starter kit to
+                ensure consistency and reduce redundancy.
+              </span>
+            </motion.li>
+          </motion.ul>
+
+          <p className="font-medium pl-2.5 mt-8 mb-4">
+            <span className="font-light mr-2.5">2.</span>Scalability
+            Requirements:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Building a micro-frontend architecture that integrates
+                seamlessly with a unified authentication system.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Designed a
+                flexible architecture that allowed for independent service
+                deployment while maintaining a cohesive user experience.
+              </span>
+            </motion.li>
+          </motion.ul>
+
+          <p className="font-medium pl-2.5 mt-8 mb-4">
+            <span className="font-light mr-2.5">3.</span>Mentorship
+            Responsibilities:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Balancing technical tasks with mentoring team members and
+                addressing their skill gaps.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Tailored guidance
+                to each engineer’s needs, fostering their confidence and
+                capabilities.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    lessons: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">Insights for the Future:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">
+                  Improved Technical Expertise:
+                </span>{" "}
+                My understanding of{" "}
+                <span className="font-medium">micro-frontend architecture</span>{" "}
+                and <span className="font-medium">microservices</span> advanced
+                significantly.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">
+                  Documentation as a Superpower:
+                </span>{" "}
+                By using tools like{" "}
+                <span className="font-medium">Storybook</span> and{" "}
+                <span className="font-medium">Docusaurus</span>, I learned the
+                importance of clear, accessible documentation for team
+                efficiency.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Empathy in Leadership:</span>{" "}
+                Mentoring taught me to identify team members' pain points and
+                help them grow into their potential.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Beyond Code:</span> The CTO&apos;s
+                guidance underscored the criticality of building solutions that
+                are not only functional but also ethical, scalable, and
+                user-focused.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    results: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">Delivering Measurable Results:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+              The <span className="font-medium">component library</span> and <span className="font-medium">utility tools</span> reduced development time by <span className="font-medium">40%</span>, improving team productivity.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+              The <span className="font-medium">micro-frontend architecture</span> enhanced scalability, allowing services to operate independently while maintaining a seamless user experience.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+              Engineers I mentored are now thriving in the tech space, contributing significantly to their projects and organizations.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Improved onboarding and team efficiency through well-documented starter kits and tools, setting a solid foundation for future projects.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Built a strong culture of collaboration, learning, and responsibility within the team.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
   },
   "onecopy-business-ai": {
     images: [
@@ -106,12 +382,293 @@ const projectDetails: any = {
     fullTitle: "Onecopy Business Marketing AI",
     description:
       "An intelligent content generation platform leveraging advanced AI models to create tailored, high-quality copy for businesses and individuals, enhancing productivity and creativity.",
-    projectDesc: () => <></>,
-    projectJourney: () => <></>,
-    contributions: () => <></>,
-    solutions: () => <></>,
-    lessons: () => <></>,
-    results: () => <></>,
+    projectJourney: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">
+            Key Contributions and Achievements:
+          </p>
+
+          <p className="pl-2.5">
+            The project began with an in-depth{" "}
+            <span className="font-medium">UI/UX audit</span> to identify pain
+            points in the existing design. By transforming outdated components
+            into modern, interactive ones, the platform became more engaging and
+            intuitive.
+          </p>
+
+          <p className="my-4 pl-2.5">
+            Development workflows were streamlined by creating a bespoke{" "}
+            <span className="font-medium">component library</span> and a custom{" "}
+            <span className="font-medium">CSS icon library</span>, saving the
+            team valuable time. I also facilitated{" "}
+            <span className="font-medium">agile ceremonies</span> like sprint
+            planning and daily stand-ups, ensuring clear priorities and
+            effective collaboration.
+          </p>
+
+          <p className="pl-2.5">
+            As we progressed, I improved the platform&apos;s{" "}
+            <span className="font-medium">content and SEO</span>, helping it
+            rank better while integrating{" "}
+            <span className="font-medium">Google Analytics</span> for actionable
+            insights. Deployment was handled using{" "}
+            <span className="font-medium">DigitalOcean droplets</span> and an
+            Apache server, ensuring a smooth and scalable launch.
+          </p>
+        </div>
+      </>
+    ),
+    contributions: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+          <h6>
+            <span className="font-medium">My Role:</span> Team Lead/Senior Frontend Engineer &
+            Project Manager
+          </h6>
+
+          <p className="mt-2 mb-4">Key Contributions and Achievements:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Conducted <span className="font-medium">UI/UX audits</span>,
+                modernizing outdated components into engaging, user-friendly
+                designs.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Designed and implemented a bespoke{" "}
+                <span className="font-medium">component library</span> and a
+                custom <span className="font-medium">CSS icon library</span>,
+                significantly accelerating development efficiency.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Spearheaded{" "}
+                <span className="font-medium">sprint planning sessions</span>,
+                managed sprint backlogs, and facilitated daily stand-ups,
+                ensuring seamless team collaboration.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Enhanced the application&apos;s{" "}
+                <span className="font-medium">copy and SEO</span>, improving
+                visibility and engagement while integrating{" "}
+                <span className="font-medium">Google Analytics</span> for
+                data-driven user behavior insights.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Managed deployment on{" "}
+                <span className="font-medium">DigitalOcean</span>, utilizing
+                droplets and an Apache server for a robust hosting solution.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Convinced the CEO to introduce{" "}
+                <span className="font-medium">tier names and logos</span>,
+                adding personality and brand identity to the platform.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    solutions: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">
+            Turning Obstacles into Opportunities:
+          </p>
+
+          <p className="font-medium pl-2.5 mb-4">
+            <span className="font-light mr-2.5">1.</span>Requirement Changes
+            Midway:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>Frequent changes required quick adaptability.</span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Leveraged agile
+                principles to reprioritize tasks and accommodate new
+                requirements while maintaining progress.
+              </span>
+            </motion.li>
+          </motion.ul>
+
+          <p className="font-medium pl-2.5 mt-8 mb-4">
+            <span className="font-light mr-2.5">2.</span>Time Constraints:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>Limited time necessitated trade-offs in features.</span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Focused on
+                delivering high-impact components first while deferring
+                lower-priority features.
+              </span>
+            </motion.li>
+          </motion.ul>
+
+          <p className="font-medium pl-2.5 mt-8 mb-4">
+            <span className="font-light mr-2.5">3.</span>Unfamiliar
+            Functionalities:
+          </p>
+
+          <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>Some components and features were entirely new to me.</span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Solution:</span> Invested time in
+                research and learning, ultimately delivering high-quality
+                implementations.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    lessons: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">Insights for the Future:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Adaptability is Key:</span> Agile
+                principles proved invaluable in navigating changing requirements
+                and time constraints.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">
+                  Innovation through Collaboration:
+                </span>{" "}
+                Open communication with stakeholders, like the CEO, led to
+                creative branding ideas that added significant value.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Continuous Learning:</span>{" "}
+                Tackling unfamiliar features enhanced my problem-solving skills
+                and technical expertise.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                <span className="font-medium">Efficiency through Tools:</span>{" "}
+                Developing custom libraries significantly streamlined workflows
+                and will remain a best practice in future projects.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
+    results: () => (
+      <>
+        <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+          <p className="mt-2 mb-4 font-medium">Delivering Measurable Results:</p>
+
+          <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Revamped UI/UX designs increased user engagement and
+                satisfaction.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                The bespoke component library and custom CSS icon library
+                reduced development time by{" "}
+                <span className="font-medium">30%</span>, improving team
+                productivity.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Enhanced SEO and copy boosted platform visibility, attracting
+                more users and improving search rankings.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Google Analytics integration provided actionable insights,
+                enabling data-driven decision-making.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                Successful deployment on DigitalOcean ensured a robust and
+                scalable infrastructure for the platform.
+              </span>
+            </motion.li>
+
+            <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+              <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+              <span>
+                The new tier names and logos added personality and enhanced the
+                brand&apos;s appeal, positively resonating with users and
+                stakeholders.
+              </span>
+            </motion.li>
+          </motion.ul>
+        </div>
+      </>
+    ),
   },
   "phc-accountability-tracka": {
     images: [
@@ -253,12 +810,253 @@ const projectDetails: any = {
     fullTitle: "Transforming Urban Living Spaces",
     description:
       "Liveable is a platform dedicated to enhancing the quality of urban living by providing innovative solutions for sustainable and efficient housing in Nigeria.",
-    projectDesc: () => <></>,
-    projectJourney: () => <></>,
-    contributions: () => <></>,
-    solutions: () => <></>,
-    lessons: () => <></>,
-    results: () => <></>,
+      projectJourney: () => (
+        <>
+          <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+            <p className="mt-2 mb-4 font-medium">
+            The Road to Enhanced Urban Living Solutions:
+            </p>
+  
+            <p className="pl-2.5">
+              The project began with a deep dive into the existing system, identifying areas for improvement and scalability. My primary focus was on building a robust <span className="font-medium">component library</span> to ensure consistency and efficiency in UI development.
+            </p>
+  
+            <p className="my-4 pl-2.5">
+            I introduced <span className="font-medium">micro-frontend architecture</span> to enable modular service development, with a unified authentication system ensuring seamless integration across the platform. Alongside these architectural improvements, I developed <span className="font-medium">starter kits</span> and tools to accelerate onboarding and development.
+            </p>
+  
+            <p className="pl-2.5">
+            Mentorship played a pivotal role in the journey, as I worked closely with three frontend engineers to upskill them, ensuring they became integral contributors to the project.
+            </p>
+          </div>
+        </>
+      ),
+      contributions: () => (
+        <>
+          <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
+            <h6>
+              <span className="font-medium">My Role:</span> Senior Frontend
+              Engineer/Frontend Lead
+            </h6>
+  
+            <p className="mt-2 mb-4">Key Contributions and Achievements:</p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Built a robust{" "}
+                  <span className="font-medium">component library</span> for the
+                  team, leveraging <span className="font-medium">Storybook</span>{" "}
+                  for seamless documentation and collaboration.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Analyzed existing codebases and developed{" "}
+                  <span className="font-medium">
+                    utility functions, custom hooks, an icon library, and
+                    React/Next.js starter kits,
+                  </span>{" "}
+                  all documented with{" "}
+                  <span className="font-medium">Docusaurus</span>.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Established a scalable{" "}
+                  <span className="font-medium">micro-frontend architecture</span>
+                  , integrating multiple services with a unified authentication
+                  system.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Mentored{" "}
+                  <span className="font-medium">three frontend engineers</span>,
+                  nurturing their growth and enhancing team productivity.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Actively participated in{" "}
+                  <span className="font-medium">
+                    sprint planning, strategic meetings, and code reviews
+                  </span>
+                  , driving high-quality deliverables.
+                </span>
+              </motion.li>
+            </motion.ul>
+          </div>
+        </>
+      ),
+      solutions: () => (
+        <>
+          <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+            <p className="mt-2 mb-4 font-medium">
+              Turning Obstacles into Opportunities:
+            </p>
+  
+            <p className="font-medium pl-2.5 mb-4">
+              <span className="font-light mr-2.5">1.</span>Legacy Codebase and Inconsistencies:
+            </p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                The platform's existing codebase lacked standardization.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">Solution:</span> Introduced a unified <span className="font-medium">component library</span>, utility tools, and starter kits, reducing technical debt and improving team efficiency.
+                </span>
+              </motion.li>
+            </motion.ul>
+  
+            <p className="font-medium pl-2.5 mt-8 mb-4">
+              <span className="font-light mr-2.5">2.</span>Scalability
+              Requirements:
+            </p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                Building a micro-frontend architecture that allowed for independent module development while maintaining a cohesive user experience.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">Solution:</span> Designed and implemented an architecture that balanced modularity with seamless integration.
+                </span>
+              </motion.li>
+            </motion.ul>
+  
+            <p className="font-medium pl-2.5 mt-8 mb-4">
+              <span className="font-light mr-2.5">3.</span>Team Development:
+            </p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                Addressing skill gaps within the team while meeting project deadlines.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">Solution:</span> Provided hands-on mentoring and technical guidance, tailored to each engineer's strengths and areas for improvement.
+                </span>
+              </motion.li>
+            </motion.ul>
+          </div>
+        </>
+      ),
+      lessons: () => (
+        <>
+          <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+            <p className="mt-2 mb-4 font-medium">Insights for the Future:</p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">
+                  Deepened Technical Expertise:
+                  </span>{" "}
+                  Enhanced my knowledge of <span className="font-medium">microservices</span> and <span className="font-medium">micro-frontend architecture</span>, which I&apos;ve since applied to other projects.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">
+                  Documentation as a Tool for Success:
+                  </span>{" "}
+                  Leveraging tools like <span className="font-medium">Storybook</span> and <span className="font-medium">Docusaurus</span> significantly improved team collaboration and onboarding processes.
+                  efficiency.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">Leadership Beyond Code:</span>{" "}
+                  Mentorship taught me to be patient, empathetic, and proactive in helping team members succeed.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  <span className="font-medium">Responsibility in Engineering:</span> The CTO&apos;s guidance emphasized the importance of precision and accountability in building solutions that serve users reliably.
+                </span>
+              </motion.li>
+            </motion.ul>
+          </div>
+        </>
+      ),
+      results: () => (
+        <>
+          <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
+            <p className="mt-2 mb-4 font-medium">Delivering Measurable Results:</p>
+  
+            <motion.ul className="flex flex-col w-full md:pl-2.5 space-y-4">
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                The <span className="font-medium">component library</span> and tools reduced development time by <span className="font-medium">30%</span>, enhancing team productivity.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                The <span className="font-medium">micro-frontend architecture</span> enabled scalable service development while maintaining platform cohesion.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                Improved onboarding and collaboration through comprehensive documentation and starter kits.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                Mentored engineers who now thrive in their roles, contributing to the tech space.
+                </span>
+              </motion.li>
+  
+              <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
+                <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
+                <span>
+                  Delivered a scalable and maintainable platform that supports sustainable urban housing solutions in Nigeria, positively impacting communities.
+                </span>
+              </motion.li>
+            </motion.ul>
+          </div>
+        </>
+      ),
   },
   "ssaf-logistics": {
     images: [
@@ -597,79 +1395,7 @@ const ProjectOverview = () => {
                 Role & Achievements/Contributions
               </h4>
 
-              <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
-                <h6>
-                  <span className="font-medium">My Role:</span> UI/UX Engineer &
-                  Project Manager
-                </h6>
-
-                <p className="mt-2 mb-4">Key Contributions and Achievements:</p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Conducted{" "}
-                      <span className="font-medium">UI/UX audits</span>,
-                      modernizing outdated components into engaging,
-                      user-friendly designs.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Designed and implemented a bespoke{" "}
-                      <span className="font-medium">component library</span> and
-                      a custom{" "}
-                      <span className="font-medium">CSS icon library</span>,
-                      significantly accelerating development efficiency.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Spearheaded{" "}
-                      <span className="font-medium">
-                        sprint planning sessions
-                      </span>
-                      , managed sprint backlogs, and facilitated daily
-                      stand-ups, ensuring seamless team collaboration.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Enhanced the application&apos;s{" "}
-                      <span className="font-medium">copy and SEO</span>,
-                      improving visibility and engagement while integrating{" "}
-                      <span className="font-medium">Google Analytics</span> for
-                      data-driven user behavior insights.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Managed deployment on{" "}
-                      <span className="font-medium">DigitalOcean</span>,
-                      utilizing droplets and an Apache server for a robust
-                      hosting solution.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Convinced the CEO to introduce{" "}
-                      <span className="font-medium">tier names and logos</span>,
-                      adding personality and brand identity to the platform.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-              </div>
+              {projectAnalysis?.contributions()}
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -677,39 +1403,7 @@ const ProjectOverview = () => {
                 Project Journey
               </h4>
 
-              <div className="font-poppins font-light text-sm md:text-base text-pretty text-zinc-50/80">
-                <p className="mt-2 mb-4 font-medium">
-                  Key Contributions and Achievements:
-                </p>
-
-                <p className="pl-2.5">
-                  The project began with an in-depth{" "}
-                  <span className="font-medium">UI/UX audit</span> to identify
-                  pain points in the existing design. By transforming outdated
-                  components into modern, interactive ones, the platform became
-                  more engaging and intuitive.
-                </p>
-
-                <p className="my-4 pl-2.5">
-                  Development workflows were streamlined by creating a bespoke{" "}
-                  <span className="font-medium">component library</span> and a
-                  custom <span className="font-medium">CSS icon library</span>,
-                  saving the team valuable time. I also facilitated{" "}
-                  <span className="font-medium">agile ceremonies</span> like
-                  sprint planning and daily stand-ups, ensuring clear priorities
-                  and effective collaboration.
-                </p>
-
-                <p className="pl-2.5">
-                  As we progressed, I improved the platform&apos;s{" "}
-                  <span className="font-medium">content and SEO</span>, helping
-                  it rank better while integrating{" "}
-                  <span className="font-medium">Google Analytics</span> for
-                  actionable insights. Deployment was handled using{" "}
-                  <span className="font-medium">DigitalOcean droplets</span> and
-                  an Apache server, ensuring a smooth and scalable launch.
-                </p>
-              </div>
+              {projectAnalysis?.projectJourney()}
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -717,77 +1411,7 @@ const ProjectOverview = () => {
                 Challenges & Solutions
               </h4>
 
-              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
-                <p className="mt-2 mb-4 font-medium">
-                  Turning Obstacles into Opportunities:
-                </p>
-
-                <p className="font-medium pl-2.5 mb-4">
-                  <span className="font-light mr-2.5">1.</span>Requirement
-                  Changes Midway:
-                </p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>Frequent changes required quick adaptability.</span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">Solution:</span> Leveraged
-                      agile principles to reprioritize tasks and accommodate new
-                      requirements while maintaining progress.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-
-                <p className="font-medium pl-2.5 mt-8 mb-4">
-                  <span className="font-light mr-2.5">2.</span>Time Constraints:
-                </p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Limited time necessitated trade-offs in features.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">Solution:</span> Focused on
-                      delivering high-impact components first while deferring
-                      lower-priority features.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-
-                <p className="font-medium pl-2.5 mt-8 mb-4">
-                  <span className="font-light mr-2.5">3.</span>Unfamiliar
-                  Functionalities:
-                </p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Some components and features were entirely new to me.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">Solution:</span> Invested
-                      time in research and learning, ultimately delivering
-                      high-quality implementations.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-              </div>
+              {projectAnalysis?.solutions()}
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -795,54 +1419,7 @@ const ProjectOverview = () => {
                 Lessons Learned
               </h4>
 
-              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
-                <p className="mt-2 mb-4 font-medium">
-                  Insights for the Future:
-                </p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">Adaptability is Key:</span>{" "}
-                      Agile principles proved invaluable in navigating changing
-                      requirements and time constraints.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">
-                        Innovation through Collaboration:
-                      </span>{" "}
-                      Open communication with stakeholders, like the CEO, led to
-                      creative branding ideas that added significant value.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">Continuous Learning:</span>{" "}
-                      Tackling unfamiliar features enhanced my problem-solving
-                      skills and technical expertise.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      <span className="font-medium">
-                        Efficiency through Tools:
-                      </span>{" "}
-                      Developing custom libraries significantly streamlined
-                      workflows and will remain a best practice in future
-                      projects.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-              </div>
+              {projectAnalysis?.lessons()}
             </div>
 
             <div className="w-full flex flex-col gap-y-4 items-start">
@@ -850,64 +1427,7 @@ const ProjectOverview = () => {
                 Results and Impact
               </h4>
 
-              <div className="font-poppins font-light text-sm md:text-base text-pretty subpixel-antialiased text-zinc-50/80">
-                <p className="mt-2 mb-4 font-medium">
-                  Insights for the Future:
-                </p>
-
-                <motion.ul className="flex flex-col w-full md:pl-5 space-y-4">
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Revamped UI/UX designs increased user engagement and
-                      satisfaction.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      The bespoke component library and custom CSS icon library
-                      reduced development time by{" "}
-                      <span className="font-medium">30%</span>, improving team
-                      productivity.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Enhanced SEO and copy boosted platform visibility,
-                      attracting more users and improving search rankings.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Google Analytics integration provided actionable insights,
-                      enabling data-driven decision-making.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      Successful deployment on DigitalOcean ensured a robust and
-                      scalable infrastructure for the platform.
-                    </span>
-                  </motion.li>
-
-                  <motion.li className="flex items-start space-x-1.5 font-poppins font-light text-sm md:text-base tracking-[0.01em]">
-                    <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
-                    <span>
-                      The new tier names and logos added personality and
-                      enhanced the brand’s appeal, positively resonating with
-                      users and stakeholders.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-              </div>
+              {projectAnalysis?.results()}
             </div>
           </div>
 
