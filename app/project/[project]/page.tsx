@@ -9,10 +9,10 @@ import { HeadingChip } from "@/components/ui";
 import { useParams, notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import React, { createContext, useEffect, useId, useState } from "react";
 import { nanoid } from "nanoid";
 import kebabCase from "lodash/kebabCase";
 import { useRouter } from "next/navigation";
+import React, { createContext, useEffect, useId, useState } from "react";
 
 const projectDetails: any = {
   "my-landlord-heaven": {
@@ -2434,7 +2434,7 @@ const ProjectOverview = () => {
               {projectAnalysis?.title} - {projectAnalysis?.category}
             </h3>
 
-            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-ful max-w-[70%] mt-2">
+            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[80%] 2xl:max-w-[70%] mt-2">
               {projectAnalysis?.description}
             </p>
 
@@ -2536,7 +2536,7 @@ const ProjectOverview = () => {
           </div>
         </section>
 
-        <div className="grid grid-cols-1 absolute h-[40%] w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
+        <div className="grid grid-cols-1 absolute h-[60%] w-[60%] 2xl:h-[40%] 2xl:w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
           <GridPattern
             width={30}
             height={30}
@@ -2549,7 +2549,7 @@ const ProjectOverview = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 absolute h-[40%] w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
+        <div className="grid grid-cols-1 absolute h-[50%] w-[40%] 2xl:h-[40%] 2xl:w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
           <div className="w-full relative h-full grid">
             <Image
               src={ImagePath.ILLUS_LINE_TOP_PROJECT}
@@ -2979,10 +2979,11 @@ Card.displayName = "Card";
 Carousel.displayName = "Carousel";
 BlurImage.displayName = "BlurImage";
 GridPattern.displayName = "GridPattern";
+projectDetails.displayName = "projectDetails";
 ProjectOverview.displayName = "ProjectOverview";
 CarouselContext.displayName = "CarouselContext";
+ProjectOverview.displayName = "ProjectOverview";
 InteractiveRightButton.displayName = "InteractiveRightButton";
 InteractiveLeftButton.displayName = "InteractiveLeftButton";
-ProjectOverview.displayName = "ProjectOverview";
-projectDetails.displayName = "projectDetails";
+
 export default ProjectOverview;
