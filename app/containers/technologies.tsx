@@ -1054,10 +1054,10 @@ const backendTechnologies = [
     Icon: FastAPILogo,
     name: "FastAPI",
   },
-  {
-    Icon: LaravelLogo,
-    name: "Laravel",
-  },
+  // {
+  //   Icon: LaravelLogo,
+  //   name: "Laravel",
+  // },
   {
     Icon: Icons.mongodb,
     name: "Mongo DB",
@@ -1111,10 +1111,6 @@ const mobileTechnologies = [
   {
     Icon: FlutterLogo,
     name: "Flutter",
-  },
-  {
-    Icon: ReactLogo,
-    name: "React Native",
   },
   {
     Icon: LottieLogo,
@@ -1206,11 +1202,7 @@ const programmingLanguages = [
   {
     Icon: Icons.dart,
     name: "Dart",
-  },
-  {
-    Icon: Icons.php,
-    name: "PHP",
-  },
+  }
 ];
 
 const Technologies = () => {

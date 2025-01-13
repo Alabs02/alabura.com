@@ -16,9 +16,12 @@ import {
 // MODELS
 import { UI } from "@/models";
 import { HireButtonCopy, ImagePath } from "@/constants";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
   const { scrollYProgress } = useScroll();
+  const pathname = usePathname();
 
   const [visible, setVisible] = useState(true);
 
@@ -88,7 +91,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
           </Link>
 
           {navItems.map((navItem) => (
-            <AnimatedLink key={navItem.id} {...navItem} />
+            <AnimatedLink key={navItem.id} {...navItem} className={cn(pathname?.includes("project") || cn(pathname?.includes("projects") ? "!text-secondary-300/95 font-semibold" : ""))} />
           ))}
 
           <Link href={"/#request-consultation"} passHref>

@@ -1,4 +1,4 @@
-import { baseUrl } from '@/sitemap';
+import { BASE_URL } from '@/sitemap';
 
 export default function robots() {
   return {
@@ -6,9 +6,8 @@ export default function robots() {
       {
         userAgent: '*',
         allow: "/",
-        // disallow: "/private/"
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }

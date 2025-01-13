@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/bricolage-grotesque':
+        specifier: ^5.1.1
+        version: 5.1.1
+      '@fontsource/inter':
+        specifier: ^5.1.1
+        version: 5.1.1
+      '@fontsource/poppins':
+        specifier: ^5.1.1
+        version: 5.1.1
       '@radix-ui/react-icons':
         specifier: ^1.3.2
         version: 1.3.2(react@19.0.0)
@@ -102,6 +111,12 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.0.2(@types/react@19.0.1)
+      '@vercel/analytics':
+        specifier: ^1.4.1
+        version: 1.4.1(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0))(react@19.0.0)
+      '@vercel/speed-insights':
+        specifier: ^1.1.0
+        version: 1.1.0(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0))(react@19.0.0)
       eslint:
         specifier: ^9
         version: 9.17.0(jiti@1.21.6)
@@ -860,6 +875,15 @@ packages:
 
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
+
+  '@fontsource/bricolage-grotesque@5.1.1':
+    resolution: {integrity: sha512-xiBV/xkHVXQK0E5/D3q3CDDLmNrl9+Lq9YvFVENT68c0GpV6hBYVUhr1pDUJdcNEa5KiYu7UaBv/9FlJXTKZ0w==}
+
+  '@fontsource/inter@5.1.1':
+    resolution: {integrity: sha512-weN3E+rq0Xb3Z93VHJ+Rc7WOQX9ETJPTAJ+gDcaMHtjft67L58sfS65rAjC5tZUXQ2FdZ/V1/sSzCwZ6v05kJw==}
+
+  '@fontsource/poppins@5.1.1':
+    resolution: {integrity: sha512-PQVKHGQOK+UpVNPzTFF9Z9ez3CIDkunfvRXGH95hiDoqWJc1shW4JFqe4tEoqnq7RtZaYrw9aWQq58L4eny5xg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1774,6 +1798,55 @@ packages:
   '@typescript-eslint/visitor-keys@8.19.1':
     resolution: {integrity: sha512-fzmjU8CHK853V/avYZAvuVut3ZTfwN5YtMaoi+X9Y9MA9keaWNHC3zEQ9zvyX/7Hj+5JkNyK1l7TOR2hevHB6Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@vercel/analytics@1.4.1':
+    resolution: {integrity: sha512-ekpL4ReX2TH3LnrRZTUKjHHNpNy9S1I7QmS+g/RQXoSUQ8ienzosuX7T9djZ/s8zPhBx1mpHP/Rw5875N+zQIQ==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+
+  '@vercel/speed-insights@1.1.0':
+    resolution: {integrity: sha512-rAXxuhhO4mlRGC9noa5F7HLMtGg8YF1zAN6Pjd1Ny4pII4cerhtwSG4vympbCl+pWkH7nBS9kVXRD4FAn54dlg==}
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
@@ -4078,14 +4151,6 @@ packages:
     resolution: {integrity: sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==}
     engines: {node: '>=6.0.0'}
 
-  tempus@1.0.0-dev.10:
-    resolution: {integrity: sha512-gsr82C8xlQO4Svh9ozJacJzfDgRc4BIFk3Oh495zZwKLgDN5wXfYZ9/HxrAfMCBymrMidGDcFrn5Bry8g7/XBg==}
-    peerDependencies:
-      react: '>=17.0.0'
-    peerDependenciesMeta:
-      react:
-        optional: true
-
   terser@5.37.0:
     resolution: {integrity: sha512-B8wRRkmre4ERucLM/uXx4MOV5cbnOlVAqUst+1+iLKPI0dOgFO28f84ptoQt9HEI537PMzfYa/d+GEPKTRXmYA==}
     engines: {node: '>=10'}
@@ -5282,6 +5347,12 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
+  '@fontsource/bricolage-grotesque@5.1.1': {}
+
+  '@fontsource/inter@5.1.1': {}
+
+  '@fontsource/poppins@5.1.1': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -6243,6 +6314,16 @@ snapshots:
       '@typescript-eslint/types': 8.19.1
       eslint-visitor-keys: 4.2.0
 
+  '@vercel/analytics@1.4.1(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0))(react@19.0.0)':
+    optionalDependencies:
+      next: 15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0)
+      react: 19.0.0
+
+  '@vercel/speed-insights@1.1.0(next@15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0))(react@19.0.0)':
+    optionalDependencies:
+      next: 15.1.0(@babel/core@7.26.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.0)
+      react: 19.0.0
+
   abort-controller@3.0.0:
     dependencies:
       event-target-shim: 5.0.1
@@ -6293,7 +6374,6 @@ snapshots:
       react-spring: 9.7.5(@react-three/fiber@8.17.10(@types/react@19.0.1)(react-dom@19.0.0(react@19.0.0))(react-native@0.76.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@19.0.1)(react@19.0.0))(react@19.0.0)(three@0.171.0))(konva@9.3.16)(react-dom@19.0.0(react@19.0.0))(react-konva@18.2.10(@types/react@19.0.1)(konva@9.3.16)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-native@0.76.5(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(@types/react@19.0.1)(react@19.0.0))(react-zdog@1.2.2)(react@19.0.0)(three@0.171.0)(zdog@1.1.3)
       sass: 1.83.0
       tailwind-merge: 2.5.5
-      tempus: 1.0.0-dev.10(react@19.0.0)
       zustand: 5.0.2(@types/react@19.0.1)(react@19.0.0)
     transitivePeerDependencies:
       - '@babel/core'
@@ -9053,10 +9133,6 @@ snapshots:
   temp@0.8.4:
     dependencies:
       rimraf: 2.6.3
-
-  tempus@1.0.0-dev.10(react@19.0.0):
-    optionalDependencies:
-      react: 19.0.0
 
   terser@5.37.0:
     dependencies:

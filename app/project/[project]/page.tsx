@@ -12,6 +12,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { nanoid } from "nanoid";
 import kebabCase from "lodash/kebabCase";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
+import { BASE_URL } from "@/sitemap";
 import React, { createContext, useEffect, useId, useState } from "react";
 
 const projectDetails: any = {
@@ -279,8 +281,8 @@ const projectDetails: any = {
               <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
               <span>
                 <span className="font-medium">Empathy in Leadership:</span>{" "}
-                Mentoring taught me to identify team members&apos; pain points and
-                help them grow into their potential.
+                Mentoring taught me to identify team members&apos; pain points
+                and help them grow into their potential.
               </span>
             </motion.li>
 
@@ -1563,8 +1565,8 @@ const projectDetails: any = {
               <i className="icon-bolt text-[16.5px] md:text-[18px] text-transparent bg-gradient-to-br bg-clip-text from-primary-500 via-indigo-500 to-purple-500"></i>
               <span>
                 <span className="font-medium">Solution:</span> Provided hands-on
-                mentoring and technical guidance, tailored to each engineer&apos;s
-                strengths and areas for improvement.
+                mentoring and technical guidance, tailored to each
+                engineer&apos;s strengths and areas for improvement.
               </span>
             </motion.li>
           </motion.ul>
@@ -2424,229 +2426,281 @@ const ProjectOverview = () => {
   }
 
   return (
-    <Wrapper footer="!top-0">
-      <header className="w-full min-h-screen flex flex-col items-center relative bg-gradient-to-b from-background to-background">
-        <section className="section relative h-full gap-y-10 py-10 xl:py-12 2xl:py-16 mt-[95px] z-[2000]">
-          <div className="w-full flex flex-col gap-y-4 items-start">
-            <HeadingChip>Project Overview</HeadingChip>
+    <>
+      <Head>
+        <title>{`${projectAnalysis?.title} | Alabura Usman`}</title>
+        <meta
+          name="description"
+          content={
+            projectAnalysis?.description ||
+            `Explore details about ${projectAnalysis?.title}, a featured project by Alabura Usman.`
+          }
+        />
+        <meta
+          property="og:title"
+          content={`${projectAnalysis?.title} | Alabura Usman`}
+        />
+        <meta
+          property="og:description"
+          content={
+            projectAnalysis?.description ||
+            `Discover how ${projectAnalysis?.title} was designed and developed to deliver impactful solutions.`
+          }
+        />
+        <meta property="og:url" content={`${BASE_URL}/project/${project}`} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:image"
+          content={`${BASE_URL}${projectAnalysis?.logo}`}
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content={`${projectAnalysis?.title} | Alabura Usman`}
+        />
+        <meta
+          property="twitter:description"
+          content={
+            projectAnalysis?.description ||
+            `Uncover the story behind ${projectAnalysis?.title}, a remarkable project by Alabura Usman.`
+          }
+        />
+        <meta
+          property="twitter:image"
+          content={`${BASE_URL}${projectAnalysis?.logo}`}
+        />
+      </Head>
 
-            <h3 className="text-4xl lg:text-5xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-              {projectAnalysis?.title} - {projectAnalysis?.category}
-            </h3>
+      <Wrapper footer="!top-0">
+        <header className="w-full min-h-screen flex flex-col items-center relative bg-gradient-to-b from-background to-background">
+          <section className="section relative h-full gap-y-10 py-10 xl:py-12 2xl:py-16 mt-[95px] z-[2000]">
+            <div className="w-full flex flex-col gap-y-4 items-start">
+              <HeadingChip>Project Overview</HeadingChip>
 
-            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[80%] 2xl:max-w-[70%] mt-2">
-              {projectAnalysis?.description}
-            </p>
+              <h3 className="text-4xl lg:text-5xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+                {projectAnalysis?.title} - {projectAnalysis?.category}
+              </h3>
 
-            <div className="flex items-center flex-wrap space-x-4 mt-4">
-              {projectAnalysis?.stack.map((item: any) => (
-                <motion.div
-                  key={item?.id}
-                  className={cn(
-                    "ring-1 ring-yellow-500/10 bg-zinc-950/85 no-underline cursor-default group relative shadow-2xl shadow-black rounded-full p-px inline-block",
-                    {
-                      "ring-indigo-50/10": kebabCase(item?.title) === "recoil",
-                      "ring-pink-50/10": kebabCase(item?.title) === "sass",
-                      "ring-slate-50/10": kebabCase(item?.title) === "next-js",
-                      "ring-red-50/10": kebabCase(item?.title) === "nest-js" || kebabCase(item?.title) === "laravel",
-                      "ring-cyan-50/10": kebabCase(item?.title) === "vuex",
-                      "ring-secondary-50/10":
-                        kebabCase(item?.title) === "vue-js",
-                      "ring-purple-50/10": kebabCase(item?.title) === "redux",
-                      "ring-green-50/10":
-                        kebabCase(item?.title) === "daisy-ui" ||
-                        kebabCase(item?.title) === "gsap" ||
-                        kebabCase(item?.title) === "node-js",
-                      "ring-blue-50/10":
-                        kebabCase(item?.title) === "react-js" ||
-                        kebabCase(item?.title) === "docker" ||
-                        kebabCase(item?.title) === "tailwind-css"
-                    }
-                  )}
-                >
-                  <div
+              <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[80%] 2xl:max-w-[70%] mt-2">
+                {projectAnalysis?.description}
+              </p>
+
+              <div className="flex items-center flex-wrap space-x-4 mt-4">
+                {projectAnalysis?.stack.map((item: any) => (
+                  <motion.div
+                    key={item?.id}
                     className={cn(
-                      "relative bg-yellow-950/20 text-yellow-50/90 flex space-x-2 items-center z-10 rounded-full py-0.5 px-3",
+                      "ring-1 ring-yellow-500/10 bg-zinc-950/85 no-underline cursor-default group relative shadow-2xl shadow-black rounded-full p-px inline-block",
                       {
-                        "bg-indigo-950/20 text-indigo-50/90":
+                        "ring-indigo-50/10":
                           kebabCase(item?.title) === "recoil",
-                        "bg-pink-950/20 text-pink-50/90":
-                          kebabCase(item?.title) === "sass",
-                        "bg-slate-950/20 text-slate-50/90":
+                        "ring-pink-50/10": kebabCase(item?.title) === "sass",
+                        "ring-slate-50/10":
                           kebabCase(item?.title) === "next-js",
-                          "bg-red-950/20 text-red-50/90":
-                          kebabCase(item?.title) === "nest-js" || kebabCase(item?.title) === "laravel",
-                        "bg-cyan-950/20 text-cyan-50/90":
-                          kebabCase(item?.title) === "vuex",
-                        "bg-secondary-950/20 text-secondary-50/90":
+                        "ring-red-50/10":
+                          kebabCase(item?.title) === "nest-js" ||
+                          kebabCase(item?.title) === "laravel",
+                        "ring-cyan-50/10": kebabCase(item?.title) === "vuex",
+                        "ring-secondary-50/10":
                           kebabCase(item?.title) === "vue-js",
-                        "bg-purple-950/20 text-purple-50/90":
-                          kebabCase(item?.title) === "redux",
-                        "bg-green-950/20 text-green-50/90":
+                        "ring-purple-50/10": kebabCase(item?.title) === "redux",
+                        "ring-green-50/10":
                           kebabCase(item?.title) === "daisy-ui" ||
                           kebabCase(item?.title) === "gsap" ||
                           kebabCase(item?.title) === "node-js",
-                        "bg-blue-950/20 text-blue-50/90":
+                        "ring-blue-50/10":
                           kebabCase(item?.title) === "react-js" ||
                           kebabCase(item?.title) === "docker" ||
                           kebabCase(item?.title) === "tailwind-css",
                       }
                     )}
                   >
-                    <span className="tracking-wide text-sm lg:text-base font-bricolage font-light">
-                      {item?.title}
-                    </span>
-                  </div>
+                    <div
+                      className={cn(
+                        "relative bg-yellow-950/20 text-yellow-50/90 flex space-x-2 items-center z-10 rounded-full py-0.5 px-3",
+                        {
+                          "bg-indigo-950/20 text-indigo-50/90":
+                            kebabCase(item?.title) === "recoil",
+                          "bg-pink-950/20 text-pink-50/90":
+                            kebabCase(item?.title) === "sass",
+                          "bg-slate-950/20 text-slate-50/90":
+                            kebabCase(item?.title) === "next-js",
+                          "bg-red-950/20 text-red-50/90":
+                            kebabCase(item?.title) === "nest-js" ||
+                            kebabCase(item?.title) === "laravel",
+                          "bg-cyan-950/20 text-cyan-50/90":
+                            kebabCase(item?.title) === "vuex",
+                          "bg-secondary-950/20 text-secondary-50/90":
+                            kebabCase(item?.title) === "vue-js",
+                          "bg-purple-950/20 text-purple-50/90":
+                            kebabCase(item?.title) === "redux",
+                          "bg-green-950/20 text-green-50/90":
+                            kebabCase(item?.title) === "daisy-ui" ||
+                            kebabCase(item?.title) === "gsap" ||
+                            kebabCase(item?.title) === "node-js",
+                          "bg-blue-950/20 text-blue-50/90":
+                            kebabCase(item?.title) === "react-js" ||
+                            kebabCase(item?.title) === "docker" ||
+                            kebabCase(item?.title) === "tailwind-css",
+                        }
+                      )}
+                    >
+                      <span className="tracking-wide text-sm lg:text-base font-bricolage font-light">
+                        {item?.title}
+                      </span>
+                    </div>
 
-                  <span
-                    className={cn(
-                      "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 via-yellow-500/90 to-white/0 transition-opacity duration-500",
-                      {
-                        "via-indigo-500/90":
-                          kebabCase(item?.title) === "recoil",
-                        "via-pink-500/90": kebabCase(item?.title) === "sass",
-                        "via-slate-500/90":
-                          kebabCase(item?.title) === "next-js",
+                    <span
+                      className={cn(
+                        "absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-white/0 via-yellow-500/90 to-white/0 transition-opacity duration-500",
+                        {
+                          "via-indigo-500/90":
+                            kebabCase(item?.title) === "recoil",
+                          "via-pink-500/90": kebabCase(item?.title) === "sass",
+                          "via-slate-500/90":
+                            kebabCase(item?.title) === "next-js",
                           "via-red-500/90":
-                          kebabCase(item?.title) === "nest-js",
-                        "via-cyan-500/90": kebabCase(item?.title) === "vuex",
-                        "via-secondary-500/90":
-                          kebabCase(item?.title) === "vue-js",
-                        "via-purple-500/90": kebabCase(item?.title) === "redux",
-                        "via-green-500/90":
-                          kebabCase(item?.title) === "daisy-ui",
-                        "via-green-700/90":
-                          kebabCase(item?.title) === "gsap" ||
-                          kebabCase(item?.title) === "node-js",
-                        "via-blue-500/90":
-                          kebabCase(item?.title) === "react-js" ||
-                          kebabCase(item?.title) === "docker" ||
-                          kebabCase(item?.title) === "tailwind-css",
-                        "via-error/90": kebabCase(item?.title) === "laravel",
-                      }
-                    )}
-                  ></span>
-                </motion.div>
-              ))}
+                            kebabCase(item?.title) === "nest-js",
+                          "via-cyan-500/90": kebabCase(item?.title) === "vuex",
+                          "via-secondary-500/90":
+                            kebabCase(item?.title) === "vue-js",
+                          "via-purple-500/90":
+                            kebabCase(item?.title) === "redux",
+                          "via-green-500/90":
+                            kebabCase(item?.title) === "daisy-ui",
+                          "via-green-700/90":
+                            kebabCase(item?.title) === "gsap" ||
+                            kebabCase(item?.title) === "node-js",
+                          "via-blue-500/90":
+                            kebabCase(item?.title) === "react-js" ||
+                            kebabCase(item?.title) === "docker" ||
+                            kebabCase(item?.title) === "tailwind-css",
+                          "via-error/90": kebabCase(item?.title) === "laravel",
+                        }
+                      )}
+                    ></span>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 w-full lg:w-[90%] 2xl:w-[80%] self-center lg:h-[450px] 2xl:h-[550px] mt-8 lg:mt-12 relative">
+                <Carousel items={cards} />
+              </div>
             </div>
+          </section>
 
-            <div className="grid grid-cols-1 w-full lg:w-[90%] 2xl:w-[80%] self-center lg:h-[450px] 2xl:h-[550px] mt-8 lg:mt-12 relative">
-              <Carousel items={cards} />
-            </div>
-          </div>
-        </section>
-
-        <div className="grid grid-cols-1 absolute h-[60%] w-[60%] 2xl:h-[40%] 2xl:w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
-          <GridPattern
-            width={30}
-            height={30}
-            x={-1}
-            y={-1}
-            squares={patterns}
-            className={cn(
-              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
-            )}
-          />
-        </div>
-
-        <div className="grid grid-cols-1 absolute h-[50%] w-[40%] 2xl:h-[45%] 2xl:w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
-          <div className="w-full relative h-full grid">
-            <Image
-              src={ImagePath.ILLUS_LINE_TOP_PROJECT}
-              alt={""}
-              fill
-              priority
-              draggable={false}
-              className="size-full opacity-90"
+          <div className="grid grid-cols-1 absolute h-[60%] w-[60%] 2xl:h-[40%] 2xl:w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
+            <GridPattern
+              width={30}
+              height={30}
+              x={-1}
+              y={-1}
+              squares={patterns}
+              className={cn(
+                "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+              )}
             />
           </div>
-        </div>
-      </header>
 
-      <section className="w-full min-h-screen flex flex-col items-center relative bg-zinc-900">
-        <div className="section relative grid grid-cols-12 grid-rows-[auto] h-full gap-6 lg:gap-8 2xl:gap-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
-          <div className="col-span-12 lg:col-span-1">
-            <div className="w-auto h-12 relative overflow-hidden flex items-start justify-start">
+          <div className="grid grid-cols-1 absolute h-[50%] w-[40%] 2xl:h-[45%] 2xl:w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
+            <div className="w-full relative h-full grid">
               <Image
-                src={projectAnalysis?.logo}
+                src={ImagePath.ILLUS_LINE_TOP_PROJECT}
                 alt={""}
                 fill
                 priority
                 draggable={false}
-                className="size-full object-contain"
+                className="size-full opacity-90"
               />
             </div>
           </div>
+        </header>
 
-          <div className="col-span-1 flex justify-center">
-            <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
+        <section className="w-full min-h-screen flex flex-col items-center relative bg-zinc-900">
+          <div className="section relative grid grid-cols-12 grid-rows-[auto] h-full gap-6 lg:gap-8 2xl:gap-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
+            <div className="col-span-12 lg:col-span-1">
+              <div className="w-auto h-12 relative overflow-hidden flex items-start justify-start">
+                <Image
+                  src={projectAnalysis?.logo}
+                  alt={""}
+                  fill
+                  priority
+                  draggable={false}
+                  className="size-full object-contain"
+                />
+              </div>
+            </div>
+
+            <div className="col-span-1 flex justify-center">
+              <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
+            </div>
+
+            <div className="col-span-12 lg:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
+              <div className="w-full flex flex-col gap-y-4 items-start">
+                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  Role & Achievements/Contributions
+                </h4>
+
+                {projectAnalysis?.contributions()}
+              </div>
+
+              <div className="w-full flex flex-col gap-y-4 items-start">
+                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  Project Journey
+                </h4>
+
+                {projectAnalysis?.projectJourney()}
+              </div>
+
+              <div className="w-full flex flex-col gap-y-4 items-start">
+                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  Challenges & Solutions
+                </h4>
+
+                {projectAnalysis?.solutions()}
+              </div>
+
+              <div className="w-full flex flex-col gap-y-4 items-start">
+                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  Lessons Learned
+                </h4>
+
+                {projectAnalysis?.lessons()}
+              </div>
+
+              <div className="w-full flex flex-col gap-y-4 items-start">
+                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  Results and Impact
+                </h4>
+
+                {projectAnalysis?.results()}
+              </div>
+            </div>
+
+            <div className="col-span-12 w-full flex flex-col lg:flex-row lg:justify-center space-y-4 md:space-y-0 md:space-x-4 2xl:space-x-6 pt-2">
+              <InteractiveLeftButton
+                onClick={onPrevious}
+                text="Previous"
+                disabled={!canGoBack}
+                className={cn(
+                  "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+                  !canGoBack && "disabled:opacity-50 pointer-events-none"
+                )}
+              />
+              <InteractiveRightButton
+                onClick={onNext}
+                text="Next"
+                disabled={!canGoNext}
+                className={cn(
+                  "w-40 border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
+                  !canGoNext && "disabled:opacity-50 pointer-events-none"
+                )}
+              />
+            </div>
           </div>
-
-          <div className="col-span-12 lg:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Role & Achievements/Contributions
-              </h4>
-
-              {projectAnalysis?.contributions()}
-            </div>
-
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Project Journey
-              </h4>
-
-              {projectAnalysis?.projectJourney()}
-            </div>
-
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Challenges & Solutions
-              </h4>
-
-              {projectAnalysis?.solutions()}
-            </div>
-
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Lessons Learned
-              </h4>
-
-              {projectAnalysis?.lessons()}
-            </div>
-
-            <div className="w-full flex flex-col gap-y-4 items-start">
-              <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
-                Results and Impact
-              </h4>
-
-              {projectAnalysis?.results()}
-            </div>
-          </div>
-
-          <div className="col-span-12 w-full flex flex-col lg:flex-row lg:justify-center space-y-4 md:space-y-0 md:space-x-4 2xl:space-x-6 pt-2">
-            <InteractiveLeftButton
-              onClick={onPrevious}
-              text="Previous"
-              disabled={!canGoBack}
-              className={cn(
-                "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
-                !canGoBack && "disabled:opacity-50 pointer-events-none"
-              )}
-            />
-            <InteractiveRightButton
-              onClick={onNext}
-              text="Next"
-              disabled={!canGoNext}
-              className={cn(
-                "w-40 border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
-                !canGoNext && "disabled:opacity-50 pointer-events-none"
-              )}
-            />
-          </div>
-        </div>
-      </section>
-    </Wrapper>
+        </section>
+      </Wrapper>
+    </>
   );
 };
 
