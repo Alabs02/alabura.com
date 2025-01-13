@@ -72,7 +72,7 @@ const AboutAlaburaUsman = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 absolute h-[50%] w-[40%] 2xl:h-[40%] 2xl:w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
+        <div className="grid grid-cols-1 absolute h-[50%] w-[40%] 2xl:h-[75%] 2xl:w-[30%] overflow-hidden -top-10 -right-10 z-[500]">
           <div className="w-full relative h-full grid">
             <Image
               src={ImagePath.ILLUS_LINE_TOP_PROJECT}
