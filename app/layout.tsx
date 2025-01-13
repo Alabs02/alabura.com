@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import clsx from "clsx";
 import { RealViewport } from "@/real-viewport";
 import { ReactLenis } from "@/lib/lenis";
+import { Viewport } from "next";
 
 import "@fontsource/inter/300.css";
 import "@fontsource/inter/300-italic.css";
@@ -124,9 +125,21 @@ export const metadata: Metadata = {
       name: "Alabura Usman | Medium Blog",
       url: "https://medium.com/@alabura.usman",
     },
-  ],
-  themeColor: "#06b6d4",
+  ]
 };
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  interactiveWidget: "resizes-visual",
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: "#06b6d4" },
+    { media: '(prefers-color-scheme: dark)', color: "#06b6d4" },
+  ],
+  colorScheme: "dark"
+}
 
 export default function RootLayout({
   children,

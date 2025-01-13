@@ -27,7 +27,7 @@ export const AnimatedLink: FC<
       href={href}
       prefetch={true}
       className={clsx(
-        "text-sm md:text-[15px] leading-6 tracking-normal font-medium font-poppins text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-colors duration-300",
+        "text-sm md:text-[15px] leading-6 tracking-normal font-normal md:font-medium font-poppins text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-colors duration-300",
         isActive && "!text-secondary-300/95 font-semibold",
         !isActive && "animated-link",
         className
