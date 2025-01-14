@@ -47,13 +47,13 @@ const Hero = () => {
           </motion.h1>
 
           <motion.div className="flex flex-col gap-y-6 xl:gap-y-9">
-            <motion.h3 className="text-2xl xl:text-4xl 2xl:text-5xl text-balance font-extrabold font-bricolage bg-gradient-to-r from-primary-50 via-indigo-50 to-purple-50 bg-clip-text text-transparent">
+            <motion.h2 className="text-2xl xl:text-4xl 2xl:text-5xl text-balance font-extrabold font-bricolage bg-gradient-to-r from-primary-50 via-indigo-50 to-purple-50 bg-clip-text text-transparent">
               <span>{HeroSubHeadingCopyFirst}</span>
               {"."} <br className="md:hidden" />
               <Highlight className="rounded-2xl rounded-tl-sm rounded-br-sm text-zinc-50">
                 {HeroSubHeadingCopySecond}
               </Highlight>
-            </motion.h3>
+            </motion.h2>
 
             <motion.div className="flex items-end justify-between w-full">
               <motion.p className="text-[17px] leading-6 xl:text-2xl xl:!leading-9 2xl:!leading-relaxed text-pretty font-normal tracking-wide text-zinc-50 w-full xl:max-w-[62%] 2xl:max-w-[69%] font-poppins">
@@ -111,14 +111,14 @@ const Hero = () => {
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
-                <motion.h4 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
+                <motion.h3 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   <NumberTicker
                     value={ProjectsDelivered.stat}
                     delay={1}
                     className="text-sm md:text-base xl:text-lg text-zinc-50 font-bricolage"
                   />
                   {"+"} {ProjectsDelivered.heading}
-                </motion.h4>
+                </motion.h3>
                 <motion.p className="text-xs md:text-sm xl:max-w-[16rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {ProjectsDelivered.content}
                 </motion.p>
@@ -131,9 +131,9 @@ const Hero = () => {
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
-                <motion.h4 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
+                <motion.h3 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   {Perks.heading}
-                </motion.h4>
+                </motion.h3>
                 <motion.p className="text-xs md:text-sm xl:max-w-[16rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {Perks.content}
                 </motion.p>
@@ -151,9 +151,9 @@ const Hero = () => {
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
-                <motion.h4 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
+                <motion.h3 className="text-sm md:text-base xl:text-lg text-zinc-50 tracking-wide font-bricolage font-bold">
                   {GlobalCollaboration.heading}
-                </motion.h4>
+                </motion.h3>
                 <motion.p className="text-xs md:text-sm xl:max-w-[16rem] 2xl:max-w-[18rem] font-poppins tracking-wide text-zinc-50/80">
                   {GlobalCollaboration.content}
                 </motion.p>
