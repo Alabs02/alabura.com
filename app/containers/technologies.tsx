@@ -356,7 +356,7 @@ const Icons = {
         src={ImagePath.VITE_LOGO}
         alt={""}
         fill
-        priority
+        loading={"lazy"}
         draggable={false}
       />
     </>
@@ -367,7 +367,7 @@ const Icons = {
         src={ImagePath.FIREBASE_LOGO}
         alt={""}
         fill
-        priority
+        loading={"lazy"}
         draggable={false}
       />
     </>
@@ -494,7 +494,7 @@ const Icons = {
       src={ImagePath.CANVA_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -503,7 +503,7 @@ const Icons = {
       src={ImagePath.CURSOR_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -512,31 +512,31 @@ const Icons = {
       src={ImagePath.VS_CODE_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
   git: () => (
-    <Image src={ImagePath.GIT_LOGO} alt={""} fill priority draggable={false} />
+    <Image src={ImagePath.GIT_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
   ),
   postman: () => (
     <Image
       src={ImagePath.POSTMAN_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
   synk: () => (
-    <Image src={ImagePath.SYNK_LOGO} alt={""} fill priority draggable={false} />
+    <Image src={ImagePath.SYNK_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
   ),
   jenkins: () => (
     <Image
       src={ImagePath.JENKINS_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -545,7 +545,7 @@ const Icons = {
       src={ImagePath.TERRAFORM_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -554,7 +554,7 @@ const Icons = {
       src={ImagePath.PYTHON_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -563,7 +563,7 @@ const Icons = {
       src={ImagePath.TYPESCRIPT_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
@@ -572,15 +572,15 @@ const Icons = {
       src={ImagePath.JAVASCRIPT_LOGO}
       alt={""}
       fill
-      priority
+      loading={"lazy"}
       draggable={false}
     />
   ),
   dart: () => (
-    <Image src={ImagePath.DART_LOGO} alt={""} fill priority draggable={false} />
+    <Image src={ImagePath.DART_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
   ),
   php: () => (
-    <Image src={ImagePath.PHP_LOGO} alt={""} fill priority draggable={false} />
+    <Image src={ImagePath.PHP_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
   ),
 };
 
@@ -830,7 +830,7 @@ const FlutterLogo = ({ className }: { className?: string }) => {
 //         src={ImagePath.RIVERPOD_LOGO}
 //         alt={""}
 //         fill
-//         priority
+//         loading={"lazy"}
 //         draggable={false}
 //       />
 //     </div>
@@ -3317,7 +3317,7 @@ const TechnologiesArtifactTopLeft = () => {
           src={ImagePath.WAVY_LINES}
           alt={""}
           fill
-          priority
+          loading={"lazy"}
           draggable={false}
           className="relative"
         />
@@ -3334,7 +3334,7 @@ const TechnologiesArtifactTopRight = () => {
         src={ImagePath.ILLUS_LINES_TOP}
         alt={""}
         fill
-        priority
+        loading={"lazy"}
         draggable={false}
       />
     </motion.div>
@@ -3348,7 +3348,7 @@ const TechnologiesArtifactBottomRight = () => {
         src={ImagePath.ILLUS_LINES_DOWN}
         alt={""}
         fill
-        priority
+        loading={"lazy"}
         draggable={false}
       />
     </motion.div>

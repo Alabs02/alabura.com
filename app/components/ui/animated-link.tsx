@@ -22,6 +22,7 @@ export const AnimatedLink: FC<
 
   return href ? (
     <Link
+      aria-label={label}
       key={`animated-link-${id}`}
       data-hover-label={label}
       href={href}
@@ -39,6 +40,7 @@ export const AnimatedLink: FC<
     </Link>
   ) : (
     <motion.a
+      aria-label={label}
       data-state={label ? "open" : "close"}
       data-hover-label={label}
       className={clsx(

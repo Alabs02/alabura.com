@@ -167,7 +167,7 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
                 src={imageSrc}
                 alt={""}
                 fill
-                priority
+                loading={"eager"}
                 draggable={false}
                 className="size-full -skew-x-6"
               />

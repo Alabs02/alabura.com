@@ -39,9 +39,10 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
           </div>
 
           <div className="flex items-center justify-end w-full self-end">
-            <Link href={"/#request-consultation"} passHref>
+            <Link href={"/#request-consultation"} aria-label="Let's Discuss" passHref>
               <InteractiveRightButton
                 text="Let's Discuss"
+                aria-label="Let's Discuss"
                 className={cn(
                   "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] md:text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
                 )}
@@ -58,7 +59,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                       src={ImagePath.BRAND_LOGO_LIGHT}
                       alt={""}
                       fill
-                      priority
+                      loading={"eager"}
                       draggable={false}
                       className="size-full object-contain"
                     />
@@ -70,6 +71,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </div>
 
                 <Link
+                  aria-label="usmanunfolds@alabura.com"
                   href="mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
                   className="flex items-center space-x-2 text-sm lg:text-base font-poppins font-light text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-all duration-300 will-change-auto"
                   passHref
@@ -79,6 +81,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </Link>
 
                 <Link
+                  aria-label="+2349027661950"
                   href="tel:+2349027661950"
                   className="flex items-center space-x-2 text-sm lg:text-base font-poppins font-light text-zinc-50 hover:text-secondary-300/95 active:text-secondary focus:text-secondary transition-all duration-300 will-change-auto"
                   passHref
@@ -125,6 +128,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
 
               <div className="flex items-center justify-between lg:justify-start space-x-2 lg:space-x-4">
                 <Link
+                  aria-label="LinkedIn Profile"
                   href={"https://www.linkedin.com/in/usmanunfolds/"}
                   target="_blank"
                   passHref
@@ -145,6 +149,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
+                    aria-label="Open LinkedIn Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Linkedin />
@@ -152,6 +157,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </Link>
 
                 <Link
+                  aria-label="X Profile"
                   href={"https://x.com/UsmanUnfolds"}
                   target="_blank"
                   passHref
@@ -172,6 +178,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
+                    aria-label="Open X Profile"
                     className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <svg
@@ -188,6 +195,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </Link>
 
                 <Link
+                  aria-label="Github Profile"
                   href={"https://github.com/Alabs02"}
                   target="_blank"
                   passHref
@@ -208,6 +216,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
+                    aria-label="Open Github Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Github />
@@ -215,6 +224,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </Link>
 
                 <Link
+                  aria-label="CodePen Profile"
                   href={"https://codepen.io/Alabura"}
                   target="_blank"
                   passHref
@@ -235,6 +245,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
+                  aria-label="Open CodePen Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Codepen />
@@ -242,6 +253,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 </Link>
 
                 <Link
+                  aria-label="Medium Blog"
                   href={"https://medium.com/@alabura.usman"}
                   target="_blank"
                   passHref
@@ -262,6 +274,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
+                  aria-label="Open Medium Blog"
                     className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <svg
@@ -294,6 +307,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
           whileTap={{
             scale: 0.9,
           }}
+          aria-label="Back To The Top"
           onClick={backToTop}
           className="w-[80%] cursor-pointer bg-black no-underline group/move-up absolute ring-1 ring-secondary-50/15 shadow-2xl shadow-black !rounded-t-[32px] text-secondary-50 hover:bg-secondary-50 hover:text-zinc-950 transition-all duration-300 will-change-auto flex items-center space-x-2 bottom-0 z-[2500]"
         >

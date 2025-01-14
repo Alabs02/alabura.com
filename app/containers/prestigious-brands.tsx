@@ -93,6 +93,7 @@ const PrestigiousBrands = () => {
                   src={brand.src}
                   alt={""}
                   fill
+                  loading={"lazy"}
                   draggable={false}
                   className={cn(
                     "size-full object-contain grayscale",
@@ -112,6 +113,7 @@ const PrestigiousBrands = () => {
                   src={brand.src}
                   alt={""}
                   fill
+                  loading={"lazy"}
                   draggable={false}
                   className={cn(
                     "size-full object-contain grayscale",

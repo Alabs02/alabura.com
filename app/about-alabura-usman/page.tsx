@@ -46,9 +46,9 @@ const AboutAlaburaUsman = () => {
               with every project I undertake.
             </p>
 
-            <Link href={resumeHref} target={"_blank"} className="mt-4" passHref>
+            <Link href={resumeHref} target={"_blank"} aria-label="Preview My Resume" className="mt-4" passHref>
               <RainbowButton
-                className={cn(
+                aria-label="Preview My Resume"                className={cn(
                   "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
                 )}
               >
@@ -78,7 +78,7 @@ const AboutAlaburaUsman = () => {
               src={ImagePath.ILLUS_LINE_TOP_PROJECT}
               alt={""}
               fill
-              priority
+              loading={"eager"}
               draggable={false}
               className="size-full opacity-90"
             />
@@ -100,12 +100,14 @@ const AboutAlaburaUsman = () => {
 
           <div className="flex flex-col space-y-6 items-center md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
             <Link
+              aria-label="Let's Collaborate"
               href={
                 "mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
               }
               passHref
             >
               <RainbowButton
+                aria-label="Let's Collaborate"
                 className={cn(
                   "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-normal !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
                 )}
@@ -115,8 +117,8 @@ const AboutAlaburaUsman = () => {
               </RainbowButton>
             </Link>
 
-            <Link href={whatsappLink} target={"_blank"} passHref>
-              <RainbowButton className="!rounded-full font-poppins gap-x-2 uppercase text-[15px] !font-normal tracking-wide">
+            <Link href={whatsappLink} target={"_blank"} aria-label="Say Hi On WhatsApp" passHref>
+              <RainbowButton aria-label="Say Hi On WhatsApp" className="!rounded-full font-poppins gap-x-2 uppercase text-[15px] !font-normal tracking-wide">
                 <span>{"Say Hi On WhatsApp"}</span>
                 <span className="icon-whatsapp"></span>
               </RainbowButton>

@@ -208,7 +208,7 @@ const SEOIcons = {
       alt={""}
       height={200}
       width={200}
-      priority
+      loading={"eager"}
     />
   ),
   brandLogo: () => (
@@ -217,7 +217,7 @@ const SEOIcons = {
       alt={""}
       height={100}
       width={100}
-      priority
+      loading={"eager"}
     />
   ),
   seo: () => (
@@ -226,7 +226,7 @@ const SEOIcons = {
       alt={""}
       height={100}
       width={100}
-      priority
+      loading={"eager"}
     />
   ),
   rocket: () => (

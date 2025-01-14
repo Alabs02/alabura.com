@@ -58,6 +58,7 @@ const ContactPanel: React.FC<ContactPanel> = ({
             duration: 0.2,
             ease: "easeInOut",
           }}
+          aria-label={`Copy ${heading}`}
           onClick={copyTextToClipboard}
           className="flex items-start space-x-2 font-poppins font-light text-sm xl:text-base relavtive z-[2000]"
         >

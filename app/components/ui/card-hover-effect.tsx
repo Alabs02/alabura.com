@@ -28,6 +28,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <Link
+          aria-label={item.title}
           href={item?.href}
           key={nanoid()}
           className="relative group block p-2 h-full w-full"

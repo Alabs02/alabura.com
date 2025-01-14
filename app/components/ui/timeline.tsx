@@ -133,6 +133,7 @@ export const AccordionBtn = React.forwardRef<
 >(({ className, isSelectedEntry, selectEntry, ...props }, ref) => {
   return (
     <motion.button
+      aria-label={"Expand Accordion"}
       ref={ref}
       {...animationProps}
       {...props}
