@@ -59,7 +59,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                       src={ImagePath.BRAND_LOGO_LIGHT}
                       alt={""}
                       fill
-                      loading={"eager"}
+                      loading={"lazy"}
                       draggable={false}
                       className="size-full object-contain"
                     />

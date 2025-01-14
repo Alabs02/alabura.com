@@ -78,8 +78,8 @@ const AboutAlaburaUsman = () => {
               src={ImagePath.ILLUS_LINE_TOP_PROJECT}
               alt={""}
               fill
-              loading={"eager"}
               draggable={false}
+              priority
               className="size-full opacity-90"
             />
           </div>
