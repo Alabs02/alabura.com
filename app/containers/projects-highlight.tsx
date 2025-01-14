@@ -144,7 +144,7 @@ const ProjectsHighlight = () => {
           </motion.h4>
 
           <div className="w-full mt-12">
-            <motion.div className="grid auto-rows-[23.3rem] md:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+            <motion.div className="grid auto-rows-[23.5rem] md:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {projects.map((project, i) => (
                 <ProjectCard
                   key={i}
@@ -339,7 +339,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <Link href={`/project/${kebabCase(title)}`} className="block w-full transition-all duration-300 will-change-transform translate-y-8 group-hover/bento:translate-y-0 delay-75" passHref>
+        <Link href={`/project/${kebabCase(title)}`} className="block w-full transition-all duration-300 will-change-transform translate-y-12 group-hover/bento:translate-y-0 delay-75" passHref>
           <RainbowButton className="w-full !text-xs text uppercase font-poppins text-zinc-50/80 space-x-2 rounded-full !py-0.5 px-2 h-8 mt-2">
             <motion.span className="!text-xs">See Full Overview</motion.span>
             <View size={17} />

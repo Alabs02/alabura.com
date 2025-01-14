@@ -131,7 +131,7 @@ const Recommendations = () => {
           </div>
 
           <div className="col-span-12 lg:col-span-7">
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-8 lg:gap-4 transition-all duration-300 will-change-auto transform-gpu">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-y-8 lg:gap-4 transition-all duration-300 will-change-auto transform-gpu">
               {endorsements.map((item) => (
                 <EndorsementCard key={item.id} {...item} />
               ))}
