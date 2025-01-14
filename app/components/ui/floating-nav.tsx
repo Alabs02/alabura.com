@@ -94,7 +94,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
             <AnimatedLink key={navItem.id} {...navItem} className={cn(pathname?.includes("project") || cn(pathname?.includes("projects") ? "!text-secondary-300/95 font-semibold" : ""))} />
           ))}
 
-          <Link href={"/#request-consultation"} passHref>
+          <Link href={"/#request-consultation"} aria-label={HireButtonCopy} passHref>
             <RainbowButton aria-label={HireButtonCopy} className="!rounded-full font-poppins uppercase !font-normal tracking-wide hidden md:inline-block">
               {HireButtonCopy}
             </RainbowButton>

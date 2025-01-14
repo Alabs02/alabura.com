@@ -31,14 +31,14 @@ const Services = () => {
           <motion.div className="xl:w-[75%] flex flex-col items-center md:items-start mb-4 md:mb-0">
             <HeadingChip>Core Services</HeadingChip>
 
-            <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center lg:text-left font-bricolage font-bold tracking-wide mt-4 xl:mt-12">
+            <motion.h4 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center lg:text-left font-bricolage font-bold tracking-wide mt-4 xl:mt-12">
               What I Do Best
-            </motion.h2>
+            </motion.h4>
 
-            <motion.h4 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal mt-4 xl:mt-6">
+            <motion.h5 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal mt-4 xl:mt-6">
               From crafting stunning interfaces to securing systems, here’s how
               I turn ideas into impactful digital experiences.
-            </motion.h4>
+            </motion.h5>
           </motion.div>
 
           <Link href={"/#technologies"} aria-label="Explore Services" passHref>

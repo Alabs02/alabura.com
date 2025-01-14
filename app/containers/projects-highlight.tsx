@@ -133,15 +133,15 @@ const ProjectsHighlight = () => {
           <HeadingChip>From Concept to Completion</HeadingChip>
 
           <div className="flex flex-col lg:flex-row items-center lg:gap-2 mt-12">
-            <motion.h2 className={h2}>Visions Realized Through</motion.h2>
+            <motion.h4 className={h2}>Visions Realized Through</motion.h4>
             <WordRotate className={h2} words={headingWords} />
           </div>
 
-          <motion.h4 className="text-base lg:text-xl text-center text-zinc-50/90 font-poppins font-normal lg:w-[70%] mt-6">
+          <motion.h5 className="text-base lg:text-xl text-center text-zinc-50/90 font-poppins font-normal lg:w-[70%] mt-6">
             Explore a curated collection of projects, where visions have come to
             life through a blend of applied creativity, ingenuity, grit, and a
             touch of finesse.
-          </motion.h4>
+          </motion.h5>
 
           <div className="w-full mt-12">
             <motion.div className="grid auto-rows-[24rem] md:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
@@ -238,9 +238,9 @@ const ProjectCard = ({
                 className="cursor-pointer bg-zinc-950 no-underline group/media-btn relative py-1.5 px-4 ring-1 ring-cyan-50/15 shadow-2xl shadow-black rounded-full p-px inline-block text-cyan-50 hover:bg-cyan-50 hover:text-zinc-950 transition-all duration-300 will-change-auto"
               >
                 <div className="relative flex space-x-2 items-center z-10 rounded-full">
-                  <h6 className="text-inherit lowercase text-sm lg:text-[15px] font-poppins font-medium tracking-wide">
+                  <span className="text-inherit lowercase text-sm lg:text-[15px] font-poppins font-medium tracking-wide">
                     {asset.previewHref}
-                  </h6>
+                  </span>
                   <ExternalLink size={16} />
                 </div>
                 <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-cyan-500/0 via-cyan-500/90 to-cyan-500/0 group-hover/media-btn:from-cyan-500/0 group-hover/media-btn:via-cyan-500/80 group-hover/media-btn:to-cyan-500/0 transition-all duration-500"></span>
