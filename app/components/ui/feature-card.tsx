@@ -67,14 +67,14 @@ export const FeatureCardTitle = ({
   className?: string;
 }) => {
   return (
-    <h3
+    <h6
       className={cn(
         "text-lg font-semibold text-white py-2",
         className
       )}
     >
       {children}
-    </h3>
+    </h6>
   );
 };
 

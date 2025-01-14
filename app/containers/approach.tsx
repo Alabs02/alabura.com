@@ -34,7 +34,7 @@ const Approach = () => {
               
               <ShinyText className="flex flex-row items-center justify-center w-full h-full">
                 <div className="mx-px md:mx-3 h-4 w-px bg-zinc-50/90 hidden md:inline-block" />
-                <motion.h6 className="uppercase tracking-wider text-left md:text-center text-zinc-50 font-light font-poppins text-[10.5px] lg:text-lg !m-0 !p-0">
+                <motion.h4 className="uppercase tracking-wider text-left md:text-center text-zinc-50 font-light font-poppins text-[10.5px] lg:text-lg !m-0 !p-0">
                   <motion.span className="text-purple-500">Grit</motion.span> +{" "}
                   <motion.span className="text-[#ffaa40]">Agility</motion.span>{" "}
                   +{" "}
@@ -43,16 +43,16 @@ const Approach = () => {
                   <motion.span className="bg-gradient-to-r bg-clip-text from-purple-500 via-[#ffaa40] to-pink-500 text-transparent">
                     The GAIN Approach
                   </motion.span>
-                </motion.h6>
+                </motion.h4>
               </ShinyText>
             </div>
           </motion.div>
 
-          <motion.h2 className="text-2xl lg:text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-8 2xl:mt-12">
+          <motion.h5 className="text-2xl lg:text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-8 2xl:mt-12">
             A Time-Tested Framework for Excellence
-          </motion.h2>
+          </motion.h5>
 
-          <motion.h4 className="text-base lg:text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-4 lg:mt-6">
+          <motion.h6 className="text-base lg:text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-4 lg:mt-6">
             Over the years, I&apos;ve refined a pattern grounded in{" "}
             <i className="text-zinc-50">grit</i>,{" "}
             <i className="text-zinc-50">agile principles</i>, and{" "}
@@ -60,7 +60,7 @@ const Approach = () => {
             every solution I craft is not only robust but also tailored to meet
             the <i className="text-zinc-50">highest standards</i>. It looks like
             this:
-          </motion.h4>
+          </motion.h6>
         </motion.div>
 
         <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-12">
