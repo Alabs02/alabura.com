@@ -116,7 +116,7 @@ const projects = [
     title: "SIMS",
     fullTitle: "Revolutionizing Educational Administration in Plateau State",
     description:
-      "SIMS, the cloud-based platform of the Plateau State Ministry of Education, streamlines school management by integrating student records, academic progress, and communication tools for efficiency and compliance.",
+      "SIMS, the cloud-based platform of the Plateau State Ministry of Education, streamlines school management by integrating student records, and tools for efficiency and compliance.",
     icon: ImagePath.SIMS_LOGO,
   },
 ];
