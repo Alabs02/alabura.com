@@ -2622,7 +2622,7 @@ const ProjectOverview = () => {
                 src={ImagePath.ILLUS_LINE_TOP_PROJECT}
                 alt={""}
                 fill
-                loading={"eager"}
+                priority
                 draggable={false}
                 className="size-full opacity-90"
               />
@@ -2638,7 +2638,7 @@ const ProjectOverview = () => {
                   src={projectAnalysis?.logo}
                   alt={""}
                   fill
-                  loading={"eager"}
+                  loading={"lazy"}
                   draggable={false}
                   className="!w-auto h-full md:!size-full object-contain"
                 />

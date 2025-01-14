@@ -92,7 +92,7 @@ const Hero = () => {
                     src={ImagePath.ARROW_DOWN_WHITE}
                     alt={""}
                     fill
-                    loading={"eager"}
+                    priority
                   />
                 </motion.button>
               </Link>
@@ -106,7 +106,7 @@ const Hero = () => {
                   src={ProjectsDelivered.src}
                   alt={""}
                   fill
-                  loading={"eager"}
+                  priority
                 />
               </motion.div>
 
@@ -127,7 +127,7 @@ const Hero = () => {
 
             <motion.div className="flex flex-col gap-y-4 w-[calc(50%-4px)] lg:!w-auto overflow-hidden">
               <motion.div className="relative size-8 md:size-12 overflow-hidden p-px rounded">
-                <Image src={Perks.src} alt={""} fill loading={"eager"} />
+                <Image src={Perks.src} alt={""} fill priority />
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
@@ -146,7 +146,7 @@ const Hero = () => {
                   src={GlobalCollaboration.src}
                   alt={""}
                   fill
-                  loading={"eager"}
+                  priority
                 />
               </motion.div>
 
@@ -215,7 +215,7 @@ const Hero = () => {
               src={ImagePath.ARROW_DOWN_WHITE}
               alt={""}
               fill
-              loading={"eager"}
+              priority
             />
           </motion.button>
         </Link>

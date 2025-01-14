@@ -74,7 +74,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
                 src={ImagePath.BRAND_LOGO_LIGHT}
                 alt="Alabura's Brand Logo"
                 fill
-                loading={"eager"}
+                priority
                 draggable={false}
                 className="transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
@@ -83,7 +83,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
                 src={ImagePath.BRAND_LOGO}
                 alt="Alabura's Brand Logo"
                 fill
-                priority
+                loading={"lazy"}
                 draggable={false}
                 className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
