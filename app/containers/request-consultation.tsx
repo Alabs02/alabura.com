@@ -612,7 +612,7 @@ const RequstConsultation = () => {
       case 5:
         return (
           <>
-            <motion.h1>Request Submitted Successfully!</motion.h1>
+            <motion.p>Request Submitted Successfully!</motion.p>
           </>
         );
       default:
@@ -632,13 +632,13 @@ const RequstConsultation = () => {
         <motion.div className="flex flex-col items-center">
           <HeadingChip>Request Consultation</HeadingChip>
 
-          <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center font-bricolage font-bold tracking-wide mt-4 xl:mt-12">
+          <motion.h4 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center font-bricolage font-bold tracking-wide mt-4 xl:mt-12">
             Ready to Bring Your Vision to Life?
-          </motion.h2>
-
-          <motion.h4 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
-            Take the first step toward crafting impactful digital solutions.
           </motion.h4>
+
+          <motion.h5 className="text-xl text-center text-zinc-50 font-poppins font-normal mt-2">
+            Take the first step toward crafting impactful digital solutions.
+          </motion.h5>
         </motion.div>
 
         <AnimatePresence mode={"wait"}>

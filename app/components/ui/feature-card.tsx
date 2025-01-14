@@ -1,40 +1,86 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+// export const Sparkles = () => {
+//   const randomMove = () => Math.random() * 2 - 1;
+//   const randomOpacity = () => Math.random();
+//   const random = () => Math.random();
+//   return (
+//     <div className="absolute inset-0" suppressHydrationWarning>
+//       {[...Array(12)].map((_, i) => (
+//         <motion.span
+//           suppressHydrationWarning
+//           key={`star-${i}`}
+//           animate={{
+//             top: `calc(${random() * 100}% + ${randomMove()}px)`,
+//             left: `calc(${random() * 100}% + ${randomMove()}px)`,
+//             opacity: randomOpacity(),
+//             scale: [1, 1.2, 0],
+//           }}
+//           transition={{
+//             duration: random() * 2 + 4,
+//             repeat: Infinity,
+//             ease: "linear",
+//           }}
+//           style={{
+//             position: "absolute",
+//             top: `${random() * 100}%`,
+//             left: `${random() * 100}%`,
+//             width: `2px`,
+//             height: `2px`,
+//             borderRadius: "50%",
+//             zIndex: 1,
+//           }}
+//           className="inline-block bg-white"
+//         ></motion.span>
+//       ))}
+//     </div>
+//   );
+// };
+
 export const Sparkles = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => setIsClient(true), []);
+  if (!isClient) return null;
+
+  const sparkles = Array.from({ length: 12 }).map(() => ({
+    top: Math.random() * 100,
+    left: Math.random() * 100,
+    opacity: Math.random(),
+    duration: Math.random() * 2 + 4,
+  }));
+
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkles.map((sparkle, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            top: `calc(${sparkle.top}% + ${Math.random() * 2 - 1}px)`,
+            left: `calc(${sparkle.left}% + ${Math.random() * 2 - 1}px)`,
+            opacity: sparkle.opacity,
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 2 + 4,
+            duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
-            width: `2px`,
-            height: `2px`,
+            top: `${sparkle.top}%`,
+            left: `${sparkle.left}%`,
+            width: "2px",
+            height: "2px",
             borderRadius: "50%",
             zIndex: 1,
           }}
           className="inline-block bg-white"
-        ></motion.span>
+        />
       ))}
     </div>
   );
@@ -67,12 +113,7 @@ export const FeatureCardTitle = ({
   className?: string;
 }) => {
   return (
-    <h6
-      className={cn(
-        "text-lg font-semibold text-white py-2",
-        className
-      )}
-    >
+    <h6 className={cn("text-lg font-semibold text-white py-2", className)}>
       {children}
     </h6>
   );
@@ -87,10 +128,7 @@ export const FeatureCardDescription = ({
 }) => {
   return (
     <p
-      className={cn(
-        "text-sm font-normal text-neutral-400 max-w-sm",
-        className
-      )}
+      className={cn("text-sm font-normal text-neutral-400 max-w-sm", className)}
     >
       {children}
     </p>
@@ -112,7 +150,7 @@ export const CardSkeletonContainer = ({
         "h-[12rem] md:h-[16rem] rounded-xl z-40 grid place-items-center",
         className,
         showGradient &&
-        "bg-[rgba(50,50,50,0.7)] [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]"
+          "bg-[rgba(50,50,50,0.7)] [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]"
       )}
     >
       {children}
