@@ -112,7 +112,7 @@ const Recommendations = () => {
   return (
     <>
       <motion.div className="section gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
-        <div className="grid grid-cols-12 gap-8 lg:gap-12 xl:pb-[6rem]">
+        <div className="grid grid-cols-12 gap-y-8 md:gap-8 lg:gap-12 xl:pb-[6rem]">
           <div className="col-span-12 lg:col-span-5">
             <div className="flex flex-col items-center lg:items-start justify-start transform-gpu will-change-transform lg:translate-y-60">
               <div className="inline-block">
@@ -130,7 +130,7 @@ const Recommendations = () => {
             </div>
           </div>
 
-          <div className="col-span-12 lg:col-span-7">
+          <div className="col-span-12 lg:col-span-7 overflow-hidden">
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 auto-rows-auto gap-y-8 lg:gap-4 transition-all duration-300 will-change-auto transform-gpu">
               {endorsements.map((item) => (
                 <EndorsementCard key={item.id} {...item} />
