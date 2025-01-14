@@ -61,7 +61,7 @@ const Icons = {
     </svg>
   ),
   nextjs: () => (
-    <div className="size-6 rounded-full bg-zinc-50 border-none">
+    <div className="size-5 md:size-6 rounded-full bg-zinc-50 border-none">
       <svg
         className="scale-105"
         viewBox=".5 -.2 1023 1024.1"
@@ -1207,16 +1207,16 @@ const programmingLanguages = [
 
 const Technologies = () => {
   return (
-    <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000] border-0 border-secondary">
+    <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
       <motion.div className="flex flex-col items-center">
         <HeadingChip>Technologies & Offerings</HeadingChip>
       </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+      <motion.div className="flex flex-col gap-y-8 items-start mt-6 2xl:mt-12">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
-              <div className="relative size-8">
+              <div className="relative size-7 md:size-8">
                 <svg
                   viewBox="0 0 80 81"
                   fill="none"
@@ -1401,20 +1401,20 @@ const Technologies = () => {
                 </svg>
               </div>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 Programming Languages
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Proficient in JavaScript, TypeScript, Python, PHP, and other core
               programming languages essential for developing scalable,
               efficient, and modern applications.
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {programmingLanguages.map(({ Icon, name }) => (
@@ -1428,9 +1428,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -1443,11 +1443,11 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
-                className="size-8"
+                className="size-7 md:size-8"
                 viewBox="0 0 80 81"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1672,12 +1672,12 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
                 Frontend Development
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               I specialize in building user-focused, high-performing interfaces.
               My choice of technologies ensures scalability, modern design, and
               quick adaptability to user needs. By leveraging frameworks like
@@ -1686,8 +1686,8 @@ const Technologies = () => {
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {frontendTechnologies.map(({ Icon, name }) => (
@@ -1701,9 +1701,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -1714,14 +1714,14 @@ const Technologies = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 80 81"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-8"
+                className="size-7 md:size-8"
               >
                 <path
                   d="M45.2816 44.9188C45.2818 43.8741 44.9721 42.8528 44.3918 41.9842C43.8115 41.1155 42.9866 40.4384 42.0215 40.0385C41.0563 39.6386 39.9943 39.5339 38.9697 39.7376C37.945 39.9414 37.0038 40.4444 36.265 41.183C35.5263 41.9217 35.0232 42.8629 34.8193 43.8875C34.6155 44.9121 34.72 45.9741 35.1198 46.9393C35.5195 47.9045 36.1965 48.7295 37.0652 49.3099C37.9338 49.8903 38.955 50.2001 39.9997 50.2001C41.3998 50.1979 42.7419 49.6408 43.7319 48.6508C44.722 47.6609 45.2793 46.3189 45.2816 44.9188Z"
@@ -1907,20 +1907,20 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
                 Backend Development
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Expertise in developing robust APIs and server-side solutions
               tailored to unique business requirements. My backend systems are
               secure, scalable, and built with efficiency in mind.
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {backendTechnologies.map(({ Icon, name }) => (
@@ -1934,9 +1934,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -1947,13 +1947,13 @@ const Technologies = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 80 81"
                 fill="none"
-                className="size-8"
+                className="size-7 md:size-8"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -2104,20 +2104,20 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
                 Web & SEO Optimization
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               I optimize websites for speed, visibility, and user retention.
               Combining modern development practices with proven SEO strategies,
               I ensure your digital presence stands out.
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {seoTechnologies.map(({ Icon, name }) => (
@@ -2131,9 +2131,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-2 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -2146,14 +2146,14 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 80 81"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-8"
+                className="size-7 md:size-8"
               >
                 <path
                   d="M22.125 45.2894C22.2742 45.3424 22.431 45.3704 22.5893 45.3723H35.5409C35.6991 45.3704 35.856 45.3424 36.0052 45.2894L29.0651 39.6816L22.125 45.2894Z"
@@ -2519,12 +2519,12 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 Mobile Development
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Flutter is my go-to framework for its flexibility, cross-platform
               capabilities, and quick development cycle. I create polished,
               high-performance apps that run seamlessly on iOS and Android.
@@ -2535,8 +2535,8 @@ const Technologies = () => {
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {mobileTechnologies.map(({ Icon, name }) => (
@@ -2550,9 +2550,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -2565,11 +2565,11 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
-                className="size-8"
+                className="size-7 md:size-8"
                 viewBox="0 0 80 81"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2794,20 +2794,20 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
                 UI/UX Design & Audit
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Enhance user engagement through intuitive design and regular
               audits. I ensure your applications are visually appealing and easy
               to navigate.
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {designTechnologies.map(({ Icon, name }) => (
@@ -2821,9 +2821,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -2836,14 +2836,14 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-8"
+                className="size-7 md:size-8"
               >
                 <path
                   d="M8.42229 20.6181C10.1779 21.5395 11.0557 22.0001 12 22.0001V12.0001L2.63802 7.07275C2.62423 7.09491 2.6107 7.11727 2.5974 7.13986C2 8.15436 2 9.41678 2 11.9416V12.0586C2 14.5834 2 15.8459 2.5974 16.8604C3.19479 17.8749 4.27063 18.4395 6.42229 19.5686L8.42229 20.6181Z"
@@ -2865,19 +2865,19 @@ const Technologies = () => {
                 />
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
                 Tools
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Proficient in tools that streamline development, enhance
               collaboration, and ensure project success.
             </p>
           </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <div className="col-span-12 xl:col-span-6 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {toolsTechnologies.map(({ Icon, name }) => (
@@ -2891,9 +2891,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -2906,14 +2906,14 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 80 81"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-8"
+                className="size-7 md:size-8"
               >
                 <path
                   d="M18.9472 10.8403C19.7522 10.8403 20.4047 10.1877 20.4047 9.38278C20.4047 8.57783 19.7522 7.92529 18.9472 7.92529C18.1423 7.92529 17.4897 8.57783 17.4897 9.38278C17.4897 10.1877 18.1423 10.8403 18.9472 10.8403Z"
@@ -3135,19 +3135,19 @@ const Technologies = () => {
                 </defs>
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
                 Code Security & Audit
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
               Conduct rigorous security audits, vulnerability assessments, and
               implement encryption standards to safeguard applications.
             </p>
           </div>
 
           <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {securityTechnologies.map(({ Icon, name }) => (
@@ -3161,9 +3161,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 
@@ -3176,14 +3176,14 @@ const Technologies = () => {
       </motion.div>
 
       <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-x-12 transition-all duration-300 w-full">
+        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
           <div className="col-span-12 xl:col-span-6">
             <div className="flex items-center space-x-2 mb-3">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-8"
+                className="size-7 md:size-8"
               >
                 <path
                   d="M12 4V15.2C12 16.8802 12 17.7202 12.327 18.362C12.6146 18.9265 13.0735 19.3854 13.638 19.673C14.2798 20 15.1198 20 16.8 20H17M17 20C17 21.1046 17.8954 22 19 22C20.1046 22 21 21.1046 21 20C21 18.8954 20.1046 18 19 18C17.8954 18 17 18.8954 17 20ZM7 4L17 4M7 4C7 5.10457 6.10457 6 5 6C3.89543 6 3 5.10457 3 4C3 2.89543 3.89543 2 5 2C6.10457 2 7 2.89543 7 4ZM17 4C17 5.10457 17.8954 6 19 6C20.1046 6 21 5.10457 21 4C21 2.89543 20.1046 2 19 2C17.8954 2 17 2.89543 17 4ZM12 12H17M17 12C17 13.1046 17.8954 14 19 14C20.1046 14 21 13.1046 21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12Z"
@@ -3194,12 +3194,12 @@ const Technologies = () => {
                 />
               </svg>
 
-              <h4 className="font-bricolage font-bold text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
                 DevOps
               </h4>
             </div>
 
-            <p className="text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide">
+            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-widemt-1">
               Seamlessly integrate DevOps practices to ensure efficient
               development pipelines, continuous delivery, and smooth
               deployments.
@@ -3207,7 +3207,7 @@ const Technologies = () => {
           </div>
 
           <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
               <Grid size={60} />
 
               {devopsTechnologies.map(({ Icon, name }) => (
@@ -3221,9 +3221,9 @@ const Technologies = () => {
                     scale: 1.1,
                   }}
                   key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-4 bg-zinc-700/90 cursor-default"
+                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
                 >
-                  <div className="size-6 relative overflow-hidden grid place-items-center p-px">
+                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
                     <Icon />
                   </div>
 

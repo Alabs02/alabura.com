@@ -18,7 +18,7 @@ export default function NotFound() {
       <Wrapper footer="!top-0">
       <section className="w-full grid grid-cols-1 place-items-center relative overflow-hidden bg-gradient-to-b from-zinc-900/80 via-background to-zinc-900/80 pt-24">
         <div className="section relative flex flex-col items-center h-full gap-y-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
-          <h3 className="text-4xl lg:text-5xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+          <h3 className="text-3xl xl:text-5xl text-center md:text-left font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-500">
             Ready to Build Something Exceptional?
           </h3>
 
@@ -28,7 +28,7 @@ export default function NotFound() {
             time.
           </p>
 
-          <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
+          <div className="flex flex-col space-y-6 items-center md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
             <Link
               href={
                 "mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."

@@ -70,11 +70,11 @@ const PrestigiousBrands = () => {
         <motion.div className="flex flex-col items-center">
           <HeadingChip>PRESTIGIOUS BRANDS</HeadingChip>
 
-          <motion.h2 className="text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
+          <motion.h2 className="text-2xl lg:text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
             Trusted by Industry Leaders
           </motion.h2>
 
-          <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
+          <motion.h4 className="text-base lg:text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
             Collaborating with renowned brands to deliver transformative
             solutions that exemplify excellence, innovation, and trust.
           </motion.h4>
@@ -106,7 +106,7 @@ const PrestigiousBrands = () => {
             {secondRow.map((brand) => (
               <div
                 key={brand.id}
-                className="grid place-items-center min-h-10 min-w-44 relative overflow py-3 px-3"
+                className="grid place-items-center min-h-9 md:min-h-10 min-w-36 md:min-w-44 relative overflow py-3 px-3"
               >
                 <Image
                   src={brand.src}

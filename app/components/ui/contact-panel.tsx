@@ -9,11 +9,13 @@ export type ContactPanel = {
   heading: string;
   subheading: string;
   clipBoardText: string;
+  className?: string;
 };
 const ContactPanel: React.FC<ContactPanel> = ({
   icon,
   heading,
   subheading,
+  className,
   clipBoardText,
 }) => {
   const [copied, setCopied] = useState(false);
@@ -31,7 +33,7 @@ const ContactPanel: React.FC<ContactPanel> = ({
     <>
       <motion.div
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="group flex flex-col space-y-2 min-w-16 py-3 px-6 text-primary-content relative bg-zinc-800/40"
+        className={cn("group flex flex-col space-y-2 min-w-16 py-3 px-6 text-primary-content relative bg-zinc-800/40", className)}
       >
         <motion.div className="absolute left-0 top-0 h-full w-1 z-[2100] bg-gradient-to-br from-primary-500 via-indigo-500 to-purple-500 group-hover:shadow-[0_0_8px_2px_rgba(118,69,217,0.5)]"></motion.div>
 

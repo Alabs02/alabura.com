@@ -119,11 +119,11 @@ const Recommendations = () => {
                 <HeadingChip>ENDORSEMENTS</HeadingChip>
               </div>
 
-              <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide my-6">
+              <motion.h2 className="text-2xl lg:text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide my-6">
                 Voices of Impact
               </motion.h2>
 
-              <motion.h4 className="text-xl text-center lg:text-left text-zinc-50/80 font-poppins font-light">
+              <motion.h4 className="text-base lg:text-xl text-center lg:text-left text-zinc-50/80 font-poppins font-light">
                 Insights from exceptional professionals who&apos;ve experienced
                 the value, precision, and dedication I bring to every project.
               </motion.h4>
@@ -175,16 +175,16 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
           </div>
 
           <div className="flex-1 flex flex-col items-start justify-between h-14">
-            <h4 className="font-bricolage font-bold text-base md:text-lg 2xl:text-xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-50 via-zinc-50 to-zinc-700">
+            <h4 className="font-bricolage font-bold text-lg 2xl:text-xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-50 via-zinc-50 to-zinc-700">
               {name}
             </h4>
-            <h6 className="font-bricolage font-thin text-[12.5px] 2xl:text-sm text-zinc-50/80">
+            <h6 className="font-bricolage font-thin text-[13px] md:text-[12.5px] 2xl:text-sm text-zinc-50/80">
               {position}
             </h6>
           </div>
         </div>
 
-        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-[14.5px] leading-5 2xl:text-base tracking-[0.015em] text-pretty">
+        <div className="flex-1 w-full mt-6 text-neutral-50/90 font-bricolage font-thin text-[14.5px] leading-5 2xl:text-base md:stracking-[0.015em] text-pretty">
           {comment()}
         </div>
       </motion.div>

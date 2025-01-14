@@ -46,8 +46,8 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
             key={item.id}
             className={cn("flex flex-col justify-start gap-8 md:gap-12 w-full transition-all duration-300 will-change-auto", index === 0 ? "pt-10" : "pt-5")}
           >
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
+            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start w-full pl-12 md:pl-0">
+              <div className="h-10 absolute left-0 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-zinc-800 border border-zinc-700 p-2" />
               </div>
 
@@ -59,11 +59,11 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
                     <span className="text-inherit">{item.dates.end}</span>
                   </div>
 
-                  <h3 className="font-bricolage font-extrabold text-xl md:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 mt-0.5 mb-1.5">
+                  <h3 className="font-bricolage font-extrabold text-base md:text-xl lg:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 mt-0.5 mb-1.5">
                     {item.companyName}
                   </h3>
 
-                  <h4 className="font-bricolage font-extrabold text-lg md:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                  <h4 className="font-bricolage font-extrabold text-[15px] md:text-lg lg:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                     {item.positionTitle}
                   </h4>
                 </div>
@@ -73,10 +73,10 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
             </div>
 
             <motion.div
-              className={cn("relative pl-20 pr-4 w-full transition-all duration-500 will-change-auto", selectedEntry === index ? "opacity-100 h-auto" : "opacity-0 h-0")}
+              className={cn("relative pl-12 md:pl-20 pr-2 md:pr-4 w-full transition-all duration-500 will-change-auto", selectedEntry === index ? "opacity-100 h-auto" : "opacity-0 h-0")}
             >
               {item.content}{" "}
-              <div className="transition-all duration-500 w-full h-20 will-change-auto"></div>
+              <div className="transition-all duration-500 w-full h-16 md:h-20 will-change-auto"></div>
             </motion.div>
           </div>
         ))}
@@ -84,7 +84,7 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="absolute md:left-8 left-[18px] top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{

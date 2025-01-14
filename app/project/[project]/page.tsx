@@ -2349,6 +2349,16 @@ const ProjectOverview = () => {
 
   const projectAnalysis = projectDetails[project as any];
 
+  const currentProjects = [
+    "onecopy-business-ai",
+    "my-landlord-heaven",
+    "gradely",
+    "phc-accountability-tracka",
+    "liveable",
+    "ssaf-logistics",
+    "sims"
+  ];
+
   const cards = projectAnalysis?.images?.map((card: any) => (
     <Card key={card.src} card={card} />
   ));
@@ -2425,6 +2435,10 @@ const ProjectOverview = () => {
     notFound();
   }
 
+  if (!currentProjects.includes(project as string || "")) {    
+    notFound();
+  }
+
   return (
     <>
       <Head>
@@ -2477,7 +2491,7 @@ const ProjectOverview = () => {
             <div className="w-full flex flex-col gap-y-4 items-start">
               <HeadingChip>Project Overview</HeadingChip>
 
-              <h3 className="text-4xl lg:text-5xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 {projectAnalysis?.title} - {projectAnalysis?.category}
               </h3>
 
@@ -2485,7 +2499,7 @@ const ProjectOverview = () => {
                 {projectAnalysis?.description}
               </p>
 
-              <div className="flex items-center flex-wrap space-x-4 mt-4">
+              <div className="flex items-center flex-wrap gap-4 mt-4">
                 {projectAnalysis?.stack.map((item: any) => (
                   <motion.div
                     key={item?.id}
@@ -2583,7 +2597,7 @@ const ProjectOverview = () => {
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 w-full lg:w-[90%] 2xl:w-[80%] self-center lg:h-[450px] 2xl:h-[550px] mt-8 lg:mt-12 relative">
+              <div className="grid grid-cols-1 w-full lg:w-[90%] 2xl:w-[80%] self-center h-[400px] lg:h-[450px] 2xl:h-[550px] mt-8 lg:mt-12 relative">
                 <Carousel items={cards} />
               </div>
             </div>
@@ -2626,18 +2640,18 @@ const ProjectOverview = () => {
                   fill
                   priority
                   draggable={false}
-                  className="size-full object-contain"
+                  className="!w-auto h-full md:!size-full object-contain"
                 />
               </div>
             </div>
 
-            <div className="col-span-1 flex justify-center">
+            <div className="col-span-12 lg:col-span-1 flex justify-center">
               <div className="h-px w-full lg:h-full lg:w-px bg-gradient-to-r lg:bg-gradient-to-b from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
             </div>
 
             <div className="col-span-12 lg:col-span-10 grid grid-cols-1 gap-y-6 lg:gap-y-10">
               <div className="w-full flex flex-col gap-y-4 items-start">
-                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                <h4 className="font-bricolage font-extrabold md:tracking-wide text-pretty text-2xl lg:text-3xl xl:text-4xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                   Role & Achievements/Contributions
                 </h4>
 
@@ -2645,7 +2659,7 @@ const ProjectOverview = () => {
               </div>
 
               <div className="w-full flex flex-col gap-y-4 items-start">
-                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                <h4 className="font-bricolage font-extrabold md:tracking-wide text-pretty text-2xl lg:text-3xl xl:text-4xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                   Project Journey
                 </h4>
 
@@ -2653,7 +2667,7 @@ const ProjectOverview = () => {
               </div>
 
               <div className="w-full flex flex-col gap-y-4 items-start">
-                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                <h4 className="font-bricolage font-extrabold md:tracking-wide text-pretty text-2xl lg:text-3xl xl:text-4xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                   Challenges & Solutions
                 </h4>
 
@@ -2661,7 +2675,7 @@ const ProjectOverview = () => {
               </div>
 
               <div className="w-full flex flex-col gap-y-4 items-start">
-                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                <h4 className="font-bricolage font-extrabold md:tracking-wide text-pretty text-2xl lg:text-3xl xl:text-4xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                   Lessons Learned
                 </h4>
 
@@ -2669,7 +2683,7 @@ const ProjectOverview = () => {
               </div>
 
               <div className="w-full flex flex-col gap-y-4 items-start">
-                <h4 className="font-bricolage font-extrabold tracking-wide text-pretty text-2xl lg:text-3xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+                <h4 className="font-bricolage font-extrabold md:tracking-wide text-pretty text-2xl lg:text-3xl xl:text-4xl uppercase text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
                   Results and Impact
                 </h4>
 
@@ -2677,7 +2691,7 @@ const ProjectOverview = () => {
               </div>
             </div>
 
-            <div className="col-span-12 w-full flex flex-col lg:flex-row lg:justify-center space-y-4 md:space-y-0 md:space-x-4 2xl:space-x-6 pt-2">
+            <div className="col-span-12 w-full flex flex-row justify-center space-x-2 md:space-x-4 2xl:space-x-6 pt-2">
               <InteractiveLeftButton
                 onClick={onPrevious}
                 text="Previous"

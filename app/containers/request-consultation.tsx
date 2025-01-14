@@ -629,7 +629,7 @@ const RequstConsultation = () => {
         <motion.div className="flex flex-col items-center">
           <HeadingChip>Request Consultation</HeadingChip>
 
-          <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center font-bricolage font-bold tracking-wide xl:mt-12">
+          <motion.h2 className="text-3xl xl:text-4xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 text-center font-bricolage font-bold tracking-wide mt-4 xl:mt-12">
             Ready to Bring Your Vision to Life?
           </motion.h2>
 
