@@ -558,7 +558,7 @@ const projectDetails: any = {
               <span>
                 <span className="font-medium">Solution:</span> Focused on
                 delivering high-impact components first while deferring
-                lower-priority features.
+                lower-loading={"eager"} features.
               </span>
             </motion.li>
           </motion.ul>
@@ -2622,7 +2622,7 @@ const ProjectOverview = () => {
                 src={ImagePath.ILLUS_LINE_TOP_PROJECT}
                 alt={""}
                 fill
-                priority
+                loading={"eager"}
                 draggable={false}
                 className="size-full opacity-90"
               />
@@ -2638,7 +2638,7 @@ const ProjectOverview = () => {
                   src={projectAnalysis?.logo}
                   alt={""}
                   fill
-                  priority
+                  loading={"eager"}
                   draggable={false}
                   className="!w-auto h-full md:!size-full object-contain"
                 />
@@ -2695,7 +2695,9 @@ const ProjectOverview = () => {
               <InteractiveLeftButton
                 onClick={onPrevious}
                 text="Previous"
+                aria-label="Previous"
                 disabled={!canGoBack}
+                aria-disabled={!canGoBack}
                 className={cn(
                   "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
                   !canGoBack && "disabled:opacity-50 pointer-events-none"
@@ -2704,7 +2706,9 @@ const ProjectOverview = () => {
               <InteractiveRightButton
                 onClick={onNext}
                 text="Next"
+                aria-label="Next"
                 disabled={!canGoNext}
+                aria-disabled={!canGoNext}
                 className={cn(
                   "w-40 border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
                   !canGoNext && "disabled:opacity-50 pointer-events-none"
@@ -2897,6 +2901,8 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
 
         <div className="flex justify-end items-end gap-2 row-span-1">
           <button
+            aria-label="Previous"
+            aria-disabled={!canScrollLeft}
             className="relative z-40 h-9 w-9 2xl:h-10 2xl:w-10 rounded-full bg-zinc-50 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
@@ -2905,6 +2911,8 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
           </button>
 
           <button
+            aria-label="Next"
+            aria-disabled={!canScrollRight}
             className="relative z-40 h-9 w-9 2xl:h-10 2xl:w-10 rounded-full bg-zinc-50 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
@@ -2927,6 +2935,7 @@ const Card = ({
   return (
     <>
       <motion.button
+        aria-label={card?.title}
         layoutId={layout ? `card-${card.title}` : undefined}
         className="rounded-2xl bg-neutral-900 h-full w-full overflow-hidden flex flex-col items-start justify-start relative cursor-default z-10"
       >

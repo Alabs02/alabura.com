@@ -285,6 +285,7 @@ const RequstConsultation = () => {
                 onClick={() =>
                   onSelect("subject" as keyof ContactForm, heading)
                 }
+                aria-label={heading}
                 className="group relative rounded-xl overflow-hidden outline-none focus:outline"
               >
                 <MagicCard
@@ -349,6 +350,7 @@ const RequstConsultation = () => {
                       subheading,
                     })
                   }
+                  aria-label={heading}
                   className="group relative rounded-xl overflow-hidden outline-none focus:outline"
                 >
                   <MagicCard
@@ -450,6 +452,7 @@ const RequstConsultation = () => {
                     duration: 0.2,
                     ease: "easeInOut",
                   }}
+                  aria-label={heading}
                   onClick={() =>
                     onSelectService({ id, Icon, code, heading, subheading })
                   }
@@ -672,6 +675,8 @@ const RequstConsultation = () => {
           <InteractiveLeftButton
             onClick={onPrevious}
             text="Previous"
+            aria-label="Previous"
+            aria-disabled={getStep() === 1}
             className={cn(
               "w-40 border-zinc-600/80 hover:border-zinc-600/5 hover:text-zinc-100 text-zinc-400 font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
               getStep() === 1 ? "opacity-0 pointer-events-none" : "opacity-1"
@@ -680,6 +685,8 @@ const RequstConsultation = () => {
           <InteractiveRightButton
             onClick={onNext}
             text="Next"
+            aria-label="Next"
+            aria-disabled={getStep() > 3}
             className={cn(
               "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] uppercase tracking-wide !font-medium transition-opacity duration-300",
               getStep() > 3
@@ -689,6 +696,7 @@ const RequstConsultation = () => {
           />
 
           <RainbowButton
+            aria-label="Confirm & Submit"
             onClick={onNext}
             className={cn(
               "uppercase tracking-wide text-[15px] font-poppins !font-medium !rounded-full hover:text-zinc-950",

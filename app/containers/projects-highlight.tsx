@@ -203,7 +203,7 @@ const ProjectCard = ({
           src={asset.src}
           alt={asset.alt}
           fill
-          priority
+          loading={"eager"}
           draggable={false}
           className="size-full object-cover object-top rounded-xl"
         />
@@ -216,7 +216,7 @@ const ProjectCard = ({
             }}
             className="absolute inset-0 z-[2100] bg-zinc-950/85 grid place-items-center group-hover/media:backdrop-blur-sm origin-left right-full group-hover/media:right-[-2px] transition-all duration-400 delay-75 ease-in-out will-change-transform"
           >
-            <Link href={asset.href} target="_blank" passHref>
+            <Link href={asset.href} aria-label="Preview Project" target="_blank" passHref>
               <motion.button
                 initial={{
                   scale: 0,
@@ -234,6 +234,7 @@ const ProjectCard = ({
                 whileTap={{
                   scale: 0.9,
                 }}
+                aria-label="Preview Project"
                 className="cursor-pointer bg-zinc-950 no-underline group/media-btn relative py-1.5 px-4 ring-1 ring-cyan-50/15 shadow-2xl shadow-black rounded-full p-px inline-block text-cyan-50 hover:bg-cyan-50 hover:text-zinc-950 transition-all duration-300 will-change-auto"
               >
                 <div className="relative flex space-x-2 items-center z-10 rounded-full">
@@ -256,10 +257,10 @@ const ProjectCard = ({
               <div className="size-6 relative overflow-hidden p-px">
                 <Image
                   fill
-                  priority
                   src={icon}
                   alt={""}
                   draggable={false}
+                  loading={"eager"}
                   className="size-full object-contain object-center"
                 />
               </div>
@@ -339,7 +340,7 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <Link href={`/project/${kebabCase(title)}`} className="block w-full transition-all duration-300 will-change-transform translate-y-12 group-hover/bento:translate-y-0 delay-75" passHref>
+        <Link href={`/project/${kebabCase(title)}`} aria-label="See Full Overview" className="block w-full transition-all duration-300 will-change-transform translate-y-12 group-hover/bento:translate-y-0 delay-75" passHref>
           <RainbowButton className="w-full !text-xs text uppercase font-poppins text-zinc-50/80 space-x-2 rounded-full !py-0.5 px-2 h-8 mt-2">
             <motion.span className="!text-xs">See Full Overview</motion.span>
             <View size={17} />

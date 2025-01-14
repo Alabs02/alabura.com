@@ -74,7 +74,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
                 src={ImagePath.BRAND_LOGO_LIGHT}
                 alt="Alabura's Brand Logo"
                 fill
-                priority
+                loading={"eager"}
                 draggable={false}
                 className="transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
@@ -95,7 +95,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
           ))}
 
           <Link href={"/#request-consultation"} passHref>
-            <RainbowButton className="!rounded-full font-poppins uppercase !font-normal tracking-wide hidden md:inline-block">
+            <RainbowButton aria-label={HireButtonCopy} className="!rounded-full font-poppins uppercase !font-normal tracking-wide hidden md:inline-block">
               {HireButtonCopy}
             </RainbowButton>
           </Link>

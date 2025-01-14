@@ -49,8 +49,7 @@ const Hero = () => {
           <motion.div className="flex flex-col gap-y-6 xl:gap-y-9">
             <motion.h3 className="text-2xl xl:text-4xl 2xl:text-5xl text-balance font-extrabold font-bricolage bg-gradient-to-r from-primary-50 via-indigo-50 to-purple-50 bg-clip-text text-transparent">
               <span>{HeroSubHeadingCopyFirst}</span>
-              {"."}{" "}
-              <br className="md:hidden" />
+              {"."} <br className="md:hidden" />
               <Highlight className="rounded-2xl rounded-tl-sm rounded-br-sm text-zinc-50">
                 {HeroSubHeadingCopySecond}
               </Highlight>
@@ -61,8 +60,13 @@ const Hero = () => {
                 {HeroSubContent}
               </motion.p>
 
-              <Link href={"/#request-consultation"} passHref>
+              <Link
+                aria-label="Go to requestion a consultation section"
+                href={"/#request-consultation"}
+                passHref
+              >
                 <motion.button
+                  aria-label="Scroll Down"
                   onMouseEnter={() => setCanBounce(false)}
                   onMouseLeave={() => setCanBounce(true)}
                   className="relative lg:flex h-16 w-12 items-end hidden 2xl:hidden"
@@ -88,7 +92,7 @@ const Hero = () => {
                     src={ImagePath.ARROW_DOWN_WHITE}
                     alt={""}
                     fill
-                    priority
+                    loading={"eager"}
                   />
                 </motion.button>
               </Link>
@@ -98,7 +102,12 @@ const Hero = () => {
           <motion.div className="flex flex-row flex-wrap xl:flex-nowrap items-start lg:items-center gap-x-2 lg:gap-x-0 gap-y-2 lg:gap-y-0 lg:justify-between w-full xl:w-[75%] 2xl:w-[70%]">
             <motion.div className="flex flex-col gap-y-4 w-[calc(50%-4px)] lg:!w-auto overflow-hidden">
               <motion.div className="relative size-8 md:size-12 overflow-hidden p-px rounded">
-                <Image src={ProjectsDelivered.src} alt={""} fill priority />
+                <Image
+                  src={ProjectsDelivered.src}
+                  alt={""}
+                  fill
+                  loading={"eager"}
+                />
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
@@ -118,7 +127,7 @@ const Hero = () => {
 
             <motion.div className="flex flex-col gap-y-4 w-[calc(50%-4px)] lg:!w-auto overflow-hidden">
               <motion.div className="relative size-8 md:size-12 overflow-hidden p-px rounded">
-                <Image src={Perks.src} alt={""} fill priority />
+                <Image src={Perks.src} alt={""} fill loading={"eager"} />
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
@@ -133,7 +142,12 @@ const Hero = () => {
 
             <motion.div className="flex flex-col gap-y-4 w-[50%] lg:!w-auto overflow-hidden">
               <motion.div className="relative size-8 md:size-12 overflow-hidden p-px rounded">
-                <Image src={GlobalCollaboration.src} alt={""} fill priority />
+                <Image
+                  src={GlobalCollaboration.src}
+                  alt={""}
+                  fill
+                  loading={"eager"}
+                />
               </motion.div>
 
               <motion.div className="flex flex-col gap-y-2 w-full min-h-24 max-h-32">
@@ -168,8 +182,13 @@ const Hero = () => {
       </motion.div>
 
       <motion.div className="absolute z-[3000] right-[15%] top-[70%] -translate-y-[70%]">
-        <Link href={"/#request-consultation"} passHref>
+        <Link
+          href={"/#request-consultation"}
+          aria-label="Go to request a consulation section"
+          passHref
+        >
           <motion.button
+            aria-label="Scroll Down"
             onMouseEnter={() => setCanBounce(false)}
             onMouseLeave={() => setCanBounce(true)}
             className="relative 2xl:flex h-16 w-12 items-end hidden"
@@ -192,7 +211,12 @@ const Hero = () => {
                 : { duration: 1, type: "tween" }
             }
           >
-            <Image src={ImagePath.ARROW_DOWN_WHITE} alt={""} fill priority />
+            <Image
+              src={ImagePath.ARROW_DOWN_WHITE}
+              alt={""}
+              fill
+              loading={"eager"}
+            />
           </motion.button>
         </Link>
       </motion.div>
