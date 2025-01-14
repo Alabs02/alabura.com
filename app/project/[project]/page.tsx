@@ -14,7 +14,7 @@ import kebabCase from "lodash/kebabCase";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 import { BASE_URL } from "@/sitemap";
-import React, { createContext, useEffect, useId, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 const projectDetails: any = {
   "my-landlord-heaven": {
