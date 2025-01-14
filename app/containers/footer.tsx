@@ -43,17 +43,17 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
               <InteractiveRightButton
                 text="Let's Discuss"
                 className={cn(
-                  "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
+                  "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] md:text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
                 )}
               />
             </Link>
           </div>
 
           <div className="flex flex-col gap-y-4 w-full">
-            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-y-4 lg:gap-y-0">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-y-6 md:gap-y-4 lg:gap-y-0">
               <div className="flex flex-col gap-y-2">
-                <div className="flex items-center space-x-4">
-                  <div className="size-14 relative overflow-hidden">
+                <div className="flex items-center space-x-2 md:space-x-4">
+                  <div className="size-12 md:size-14 relative overflow-hidden">
                     <Image
                       src={ImagePath.BRAND_LOGO_LIGHT}
                       alt={""}
@@ -89,11 +89,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
               </div>
 
               <div className="flex flex-col items-end justify-end">
-                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
+                <p className="font-bricolage font-normal uppercase text-[15px] md:text-base lg:text-lg text-neutral-50/90">
                   &copy; {new Date().getFullYear()} Alabura Usman. All Rights
                   Reserved.
                 </p>
-                <p className="font-bricolage font-normal uppercase text-base lg:text-lg text-neutral-50/90">
+                <p className="font-bricolage font-normal uppercase text-[15px] md:text-base lg:text-lg text-neutral-50/90">
                   Delivering Impact, One Project at a Time.
                 </p>
               </div>
@@ -101,8 +101,8 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
 
             <div className="h-px w-full bg-gradient-to-r from-neutral-700/0 via-neutral-700/90 to-neutral-700/0"></div>
 
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
-              <div className="flex items-center space-x-2 lg:space-x-4">
+            <div className="flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row lg:items-start lg:justify-between">
+              <div className="flex items-center justify-between lg:justify-start space-x-2 lg:space-x-4">
                 <AnimatedLink
                   id={nanoid()}
                   label="Services"
@@ -123,7 +123,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 />
               </div>
 
-              <div className="flex items-center space-x-2 lg:space-x-4">
+              <div className="flex items-center justify-between lg:justify-start space-x-2 lg:space-x-4">
                 <Link
                   href={"https://www.linkedin.com/in/usmanunfolds/"}
                   target="_blank"
@@ -277,7 +277,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
             </div>
           </div>
 
-          <div className="w-full mb-8"></div>
+          <div className="w-full mb-10 md:mb-8"></div>
         </div>
 
         <motion.button
@@ -298,7 +298,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
           className="w-[80%] cursor-pointer bg-black no-underline group/move-up absolute ring-1 ring-secondary-50/15 shadow-2xl shadow-black !rounded-t-[32px] text-secondary-50 hover:bg-secondary-50 hover:text-zinc-950 transition-all duration-300 will-change-auto flex items-center space-x-2 bottom-0 z-[2500]"
         >
           <div className="relative h-full w-full p-6">
-            <div className="relative flex space-x-2 items-center z-10 rounded-full text-base lg:text-lg uppercase font-poppins tracking-wide font-light">
+            <div className="relative flex space-x-2 items-center z-10 rounded-full text-[15px] md:text-base lg:text-lg uppercase font-poppins tracking-wide font-light">
               <MoveUp size={20} />
 
               <span className="text-inherit">{"Back to the top"}</span>

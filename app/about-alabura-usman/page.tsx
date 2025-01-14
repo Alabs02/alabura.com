@@ -33,7 +33,7 @@ const AboutAlaburaUsman = () => {
           <div className="w-full flex flex-col gap-y-4 items-start">
             <HeadingChip>ABOUT ALABURA</HeadingChip>
 
-            <h3 className="text-4xl lg:text-5xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
               A Visionary Engineer with a Purpose
             </h3>
 
@@ -88,7 +88,7 @@ const AboutAlaburaUsman = () => {
 
       <section className="w-full grid grid-cols-1 place-items-center relative overflow-hidden bg-gradient-to-b from-zinc-900/80 via-background to-zinc-900/80">
         <div className="section relative flex flex-col items-center h-full gap-y-10 py-10 xl:py-12 2xl:py-16 z-[2000]">
-          <h3 className="text-4xl lg:text-5xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+          <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center md:text-left font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
             Ready to Build Something Exceptional?
           </h3>
 
@@ -98,7 +98,7 @@ const AboutAlaburaUsman = () => {
             time.
           </p>
 
-          <div className="flex flex-col space-y-6 md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
+          <div className="flex flex-col space-y-6 items-center md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
             <Link
               href={
                 "mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
@@ -130,7 +130,7 @@ const AboutAlaburaUsman = () => {
       <section className="w-full grid grid-cols-1 place-items-center relative overflow-hidden bg-gradient-to-b from-neutral-900 to-neutral-950">
         <div className="section h-full flex flex-col items-center gap-y-16 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
           <div className="flex flex-col items-center w-full">
-            <h3 className="text-3xl lg:text-4xl text-center font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Work:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 Crafting Solutions That Matter
@@ -148,7 +148,7 @@ const AboutAlaburaUsman = () => {
           </div>
 
           <div className="flex flex-col items-center w-full">
-            <h3 className="text-3xl lg:text-4xl text-center font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Inspired:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 Driven by Curiosity, Fueled by Purpose
@@ -165,7 +165,7 @@ const AboutAlaburaUsman = () => {
           </div>
 
           <div className="flex flex-col items-center w-full">
-            <h3 className="text-3xl lg:text-4xl text-center font-bricolage font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Vision:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
                 Engineering a Better Tomorrow

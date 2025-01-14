@@ -35,7 +35,7 @@ const Hero = () => {
     <>
       <motion.div className="section h-auto grid grid-cols-12 lg:gap-6 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
         <motion.div className="col-span-12 lg:col-span-12 flex flex-col gap-y-6 xl:gap-y-12 2xl:gap-y-14">
-          <motion.h1 className="text-2xl xl:text-5xl 2xl:text-[58px] text-pretty tracking-normal shadow-sm font-extrabold font-bricolage">
+          <motion.h1 className="text-2xl xl:text-5xl 2xl:text-[58px] text-pretty tracking-normal shadow-sm font-extrabold font-bricolage h-28 md:h-auto">
             <motion.span className="bg-gradient-to-b from-primary-50 to-zinc-50 bg-clip-text text-transparent !leading-relaxed">
               {Intro},
             </motion.span>

@@ -305,11 +305,11 @@ const WorkHistory = () => {
         <motion.div className="flex flex-col items-center">
           <HeadingChip>Professional Journey</HeadingChip>
 
-          <motion.h2 className="text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
+          <motion.h2 className="text-2xl lg:text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
             Collaborating with the Best
           </motion.h2>
 
-          <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
+          <motion.h4 className="text-base lg:text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
             I&apos;ve had the privilege of working alongside world-class
             professionals at exceptional companies, gaining invaluable
             experience and contributing to impactful projects.

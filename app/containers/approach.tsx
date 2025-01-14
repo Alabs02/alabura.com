@@ -29,11 +29,12 @@ const Approach = () => {
           <HeadingChip>My Approach</HeadingChip>
 
           <motion.div className="group flex flex-row items-center justify-center relative rounded-full bg-gradient-to-r from-purple-500 via-[#ffaa40] to-pink-500 p-[1px] transition-shadow duration-500 ease-out [--bg-size:300%] mt-6">
-            <div className="flex flex-row items-center justify-center w-full h-full bg-zinc-950 rounded-full px-4 py-1.5 z-[2]">
-              🛠️
+            <div className="flex flex-row items-center justify-center w-full h-full bg-zinc-950 rounded-full px-1.5 md:px-4 py-1.5 z-[2]">
+              <span className="hidden md:inline">🛠️</span>
+              
               <ShinyText className="flex flex-row items-center justify-center w-full h-full">
-                <div className="mx-3 h-4 w-px bg-zinc-50/90" />
-                <motion.h6 className="uppercase tracking-wider text-center text-zinc-50 font-light font-poppins text-base lg:text-lg">
+                <div className="mx-px md:mx-3 h-4 w-px bg-zinc-50/90 hidden md:inline-block" />
+                <motion.h6 className="uppercase tracking-wider text-left md:text-center text-zinc-50 font-light font-poppins text-[10.5px] lg:text-lg !m-0 !p-0">
                   <motion.span className="text-purple-500">Grit</motion.span> +{" "}
                   <motion.span className="text-[#ffaa40]">Agility</motion.span>{" "}
                   +{" "}
@@ -47,12 +48,12 @@ const Approach = () => {
             </div>
           </motion.div>
 
-          <motion.h2 className="text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-12">
+          <motion.h2 className="text-2xl lg:text-3xl xl:text-4xl text-center text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600 font-extrabold font-bricolage tracking-wide mt-8 2xl:mt-12">
             A Time-Tested Framework for Excellence
           </motion.h2>
 
-          <motion.h4 className="text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-6">
-            Over the years, I’ve refined a pattern grounded in{" "}
+          <motion.h4 className="text-base lg:text-xl text-center text-zinc-50/80 font-poppins font-normal lg:w-[70%] mt-4 lg:mt-6">
+            Over the years, I&apos;ve refined a pattern grounded in{" "}
             <i className="text-zinc-50">grit</i>,{" "}
             <i className="text-zinc-50">agile principles</i>, and{" "}
             <i className="text-zinc-50">integrity</i>. This approach ensures
@@ -64,9 +65,9 @@ const Approach = () => {
 
         <motion.div className="w-full flex flex-col gap-y-12 items-center mt-8 xl:mt-12">
           <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+            <motion.h6 className="font-bricolage font-medium text-xl lg:text-2xl text-center bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600 text-transparent">
               Collaboration & Understanding:{" "}
-              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+              <span className="bg-gradient-to-b bg-clip-text from-secondary-100 to-cyan-200 text-transparent">
                 The Foundation of GAIN
               </span>
             </motion.h6>
@@ -78,9 +79,9 @@ const Approach = () => {
           </div>
 
           <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+            <motion.h6 className="font-bricolage font-medium text-xl lg:text-2xl text-center bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600 text-transparent">
               A Tailored Approach:{" "}
-              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+              <span className="bg-gradient-to-b bg-clip-text from-secondary-100 to-cyan-200 text-transparent">
                 Agile in Action
               </span>
             </motion.h6>
@@ -92,9 +93,9 @@ const Approach = () => {
           </div>
 
           <div className="w-full lg:w-[50%] 2xl:w-[45%] flex flex-col gap-y-1">
-            <motion.h6 className="font-bricolage font-medium text-2xl text-center bg-gradient-to-b bg-clip-text from-primary-300 via-indigo-300 to-purple-300 text-transparent">
+            <motion.h6 className="font-bricolage font-medium text-xl lg:text-2xl text-center bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-300 text-transparent">
               Delivering Results:{" "}
-              <span className="bg-gradient-to-b bg-clip-text from-primary-100 via-indigo-100 to-purple-100 text-transparent">
+              <span className="bg-gradient-to-b bg-clip-text from-secondary-100 to-cyan-200 text-transparent">
                 Turning Grit Into Gains
               </span>
             </motion.h6>
