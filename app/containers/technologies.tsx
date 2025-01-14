@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 // LIB
 import { ImagePath } from "@/constants";
-import { HeadingChip, SEOIcons } from "@/components/ui";
+import { GridPattern, HeadingChip, SEOIcons } from "@/components/ui";
 import { Noise } from "./request-consultation";
 import { nanoid } from "nanoid";
 import { cn } from "@/lib/utils";
@@ -3245,13 +3245,16 @@ export const Grid = ({
   pattern?: number[][];
   size?: number;
 }) => {
-  const p = pattern ?? [
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-  ];
+  const stablePattern = useMemo(
+    () =>
+      pattern ??
+      Array.from({ length: 5 }, () => [
+        Math.floor(Math.random() * 4) + 7,
+        Math.floor(Math.random() * 6) + 1,
+      ]),
+    [pattern]
+  );
+
   return (
     <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 -mt-2 h-full w-full [mask-image:linear-gradient(#f4f4f5,transparent)]">
       <GridPattern
@@ -3259,55 +3262,13 @@ export const Grid = ({
         height={size ?? 20}
         x="-12"
         y="4"
-        squares={p}
+        squares={stablePattern}
         className="absolute inset-0 h-full w-full mix-blend-overlay fill-white/10 stroke-white/10"
       />
-
       <Noise />
     </div>
   );
 };
-
-export function GridPattern({ width, height, x, y, squares, ...props }: any) {
-  const patternId = nanoid();
-
-  return (
-    <svg aria-hidden="true" {...props}>
-      <defs>
-        <pattern
-          id={patternId}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
-        </pattern>
-      </defs>
-      <rect
-        width="100%"
-        height="100%"
-        strokeWidth={0}
-        fill={`url(#${patternId})`}
-      />
-      {squares && (
-        <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([x, y]: any) => (
-            <rect
-              strokeWidth="0"
-              key={`${x}-${y}-${nanoid()}`}
-              width={width + 1}
-              height={height + 1}
-              x={x * width}
-              y={y * height}
-            />
-          ))}
-        </svg>
-      )}
-    </svg>
-  );
-}
 
 const TechnologiesArtifactTopLeft = () => {
   return (

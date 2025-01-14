@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { HeadingChip } from "@/components/ui";
+import { GridPattern, HeadingChip } from "@/components/ui";
 
 import { UI } from "@/models";
 import { cn } from "@/lib/utils";
@@ -192,46 +192,6 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
   );
 };
 
-function GridPattern({ width, height, x, y, squares, ...props }: any) {
-  const patternId = nanoid();
-
-  return (
-    <svg aria-hidden="true" {...props}>
-      <defs>
-        <pattern
-          id={patternId}
-          width={width}
-          height={height}
-          patternUnits="userSpaceOnUse"
-          x={x}
-          y={y}
-        >
-          <path d={`M.5 ${height}V.5H${width}`} fill="none" />
-        </pattern>
-      </defs>
-      <rect
-        width="100%"
-        height="100%"
-        strokeWidth={0}
-        fill={`url(#${patternId})`}
-      />
-      {squares && (
-        <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([x, y]: any) => (
-            <rect
-              strokeWidth="0"
-              key={`${x}-${y}-${nanoid()}`}
-              width={width + 1}
-              height={height + 1}
-              x={x * width}
-              y={y * height}
-            />
-          ))}
-        </svg>
-      )}
-    </svg>
-  );
-}
 
 const Grid = ({ pattern, size }: { pattern?: number[][]; size?: number }) => {
   const p = pattern ?? [

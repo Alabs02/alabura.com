@@ -392,5 +392,4 @@ const GridHeroPattern = memo(() => {
 });
 
 GridHeroPattern.displayName = "GridHeroPattern";
-
 export { ProjectsHighlight, GridHeroPattern };
