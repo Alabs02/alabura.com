@@ -144,7 +144,7 @@ const ProjectsHighlight = () => {
           </motion.h4>
 
           <div className="w-full mt-12">
-            <motion.div className="grid auto-rows-[23.5rem] md:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
+            <motion.div className="grid auto-rows-[24rem] md:auto-rows-[23rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto">
               {projects.map((project, i) => (
                 <ProjectCard
                   key={i}
