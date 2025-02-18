@@ -13,7 +13,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PrestigiousBrands } from "@/containers";
-import { ArrowRight, Mail, ScanEye } from "lucide-react";
+import { ArrowRight, ScanEye } from "lucide-react";
 import { IconMailSpark } from "@tabler/icons-react";
 
 const AboutAlaburaUsman = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, useSpring } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 import {
   calURL,
   goals,
@@ -17,9 +17,8 @@ import { useBoundStore } from "@/store";
 import isEqual from "lodash/isEqual";
 import kebabCase from "lodash/kebabCase";
 import isEmpty from "lodash/isEmpty";
-import { toast } from "react-hot-toast";
 import { ContactForm, Service } from "@slice/index";
-import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Link from "next/link";
@@ -34,8 +33,6 @@ const RequstConsultation = () => {
     getStep,
     getForm,
     getLeanFormServices,
-    prevStep,
-    nextStep,
     addService,
     removeService,
   } = useBoundStore();
@@ -136,102 +133,102 @@ const RequstConsultation = () => {
     setProgress(((currentStep - 1) / totalSteps) * 100);
   };
 
-  const onNext = () => {
-    const totalSteps = 4;
+  // const onNext = () => {
+  //   const totalSteps = 4;
 
-    const caseOne = () => {
-      if (isEmpty(getForm().subject)) {
-        toast.error("Select an item!");
-      } else {
-        if (kebabCase(getForm().subject) === "explore-possibilities") {
-          nextStep(3);
-          calculateProgress(getStep(), totalSteps);
-        } else {
-          nextStep(2);
-          calculateProgress(getStep(), totalSteps);
-        }
-      }
-    };
+  //   const caseOne = () => {
+  //     if (isEmpty(getForm().subject)) {
+  //       toast.error("Select an item!");
+  //     } else {
+  //       if (kebabCase(getForm().subject) === "explore-possibilities") {
+  //         nextStep(3);
+  //         calculateProgress(getStep(), totalSteps);
+  //       } else {
+  //         nextStep(2);
+  //         calculateProgress(getStep(), totalSteps);
+  //       }
+  //     }
+  //   };
 
-    const caseTwo = () => {
-      if (
-        isEmpty(getForm().inquiry.type) ||
-        isEmpty(getForm().inquiry.heading) ||
-        isEmpty(getForm().inquiry.subheading)
-      ) {
-        toast.error("Select an item!");
-      } else {
-        nextStep(3);
-        calculateProgress(getStep(), totalSteps);
-      }
-    };
+  //   const caseTwo = () => {
+  //     if (
+  //       isEmpty(getForm().inquiry.type) ||
+  //       isEmpty(getForm().inquiry.heading) ||
+  //       isEmpty(getForm().inquiry.subheading)
+  //     ) {
+  //       toast.error("Select an item!");
+  //     } else {
+  //       nextStep(3);
+  //       calculateProgress(getStep(), totalSteps);
+  //     }
+  //   };
 
-    const caseThree = () => {
-      if (
-        kebabCase(getForm().subject) === "launch-a-project" ||
-        kebabCase(getForm().subject) === "collaborate-long-term"
-      ) {
-        if (isEmpty(getForm().services)) {
-          toast.error("Kindly select an item!");
-        } else {
-          nextStep(4);
-          calculateProgress(getStep(), totalSteps);
-        }
-      } else {
-        const formFields = getInquiryQuestionsBySubject(
-          kebabCase(getForm().subject) as keyof typeof inquiryQuestions
-        );
+  //   const caseThree = () => {
+  //     if (
+  //       kebabCase(getForm().subject) === "launch-a-project" ||
+  //       kebabCase(getForm().subject) === "collaborate-long-term"
+  //     ) {
+  //       if (isEmpty(getForm().services)) {
+  //         toast.error("Kindly select an item!");
+  //       } else {
+  //         nextStep(4);
+  //         calculateProgress(getStep(), totalSteps);
+  //       }
+  //     } else {
+  //       const formFields = getInquiryQuestionsBySubject(
+  //         kebabCase(getForm().subject) as keyof typeof inquiryQuestions
+  //       );
 
-        const missingFields = formFields.filter(
-          (field) =>
-            field.isRequired && isEmpty((getForm() as any)[field.label])
-        );
+  //       const missingFields = formFields.filter(
+  //         (field) =>
+  //           field.isRequired && isEmpty((getForm() as any)[field.label])
+  //       );
 
-        if (missingFields.length > 0) {
-          toast.error("Please fill in all required fields!");
-        } else {
-          nextStep(4);
-          calculateProgress(getStep(), totalSteps);
-        }
-      }
-    };
+  //       if (missingFields.length > 0) {
+  //         toast.error("Please fill in all required fields!");
+  //       } else {
+  //         nextStep(4);
+  //         calculateProgress(getStep(), totalSteps);
+  //       }
+  //     }
+  //   };
 
-    const caseFour = () => {
-      const requiredFields = [getForm().name, getForm().email];
+  //   const caseFour = () => {
+  //     const requiredFields = [getForm().name, getForm().email];
 
-      if (requiredFields.some(isEmpty)) {
-        toast.error("Please fill in all required fields to confirm!");
-      } else {
-        // Proceed to final step
-        toast.success("Request Submitted Successfully!");
-        // You can add your final submission logic here
-        nextStep(5);
-        calculateProgress(getStep(), totalSteps);
-      }
-    };
+  //     if (requiredFields.some(isEmpty)) {
+  //       toast.error("Please fill in all required fields to confirm!");
+  //     } else {
+  //       // Proceed to final step
+  //       toast.success("Request Submitted Successfully!");
+  //       // You can add your final submission logic here
+  //       nextStep(5);
+  //       calculateProgress(getStep(), totalSteps);
+  //     }
+  //   };
 
-    if (getStep() === 1) {
-      caseOne();
-    } else if (getStep() === 2) {
-      caseTwo();
-    } else if (getStep() === 3) {
-      caseThree();
-    } else if (getStep() === 4) {
-      caseFour();
-    }
-  };
+  //   if (getStep() === 1) {
+  //     caseOne();
+  //   } else if (getStep() === 2) {
+  //     caseTwo();
+  //   } else if (getStep() === 3) {
+  //     caseThree();
+  //   } else if (getStep() === 4) {
+  //     caseFour();
+  //   }
+  // };
 
-  const onPrevious = () => {
-    const totalSteps = 4;
+  // const onPrevious = () => {
+  //   const totalSteps = 4;
 
-    if (kebabCase(getForm().subject) === "explore-possibilities") {
-      prevStep(1);
-      calculateProgress(getStep(), totalSteps);
-    } else {
-      prevStep();
-      calculateProgress(getStep(), totalSteps);
-    }
-  };
+  //   if (kebabCase(getForm().subject) === "explore-possibilities") {
+  //     prevStep(1);
+  //     calculateProgress(getStep(), totalSteps);
+  //   } else {
+  //     prevStep();
+  //     calculateProgress(getStep(), totalSteps);
+  //   }
+  // };
 
   useEffect(() => {
     const totalSteps = 4;
@@ -273,361 +270,361 @@ const RequstConsultation = () => {
     console.log(`Step: ${getStep()}, Progress: ${progress}%`);
   }, [getStep, progress]);
 
-  const getCurrentStepSnapshot = () => {
-    switch (getStep()) {
-      case 1:
-        return (
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6">
-            {goals.map(({ id, Icon, heading, subheading }) => (
-              <motion.button
-                key={id}
-                initial={{
-                  scale: 1,
-                }}
-                whileTap={{
-                  scale: 0.9,
-                }}
-                transition={{
-                  duration: 0.2,
-                  ease: "easeInOut",
-                }}
-                onClick={() =>
-                  onSelect("subject" as keyof ContactForm, heading)
-                }
-                aria-label={heading}
-                className="group relative rounded-xl overflow-hidden outline-none focus:outline"
-              >
-                <MagicCard
-                  className={cn(
-                    "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
-                    kebabCase(getForm().subject) === kebabCase(heading) &&
-                      "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
-                  )}
-                  gradientColor="#242b33"
-                >
-                  <Icon
-                    className={cn(
-                      "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
-                      kebabCase(getForm().subject) === kebabCase(heading) &&
-                        "text-primary-content"
-                    )}
-                  />
-                  <Icon
-                    className={cn(
-                      "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
-                      kebabCase(getForm().subject) === kebabCase(heading) &&
-                        "text-indigo-300/90"
-                    )}
-                    size={110}
-                  />
+  // const getCurrentStepSnapshot = () => {
+  //   switch (getStep()) {
+  //     case 1:
+  //       return (
+  //         <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6">
+  //           {goals.map(({ id, Icon, heading, subheading }) => (
+  //             <motion.button
+  //               key={id}
+  //               initial={{
+  //                 scale: 1,
+  //               }}
+  //               whileTap={{
+  //                 scale: 0.9,
+  //               }}
+  //               transition={{
+  //                 duration: 0.2,
+  //                 ease: "easeInOut",
+  //               }}
+  //               onClick={() =>
+  //                 onSelect("subject" as keyof ContactForm, heading)
+  //               }
+  //               aria-label={heading}
+  //               className="group relative rounded-xl overflow-hidden outline-none focus:outline"
+  //             >
+  //               <MagicCard
+  //                 className={cn(
+  //                   "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+  //                   kebabCase(getForm().subject) === kebabCase(heading) &&
+  //                     "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
+  //                 )}
+  //                 gradientColor="#242b33"
+  //               >
+  //                 <Icon
+  //                   className={cn(
+  //                     "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
+  //                     kebabCase(getForm().subject) === kebabCase(heading) &&
+  //                       "text-primary-content"
+  //                   )}
+  //                 />
+  //                 <Icon
+  //                   className={cn(
+  //                     "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
+  //                     kebabCase(getForm().subject) === kebabCase(heading) &&
+  //                       "text-indigo-300/90"
+  //                   )}
+  //                   size={110}
+  //                 />
 
-                  <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
-                    {heading}
-                  </motion.h4>
+  //                 <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
+  //                   {heading}
+  //                 </motion.h4>
 
-                  <motion.p className="text-sm text-left font-poppins relative z-[2500]">
-                    {subheading}
-                  </motion.p>
-                </MagicCard>
+  //                 <motion.p className="text-sm text-left font-poppins relative z-[2500]">
+  //                   {subheading}
+  //                 </motion.p>
+  //               </MagicCard>
 
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
-              </motion.button>
-            ))}
-          </motion.div>
-        );
-      case 2:
-        return (
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6">
-            {getInquiryBySubject().map(
-              ({ id, Icon, code, heading, subheading }) => (
-                <motion.button
-                  key={id}
-                  initial={{
-                    scale: 1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeInOut",
-                  }}
-                  onClick={() =>
-                    onSelect("inquiry" as keyof ContactForm, {
-                      type: getInquiryType(heading),
-                      heading,
-                      subheading,
-                    })
-                  }
-                  aria-label={heading}
-                  className="group relative rounded-xl overflow-hidden outline-none focus:outline"
-                >
-                  <MagicCard
-                    className={cn(
-                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
-                      `${kebabCase(getForm().subject)}_${kebabCase(
-                        getForm().inquiry.heading
-                      )}` === code &&
-                        "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
-                    )}
-                    gradientColor="#242b33"
-                  >
-                    <Icon
-                      className={cn(
-                        "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
-                        `${kebabCase(getForm().subject)}_${kebabCase(
-                          getForm().inquiry.heading
-                        )}` === code && "text-primary-content"
-                      )}
-                    />
-                    <Icon
-                      className={cn(
-                        "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
-                        `${kebabCase(getForm().subject)}_${kebabCase(
-                          getForm().inquiry.heading
-                        )}` === code && "text-indigo-300/90"
-                      )}
-                      size={110}
-                    />
+  //               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
+  //             </motion.button>
+  //           ))}
+  //         </motion.div>
+  //       );
+  //     case 2:
+  //       return (
+  //         <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6">
+  //           {getInquiryBySubject().map(
+  //             ({ id, Icon, code, heading, subheading }) => (
+  //               <motion.button
+  //                 key={id}
+  //                 initial={{
+  //                   scale: 1,
+  //                 }}
+  //                 whileTap={{
+  //                   scale: 0.9,
+  //                 }}
+  //                 transition={{
+  //                   duration: 0.2,
+  //                   ease: "easeInOut",
+  //                 }}
+  //                 onClick={() =>
+  //                   onSelect("inquiry" as keyof ContactForm, {
+  //                     type: getInquiryType(heading),
+  //                     heading,
+  //                     subheading,
+  //                   })
+  //                 }
+  //                 aria-label={heading}
+  //                 className="group relative rounded-xl overflow-hidden outline-none focus:outline"
+  //               >
+  //                 <MagicCard
+  //                   className={cn(
+  //                     "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+  //                     `${kebabCase(getForm().subject)}_${kebabCase(
+  //                       getForm().inquiry.heading
+  //                     )}` === code &&
+  //                       "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
+  //                   )}
+  //                   gradientColor="#242b33"
+  //                 >
+  //                   <Icon
+  //                     className={cn(
+  //                       "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
+  //                       `${kebabCase(getForm().subject)}_${kebabCase(
+  //                         getForm().inquiry.heading
+  //                       )}` === code && "text-primary-content"
+  //                     )}
+  //                   />
+  //                   <Icon
+  //                     className={cn(
+  //                       "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
+  //                       `${kebabCase(getForm().subject)}_${kebabCase(
+  //                         getForm().inquiry.heading
+  //                       )}` === code && "text-indigo-300/90"
+  //                     )}
+  //                     size={110}
+  //                   />
 
-                    <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
-                      {heading}
-                    </motion.h4>
+  //                   <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
+  //                     {heading}
+  //                   </motion.h4>
 
-                    <motion.p className="text-sm text-left font-poppins relative z-[2500]">
-                      {subheading}
-                    </motion.p>
-                  </MagicCard>
+  //                   <motion.p className="text-sm text-left font-poppins relative z-[2500]">
+  //                     {subheading}
+  //                   </motion.p>
+  //                 </MagicCard>
 
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
-                </motion.button>
-              )
-            )}
-          </motion.div>
-        );
-      case 3:
-        return kebabCase(getForm().subject) === "explore-possibilities" ||
-          kebabCase(getForm().subject) === "training-mentorship" ? (
-          <>
-            <motion.h4 className="text-lg font-poppins mb-4 text-center italic text-zinc-500">
-              {
-                inquiryQuestionHeadings[
-                  `${kebabCase(
-                    getForm().subject
-                  )}-heading` as keyof typeof inquiryQuestionHeadings
-                ]
-              }
-            </motion.h4>
-            <motion.div className="w-full grid grid-cols-2 grid-rows-[auto] 2xl:grid-cols-3 gap-4 xl:gap-6">
-              {getInquiryQuestionsBySubject(
-                kebabCase(getForm().subject) as keyof typeof inquiryQuestions
-              ).map((q) => (
-                <motion.div key={q.id} className="flex flex-col space-y-2">
-                  <motion.label
-                    className="text-sm font-poppins text-zinc-50"
-                    htmlFor={kebabCase(q.label)}
-                  >
-                    {q.label}
-                    {q.isRequired && (
-                      <span className="text-pink-600 text-base font-medium ml-1">
-                        *
-                      </span>
-                    )}
-                  </motion.label>
-                  <motion.textarea
-                    id={kebabCase(q.label)}
-                    className="w-full p-4 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
-                    rows={4}
-                    required={q.isRequired}
-                    placeholder={q.placeholder}
-                  ></motion.textarea>
-                </motion.div>
-              ))}
-            </motion.div>
-          </>
-        ) : (
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6">
-            {getServiceBySubjectAndInquiry().map(
-              ({ id, Icon, code, heading, subheading }) => (
-                <motion.button
-                  key={id}
-                  initial={{
-                    scale: 1,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeInOut",
-                  }}
-                  aria-label={heading}
-                  onClick={() =>
-                    onSelectService({ id, Icon, code, heading, subheading })
-                  }
-                  className="group relative rounded-xl overflow-hidden outline-none focus:outline"
-                >
-                  <MagicCard
-                    className={cn(
-                      "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
-                      getLeanFormServices().includes(id) &&
-                        "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
-                    )}
-                    gradientColor="#242b33"
-                  >
-                    <Icon
-                      className={cn(
-                        "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
-                        getLeanFormServices().includes(id) &&
-                          "text-primary-content"
-                      )}
-                    />
-                    <Icon
-                      className={cn(
-                        "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
-                        getLeanFormServices().includes(id) &&
-                          "text-indigo-300/90"
-                      )}
-                      size={110}
-                    />
+  //                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
+  //               </motion.button>
+  //             )
+  //           )}
+  //         </motion.div>
+  //       );
+  //     case 3:
+  //       return kebabCase(getForm().subject) === "explore-possibilities" ||
+  //         kebabCase(getForm().subject) === "training-mentorship" ? (
+  //         <>
+  //           <motion.h4 className="text-lg font-poppins mb-4 text-center italic text-zinc-500">
+  //             {
+  //               inquiryQuestionHeadings[
+  //                 `${kebabCase(
+  //                   getForm().subject
+  //                 )}-heading` as keyof typeof inquiryQuestionHeadings
+  //               ]
+  //             }
+  //           </motion.h4>
+  //           <motion.div className="w-full grid grid-cols-2 grid-rows-[auto] 2xl:grid-cols-3 gap-4 xl:gap-6">
+  //             {getInquiryQuestionsBySubject(
+  //               kebabCase(getForm().subject) as keyof typeof inquiryQuestions
+  //             ).map((q) => (
+  //               <motion.div key={q.id} className="flex flex-col space-y-2">
+  //                 <motion.label
+  //                   className="text-sm font-poppins text-zinc-50"
+  //                   htmlFor={kebabCase(q.label)}
+  //                 >
+  //                   {q.label}
+  //                   {q.isRequired && (
+  //                     <span className="text-pink-600 text-base font-medium ml-1">
+  //                       *
+  //                     </span>
+  //                   )}
+  //                 </motion.label>
+  //                 <motion.textarea
+  //                   id={kebabCase(q.label)}
+  //                   className="w-full p-4 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+  //                   rows={4}
+  //                   required={q.isRequired}
+  //                   placeholder={q.placeholder}
+  //                 ></motion.textarea>
+  //               </motion.div>
+  //             ))}
+  //           </motion.div>
+  //         </>
+  //       ) : (
+  //         <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6">
+  //           {getServiceBySubjectAndInquiry().map(
+  //             ({ id, Icon, code, heading, subheading }) => (
+  //               <motion.button
+  //                 key={id}
+  //                 initial={{
+  //                   scale: 1,
+  //                 }}
+  //                 whileTap={{
+  //                   scale: 0.9,
+  //                 }}
+  //                 transition={{
+  //                   duration: 0.2,
+  //                   ease: "easeInOut",
+  //                 }}
+  //                 aria-label={heading}
+  //                 onClick={() =>
+  //                   onSelectService({ id, Icon, code, heading, subheading })
+  //                 }
+  //                 className="group relative rounded-xl overflow-hidden outline-none focus:outline"
+  //               >
+  //                 <MagicCard
+  //                   className={cn(
+  //                     "flex flex-col justify-start p-5 shadow-lg group-hover:shadow-xl group-focus:shadow-xl cursor-pointer border-primary-200/20 group-hover:border-primary-200/5 transition-all duration-300 text-primary-content bg-primary-950/90 relative overflow-hidden",
+  //                     getLeanFormServices().includes(id) &&
+  //                       "!bg-gradient-to-r !from-primary-600 !to-indigo-600 !shadow-xl !border-none !text-primary-content"
+  //                   )}
+  //                   gradientColor="#242b33"
+  //                 >
+  //                   <Icon
+  //                     className={cn(
+  //                       "mb-3 text-primary group-hover:text-primary-content group-focus:text-primary-content transition-colors relative duration-300",
+  //                       getLeanFormServices().includes(id) &&
+  //                         "text-primary-content"
+  //                     )}
+  //                   />
+  //                   <Icon
+  //                     className={cn(
+  //                       "absolute z-10 -top-12 -right-12 text-primary-900/90 group-hover:text-indigo-300/90 group-focus:text-indigo-300/90 group-hover:rotate-12 group-focus:rotate-12 transition-transform duration-300",
+  //                       getLeanFormServices().includes(id) &&
+  //                         "text-indigo-300/90"
+  //                     )}
+  //                     size={110}
+  //                   />
 
-                    <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
-                      {heading}
-                    </motion.h4>
+  //                   <motion.h4 className="text-lg text-left font-bricolage font-semibold mb-1 relative z-[2500]">
+  //                     {heading}
+  //                   </motion.h4>
 
-                    <motion.p className="text-sm text-left font-poppins relative z-[2500]">
-                      {subheading}
-                    </motion.p>
-                  </MagicCard>
+  //                   <motion.p className="text-sm text-left font-poppins relative z-[2500]">
+  //                     {subheading}
+  //                   </motion.p>
+  //                 </MagicCard>
 
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
-                </motion.button>
-              )
-            )}
-          </motion.div>
-        );
-      case 4:
-        return (
-          <>
-            <motion.div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6">
-              <motion.div className="flex flex-col space-y-1">
-                <motion.label
-                  className="text-sm font-poppins text-zinc-50"
-                  htmlFor={"name"}
-                >
-                  Your Name
-                  <span className="text-pink-600 text-base font-medium ml-1">
-                    *
-                  </span>
-                </motion.label>
-                <motion.input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
-                  required
-                  placeholder={"E.g., John Snow"}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    updateForm(e.target.name, e.target.value)
-                  }
-                />
-              </motion.div>
+  //                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-600 to-indigo-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
+  //               </motion.button>
+  //             )
+  //           )}
+  //         </motion.div>
+  //       );
+  //     case 4:
+  //       return (
+  //         <>
+  //           <motion.div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-6">
+  //             <motion.div className="flex flex-col space-y-1">
+  //               <motion.label
+  //                 className="text-sm font-poppins text-zinc-50"
+  //                 htmlFor={"name"}
+  //               >
+  //                 Your Name
+  //                 <span className="text-pink-600 text-base font-medium ml-1">
+  //                   *
+  //                 </span>
+  //               </motion.label>
+  //               <motion.input
+  //                 id="name"
+  //                 name="name"
+  //                 type="text"
+  //                 className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+  //                 required
+  //                 placeholder={"E.g., John Snow"}
+  //                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+  //                   updateForm(e.target.name, e.target.value)
+  //                 }
+  //               />
+  //             </motion.div>
 
-              <motion.div className="flex flex-col space-y-1">
-                <motion.label
-                  className="text-sm font-poppins text-zinc-50"
-                  htmlFor={"email"}
-                >
-                  Your Email Address
-                  <span className="text-pink-600 text-base font-medium ml-1">
-                    *
-                  </span>
-                </motion.label>
-                <motion.input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
-                  placeholder={"E.g., johnsnow@example.com"}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    updateForm(e.target.name, e.target.value)
-                  }
-                />
-              </motion.div>
+  //             <motion.div className="flex flex-col space-y-1">
+  //               <motion.label
+  //                 className="text-sm font-poppins text-zinc-50"
+  //                 htmlFor={"email"}
+  //               >
+  //                 Your Email Address
+  //                 <span className="text-pink-600 text-base font-medium ml-1">
+  //                   *
+  //                 </span>
+  //               </motion.label>
+  //               <motion.input
+  //                 id="email"
+  //                 name="email"
+  //                 type="email"
+  //                 required
+  //                 className="w-full p-3 px-6 relative font-poppins max-w-xl mx-auto bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-full focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+  //                 placeholder={"E.g., johnsnow@example.com"}
+  //                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+  //                   updateForm(e.target.name, e.target.value)
+  //                 }
+  //               />
+  //             </motion.div>
 
-              <motion.div className="flex flex-col space-y-1">
-                <motion.label
-                  className="text-sm font-poppins text-zinc-50"
-                  htmlFor={"contact"}
-                >
-                  Your Phone Number{" "}
-                  <span className="text-zinc-400">(Optional)</span>
-                </motion.label>
-                <PhoneInput
-                  country={defaultCountry}
-                  value={getForm().contact}
-                  onChange={setContact}
-                  inputStyle={{
-                    backgroundColor: "#27272a", // bg-zinc-800
-                    color: "#F4F4F5", // text-zinc-50
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "0.875rem", // text-sm
-                    padding: "0.60rem 1.5rem", // p-3 px-6
-                    paddingLeft: "3rem",
-                    height: "auto",
-                    width: "100%",
-                    border: "none",
-                    borderRadius: "9999px",
-                    boxShadow:
-                      "0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)", // shadow styles
-                  }}
-                  buttonStyle={{
-                    backgroundColor: "#18181b",
-                    border: "none",
-                  }}
-                  dropdownStyle={{
-                    backgroundColor: "#1C1C1F",
-                    color: "#F4F4F5",
-                  }}
-                  placeholder="E.g., +44 7700 900123"
-                />
-              </motion.div>
+  //             <motion.div className="flex flex-col space-y-1">
+  //               <motion.label
+  //                 className="text-sm font-poppins text-zinc-50"
+  //                 htmlFor={"contact"}
+  //               >
+  //                 Your Phone Number{" "}
+  //                 <span className="text-zinc-400">(Optional)</span>
+  //               </motion.label>
+  //               <PhoneInput
+  //                 country={defaultCountry}
+  //                 value={getForm().contact}
+  //                 onChange={setContact}
+  //                 inputStyle={{
+  //                   backgroundColor: "#27272a", // bg-zinc-800
+  //                   color: "#F4F4F5", // text-zinc-50
+  //                   fontFamily: "Poppins, sans-serif",
+  //                   fontSize: "0.875rem", // text-sm
+  //                   padding: "0.60rem 1.5rem", // p-3 px-6
+  //                   paddingLeft: "3rem",
+  //                   height: "auto",
+  //                   width: "100%",
+  //                   border: "none",
+  //                   borderRadius: "9999px",
+  //                   boxShadow:
+  //                     "0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)", // shadow styles
+  //                 }}
+  //                 buttonStyle={{
+  //                   backgroundColor: "#18181b",
+  //                   border: "none",
+  //                 }}
+  //                 dropdownStyle={{
+  //                   backgroundColor: "#1C1C1F",
+  //                   color: "#F4F4F5",
+  //                 }}
+  //                 placeholder="E.g., +44 7700 900123"
+  //               />
+  //             </motion.div>
 
-              <motion.div className="flex flex-col space-y-1 col-span-2">
-                <motion.label
-                  className="text-sm font-poppins text-zinc-50"
-                  htmlFor={"message"}
-                >
-                  Anything else you&apos;d like to share?{" "}
-                  <span className="text-zinc-400">(Optional)</span>
-                </motion.label>
-                <motion.textarea
-                  name="message"
-                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-                    updateForm(e.target.name, e.target.value)
-                  }
-                  id={kebabCase("Anything else you'd like to share")}
-                  className="w-full col-span-1 p-4 relative font-poppins bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-2xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
-                  rows={3}
-                  placeholder={
-                    "E.g., specific requirements, timelines, or preferences."
-                  }
-                ></motion.textarea>
-              </motion.div>
-            </motion.div>
-          </>
-        );
-      case 5:
-        return (
-          <>
-            <motion.p>Request Submitted Successfully!</motion.p>
-          </>
-        );
-      default:
-        return <></>;
-    }
-  };
+  //             <motion.div className="flex flex-col space-y-1 col-span-2">
+  //               <motion.label
+  //                 className="text-sm font-poppins text-zinc-50"
+  //                 htmlFor={"message"}
+  //               >
+  //                 Anything else you&apos;d like to share?{" "}
+  //                 <span className="text-zinc-400">(Optional)</span>
+  //               </motion.label>
+  //               <motion.textarea
+  //                 name="message"
+  //                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+  //                   updateForm(e.target.name, e.target.value)
+  //                 }
+  //                 id={kebabCase("Anything else you'd like to share")}
+  //                 className="w-full col-span-1 p-4 relative font-poppins bg-zinc-800 text-sm leading-5 text-zinc-50 rounded-2xl focus:outline-none focus:ring-0 resize-none overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200"
+  //                 rows={3}
+  //                 placeholder={
+  //                   "E.g., specific requirements, timelines, or preferences."
+  //                 }
+  //               ></motion.textarea>
+  //             </motion.div>
+  //           </motion.div>
+  //         </>
+  //       );
+  //     case 5:
+  //       return (
+  //         <>
+  //           <motion.p>Request Submitted Successfully!</motion.p>
+  //         </>
+  //       );
+  //     default:
+  //       return <></>;
+  //   }
+  // };
 
   return (
     <>
