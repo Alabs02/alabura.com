@@ -15,7 +15,7 @@ import {
 
 // MODELS
 import { UI } from "@/models";
-import { HireButtonCopy, ImagePath } from "@/constants";
+import { calURL, HireButtonCopy, ImagePath } from "@/constants";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
@@ -83,7 +83,7 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
                 src={ImagePath.BRAND_LOGO}
                 alt="Alabura's Brand Logo"
                 fill
-                loading={"lazy"}
+                priority
                 draggable={false}
                 className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
               />
@@ -91,11 +91,30 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
           </Link>
 
           {navItems.map((navItem) => (
-            <AnimatedLink key={navItem.id} {...navItem} className={cn(pathname?.includes("project") || cn(pathname?.includes("projects") ? "!text-secondary-300/95 font-semibold" : ""))} />
+            <AnimatedLink
+              key={navItem.id}
+              {...navItem}
+              className={cn(
+                pathname?.includes("project") ||
+                  cn(
+                    pathname?.includes("projects")
+                      ? "!text-secondary-300/95 font-semibold"
+                      : ""
+                  )
+              )}
+            />
           ))}
 
-          <Link href={"/#request-consultation"} aria-label={HireButtonCopy} passHref>
-            <RainbowButton aria-label={HireButtonCopy} className="!rounded-full font-poppins uppercase !font-normal tracking-wide hidden md:inline-block">
+          <Link
+            target="_blank"
+            href={calURL}
+            aria-label={HireButtonCopy}
+            passHref
+          >
+            <RainbowButton
+              aria-label={HireButtonCopy}
+              className="!rounded-full font-poppins uppercase !font-normal tracking-wide hidden md:inline-block text-zinc-950 !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
+            >
               {HireButtonCopy}
             </RainbowButton>
           </Link>

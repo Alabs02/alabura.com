@@ -1,14 +1,20 @@
 "use client";
 
-import { GridPattern, HeadingChip, RainbowButton, StarsBackground } from "@/components/ui";
-import { ImagePath, resumeHref } from "@/constants";
+import {
+  GridPattern,
+  HeadingChip,
+  RainbowButton,
+  StarsBackground,
+} from "@/components/ui";
+import { calURL, ImagePath, resumeHref } from "@/constants";
 import { cn } from "@/lib/utils";
 import { Wrapper } from "@/wrapper";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PrestigiousBrands } from "@/containers";
-import { ArrowRight, ScanEye } from "lucide-react";
+import { ArrowRight, Mail, ScanEye } from "lucide-react";
+import { IconMailSpark } from "@tabler/icons-react";
 
 const AboutAlaburaUsman = () => {
   const phoneNumber = "+2349027661950";
@@ -29,33 +35,58 @@ const AboutAlaburaUsman = () => {
     <Wrapper footer="!top-0">
       <header className="w-full flex flex-col items-center relative bg-gradient-to-b from-background to-background">
         <section className="section relative h-full gap-y-10 py-10 xl:py-12 2xl:py-16 mt-[95px] z-[2000]">
-          <div className="w-full flex flex-col gap-y-4 items-start">
+          <div className="grid grid-cols-12 gap-5 xl:gap-8 2xl:gap-10 w-full">
+          <div className="col-span-12 lg:col-span-7 2xl:col-span-8 w-full flex flex-col gap-y-4 items-start">
             <HeadingChip>ABOUT ALABURA</HeadingChip>
 
             <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-              A Visionary Engineer with a Purpose
+              AI Solutions Expert
             </h3>
 
-            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[80%] 2xl:max-w-[70%] mt-8">
-              Blending strategic thinking with hands-on expertise, I&apos;ve
-              spent years partnering with businesses to create{" "}
-              <span className="font-normal">human-centered market-leading</span>{" "}
-              digital solutions. My passion lies in turning bold ideas into
-              tangible realities, leaving a legacy of innovation and excellence
-              with every project I undertake.
+            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[96%] !leading-relaxed mt-8">
+              With a strategic mindset and hands-on expertise, I help businesses
+              design, build, and scale AI-driven solutions that drive revenue,
+              cut costs, and automate operations. My passion lies in
+              transforming bold ideas into impactful, scalable AI solutions,
+              leaving a legacy of innovation and business success with every
+              project.
             </p>
 
-            <Link href={resumeHref} target={"_blank"} aria-label="Preview My Resume" className="mt-4" passHref>
+            <Link
+              href={resumeHref}
+              target={"_blank"}
+              aria-label="Preview My Resume"
+              className="mt-4"
+              passHref
+            >
               <RainbowButton
-                aria-label="Preview My Resume"                className={cn(
+                aria-label="Preview My Resume"
+                className={cn(
                   "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
                 )}
               >
                 <span>{"Preview Resume"}</span>
-                <ScanEye className="group-hover:rotate-45 transition-all duration-300" />
+                <ScanEye />
               </RainbowButton>
             </Link>
           </div>
+            
+            <div className="col-span-12 lg:col-span-5 2xl:col-span-4 grid-cols-1 hidden lg:grid">
+              <div className="relative size-full opacity-95">
+                <Image
+                  priority
+                  width={483}
+                  height={353}
+                  quality={100}
+                  draggable={false}
+                  alt={"Usman Alabura"}
+                  src={ImagePath.ALABURA_USMAN}
+                  className="size-full object-contain object-center"
+                />
+              </div>
+            </div>
+          </div>
+          
         </section>
 
         <div className="grid grid-cols-1 absolute h-[60%] w-[60%] 2xl:h-[40%] 2xl:w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
@@ -99,25 +130,53 @@ const AboutAlaburaUsman = () => {
 
           <div className="flex flex-col space-y-6 items-center md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
             <Link
-              aria-label="Let's Collaborate"
+              aria-label="Get in touch via email"
               href={
                 "mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
               }
               passHref
             >
               <RainbowButton
-                aria-label="Let's Collaborate"
+                aria-label="Get in touch via email"
+                className={cn(
+                  "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] font-poppins !font-normal"
+                )}
+              >
+                <span>{"Get in Touch"}</span>
+                <IconMailSpark
+                  className="transition-all duration-300"
+                  size={20}
+                />
+              </RainbowButton>
+            </Link>
+
+            <Link
+              aria-label="Let's talk about your project"
+              href={calURL}
+              target="_blank"
+              passHref
+            >
+              <RainbowButton
+                aria-label="Let's Talk"
                 className={cn(
                   "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-normal !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
                 )}
               >
-                <span>{"Let's Collaborate"}</span>
-                <ArrowRight className="group-hover:-rotate-45 transition-all duration-300" />
+                <span>{"Let's Talk"}</span>
+                <ArrowRight className="-rotate-45 transition-all duration-300" />
               </RainbowButton>
             </Link>
 
-            <Link href={whatsappLink} target={"_blank"} aria-label="Say Hi On WhatsApp" passHref>
-              <RainbowButton aria-label="Say Hi On WhatsApp" className="!rounded-full font-poppins gap-x-2 uppercase text-[15px] !font-normal tracking-wide">
+            <Link
+              href={whatsappLink}
+              target={"_blank"}
+              aria-label="Say Hi On WhatsApp"
+              passHref
+            >
+              <RainbowButton
+                aria-label="Say Hi On WhatsApp"
+                className="!rounded-full font-poppins gap-x-2 uppercase text-[15px] !font-normal tracking-wide"
+              >
                 <span>{"Say Hi On WhatsApp"}</span>
                 <span className="icon-whatsapp"></span>
               </RainbowButton>
@@ -193,7 +252,6 @@ const AboutAlaburaUsman = () => {
     </Wrapper>
   );
 };
-
 
 AboutAlaburaUsman.displayName = "AboutAlaburaUsman";
 export default AboutAlaburaUsman;

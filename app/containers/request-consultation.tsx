@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, useSpring } from "framer-motion";
 import {
+  calURL,
   goals,
   ImagePath,
   inquiry,
@@ -18,9 +19,11 @@ import kebabCase from "lodash/kebabCase";
 import isEmpty from "lodash/isEmpty";
 import { toast } from "react-hot-toast";
 import { ContactForm, Service } from "@slice/index";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Mail } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Link from "next/link";
+import { IconMailSpark } from "@tabler/icons-react";
 
 const CACHE_KEY = "geoLocationData";
 const CACHE_EXPIRATION = 24 * 60 * 60 * 1000;
@@ -38,6 +41,12 @@ const RequstConsultation = () => {
   } = useBoundStore();
   const [progress, setProgress] = useState<number>(0);
   const [defaultCountry, setDefaultCountry] = useState("gb");
+
+  const phoneNumber = "+2349027661950";
+  const initialMessage = encodeURIComponent(
+    "Hi there! I’d like to get in touch with you."
+  );
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${initialMessage}`;
 
   const setContact = (value: string) => {
     updateForm("contact", value);
@@ -641,7 +650,59 @@ const RequstConsultation = () => {
           </motion.h5>
         </motion.div>
 
-        <AnimatePresence mode={"wait"}>
+        <div className="flex flex-col space-y-6 items-center md:flex-row md:space-x-6 md:space-y-0 md:justify-center w-full mt-2">
+          <Link
+            aria-label="Get in touch via email"
+            href={
+              "mailto:usmanunfolds@alabura.com?subject=Hello%20Alabura&body=I%20wanted%20to%20reach%20out%20regarding..."
+            }
+            passHref
+          >
+            <RainbowButton
+              aria-label="Get in touch via email"
+              className={cn(
+                "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] font-poppins !font-normal"
+              )}
+            >
+              <span>{"Get in Touch"}</span>
+              <IconMailSpark className="transition-all duration-300" size={20} />
+            </RainbowButton>
+          </Link>
+
+          <Link
+            aria-label="Let's talk about your project"
+            href={calURL}
+            target="_blank"
+            passHref
+          >
+            <RainbowButton
+              aria-label="Let's Talk"
+              className={cn(
+                "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-normal !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
+              )}
+            >
+              <span>{"Let's Talk"}</span>
+              <ArrowRight className="-rotate-45 transition-all duration-300" />
+            </RainbowButton>
+          </Link>
+
+          <Link
+            href={whatsappLink}
+            target={"_blank"}
+            aria-label="Say Hi On WhatsApp"
+            passHref
+          >
+            <RainbowButton
+              aria-label="Say Hi On WhatsApp"
+              className="!rounded-full font-poppins gap-x-2 uppercase text-[15px] !font-normal tracking-wide"
+            >
+              <span>{"Say Hi On WhatsApp"}</span>
+              <span className="icon-whatsapp"></span>
+            </RainbowButton>
+          </Link>
+        </div>
+
+        {/* <AnimatePresence mode={"wait"}>
           <motion.div
             key={`step-${getStep()}`}
             initial="initialState"
@@ -705,7 +766,7 @@ const RequstConsultation = () => {
           >
             {"Confirm & Submit"}
           </RainbowButton>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </>
   );

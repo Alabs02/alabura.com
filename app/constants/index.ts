@@ -87,6 +87,9 @@ export const ImagePath = {
   ASTRO_MARKETER_FULL_LOGO: "/images/astro-marketer-full.webp",
   PLATEAU_STATE_FULL_LOGO: "/images/plateau-state-government-logo-full.webp",
 
+  ALABURA_USMAN: "/images/alabura-usman.webp",
+  ALABURA_COM: "/images/alabura.com.webp",
+
   PERKS_ICON: "/images/perks.svg",
   GLOBE_ICON: "/images/globe.svg",
   ROCKET_ICON: "/images/rocket.svg",
@@ -187,24 +190,24 @@ export const NavItems: UI.FloatingNavItem[] = [
 export const ProjectsDelivered = {
   stat: 20,
   src: ImagePath.ROCKET_ICON,
-  heading: "Projects Delivered",
+  heading: "Digital Products Shipped",
   content:
     "Across industries like fintech, edtech, proptech, logistics, and retail.",
 };
 
 export const Perks = {
   src: ImagePath.PERKS_ICON,
-  heading: "Bespoke Solutions",
+  heading: "Tailored Solutions for Growth",
   content: "Tailored strategies to accelerate growth and efficiency.",
 };
 
 export const GlobalCollaboration = {
   src: ImagePath.GLOBE_ICON,
-  heading: "Global Collaboration",
+  heading: "Global Reach, Local Impact",
   content: "Partnered with teams across 5 countries to deliver results.",
 };
 
-export const Intro = "I'm Alabura Usman";
+export const Intro = "Hi, I'm Alabura Usman.";
 
 export const HeroSecondaryCopy = [
   "Your Strategic Engineer",
@@ -212,14 +215,16 @@ export const HeroSecondaryCopy = [
   "Your Outside Frame of Reference",
 ];
 
-export const HeroSubContent =
-  "I partner with businesses to ideate, architect, design, and build market-leading digital solutions. Through applied creativity and digital transformation, I leave a positive dent on every challenge I tackle.";
+export const HeroSubContentOld =
+  "I help businesses design, build, and scale market-leading digital solutions, seamlessly blending creativity, strategy, and technology.";
 
-export const HireButtonCopy = "Discuss a  Project";
+export const HeroSubContent =  "I help businesses design, build, and scale AI-driven digital solutions that blend creativity, strategy, and technology to boost revenue, cut costs, and automate operations.";
+export const HireButtonCopy = "Book a Call";
 export const DiscussProjectBtnCopy = "Start Your Next Breakthrough";
 export const HeroBtnCopy = "Let’s Discuss Your Next Project";
-export const HeroSubHeadingCopyFirst = "You Bring the Vision";
-export const HeroSubHeadingCopySecond = "I Engineer the Reality";
+export const HeroSubHeadingCopyFirst = "Scale Your Business with";
+export const HeroSubHeadingCopySecond = "AI Solutions";
+export const calURL = "https://cal.com/usmanunfolds?utm_source=alabura.com";
 
 export const goals = [
   {

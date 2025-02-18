@@ -203,7 +203,7 @@ const ProjectCard = ({
           src={asset.src}
           alt={asset.alt}
           fill
-          loading={"lazy"}
+          priority
           draggable={false}
           className="size-full object-cover object-top rounded-xl"
         />
@@ -260,7 +260,7 @@ const ProjectCard = ({
                   src={icon}
                   alt={""}
                   draggable={false}
-                  loading={"lazy"}
+                  priority
                   className="size-full object-contain object-center"
                 />
               </div>

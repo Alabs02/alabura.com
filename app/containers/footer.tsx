@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Github, Codepen, Linkedin } from "lucide-react";
 import { nanoid } from "nanoid";
 import Image from "next/image";
-import { ImagePath } from "@/constants";
+import { ImagePath, calURL } from "@/constants";
 
 const Footer: React.FC<{ className?: string }> = ({ className }) => {
   const backToTop = () => {
@@ -24,7 +24,12 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
 
   return (
     <>
-      <motion.div className={cn("w-full relative overflow-hidden top-[95px] flex flex-col items-center bg-gradient-to-b from-neutral-950 via-background to-background", className)}>
+      <motion.div
+        className={cn(
+          "w-full relative overflow-hidden top-[95px] flex flex-col items-center bg-gradient-to-b from-neutral-950 via-background to-background",
+          className
+        )}
+      >
         <div className="section flex flex-col items-start h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
           <div className="flex flex-col gap-y-0.5 w-[80%] items-end self-end">
             <h3 className="text-4xl lg:text-7xl 2xl:text-8xl font-bricolage font-extrabold text-transparent bg-gradient-to-b bg-clip-text from-neutral-200 to-neutral-600">
@@ -38,11 +43,16 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
             </h3>
           </div>
 
-          <div className="flex items-center justify-end w-full self-end">
-            <Link href={"/#request-consultation"} aria-label="Let's Discuss" passHref>
+          <div className="flex items-center justify-center md:!justify-end w-full md:!self-end">
+            <Link
+              aria-label="Let's talk about your project"
+              href={calURL}
+              target="_blank"
+              passHref
+            >
               <InteractiveRightButton
-                text="Let's Discuss"
-                aria-label="Let's Discuss"
+                text="Book a call"
+                aria-label="Book a call"
                 className={cn(
                   "border-secondary-300/40 hover:border-secondary-200/5 text-secondary-400 hover:text-secondary-content font-poppins text-[15px] md:text-base uppercase tracking-wide !font-medium transition-opacity duration-300"
                 )}
@@ -59,7 +69,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                       src={ImagePath.BRAND_LOGO_LIGHT}
                       alt={""}
                       fill
-                      loading={"lazy"}
+                      priority
                       draggable={false}
                       className="size-full object-contain"
                     />
@@ -245,7 +255,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                  aria-label="Open CodePen Profile"
+                    aria-label="Open CodePen Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <Codepen />
@@ -274,7 +284,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                     whileTap={{
                       scale: 0.9,
                     }}
-                  aria-label="Open Medium Blog"
+                    aria-label="Open Medium Blog"
                     className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
                   >
                     <svg

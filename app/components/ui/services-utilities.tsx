@@ -318,7 +318,7 @@ export const RiverPodLogo = ({ className }: { className?: string }) => {
         src={ImagePath.RIVERPOD_LOGO}
         alt={""}
         fill
-        loading={"lazy"}
+        priority
         draggable={false}
       />
     </div>
@@ -1171,7 +1171,7 @@ export const CodeSecuritySkeleton = () => {
               alt={""}
               height={100}
               width={100}
-              loading={"lazy"}
+              priority
               draggable={false}
               className="object-contain h-[62px] w-[62px] scale-105"
             />

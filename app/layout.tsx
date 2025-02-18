@@ -35,40 +35,51 @@ import "@fontsource/bricolage-grotesque/800.css";
 
 // PLUGINS
 import { inter, poppins, bricolageGrotesque } from "@/plugins";
+import { ImagePath } from "./constants";
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const BASE_URL = "https://alabura.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Alabura Usman | Engineering Vision to Reality",
+    default: "Alabura Usman | AI Solutions for Scalable Growth",
     template: "%s | Alabura Usman",
   },
   description:
-    "Explore the portfolio of Alabura Usman, a seasoned Full-Stack Engineer and AI enthusiast. With expertise in building scalable digital solutions and validating AI models, I blend strategic thinking with technical precision to deliver impactful results. Whether crafting robust applications or providing actionable feedback on large language models, I bring creativity, agility, and attention to detail to every project.",
+    "Explore the portfolio of Alabura Usman, an expert in AI-driven solutions that scale and drive business growth. I specialize in creating AI-powered systems that automate operations, boost revenue, and reduce costs. With a blend of creativity, strategy, and technical precision, I turn bold ideas into impactful realities.",
   openGraph: {
-    title: "Alabura Usman | Engineering Vision to Reality",
+    title: "Alabura Usman | AI Solutions for Scalable Growth",
     description:
-      "Dive into the world of Alabura Usman’s portfolio, where bold ideas are transformed into impactful digital solutions through grit, agility, and integrity.",
+      "Dive into Alabura Usman’s portfolio, where visionary ideas are turned into powerful AI-driven solutions that scale, drive revenue, and transform businesses.",
     url: BASE_URL,
-    siteName: "Alabura Usman Portfolio",
+    siteName: "Alabura Usman's Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `${BASE_URL}/images/alabura.webp`,
+        url: `${BASE_URL}${ImagePath.ALABURA_COM}`,
         width: 1200,
         height: 630,
-        alt: "Alabura Usman Portfolio - Engineering Vision to Reality",
+        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alabura Usman | Engineering Vision to Reality",
+    title: "Alabura Usman | AI Solutions for Scalable Growth",
     description:
-      "Discover how Alabura Usman crafts bespoke digital solutions through creativity and precision.",
-    images: [`${BASE_URL}/images/alabura.webp`],
+      "Discover how Alabura Usman builds AI solutions that scale, automate, and drive business success.",
+    images: [
+      {
+        width: 1200,
+        height: 630,
+        url: `${BASE_URL}/images/alabura.webp`,
+        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth",
+      }
+    ],
   },
   robots: {
     index: true,
@@ -83,30 +94,28 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Alabura Usman",
-    "Digital Solutions",
-    "FullStack Engineer",
-    "Senior Software Engineer",
-    "LLM Validation Specialist",
-    "AI Model Feedback Engineer",
-    "AI/ML Engineer",
-    "Generative AI Engineer",
-    "Large Language Model Specialist",
-    "Data Annotation Specialist",
-    "AI System Tester",
+    "AI Solutions",
+    "AI Integration",
+    "AI-Driven Systems",
+    "Scalable AI Solutions",
+    "AI Solutions for Business",
+    "Revenue Boosting AI",
+    "Cost Reducing AI",
+    "Automated AI Operations",
+    "Full-Stack Engineer",
     "Frontend Engineer",
-    "Consultant",
-    "IT Consultant",
-    "Bespoke Software Solutions",
-    "Web Development Portfolio",
+    "AI/ML Engineer",
+    "AI Consultant",
+    "Generative AI Engineer",
+    "Bespoke AI Solutions",
+    "Business Growth with AI",
     "Strategic Engineering",
     "Machine Learning Operations (MLOps)",
-    "Prompt Engineering",
-    "Usman",
-    "Alabura",
-    "usmanunfolds",
-    "Alabs02",
-    "Alabura Usman Aliyu",
-    "AI-Assisted Development",
+    "AI Integration Specialist",
+    "AI System Automation",
+    "AI Engineering Consultant",
+    "Web Development Portfolio",
+    "Frontend Development",
   ],
   authors: [
     {
@@ -127,6 +136,7 @@ export const metadata: Metadata = {
     },
   ]
 };
+
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -163,6 +173,9 @@ export default function RootLayout({
           <RealViewport />
 
           {children}
+
+          <Analytics />
+          <SpeedInsights />
         </body>
       </ReactLenis>
     </html>

@@ -6,6 +6,8 @@ export default async function sitemap() {
   const projects = projectSlugs.map((project) => ({
     url: `${BASE_URL}/project/${project}`,
     lastModified: new Date().toISOString().split('T')[0],
+    changefreq: "weekly",
+    priority: 0.8
   }));
 
   const routes = ["", "/", "/#request-consultation", "/#services", "/#technologies", "/#projects", "/about-alabura-usman", "/project"].map((route) => ({

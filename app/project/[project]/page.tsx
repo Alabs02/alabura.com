@@ -2638,7 +2638,7 @@ const ProjectOverview = () => {
                   src={projectAnalysis?.logo}
                   alt={""}
                   fill
-                  loading={"lazy"}
+                  priority
                   draggable={false}
                   className="!w-auto h-full md:!size-full object-contain"
                 />
