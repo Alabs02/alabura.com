@@ -51,7 +51,7 @@ export const Sparkles = () => {
     top: Math.random() * 100,
     left: Math.random() * 100,
     opacity: Math.random(),
-    duration: Math.random() * 2 + 4,
+    duration: Math.random() * 2 + 4
   }));
 
   return (
@@ -63,12 +63,12 @@ export const Sparkles = () => {
             top: `calc(${sparkle.top}% + ${Math.random() * 2 - 1}px)`,
             left: `calc(${sparkle.left}% + ${Math.random() * 2 - 1}px)`,
             opacity: sparkle.opacity,
-            scale: [1, 1.2, 0],
+            scale: [1, 1.2, 0]
           }}
           transition={{
             duration: sparkle.duration,
             repeat: Infinity,
-            ease: "linear",
+            ease: "linear"
           }}
           style={{
             position: "absolute",
@@ -77,7 +77,7 @@ export const Sparkles = () => {
             width: "2px",
             height: "2px",
             borderRadius: "50%",
-            zIndex: 1,
+            zIndex: 1
           }}
           className="inline-block bg-white"
         />
@@ -88,7 +88,7 @@ export const Sparkles = () => {
 
 export const FeatureCard = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children: React.ReactNode;
@@ -107,7 +107,7 @@ export const FeatureCard = ({
 
 export const FeatureCardTitle = ({
   children,
-  className,
+  className
 }: {
   children: React.ReactNode;
   className?: string;
@@ -121,7 +121,7 @@ export const FeatureCardTitle = ({
 
 export const FeatureCardDescription = ({
   children,
-  className,
+  className
 }: {
   children: React.ReactNode;
   className?: string;
@@ -138,7 +138,7 @@ export const FeatureCardDescription = ({
 export const CardSkeletonContainer = ({
   className,
   children,
-  showGradient = true,
+  showGradient = true
 }: {
   className?: string;
   showGradient?: boolean;
@@ -160,7 +160,7 @@ export const CardSkeletonContainer = ({
 
 export const FeatureContainer = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children: React.ReactNode;

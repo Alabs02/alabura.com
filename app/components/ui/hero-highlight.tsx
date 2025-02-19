@@ -6,7 +6,7 @@ import React from "react";
 export const HeroHighlight = ({
   children,
   className,
-  containerClassName,
+  containerClassName
 }: {
   children: React.ReactNode;
   className?: string;
@@ -18,7 +18,7 @@ export const HeroHighlight = ({
   function handleMouseMove({
     currentTarget,
     clientX,
-    clientY,
+    clientY
   }: React.MouseEvent<HTMLDivElement>) {
     if (!currentTarget) return;
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -51,7 +51,7 @@ export const HeroHighlight = ({
               black 0%,
               transparent 100%
             )
-          `,
+          `
         }}
       />
 
@@ -67,20 +67,20 @@ export const Highlight: React.FC<{
   return (
     <motion.span
       initial={{
-        backgroundSize: "0% 100%",
+        backgroundSize: "0% 100%"
       }}
       animate={{
-        backgroundSize: "100% 100%",
+        backgroundSize: "100% 100%"
       }}
       transition={{
         duration: 2,
         ease: "linear",
-        delay: 0.5,
+        delay: 0.5
       }}
       style={{
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center",
-        display: "inline",
+        display: "inline"
       }}
       className={cn(
         `relative inline-block pb-1 px-1 rounded-md bg-gradient-to-r from-primary-600 via-indigo-600 to-purple-600`,

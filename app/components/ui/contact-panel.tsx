@@ -16,7 +16,7 @@ const ContactPanel: React.FC<ContactPanel> = ({
   heading,
   subheading,
   className,
-  clipBoardText,
+  clipBoardText
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -33,7 +33,10 @@ const ContactPanel: React.FC<ContactPanel> = ({
     <>
       <motion.div
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={cn("group flex flex-col space-y-2 min-w-16 py-3 px-6 text-primary-content relative bg-zinc-800/40", className)}
+        className={cn(
+          "group flex flex-col space-y-2 min-w-16 py-3 px-6 text-primary-content relative bg-zinc-800/40",
+          className
+        )}
       >
         <motion.div className="absolute left-0 top-0 h-full w-1 z-[2100] bg-gradient-to-br from-primary-500 via-indigo-500 to-purple-500 group-hover:shadow-[0_0_8px_2px_rgba(118,69,217,0.5)]"></motion.div>
 
@@ -49,14 +52,14 @@ const ContactPanel: React.FC<ContactPanel> = ({
 
         <motion.button
           initial={{
-            scale: 1,
+            scale: 1
           }}
           whileTap={{
-            scale: 0.9,
+            scale: 0.9
           }}
           transition={{
             duration: 0.2,
-            ease: "easeInOut",
+            ease: "easeInOut"
           }}
           aria-label={`Copy ${heading}`}
           onClick={copyTextToClipboard}

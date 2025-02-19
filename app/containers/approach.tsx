@@ -7,7 +7,7 @@ import { UI } from "@/models";
 import {
   AnimatedBeam,
   BackgroundBeamsWithCollision,
-  HeadingChip,
+  HeadingChip
 } from "@/components/ui";
 import { ImagePath } from "@/constants";
 import Image from "next/image";
@@ -18,7 +18,7 @@ import {
   ListCheck,
   Orbit,
   PencilRuler,
-  ScanEye,
+  ScanEye
 } from "lucide-react";
 
 const Approach = () => {
@@ -31,7 +31,7 @@ const Approach = () => {
           <motion.div className="group flex flex-row items-center justify-center relative rounded-full bg-gradient-to-r from-purple-500 via-[#ffaa40] to-pink-500 p-[1px] transition-shadow duration-500 ease-out [--bg-size:300%] mt-6">
             <div className="flex flex-row items-center justify-center w-full h-full bg-zinc-950 rounded-full px-1.5 md:px-4 py-1.5 z-[2]">
               <span className="hidden md:inline">🛠️</span>
-              
+
               <ShinyText className="flex flex-row items-center justify-center w-full h-full">
                 <div className="mx-px md:mx-3 h-4 w-px bg-zinc-50/90 hidden md:inline-block" />
                 <motion.h4 className="uppercase tracking-wider text-left md:text-center text-zinc-50 font-light font-poppins text-[10.5px] lg:text-lg !m-0 !p-0">
@@ -423,13 +423,13 @@ const Circle = forwardRef<
 const ShinyText: FC<UI.ShinyTextProps> = ({
   children,
   className,
-  shimmerWidth = 100,
+  shimmerWidth = 100
 }) => {
   return (
     <div
       style={
         {
-          "--shiny-width": `${shimmerWidth}px`,
+          "--shiny-width": `${shimmerWidth}px`
         } as CSSProperties
       }
       className={cn(
@@ -535,7 +535,7 @@ const Icons = {
       alt={""}
       width={100}
       height={100}
-      priority
+      loading="lazy"
     />
   ),
 
@@ -543,7 +543,7 @@ const Icons = {
     <motion.h6 className="text-[13px] font-bricolage uppercase font-bold text-indigo-600 tracking-wide">
       gain
     </motion.h6>
-  ),
+  )
 };
 
 Circle.displayName = "Circle";

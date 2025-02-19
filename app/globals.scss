@@ -314,3 +314,17 @@ ul {
 .burpe-suit {
   enable-background: new 0 0 44 44;
 }
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  animation: blink 1s infinite;
+}

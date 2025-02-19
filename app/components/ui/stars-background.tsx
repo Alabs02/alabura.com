@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useRef,
   RefObject,
-  useCallback,
+  useCallback
 } from "react";
 
 interface StarProps {
@@ -29,9 +29,9 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   starDensity = 0.00015,
   allStarsTwinkle = true,
   twinkleProbability = 0.7,
-  minTwinkleSpeed = 0.5,
-  maxTwinkleSpeed = 1,
-  className,
+  minTwinkleSpeed = 0.8,
+  maxTwinkleSpeed = 1.2,
+  className
 }) => {
   const [stars, setStars] = useState<StarProps[]>([]);
   const canvasRef: RefObject<HTMLCanvasElement | null> =
@@ -52,7 +52,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
           twinkleSpeed: shouldTwinkle
             ? minTwinkleSpeed +
               Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
-            : null,
+            : null
         };
       });
     },
@@ -61,7 +61,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
       allStarsTwinkle,
       twinkleProbability,
       minTwinkleSpeed,
-      maxTwinkleSpeed,
+      maxTwinkleSpeed
     ]
   );
 
@@ -97,7 +97,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     twinkleProbability,
     minTwinkleSpeed,
     maxTwinkleSpeed,
-    generateStars,
+    generateStars
   ]);
 
   useEffect(() => {

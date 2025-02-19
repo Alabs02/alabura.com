@@ -13,6 +13,7 @@ import {
   AuroraBackground,
   ContactPanel,
   RainbowButton,
+  SimpleTypingChatbot
 } from "@/components/ui";
 
 // CONSTANTS
@@ -25,7 +26,7 @@ import {
   Intro,
   Perks,
   ProjectsDelivered,
-  resumeHref,
+  resumeHref
 } from "@/constants";
 import { FolderOpenDot, ScanEye } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -70,7 +71,7 @@ const Hero = () => {
                   animate={
                     canBounce
                       ? {
-                          y: [0, -10, 0],
+                          y: [0, -10, 0]
                         }
                       : { y: [0, 0, 0] }
                   }
@@ -80,7 +81,7 @@ const Hero = () => {
                           delay: 1,
                           duration: 1.5,
                           repeat: Infinity,
-                          repeatType: "loop",
+                          repeatType: "loop"
                         }
                       : { duration: 1 }
                   }
@@ -199,7 +200,7 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="absolute z-[3000] right-[15%] top-[70%] -translate-y-[70%]">
+      <motion.div className="absolute z-[3000] right-[15%] 2xl:top-[70%] 2xl:-translate-y-[70%] hidden 2xl:block transition-all duration-200">
         <Link
           href={"/#request-consultation"}
           aria-label="Go to request a consulation section"
@@ -209,11 +210,11 @@ const Hero = () => {
             aria-label="Scroll Down"
             onMouseEnter={() => setCanBounce(false)}
             onMouseLeave={() => setCanBounce(true)}
-            className="relative 2xl:flex h-16 w-12 items-end hidden"
+            className="relative 2xl:flex h-16 w-12 items-end hidden transition-all duration-300"
             animate={
               canBounce
                 ? {
-                    y: [0, -10, 0],
+                    y: [0, -10, 0]
                   }
                 : { y: [0, 0, 0] }
             }
@@ -224,7 +225,7 @@ const Hero = () => {
                     delay: 1,
                     duration: 1.5,
                     repeat: Infinity,
-                    repeatType: "loop",
+                    repeatType: "loop"
                   }
                 : { duration: 1, type: "tween" }
             }
@@ -234,11 +235,14 @@ const Hero = () => {
         </Link>
       </motion.div>
 
+      <SimpleTypingChatbot />
+
       <ShootingStars
         className="z-[1000]"
         starColor="#9E00FF"
         trailColor="#3d91e6"
       />
+
       <StarsBackground className="z-[1000] top-[-100px]" />
 
       <motion.div className="absolute top-[-98px] right-0 h-full w-[70%] 2xl:w-[60%] z-[500] hidden md:block">

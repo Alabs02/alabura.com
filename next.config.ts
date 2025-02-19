@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
+  enabled: process.env.ANALYZE === "true"
 });
 
 const nextConfig: NextConfig = withBundleAnalyzer({
@@ -15,18 +15,18 @@ const nextConfig: NextConfig = withBundleAnalyzer({
         hostname: "assets.aceternity.com",
         port: "",
         pathname: "/demos/**",
-        search: "",
+        search: ""
       },
       {
         protocol: "https",
         hostname: "images.unsplash.com",
         port: "",
         pathname: "/**",
-        search: "",
-      },
+        search: ""
+      }
     ],
     deviceSizes: [640, 750, 1080, 1200],
-    imageSizes: [16, 32, 48, 64, 128],
+    imageSizes: [16, 32, 48, 64, 128]
   },
   experimental: {
     cssChunking: true,
@@ -35,23 +35,15 @@ const nextConfig: NextConfig = withBundleAnalyzer({
     turbo: {
       moduleIdStrategy: "deterministic",
       resolveAlias: {
-        underscore: "lodash",
+        underscore: "lodash"
       },
-      resolveExtensions: [
-        ".mdx",
-        ".tsx",
-        ".ts",
-        ".jsx",
-        ".js",
-        ".mjs",
-        ".json",
-      ],
-    },
+      resolveExtensions: [".mdx", ".tsx", ".ts", ".jsx", ".js", ".mjs", ".json"]
+    }
   },
   logging: {
     fetches: {
-      fullUrl: true,
-    },
+      fullUrl: true
+    }
   },
   headers: async () =>
     process.env.NODE_ENV === "production"
@@ -61,12 +53,12 @@ const nextConfig: NextConfig = withBundleAnalyzer({
             headers: [
               {
                 key: "Cache-Control",
-                value: "public, max-age=31536000, immutable",
+                value: "public, max-age=31536000, immutable"
               }
-            ],
-          },
+            ]
+          }
         ]
-      : [],
+      : []
 }) satisfies NextConfig;
 
 export default nextConfig;

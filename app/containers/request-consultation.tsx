@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { motion, useSpring } from "framer-motion";
 import {
@@ -9,7 +10,7 @@ import {
   inquiry,
   inquiryQuestionHeadings,
   inquiryQuestions,
-  inquiryServices,
+  inquiryServices
 } from "@/constants";
 import { UI } from "@/models";
 import toLower from "lodash/toLower";
@@ -36,7 +37,7 @@ const RequstConsultation = () => {
     getForm,
     getLeanFormServices,
     addService,
-    removeService,
+    removeService
   } = useBoundStore();
   const [progress, setProgress] = useState<number>(0);
   const [defaultCountry, setDefaultCountry] = useState("gb");
@@ -90,15 +91,15 @@ const RequstConsultation = () => {
     return toLower(heading) === "for yourself"
       ? "For YourSelf"
       : toLower(heading) === "for an organization"
-      ? "For an Organization"
-      : "N/A";
+        ? "For an Organization"
+        : "N/A";
   };
 
   const clearForm = () => {
     updateForm("inquiry", {
       type: "",
       heading: "",
-      subheading: "",
+      subheading: ""
     });
 
     updateForm("services", []);
@@ -664,7 +665,10 @@ const RequstConsultation = () => {
               )}
             >
               <span>{"Get in Touch"}</span>
-              <IconMailSpark className="transition-all duration-300" size={20} />
+              <IconMailSpark
+                className="transition-all duration-300"
+                size={20}
+              />
             </RainbowButton>
           </Link>
 
@@ -780,7 +784,7 @@ const Noise: React.FC<{ className?: string }> = ({ className }) => {
       )}
       style={{
         backgroundImage: `url(${ImagePath.NOISE})`,
-        backgroundSize: "30%",
+        backgroundSize: "30%"
       }}
     ></div>
   );
@@ -793,14 +797,14 @@ const InteractiveRightButton = React.forwardRef<
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       ref={ref}
       className={cn(
@@ -828,14 +832,14 @@ const InteractiveLeftButton = React.forwardRef<
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       ref={ref}
       className={cn(
@@ -858,12 +862,12 @@ const InteractiveLeftButton = React.forwardRef<
 
 const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({
   progress,
-  className,
+  className
 }) => {
   const scaleX = useSpring(0, {
     stiffness: 200,
     damping: 50,
-    restDelta: 0.001,
+    restDelta: 0.001
   });
 
   useEffect(() => {
@@ -877,7 +881,7 @@ const ScrollProgress: React.FC<UI.ScrollProgressProps> = ({
         className
       )}
       style={{
-        scaleX,
+        scaleX
       }}
     />
   );
@@ -890,5 +894,5 @@ export {
   RequstConsultation,
   Noise,
   InteractiveRightButton,
-  InteractiveLeftButton,
+  InteractiveLeftButton
 };

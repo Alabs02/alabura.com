@@ -1,10 +1,6 @@
 "use client";
 import { UI } from "@/models";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import { type AnimationProps } from "motion/react";
 import { cn } from "@/lib/utils";
 import { ChevronUp } from "lucide-react";
@@ -25,14 +21,18 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 10%", "end 50%"],
+    offset: ["start 10%", "end 50%"]
   });
 
   const selectEntry = (index: number) => {
     setSelectedEntry(index);
   };
 
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, (height * 1.5)]);
+  const heightTransform = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, height * 1.5]
+  );
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
@@ -44,7 +44,10 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={item.id}
-            className={cn("flex flex-col justify-start gap-8 md:gap-12 w-full transition-all duration-300 will-change-auto", index === 0 ? "pt-10" : "pt-5")}
+            className={cn(
+              "flex flex-col justify-start gap-8 md:gap-12 w-full transition-all duration-300 will-change-auto",
+              index === 0 ? "pt-10" : "pt-5"
+            )}
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start w-full pl-12 md:pl-0">
               <div className="h-10 absolute left-0 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
@@ -68,12 +71,19 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
                   </h4>
                 </div>
 
-                <AccordionBtn key={item.id} isSelectedEntry={index === selectedEntry} selectEntry={() => selectEntry(index)} />
+                <AccordionBtn
+                  key={item.id}
+                  isSelectedEntry={index === selectedEntry}
+                  selectEntry={() => selectEntry(index)}
+                />
               </div>
             </div>
 
             <motion.div
-              className={cn("relative pl-12 md:pl-20 pr-2 md:pr-4 w-full transition-all duration-500 will-change-auto", selectedEntry === index ? "opacity-100 h-auto" : "opacity-0 h-0")}
+              className={cn(
+                "relative pl-12 md:pl-20 pr-2 md:pr-4 w-full transition-all duration-500 will-change-auto",
+                selectedEntry === index ? "opacity-100 h-auto" : "opacity-0 h-0"
+              )}
             >
               {item.content}{" "}
               <div className="transition-all duration-500 w-full h-16 md:h-20 will-change-auto"></div>
@@ -82,14 +92,14 @@ export const Timeline = ({ data }: { data: UI.TimelineEntry[] }) => {
         ))}
         <div
           style={{
-            height: height + "px",
+            height: height + "px"
           }}
           className="absolute md:left-8 left-[18px] top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
         >
           <motion.div
             style={{
               height: heightTransform,
-              opacity: opacityTransform,
+              opacity: opacityTransform
             }}
             className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
@@ -115,9 +125,9 @@ const animationProps = {
       type: "spring",
       stiffness: 200,
       damping: 5,
-      mass: 0.5,
-    },
-  },
+      mass: 0.5
+    }
+  }
 } as AnimationProps;
 
 type AccordionBtnProps = {
@@ -147,15 +157,20 @@ export const AccordionBtn = React.forwardRef<
         className="relative block size-full text-sm uppercase tracking-wide font-light text-zinc-50/75"
         style={{
           maskImage:
-            "linear-gradient(-75deg,hsl(var(--silver-400)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var((--silver-400)) calc(var(--x) + 100%))",
+            "linear-gradient(-75deg,hsl(var(--silver-400)) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),hsl(var((--silver-400)) calc(var(--x) + 100%))"
         }}
       >
-        <ChevronUp className={cn("group-hover/accordion:rotate-180 transition-all duration-300 will-change-auto", isSelectedEntry && "rotate-180")} />
+        <ChevronUp
+          className={cn(
+            "group-hover/accordion:rotate-180 transition-all duration-300 will-change-auto",
+            isSelectedEntry && "rotate-180"
+          )}
+        />
       </span>
       <span
         style={{
           mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
-          maskComposite: "exclude",
+          maskComposite: "exclude"
         }}
         className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--silver-50)/10%)_calc(var(--x)+20%),hsl(var(--silver-50)/50%)_calc(var(--x)+25%),hsl(var(--silver-50)/10%)_calc(var(--x)+100%))] p-px"
       ></span>

@@ -17,7 +17,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
     if (window) {
       window.scrollTo({
         top: 0,
-        behavior: "smooth",
+        behavior: "smooth"
       });
     }
   };
@@ -69,7 +69,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                       src={ImagePath.BRAND_LOGO_LIGHT}
                       alt={""}
                       fill
-                      priority
+                      loading={"lazy"}
                       draggable={false}
                       className="size-full object-contain"
                     />
@@ -145,7 +145,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 >
                   <motion.button
                     initial={{
-                      scale: 1,
+                      scale: 1
                     }}
                     transition={{
                       scale: {
@@ -153,11 +153,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                         stiffness: 200,
                         damping: 5,
                         mass: 0.5,
-                        duration: 0.3,
-                      },
+                        duration: 0.3
+                      }
                     }}
                     whileTap={{
-                      scale: 0.9,
+                      scale: 0.9
                     }}
                     aria-label="Open LinkedIn Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
@@ -174,7 +174,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 >
                   <motion.button
                     initial={{
-                      scale: 1,
+                      scale: 1
                     }}
                     transition={{
                       scale: {
@@ -182,11 +182,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                         stiffness: 200,
                         damping: 5,
                         mass: 0.5,
-                        duration: 0.3,
-                      },
+                        duration: 0.3
+                      }
                     }}
                     whileTap={{
-                      scale: 0.9,
+                      scale: 0.9
                     }}
                     aria-label="Open X Profile"
                     className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
@@ -212,7 +212,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 >
                   <motion.button
                     initial={{
-                      scale: 1,
+                      scale: 1
                     }}
                     transition={{
                       scale: {
@@ -220,11 +220,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                         stiffness: 200,
                         damping: 5,
                         mass: 0.5,
-                        duration: 0.3,
-                      },
+                        duration: 0.3
+                      }
                     }}
                     whileTap={{
-                      scale: 0.9,
+                      scale: 0.9
                     }}
                     aria-label="Open Github Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
@@ -241,7 +241,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 >
                   <motion.button
                     initial={{
-                      scale: 1,
+                      scale: 1
                     }}
                     transition={{
                       scale: {
@@ -249,11 +249,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                         stiffness: 200,
                         damping: 5,
                         mass: 0.5,
-                        duration: 0.3,
-                      },
+                        duration: 0.3
+                      }
                     }}
                     whileTap={{
-                      scale: 0.9,
+                      scale: 0.9
                     }}
                     aria-label="Open CodePen Profile"
                     className="border size-8 lg:size-10 grid place-items-center rounded-full p-1 border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
@@ -270,7 +270,7 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                 >
                   <motion.button
                     initial={{
-                      scale: 1,
+                      scale: 1
                     }}
                     transition={{
                       scale: {
@@ -278,11 +278,11 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
                         stiffness: 200,
                         damping: 5,
                         mass: 0.5,
-                        duration: 0.3,
-                      },
+                        duration: 0.3
+                      }
                     }}
                     whileTap={{
-                      scale: 0.9,
+                      scale: 0.9
                     }}
                     aria-label="Open Medium Blog"
                     className="border size-8 lg:size-10 p-2 grid place-items-center rounded-full border-cyan-500/50 hover:border-transparent hover:shadow-inner hover:shadow-cyan-700 text-secondary hover:text-secondary-content bg-gradient-to-br from-secondary/0 to-cyan-600/0 hover:from-secondary hover:to-cyan-600 transition-all duration-300 will-change-auto"
@@ -305,17 +305,17 @@ const Footer: React.FC<{ className?: string }> = ({ className }) => {
 
         <motion.button
           initial={{
-            scale: 1,
+            scale: 1
           }}
           transition={{
             type: "spring",
             duration: 0.3,
             stiffness: 200,
             damping: 5,
-            mass: 0.5,
+            mass: 0.5
           }}
           whileTap={{
-            scale: 0.9,
+            scale: 0.9
           }}
           aria-label="Back To The Top"
           onClick={backToTop}
@@ -351,14 +351,14 @@ const InteractiveRightButton = React.forwardRef<
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       ref={ref}
       className={cn(

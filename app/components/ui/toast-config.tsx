@@ -17,7 +17,7 @@ const ToastConfig = () => {
                   "from-gray-900 via-[#111900]/95 to-gray-900 text-success-background border-success-hairline/50":
                     resolveValue(t.type, t) === "success",
                   "from-gray-900 via-[#140d05]/95 to-gray-900 text-primary-600 border-primary-400/20":
-                    resolveValue(t.type, t) === "loading",
+                    resolveValue(t.type, t) === "loading"
                 }
               )}
             >

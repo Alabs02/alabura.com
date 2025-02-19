@@ -11,7 +11,11 @@ type WrapperProps = React.HTMLAttributes<HTMLDivElement> & {
   footer?: string;
 };
 
-const Wrapper: React.FC<WrapperProps> = ({ children, footer, theme = "dark" }) => {
+const Wrapper: React.FC<WrapperProps> = ({
+  children,
+  footer,
+  theme = "dark"
+}) => {
   const pathname = usePathname();
 
   useEffect(() => {

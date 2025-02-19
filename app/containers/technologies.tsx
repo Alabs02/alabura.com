@@ -678,7 +678,9 @@ const Icons = {
   ),
   autogen: () => (
     <div className="bg-black/85 p-0.5 grid place-items-center">
-      <span className="font-poppins font-bold text-center text-[13px] tracking-wide">AG</span>
+      <span className="font-poppins font-bold text-center text-[13px] tracking-wide">
+        AG
+      </span>
     </div>
   )
 };
@@ -922,7 +924,6 @@ const FlutterLogo = ({ className }: { className?: string }) => {
   );
 };
 
-
 // const NestJSLogo = ({ className }: { className?: string }) => {
 //   return (
 //     <svg
@@ -942,7 +943,6 @@ const FlutterLogo = ({ className }: { className?: string }) => {
 //     </svg>
 //   );
 // };
-
 
 const MySQLLogo = ({ className }: { className?: string }) => {
   return (
@@ -1016,21 +1016,15 @@ const OwaspZapLogo = ({ className }: { className?: string }) => {
 
 const LookaLogo = ({ className }: { className?: string }) => {
   return (
-    <svg
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 813.39 813.39"
-      className={className}
-    >
-      <path
-        fill="#5340ff"
-        d="M319.36 148.98l221.39 128.86c35.78 20.82 57.81 59.08 57.87 100.47l.63 435.08 265.24-148.98V232.27c0-41.54-22.13-79.93-58.07-100.76L579.43 0 319.36 148.98z"
-      />
-      <path
-        fill="#5340ff"
-        d="M545.13 664.41l-221.4-128.86c-35.78-20.82-57.81-59.08-57.87-100.47L265.24 0 0 148.98v432.14c0 41.54 22.13 79.93 58.07 100.76L285.06 813.4l260.07-148.99zM2170.82 481.94c0 146.88-106.26 253.89-246.96"
-      />
-    </svg>
+    <Image
+      src={ImagePath.LOOKA_LOGO}
+      alt=""
+      width={100}
+      height={100}
+      loading="lazy"
+      draggable={false}
+      className={cn("size-full object-contain", className)}
+    />
   );
 };
 
@@ -1054,234 +1048,234 @@ const FastAPILogo = ({ className }: { className?: string }) => {
 const frontendTechnologies = [
   {
     Icon: Icons.nextjs,
-    name: "Next Js",
+    name: "Next Js"
   },
   {
     Icon: ReactLogo,
-    name: "React Js",
+    name: "React Js"
   },
   {
     Icon: VueLogo,
-    name: "Vue Js",
+    name: "Vue Js"
   },
   {
     Icon: Icons.vite,
-    name: "Vite & Vitest",
+    name: "Vite & Vitest"
   },
   {
     Icon: AngularLogo,
-    name: "Angular Js",
+    name: "Angular Js"
   },
   {
     Icon: TailwindCSSLogo,
-    name: "Tailwind CSS",
+    name: "Tailwind CSS"
   },
 
   {
     Icon: Icons.shadecn,
-    name: "Shadecn UI",
+    name: "Shadecn UI"
   },
 
   {
     Icon: Icons.motion,
-    name: "Framer Motion",
+    name: "Framer Motion"
   },
 
   {
     Icon: Icons.gsap,
-    name: "GSAP",
+    name: "GSAP"
   },
   {
     Icon: Icons.webflow,
-    name: "Webflow",
+    name: "Webflow"
   },
   {
     Icon: Icons.jest,
-    name: "Jest",
+    name: "Jest"
   },
   {
     Icon: Icons.playwright,
-    name: "Playwright",
-  },
+    name: "Playwright"
+  }
 ];
 
 const backendTechnologies = [
   {
     Icon: Icons.nodejs,
-    name: "Node Js / Fastify / Express",
+    name: "Node Js / Fastify / Express"
   },
   {
     Icon: FastAPILogo,
-    name: "FastAPI",
+    name: "FastAPI"
   },
   {
     Icon: Icons.redis,
-    name: "Redis",
+    name: "Redis"
   },
   {
     Icon: Icons.kafka,
-    name: "Kafka",
+    name: "Kafka"
   },
   {
     Icon: MySQLLogo,
-    name: "MySQL DB",
+    name: "MySQL DB"
   },
   {
     Icon: Icons.mongodb,
-    name: "Mongo DB",
+    name: "Mongo DB"
   },
   {
     Icon: Icons.firebase,
-    name: "Firebase",
-  },
+    name: "Firebase"
+  }
 ];
 
 const seoTechnologies = [
   {
     Icon: SEOIcons.googleAnalytics,
-    name: "Google Analytics",
+    name: "Google Analytics"
   },
   {
     Icon: SEOIcons.googlePageSpeed,
-    name: "Google Page Speed",
+    name: "Google Page Speed"
   },
   {
     Icon: SEOIcons.semRush,
-    name: "Semrush",
+    name: "Semrush"
   },
   {
     Icon: Icons.openai,
-    name: "ChatGPT",
+    name: "ChatGPT"
   },
   {
     Icon: SEOIcons.chromeLightHouse,
-    name: "Lighthouse",
+    name: "Lighthouse"
   },
   {
     Icon: Icons.vercel,
-    name: "Vercel Analytics & Speed Insights",
+    name: "Vercel Analytics & Speed Insights"
   }
 ];
 
 const mobileTechnologies = [
   {
     Icon: FlutterLogo,
-    name: "Flutter",
+    name: "Flutter"
   },
   {
     Icon: LottieLogo,
-    name: "Lottie Files",
-  },
+    name: "Lottie Files"
+  }
 ];
 
 const designTechnologies = [
   {
     Icon: Icons.figma,
-    name: "Figma",
+    name: "Figma"
   },
   {
     Icon: Icons.canva,
-    name: "Canva",
+    name: "Canva"
   },
   {
     Icon: LookaLogo,
-    name: "Looka",
-  },
+    name: "Looka"
+  }
 ];
 
 const toolsTechnologies = [
   {
     Icon: Icons.cursor,
-    name: "Cursor AI Editor",
+    name: "Cursor AI Editor"
   },
   {
     Icon: Icons.vscode,
-    name: "VS Code",
+    name: "VS Code"
   },
   {
     Icon: Icons.git,
-    name: "Git",
+    name: "Git"
   },
   {
     Icon: Icons.postman,
-    name: "Postman",
-  },
+    name: "Postman"
+  }
 ];
 
 const aiTechnologies = [
   {
     Icon: Icons.openai,
-    name: "OpenAI API",
+    name: "OpenAI API"
   },
   {
     Icon: Icons.tensorflow,
-    name: "TensorFlow",
+    name: "TensorFlow"
   },
   {
     Icon: Icons.langchain,
-    name: "LangChain",
+    name: "LangChain"
   },
   {
     Icon: Icons.huggingFace,
-    name: "Hugging Face",
+    name: "Hugging Face"
   },
   {
     Icon: Icons.autogen,
-    name: "AutoGen",
+    name: "AutoGen"
   },
   {
     Icon: Icons.wb,
-    name: "Weights & Biases",
-  },
+    name: "Weights & Biases"
+  }
 ];
 
 const securityTechnologies = [
   {
     Icon: Icons.synk,
-    name: "Synk",
+    name: "Synk"
   },
   {
     Icon: OwaspZapLogo,
-    name: "Owasp Zap",
-  },
+    name: "Owasp Zap"
+  }
 ];
 
 const devopsTechnologies = [
   {
     Icon: Icons.docker,
-    name: "Docker",
+    name: "Docker"
   },
   {
     Icon: Icons.nginx,
-    name: "Nginx",
+    name: "Nginx"
   },
   {
     Icon: Icons.jenkins,
-    name: "Jenkins",
+    name: "Jenkins"
   },
   {
     Icon: Icons.terraform,
-    name: "Terraform",
-  },
+    name: "Terraform"
+  }
 ];
 
 const programmingLanguages = [
   {
     Icon: Icons.typescript,
-    name: "JavaScript / TypeScript",
+    name: "JavaScript / TypeScript"
   },
   {
     Icon: Icons.python,
-    name: "Python",
+    name: "Python"
   },
   {
     Icon: MySQLLogo,
-    name: "SQL",
+    name: "SQL"
   },
   {
     Icon: Icons.dart,
-    name: "Dart",
-  },
+    name: "Dart"
+  }
 ];
 
 const Technologies = () => {
@@ -1290,7 +1284,9 @@ const Technologies = () => {
       <motion.div className="flex flex-col items-center">
         <HeadingChip>Tools & Technologies</HeadingChip>
         <motion.p className="text-xl text-center text-zinc-50 font-poppins font-normal mt-4 xl:mt-6 md:max-w-[80%]">
-          I leverage a powerful tech stack to build AI-driven, scalable, and high-performance solutions. From frontend to backend, I integrate AI seamlessly to enhance automation, intelligence, and user experience.
+          I leverage a powerful tech stack to build AI-driven, scalable, and
+          high-performance solutions. From frontend to backend, I integrate AI
+          seamlessly to enhance automation, intelligence, and user experience.
         </motion.p>
       </motion.div>
 
@@ -1307,10 +1303,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1336,10 +1332,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1365,10 +1361,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1394,10 +1390,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1423,10 +1419,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1452,10 +1448,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1481,10 +1477,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1510,10 +1506,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1539,10 +1535,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1568,10 +1564,10 @@ const Technologies = () => {
               transition={{
                 type: "tween",
                 ease: "easeInOut",
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               key={nanoid()}
               className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
@@ -1591,7 +1587,7 @@ const Technologies = () => {
 
 export const Grid = ({
   pattern,
-  size,
+  size
 }: {
   pattern?: number[][];
   size?: number;
@@ -1601,7 +1597,7 @@ export const Grid = ({
       pattern ??
       Array.from({ length: 5 }, () => [
         Math.floor(Math.random() * 4) + 7,
-        Math.floor(Math.random() * 6) + 1,
+        Math.floor(Math.random() * 6) + 1
       ]),
     [pattern]
   );
@@ -1676,5 +1672,5 @@ export {
   TechnologiesArtifactTopLeft,
   TechnologiesArtifactTopRight,
   TechnologiesArtifactBottomRight,
-  Icons as TechIcons,
+  Icons as TechIcons
 };

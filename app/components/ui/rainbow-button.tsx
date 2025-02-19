@@ -15,14 +15,14 @@ export function RainbowButton({
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       className={cn(
         "group !border-zinc-600/50 hover:!border-zinc-50/50 focus:!border-zinc-50/50 relative inline-flex h-11 animate-rainbow cursor-pointer items-center justify-center rounded-xl border-0 bg-[length:200%] px-8 py-2 font-medium text-zinc-50 hover:text-zinc-950 focus:text-zinc-950 text-sm md:!text-[15px] transition-colors [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",

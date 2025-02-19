@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export const FlipWords = ({
   words,
   duration = 3000,
-  className,
+  className
 }: {
   words: string[];
   duration?: number;
@@ -37,16 +37,16 @@ export const FlipWords = ({
       <motion.div
         initial={{
           opacity: 0,
-          y: 10,
+          y: 10
         }}
         animate={{
           opacity: 1,
-          y: 0,
+          y: 0
         }}
         transition={{
           type: "spring",
           stiffness: 100,
-          damping: 10,
+          damping: 10
         }}
         exit={{
           opacity: 0,
@@ -54,12 +54,9 @@ export const FlipWords = ({
           x: 40,
           filter: "blur(8px)",
           scale: 2,
-          position: "absolute",
+          position: "absolute"
         }}
-        className={cn(
-          "z-10 inline-block relative text-left px-2",
-          className
-        )}
+        className={cn("z-10 inline-block relative text-left px-2", className)}
         key={currentWord}
       >
         {currentWord.split(" ").map((word, wordIndex) => (
@@ -69,7 +66,7 @@ export const FlipWords = ({
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
               delay: wordIndex * 0.3,
-              duration: 0.3,
+              duration: 0.3
             }}
             className="inline-block whitespace-nowrap"
           >
@@ -80,7 +77,7 @@ export const FlipWords = ({
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{
                   delay: wordIndex * 0.3 + letterIndex * 0.05,
-                  duration: 0.2,
+                  duration: 0.2
                 }}
                 className="inline-block font-bricolage font-extrabold bg-gradient-to-b from-primary-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent"
               >

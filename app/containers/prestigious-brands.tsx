@@ -12,56 +12,56 @@ const PrestigiousBrands = () => {
     {
       id: nanoid(),
       src: ImagePath.FBN_QUEST_FULL_LOGO,
-      className: "invert",
+      className: "invert"
     },
     {
       id: nanoid(),
       src: ImagePath.ACRONIS_FULL_LOGO,
-      className: "opacity-75 scale-90",
+      className: "opacity-75 scale-90"
     },
     {
       id: nanoid(),
       src: ImagePath.BUDGIT_FULL_LOGO,
-      className: "",
+      className: ""
     },
     {
       id: nanoid(),
       src: ImagePath.SBSC_FULL_LOGO,
-      className: "invert",
+      className: "invert"
     },
     {
       id: nanoid(),
       src: ImagePath.LIVEABLE_FULL_LOGO,
-      className: "invert opacity-75",
-    },
+      className: "invert opacity-75"
+    }
   ];
 
   const secondRow = [
     {
       id: nanoid(),
       src: ImagePath.GRADELY_FULL_LOGO,
-      className: "",
+      className: ""
     },
     {
       id: nanoid(),
       src: ImagePath.PLATEAU_STATE_FULL_LOGO,
-      className: "",
+      className: ""
     },
     {
       id: nanoid(),
       src: ImagePath.ASTRO_MARKETER_FULL_LOGO,
-      className: "invert",
+      className: "invert"
     },
     {
       id: nanoid(),
       src: ImagePath.MYLANDLORD_HEAVEN_FULL_LOGO,
-      className: "invert opacity-75",
+      className: "invert opacity-75"
     },
     {
       id: nanoid(),
       src: ImagePath.SSAF_LOGISTICS_LOGO,
-      className: "",
-    },
+      className: ""
+    }
   ];
 
   return (

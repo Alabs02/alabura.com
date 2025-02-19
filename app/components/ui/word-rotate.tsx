@@ -19,9 +19,9 @@ export function WordRotate({
     initial: { opacity: 0, y: -50 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 50 },
-    transition: { duration: 0.25, ease: "easeOut" },
+    transition: { duration: 0.25, ease: "easeOut" }
   },
-  className,
+  className
 }: WordRotateProps) {
   const [index, setIndex] = useState(0);
 

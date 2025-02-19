@@ -37,7 +37,7 @@ export type ContactSlice = ContactState & {
   reset: () => void;
   nextStep: (step?: number) => void;
   prevStep: (step?: number) => void;
-  addService: (service: Service) => void; 
+  addService: (service: Service) => void;
   removeService: (service: Service) => void;
   updateForm: (key: string, value: any) => void;
 };
@@ -53,11 +53,11 @@ const contactSliceInitState: ContactState = {
     inquiry: {
       type: "",
       heading: "",
-      subheading: "",
+      subheading: ""
     },
     services: [],
     questions: []
-  },
+  }
 };
 
 export const createContactSlice: StateCreator<
@@ -77,27 +77,31 @@ export const createContactSlice: StateCreator<
   getForm: () => get().form,
   getLeanFormServices: () => get().form.services.map((o) => o.id),
 
-  nextStep: (step?: number) => set((state) => ({ step: step ? step : state.step + 1 })),
+  nextStep: (step?: number) =>
+    set((state) => ({ step: step ? step : state.step + 1 })),
 
-  prevStep: (step?: number) => set((state) => ({ step: step ? step : state.step - 1 })),
+  prevStep: (step?: number) =>
+    set((state) => ({ step: step ? step : state.step - 1 })),
 
   updateForm: (key: string, value: any) =>
     set((state) => ({
       form: {
         ...state.form,
-        [key]: value,
-      },
+        [key]: value
+      }
     })),
 
   addService: (service) =>
     set((state) => {
-      const existingService = state.form.services.find((s) => s.id === service.id);
+      const existingService = state.form.services.find(
+        (s) => s.id === service.id
+      );
       if (existingService) return state; // Prevent duplicates
       return {
         form: {
           ...state.form,
-          services: [...state.form.services, service],
-        },
+          services: [...state.form.services, service]
+        }
       };
     }),
 
@@ -105,8 +109,7 @@ export const createContactSlice: StateCreator<
     set((state) => ({
       form: {
         ...state.form,
-        services: state.form.services.filter((s) => s.id !== service.id),
-      },
-    })),
+        services: state.form.services.filter((s) => s.id !== service.id)
+      }
+    }))
 });
-

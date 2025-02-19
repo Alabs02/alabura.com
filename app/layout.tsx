@@ -37,8 +37,8 @@ import "@fontsource/bricolage-grotesque/800.css";
 import { inter, poppins, bricolageGrotesque } from "@/plugins";
 import { ImagePath } from "./constants";
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const BASE_URL = "https://alabura.com";
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default: "Alabura Usman | AI Solutions for Scalable Growth",
-    template: "%s | Alabura Usman",
+    template: "%s | Alabura Usman"
   },
   description:
     "Explore the portfolio of Alabura Usman, an expert in AI-driven solutions that scale and drive business growth. I specialize in creating AI-powered systems that automate operations, boost revenue, and reduce costs. With a blend of creativity, strategy, and technical precision, I turn bold ideas into impactful realities.",
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
         url: `${BASE_URL}${ImagePath.ALABURA_COM}`,
         width: 1200,
         height: 630,
-        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth",
-      },
-    ],
+        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -77,9 +77,9 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         url: `${BASE_URL}/images/alabura.webp`,
-        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth",
+        alt: "Alabura Usman Portfolio - AI Solutions for Scalable Growth"
       }
-    ],
+    ]
   },
   robots: {
     index: true,
@@ -89,8 +89,8 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+      "max-snippet": -1
+    }
   },
   keywords: [
     "Alabura Usman",
@@ -115,28 +115,27 @@ export const metadata: Metadata = {
     "AI System Automation",
     "AI Engineering Consultant",
     "Web Development Portfolio",
-    "Frontend Development",
+    "Frontend Development"
   ],
   authors: [
     {
       name: "Alabura Usman",
-      url: BASE_URL,
+      url: BASE_URL
     },
     {
       name: "Alabura Usman | LinkedIn Profile",
-      url: "https://www.linkedin.com/in/usmanunfolds/",
+      url: "https://www.linkedin.com/in/usmanunfolds/"
     },
     {
       name: "Alabura Usman | Github Profile",
-      url: "https://github.com/Alabs02",
+      url: "https://github.com/Alabs02"
     },
     {
       name: "Alabura Usman | Medium Blog",
-      url: "https://medium.com/@alabura.usman",
-    },
+      url: "https://medium.com/@alabura.usman"
+    }
   ]
 };
-
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -145,14 +144,14 @@ export const viewport: Viewport = {
   userScalable: true,
   interactiveWidget: "resizes-visual",
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: "#06b6d4" },
-    { media: '(prefers-color-scheme: dark)', color: "#06b6d4" },
+    { media: "(prefers-color-scheme: light)", color: "#06b6d4" },
+    { media: "(prefers-color-scheme: dark)", color: "#06b6d4" }
   ],
   colorScheme: "dark"
-}
+};
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

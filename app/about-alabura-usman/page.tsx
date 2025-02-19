@@ -4,7 +4,7 @@ import {
   GridPattern,
   HeadingChip,
   RainbowButton,
-  StarsBackground,
+  StarsBackground
 } from "@/components/ui";
 import { calURL, ImagePath, resumeHref } from "@/constants";
 import { cn } from "@/lib/utils";
@@ -28,7 +28,7 @@ const AboutAlaburaUsman = () => {
     [16, 3],
     [13, 5],
     [10, 6],
-    [9, 7],
+    [9, 7]
   ];
 
   return (

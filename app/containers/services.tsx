@@ -17,7 +17,7 @@ import {
   RainbowButton,
   SEOIcons,
   AIPoweredSkeleton,
-  AutonomousSkeleton,
+  AutonomousSkeleton
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { UI } from "@/models";
@@ -38,7 +38,8 @@ const Services = () => {
             </motion.h4>
 
             <motion.h5 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal mt-4 xl:mt-6 md:max-w-[80%]">
-              Transforming ideas into AI-powered solutions that help businesses thrive, automate, and scale.
+              Transforming ideas into AI-powered solutions that help businesses
+              thrive, automate, and scale.
             </motion.h5>
           </motion.div>
 
@@ -70,7 +71,9 @@ const Services = () => {
           <div className="col-span-12 lg:col-span-6 xl:col-span-4">
             <AnimatedFeaturecard
               heading={"Advanced AI Chatbots"}
-              subheading={"Develop human-like chatbots that enhance customer engagement and support with precise, responses."}
+              subheading={
+                "Develop human-like chatbots that enhance customer engagement and support with precise, responses."
+              }
               className={""}
               Skeleton={ChatbotSkeleton}
             />
@@ -171,7 +174,7 @@ const AnimatedFeaturecard: React.FC<UI.AnimatedFeatureCardProps> = ({
   className,
   Skeleton,
   showGradient = true,
-  containerClassName,
+  containerClassName
 }) => {
   return (
     <FeatureCard className={cn(className)}>
@@ -188,7 +191,7 @@ const AnimatedFeaturecard: React.FC<UI.AnimatedFeatureCardProps> = ({
 };
 
 export function AnimatedBeamMultipleOutputForSEO({
-  className,
+  className
 }: {
   className?: string;
 }) {

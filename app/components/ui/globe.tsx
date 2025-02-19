@@ -29,13 +29,13 @@ const GLOBE_CONFIG: COBEOptions = {
     { location: [19.4326, -99.1332], size: 0.1 },
     { location: [40.7128, -74.006], size: 0.1 },
     { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
-  ],
+    { location: [41.0082, 28.9784], size: 0.06 }
+  ]
 };
 
 export function Globe({
   className,
-  config = GLOBE_CONFIG,
+  config = GLOBE_CONFIG
 }: {
   className?: string;
   config?: COBEOptions;
@@ -69,7 +69,7 @@ export function Globe({
       state.width = width * 2;
       state.height = width * 2;
     },
-    [r],
+    [r]
   );
 
   const onResize = () => {
@@ -86,7 +86,7 @@ export function Globe({
       ...config,
       width: width * 2,
       height: width * 2,
-      onRender,
+      onRender
     });
 
     setTimeout(() => (canvasRef.current!.style.opacity = "1"));
@@ -97,17 +97,17 @@ export function Globe({
     <div
       className={cn(
         "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
-        className,
+        className
       )}
     >
       <canvas
         className={cn(
-          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]",
+          "size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
         )}
         ref={canvasRef}
         onPointerDown={(e) =>
           updatePointerInteraction(
-            e.clientX - pointerInteractionMovement.current,
+            e.clientX - pointerInteractionMovement.current
           )
         }
         onPointerUp={() => updatePointerInteraction(null)}

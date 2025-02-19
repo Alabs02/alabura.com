@@ -9,7 +9,7 @@ import { UI } from "@/models";
 import {
   HoverEffect,
   InteractiveHoverButton,
-  SparklesText,
+  SparklesText
 } from "@/components/ui";
 
 import { MenuItem } from "@/components/ui";

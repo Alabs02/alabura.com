@@ -15,14 +15,14 @@ const transition = {
   damping: 11.5,
   stiffness: 100,
   restDelta: 0.001,
-  restSpeed: 0.001,
+  restSpeed: 0.001
 };
 
 export const MenuItem = ({
   setActive,
   active,
   item,
-  children,
+  children
 }: {
   setActive: (item: string) => void;
   active: string | null;
@@ -36,13 +36,23 @@ export const MenuItem = ({
 
   return (
     <div onMouseEnter={updateActiveState} className="relative">
-      <AnimatedLink id={nanoid()} label={item} className={clsx(active && "!text-primary-200/95", !active && "animated-link")} suffix={<ChevronDown
-          className={clsx(
-            "relative top-[1px] h-4 w-4 transition duration-500 group-hover:rotate-180",
-            { "group-data-[state=open]:rotate-180": active }
-          )}
-          aria-hidden="true"
-        />} />
+      <AnimatedLink
+        id={nanoid()}
+        label={item}
+        className={clsx(
+          active && "!text-primary-200/95",
+          !active && "animated-link"
+        )}
+        suffix={
+          <ChevronDown
+            className={clsx(
+              "relative top-[1px] h-4 w-4 transition duration-500 group-hover:rotate-180",
+              { "group-data-[state=open]:rotate-180": active }
+            )}
+            aria-hidden="true"
+          />
+        }
+      />
 
       {active !== null && (
         <motion.div
@@ -57,10 +67,7 @@ export const MenuItem = ({
                 layoutId="active"
                 className="bg-primary-950/[0.99] backdrop-blur-sm rounded-2xl overflow-hidden border border-primary-200/20 shadow-xl"
               >
-                <motion.div
-                  layout
-                  className="w-max h-full p-4"
-                >
+                <motion.div layout className="w-max h-full p-4">
                   {children}
                 </motion.div>
               </motion.div>
@@ -74,7 +81,7 @@ export const MenuItem = ({
 
 export const Menu = ({
   setActive,
-  children,
+  children
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
@@ -92,14 +99,17 @@ export const Menu = ({
 export const ProductItem = ({
   title,
   description,
-  href,
+  href
 }: {
   title: string;
   description: string;
   href: string;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2 transition duration-300 border border-transparent bg-transparent hover:backdrop-blur-md hover:shadow-md hover:bg-primary-900/55 p-2 hover:border-primary-200/20 active:border-primary focus:border-primary-200/95 rounded-lg">
+    <Link
+      href={href}
+      className="flex space-x-2 transition duration-300 border border-transparent bg-transparent hover:backdrop-blur-md hover:shadow-md hover:bg-primary-900/55 p-2 hover:border-primary-200/20 active:border-primary focus:border-primary-200/95 rounded-lg"
+    >
       <div>
         <h4 className="text-base font-bold mb-1 text-primary-content font-bricolage">
           {title}

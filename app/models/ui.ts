@@ -4,7 +4,7 @@ import { JSX, ReactNode } from "react";
 export type ScrollProgressProps = {
   progress: number;
   className?: string;
-}
+};
 
 export type FloatingNavItem = {
   id: string;
@@ -12,25 +12,25 @@ export type FloatingNavItem = {
   href?: string;
   icon?: JSX.Element;
   subItems?: SubItems[];
-}
+};
 
 export type SubItems = {
   id: string;
   href: string;
   title: string;
   description: string;
-}
+};
 
 export type FloatingNavProps = {
   className?: string;
   navItems: FloatingNavItem[];
-}
+};
 
 export type ShinyTextProps = {
   children: ReactNode;
   className?: string;
   shimmerWidth?: number;
-}
+};
 
 export type AnimatedFeatureCardProps = {
   cta?: string;
@@ -52,15 +52,15 @@ export type TimelineEntry = {
   };
   location: string;
   content: React.JSX.Element;
-}
+};
 
-export type EndorsementCardProps  = React.HTMLAttributes<HTMLDivElement> & {
+export type EndorsementCardProps = React.HTMLAttributes<HTMLDivElement> & {
   id: string;
   name: string;
   imageSrc: string;
   position: string;
   comment: () => React.JSX.Element;
-}
+};
 
 export type CarouselProps = {
   items: React.JSX.Element[];
@@ -84,8 +84,9 @@ export type GridPatternProps = {
   strokeDasharray?: string;
   className?: string;
   [key: string]: unknown;
-}
+};
 
-export type InteractiveButtonProps = MotionProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  text?: string;
-}
+export type InteractiveButtonProps = MotionProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    text?: string;
+  };

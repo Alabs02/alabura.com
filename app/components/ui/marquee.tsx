@@ -48,9 +48,9 @@ function Marquee({
         "group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
         {
           "flex-row": !vertical,
-          "flex-col": vertical,
+          "flex-col": vertical
         },
-        className,
+        className
       )}
     >
       {Array(repeat)
@@ -62,7 +62,7 @@ function Marquee({
               "animate-marquee flex-row": !vertical,
               "animate-marquee-vertical flex-col": vertical,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
-              "[animation-direction:reverse]": reverse,
+              "[animation-direction:reverse]": reverse
             })}
           >
             {children}

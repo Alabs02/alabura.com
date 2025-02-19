@@ -24,34 +24,34 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.MYLANDLORD_HEAVEN_PAGE,
-      },
+        src: ImagePath.MYLANDLORD_HEAVEN_PAGE
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "Next Js",
+        title: "Next Js"
       },
       {
         id: nanoid(),
-        title: "React Js",
+        title: "React Js"
       },
       {
         id: nanoid(),
-        title: "Redux",
+        title: "Redux"
       },
       {
         id: nanoid(),
-        title: "Laravel",
+        title: "Laravel"
       },
       {
         id: nanoid(),
-        title: "MySQL DB",
+        title: "MySQL DB"
       },
       {
         id: nanoid(),
-        title: "Docker",
-      },
+        title: "Docker"
+      }
     ],
     title: "My Landlord Heaven",
     category: "PropTech",
@@ -354,7 +354,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   "onecopy-business-ai": {
     images: [
@@ -363,42 +363,42 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.ONECOPY_AI,
-      },
+        src: ImagePath.ONECOPY_AI
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "Vue Js",
+        title: "Vue Js"
       },
       {
         id: nanoid(),
-        title: "Vuex",
+        title: "Vuex"
       },
       {
         id: nanoid(),
-        title: "Node Js",
+        title: "Node Js"
       },
       {
         id: nanoid(),
-        title: "Nest Js",
+        title: "Nest Js"
       },
       {
         id: nanoid(),
-        title: "GSAP",
+        title: "GSAP"
       },
       {
         id: nanoid(),
-        title: "Tailwind CSS",
+        title: "Tailwind CSS"
       },
       {
         id: nanoid(),
-        title: "SASS",
+        title: "SASS"
       },
       {
         id: nanoid(),
-        title: "Daisy UI",
-      },
+        title: "Daisy UI"
+      }
     ],
     title: "Onecopy Business AI",
     category: "AI & Content Creation",
@@ -694,7 +694,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   "phc-accountability-tracka": {
     images: [
@@ -703,34 +703,34 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.PHC_TRACKA,
-      },
+        src: ImagePath.PHC_TRACKA
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "Next Js",
+        title: "Next Js"
       },
       {
         id: nanoid(),
-        title: "React Js",
+        title: "React Js"
       },
       {
         id: nanoid(),
-        title: "Recoil",
+        title: "Recoil"
       },
       {
         id: nanoid(),
-        title: "Tailwind CSS",
+        title: "Tailwind CSS"
       },
       {
         id: nanoid(),
-        title: "SASS",
+        title: "SASS"
       },
       {
         id: nanoid(),
-        title: "Node Js",
-      },
+        title: "Node Js"
+      }
     ],
     title: "PHC Accountability Tracka",
     category: "Healthcare & Civic Tech",
@@ -992,7 +992,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   gradely: {
     images: [
@@ -1001,30 +1001,30 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.GRADELY_PAGE,
-      },
+        src: ImagePath.GRADELY_PAGE
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "Vue Js",
+        title: "Vue Js"
       },
       {
         id: nanoid(),
-        title: "Vuex",
+        title: "Vuex"
       },
       {
         id: nanoid(),
-        title: "SASS",
+        title: "SASS"
       },
       {
         id: nanoid(),
-        title: "Laravel",
+        title: "Laravel"
       },
       {
         id: nanoid(),
-        title: "MySQL DB",
-      },
+        title: "MySQL DB"
+      }
     ],
     title: "Gradely",
     category: "EdTech",
@@ -1344,7 +1344,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   liveable: {
     images: [
@@ -1353,38 +1353,38 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.LIVEABLE_PAGE,
-      },
+        src: ImagePath.LIVEABLE_PAGE
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "Next Js",
+        title: "Next Js"
       },
       {
         id: nanoid(),
-        title: "Turbo Repo",
+        title: "Turbo Repo"
       },
       {
         id: nanoid(),
-        title: "React Js",
+        title: "React Js"
       },
       {
         id: nanoid(),
-        title: "Redux",
+        title: "Redux"
       },
       {
         id: nanoid(),
-        title: "Laravel",
+        title: "Laravel"
       },
       {
         id: nanoid(),
-        title: "MySQL DB",
+        title: "MySQL DB"
       },
       {
         id: nanoid(),
-        title: "Docker",
-      },
+        title: "Docker"
+      }
     ],
     title: "Liveable",
     category: "UrbanTech & PropTech",
@@ -1685,7 +1685,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   "ssaf-logistics": {
     images: [
@@ -1694,30 +1694,30 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.SSAF_LOGISTICS_PAGE,
-      },
+        src: ImagePath.SSAF_LOGISTICS_PAGE
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "React Js",
+        title: "React Js"
       },
       {
         id: nanoid(),
-        title: "Redux",
+        title: "Redux"
       },
       {
         id: nanoid(),
-        title: "Node Js",
+        title: "Node Js"
       },
       {
         id: nanoid(),
-        title: "SASS",
+        title: "SASS"
       },
       {
         id: nanoid(),
-        title: "Docker",
-      },
+        title: "Docker"
+      }
     ],
     title: "SSAF Logistics",
     category: "Logistics & Supply Chain",
@@ -1960,7 +1960,7 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
+    )
   },
   sims: {
     images: [
@@ -1969,34 +1969,34 @@ const projectDetails: any = {
         alt: "",
         category: "",
         title: "",
-        src: ImagePath.SIMS_PAGE,
-      },
+        src: ImagePath.SIMS_PAGE
+      }
     ],
     stack: [
       {
         id: nanoid(),
-        title: "React Js",
+        title: "React Js"
       },
       {
         id: nanoid(),
-        title: "Redux",
+        title: "Redux"
       },
       {
         id: nanoid(),
-        title: "Laravel",
+        title: "Laravel"
       },
       {
         id: nanoid(),
-        title: "Vue Js",
+        title: "Vue Js"
       },
       {
         id: nanoid(),
-        title: "Vuex",
+        title: "Vuex"
       },
       {
         id: nanoid(),
-        title: "Docker",
-      },
+        title: "Docker"
+      }
     ],
     title: "SIMS",
     category: "EdTech & GovTech",
@@ -2339,8 +2339,8 @@ const projectDetails: any = {
           </motion.ul>
         </div>
       </>
-    ),
-  },
+    )
+  }
 };
 
 const ProjectOverview = () => {
@@ -2376,7 +2376,7 @@ const ProjectOverview = () => {
     [16, 3],
     [13, 5],
     [10, 6],
-    [9, 7],
+    [9, 7]
   ];
 
   const onNext = () => {
@@ -2435,7 +2435,7 @@ const ProjectOverview = () => {
     notFound();
   }
 
-  if (!currentProjects.includes(project as string || "")) {    
+  if (!currentProjects.includes((project as string) || "")) {
     notFound();
   }
 
@@ -2525,7 +2525,7 @@ const ProjectOverview = () => {
                         "ring-blue-50/10":
                           kebabCase(item?.title) === "react-js" ||
                           kebabCase(item?.title) === "docker" ||
-                          kebabCase(item?.title) === "tailwind-css",
+                          kebabCase(item?.title) === "tailwind-css"
                       }
                     )}
                   >
@@ -2555,7 +2555,7 @@ const ProjectOverview = () => {
                           "bg-blue-950/20 text-blue-50/90":
                             kebabCase(item?.title) === "react-js" ||
                             kebabCase(item?.title) === "docker" ||
-                            kebabCase(item?.title) === "tailwind-css",
+                            kebabCase(item?.title) === "tailwind-css"
                         }
                       )}
                     >
@@ -2589,7 +2589,7 @@ const ProjectOverview = () => {
                             kebabCase(item?.title) === "react-js" ||
                             kebabCase(item?.title) === "docker" ||
                             kebabCase(item?.title) === "tailwind-css",
-                          "via-error/90": kebabCase(item?.title) === "laravel",
+                          "via-error/90": kebabCase(item?.title) === "laravel"
                         }
                       )}
                     ></span>
@@ -2729,14 +2729,14 @@ const InteractiveRightButton = React.forwardRef<
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       ref={ref}
       className={cn(
@@ -2764,14 +2764,14 @@ const InteractiveLeftButton = React.forwardRef<
   return (
     <motion.button
       initial={{
-        scale: 1,
+        scale: 1
       }}
       whileTap={{
-        scale: 0.9,
+        scale: 0.9
       }}
       transition={{
         duration: 0.2,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
       ref={ref}
       className={cn(
@@ -2797,7 +2797,7 @@ const CarouselContext = createContext<{
   currentIndex: number;
 }>({
   onCardClose: () => {},
-  currentIndex: 0,
+  currentIndex: 0
 });
 
 const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
@@ -2842,7 +2842,7 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
       const scrollPosition = (cardWidth + gap) * (index + 1);
       carouselRef.current.scrollTo({
         left: scrollPosition,
-        behavior: "smooth",
+        behavior: "smooth"
       });
       setCurrentIndex(index);
     }
@@ -2878,7 +2878,7 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
               <motion.div
                 initial={{
                   opacity: 0,
-                  y: 20,
+                  y: 20
                 }}
                 animate={{
                   opacity: 1,
@@ -2887,8 +2887,8 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
                     duration: 0.5,
                     delay: 0.2 * index,
                     ease: "easeOut",
-                    once: true,
-                  },
+                    once: true
+                  }
                 }}
                 key={"card" + index}
                 className="rounded-2xl min-w-full"
@@ -2927,7 +2927,7 @@ const Carousel = ({ items, initialScroll = 0 }: UI.CarouselProps) => {
 
 const Card = ({
   card,
-  layout = false,
+  layout = false
 }: {
   card: UI.Card;
   layout?: boolean;
@@ -2995,8 +2995,6 @@ const BlurImage = ({
     />
   );
 };
-
-
 
 Card.displayName = "Card";
 Carousel.displayName = "Carousel";

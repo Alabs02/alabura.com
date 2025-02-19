@@ -1,7 +1,12 @@
 @function hsl-with-alpha($hsl, $alpha) {
-  $hsl-list: if(type-of($hsl) == 'string', str-split($hsl, ' '), $hsl);
+  $hsl-list: if(type-of($hsl) == "string", str-split($hsl, " "), $hsl);
 
-  @return hsla(nth($hsl-list, 1), nth($hsl-list, 2), nth($hsl-list, 3), #{$alpha});
+  @return hsla(
+    nth($hsl-list, 1),
+    nth($hsl-list, 2),
+    nth($hsl-list, 3),
+    #{$alpha}
+  );
 }
 
 @function to-string($value) {

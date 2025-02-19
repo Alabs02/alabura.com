@@ -15,7 +15,7 @@ import {
   GridHeroPattern,
   WorkHistory,
   Recommendations,
-  PrestigiousBrands,
+  PrestigiousBrands
 } from "@/containers";
 import { DotPattern, ToastConfig } from "@/components/ui";
 import { cn } from "@/lib/utils";

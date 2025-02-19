@@ -11,13 +11,13 @@ interface AnimatedShinyTextProps {
 const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
   children,
   className,
-  shimmerWidth = 100,
+  shimmerWidth = 100
 }) => {
   return (
     <p
       style={
         {
-          "--shiny-width": `${shimmerWidth}px`,
+          "--shiny-width": `${shimmerWidth}px`
         } as CSSProperties
       }
       className={cn(
@@ -29,7 +29,7 @@ const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
         // Shine gradient
         "bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent  dark:via-white/80",
 
-        className,
+        className
       )}
     >
       {children}

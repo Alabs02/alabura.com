@@ -44,13 +44,13 @@ const getRandomStartPoint = () => {
 export const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
   maxSpeed = 30,
-  minDelay = 1200,
+  minDelay = 2000,
   maxDelay = 4200,
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
   starWidth = 10,
   starHeight = 1,
-  className,
+  className
 }) => {
   const [star, setStar] = useState<ShootingStar | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -65,7 +65,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
         angle,
         scale: 1,
         speed: Math.random() * (maxSpeed - minSpeed) + minSpeed,
-        distance: 0,
+        distance: 0
       };
       setStar(newStar);
 
@@ -104,7 +104,7 @@ export const ShootingStars: React.FC<ShootingStarsProps> = ({
             x: newX,
             y: newY,
             distance: newDistance,
-            scale: newScale,
+            scale: newScale
           };
         });
       }

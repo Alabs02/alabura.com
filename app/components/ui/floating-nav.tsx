@@ -10,7 +10,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-  easeInOut,
+  easeInOut
 } from "framer-motion";
 
 // MODELS
@@ -46,15 +46,15 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
       <AnimatePresence mode="wait">
         <motion.nav
           initial={{
-            opacity: 1,
+            opacity: 1
           }}
           animate={{
-            opacity: visible ? 1 : 0,
+            opacity: visible ? 1 : 0
           }}
           transition={{
             type: "tween",
             ease: easeInOut,
-            duration: 0.3,
+            duration: 0.3
           }}
           className="fixed top-5 inset-x-0 z-[5000] flex items-center justify-between md:justify-center max-w-[90%] md:max-w-fit mx-auto rounded-full md:space-x-4 lg:space-x-6 py-3 px-6 border border-zinc-200/25 bg-zinc-950/65 backdrop-blur-lg shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
         >
@@ -63,10 +63,10 @@ export const FloatingNav: FC<UI.FloatingNavProps> = ({ navItems }) => {
               transition={{
                 type: "tween",
                 ease: easeInOut,
-                duration: 0.3,
+                duration: 0.3
               }}
               whileHover={{
-                scale: 1.1,
+                scale: 1.1
               }}
               className="group relative h-6 w-6 xl:h-7 xl:w-7 grid place-items-center"
             >

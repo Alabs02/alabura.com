@@ -35,7 +35,7 @@ const Recommendations = () => {
             He would be a valuable asset to any team.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: nanoid(),
@@ -47,7 +47,7 @@ const Recommendations = () => {
         <div className="flex flex-col gap-y-2">
           <p className="text-inherit block">
             When our official site went down unnoticed, Usman took the
-            initiative to create a new version within just three days   a version
+            initiative to create a new version within just three days a version
             far superior to the previous one. The interface is beautiful and
             remains the best-looking site we’ve ever had. His communication
             skills are equally impressive; he has a rare ability to explain
@@ -58,7 +58,7 @@ const Recommendations = () => {
             engineer and a true problem-solver.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: nanoid(),
@@ -82,7 +82,7 @@ const Recommendations = () => {
             Engineering roles.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: nanoid(),
@@ -105,8 +105,8 @@ const Recommendations = () => {
             skilled Senior Frontend Engineer.
           </p>
         </div>
-      ),
-    },
+      )
+    }
   ];
 
   return (
@@ -148,7 +148,7 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
   comment,
   imageSrc,
   name,
-  position,
+  position
 }) => {
   return (
     <>
@@ -167,7 +167,7 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
                 src={imageSrc}
                 alt={""}
                 fill
-                priority
+                loading={"lazy"}
                 draggable={false}
                 className="size-full -skew-x-6"
               />
@@ -192,14 +192,13 @@ const EndorsementCard: React.FC<UI.EndorsementCardProps> = ({
   );
 };
 
-
 const Grid = ({ pattern, size }: { pattern?: number[][]; size?: number }) => {
   const p = pattern ?? [
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
     [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
-    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1],
+    [Math.floor(Math.random() * 4) + 7, Math.floor(Math.random() * 6) + 1]
   ];
   return (
     <div className="pointer-events-none absolute left-1/2 top-0  -ml-20 -mt-2 h-full w-full [mask-image:linear-gradient(white,transparent)]">

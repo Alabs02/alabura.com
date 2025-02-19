@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export const HoverEffect = ({
   items,
-  className,
+  className
 }: {
   items: {
     title: string;
@@ -43,11 +43,11 @@ export const HoverEffect = ({
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.15 },
+                  transition: { duration: 0.15 }
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
+                  transition: { duration: 0.15, delay: 0.2 }
                 }}
               />
             )}
@@ -64,7 +64,7 @@ export const HoverEffect = ({
 
 export const Card = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children: React.ReactNode;
@@ -84,20 +84,25 @@ export const Card = ({
 };
 export const CardTitle = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("font-semibold 2xl:font-bold text-sm 2xl:text-[15px] text-primary-content font-bricolage tracking-wide", className)}>
+    <h4
+      className={cn(
+        "font-semibold 2xl:font-bold text-sm 2xl:text-[15px] text-primary-content font-bricolage tracking-wide",
+        className
+      )}
+    >
       {children}
     </h4>
   );
 };
 export const CardDescription = ({
   className,
-  children,
+  children
 }: {
   className?: string;
   children: React.ReactNode;
