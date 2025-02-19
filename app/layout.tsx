@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     template: "%s | Alabura Usman"
   },
   description:
-    "Explore the portfolio of Alabura Usman, an expert in AI-driven solutions that scale and drive business growth. I specialize in creating AI-powered systems that automate operations, boost revenue, and reduce costs. With a blend of creativity, strategy, and technical precision, I turn bold ideas into impactful realities.",
+    "Explore the portfolio of Alabura Usman, an expert in AI-driven solutions that scale and drive business growth. I specialize in creating AI-powered systems that automate operations, boost revenue, and reduce costs.",
   openGraph: {
     title: "Alabura Usman | AI Solutions for Scalable Growth",
     description:
