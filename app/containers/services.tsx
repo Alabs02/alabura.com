@@ -4,24 +4,26 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   AnimatedBeam,
-  DesignSkeleton,
+  FineTuningSkeleton,
   BackendSkeleton,
   CardSkeletonContainer,
   Circle,
-  CodeSecuritySkeleton,
   FeatureCard,
   FeatureCardDescription,
   FeatureCardTitle,
   FrontendSkeleton,
   HeadingChip,
-  MobileSkeleton,
+  ChatbotSkeleton,
   RainbowButton,
   SEOIcons,
+  AIPoweredSkeleton,
+  AutonomousSkeleton,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { UI } from "@/models";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FolderOpenDot } from "lucide-react";
 import Link from "next/link";
+import { calURL } from "@/constants";
 
 const Services = () => {
   return (
@@ -35,20 +37,19 @@ const Services = () => {
               What I Do Best
             </motion.h4>
 
-            <motion.h5 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal mt-4 xl:mt-6">
-              From crafting stunning interfaces to securing systems, here’s how
-              I turn ideas into impactful digital experiences.
+            <motion.h5 className="text-xl text-center lg:text-left text-zinc-50 font-poppins font-normal mt-4 xl:mt-6 md:max-w-[80%]">
+              Transforming ideas into AI-powered solutions that help businesses thrive, automate, and scale.
             </motion.h5>
           </motion.div>
 
-          <Link href={"/#technologies"} aria-label="Explore Services" passHref>
+          <Link href={"/#technologies"} aria-label="My Tech Stack" passHref>
             <RainbowButton
-              arial-label="Explore Services"
+              arial-label="My Tech Stack"
               className={cn(
                 "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
               )}
             >
-              <span>{"Explore Services"}</span>
+              <span>{"My Tech Stack"}</span>
               <ArrowRight className="group-hover:rotate-45 transition-all duration-300" />
             </RainbowButton>
           </Link>
@@ -57,9 +58,40 @@ const Services = () => {
         <motion.div className="w-full grid grid-cols-12 grid-rows-[auto] gap-4 transition-all duration-300">
           <div className="col-span-12 lg:col-span-6 xl:col-span-4">
             <AnimatedFeaturecard
-              heading={"Frontend Development"}
+              heading={"AI-Powered Web & Mobile Apps"}
               subheading={
-                "Crafting responsive, modern interfaces for seamless user experiences."
+                "Design and build intelligent applications that personalize user experiences and automate complex tasks."
+              }
+              className={""}
+              Skeleton={AIPoweredSkeleton}
+            />
+          </div>
+
+          <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+            <AnimatedFeaturecard
+              heading={"Advanced AI Chatbots"}
+              subheading={"Develop human-like chatbots that enhance customer engagement and support with precise, responses."}
+              className={""}
+              Skeleton={ChatbotSkeleton}
+            />
+          </div>
+
+          <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+            <AnimatedFeaturecard
+              heading={"Fine-Tuning Large Language Models"}
+              subheading={
+                "Customize pre-trained LLMs for specific business needs, ensuring accurate, context-aware language processing."
+              }
+              className={""}
+              Skeleton={FineTuningSkeleton}
+            />
+          </div>
+
+          <div className="col-span-12 lg:col-span-6 xl:col-span-4">
+            <AnimatedFeaturecard
+              heading={"AI-Enhanced Frontend Development"}
+              subheading={
+                "Build modern, dynamic interfaces that adapt to user behavior, improving usability and engagement."
               }
               className={""}
               Skeleton={FrontendSkeleton}
@@ -68,58 +100,64 @@ const Services = () => {
 
           <div className="col-span-12 lg:col-span-6 xl:col-span-4">
             <AnimatedFeaturecard
-              heading={"Mobile Development"}
-              subheading={"Building sleek, intuitive apps for Android and iOS."}
+              heading={"Autonomous AI Agents"}
+              subheading={
+                "Create AI-driven agents that execute tasks, make decisions, and integrate with systems—boosting efficiency and automation."
+              }
               className={""}
-              Skeleton={MobileSkeleton}
+              Skeleton={AutonomousSkeleton}
             />
           </div>
 
           <div className="col-span-12 lg:col-span-6 xl:col-span-4">
             <AnimatedFeaturecard
-              heading={"Backend Development"}
+              heading={"AI-Integrated Backend Systems"}
               subheading={
-                "Creating secure, scalable, and efficient server-side systems."
+                "Develop scalable backend solutions with built-in AI for intelligent data processing and real-time analytics."
               }
               className={""}
               Skeleton={BackendSkeleton}
             />
           </div>
 
-          <div className="col-span-12 lg:col-span-6 xl:col-span-6">
-            <AnimatedFeaturecard
-              showGradient={false}
-              heading={"Web Application Optimization & SEO"}
-              subheading={
-                "Enhancing performance and visibility through tailored optimization strategies."
-              }
-              className={""}
-              Skeleton={AnimatedBeamMultipleOutputForSEO}
-              containerClassName="h-[16rem] md:h-[20rem] bg-[rgba(50,50,50,0.7)] [mask-image:radial-gradient(55%_55%_at_50%_50%,white_0%,transparent_100%)] rounded-2xl"
-            />
-          </div>
+          <div className="col-span-12 flex flex-col md:flex-row md:justify-center gap-5 pt-5">
+            <Link
+              aria-label="See My Work in Action"
+              href={"/#projects"}
+              passHref
+            >
+              <RainbowButton
+                type="button"
+                aria-label="See My Work in Action"
+                className={cn(
+                  "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] font-poppins !font-normal"
+                )}
+              >
+                <span>{"See My Work in Action"}</span>
+                <FolderOpenDot
+                  className="transition-all duration-300"
+                  size={20}
+                />
+              </RainbowButton>
+            </Link>
 
-          <div className="col-span-12 lg:col-span-6 xl:col-span-3">
-            <AnimatedFeaturecard
-              heading={"UI/UX Design & Audits"}
-              subheading={
-                "Enhancing usability with intuitive designs and audits."
-              }
-              className={""}
-              Skeleton={DesignSkeleton}
-              containerClassName="h-[16rem] md:h-[20rem] rounded-2xl"
-            />
-          </div>
-          <div className="col-span-12 lg:col-span-6 xl:col-span-3">
-            <AnimatedFeaturecard
-              heading={"Code Security Audit"}
-              subheading={
-                "Ensuring code integrity with in-depth security audits."
-              }
-              className={""}
-              Skeleton={CodeSecuritySkeleton}
-              containerClassName="h-[16rem] md:h-[20rem] rounded-2xl"
-            />
+            <Link
+              aria-label="Book a call"
+              aria-description="Book a call, let's talk about your project"
+              href={calURL}
+              target="_blank"
+              passHref
+            >
+              <RainbowButton
+                aria-label="Book a Call"
+                className={cn(
+                  "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-normal !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
+                )}
+              >
+                <span>{"Book a Call"}</span>
+                <ArrowRight className="-rotate-45 transition-all duration-300" />
+              </RainbowButton>
+            </Link>
           </div>
         </motion.div>
       </motion.div>

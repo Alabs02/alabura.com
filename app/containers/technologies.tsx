@@ -517,7 +517,13 @@ const Icons = {
     />
   ),
   git: () => (
-    <Image src={ImagePath.GIT_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
+    <Image
+      src={ImagePath.GIT_LOGO}
+      alt={""}
+      fill
+      loading={"lazy"}
+      draggable={false}
+    />
   ),
   postman: () => (
     <Image
@@ -529,7 +535,13 @@ const Icons = {
     />
   ),
   synk: () => (
-    <Image src={ImagePath.SYNK_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
+    <Image
+      src={ImagePath.SYNK_LOGO}
+      alt={""}
+      fill
+      loading={"lazy"}
+      draggable={false}
+    />
   ),
   jenkins: () => (
     <Image
@@ -577,11 +589,98 @@ const Icons = {
     />
   ),
   dart: () => (
-    <Image src={ImagePath.DART_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
+    <Image
+      src={ImagePath.DART_LOGO}
+      alt={""}
+      fill
+      loading={"lazy"}
+      draggable={false}
+    />
   ),
   php: () => (
-    <Image src={ImagePath.PHP_LOGO} alt={""} fill loading={"lazy"} draggable={false} />
+    <Image
+      src={ImagePath.PHP_LOGO}
+      alt={""}
+      fill
+      loading={"lazy"}
+      draggable={false}
+    />
   ),
+  redis: () => (
+    <Image
+      src={ImagePath.REDIS_LOGO}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  tensorflow: () => (
+    <Image
+      src={ImagePath.TENSORFLOW}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  langchain: () => (
+    <Image
+      src={ImagePath.LANGCHAIN_LOGO}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  huggingFace: () => (
+    <Image
+      src={ImagePath.HUGGING_FACE_LOGO}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  wb: () => (
+    <Image
+      src={ImagePath.WB_LOGO}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  kafka: () => (
+    <Image
+      src={ImagePath.KAFKA_LOGO}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  vercel: () => (
+    <Image
+      src={ImagePath.VERCEL_ICON}
+      alt=""
+      fill
+      loading="lazy"
+      quality={100}
+      draggable={false}
+    />
+  ),
+  autogen: () => (
+    <div className="bg-black/85 p-0.5 grid place-items-center">
+      <span className="font-poppins font-bold text-center text-[13px] tracking-wide">AG</span>
+    </div>
+  )
 };
 
 const ReactLogo = ({ className }: { className?: string }) => {
@@ -823,59 +922,27 @@ const FlutterLogo = ({ className }: { className?: string }) => {
   );
 };
 
-// const RiverPodLogo = ({ className }: { className?: string }) => {
-//   return (
-//     <div className={cn("size-8 relative", className)}>
-//       <Image
-//         src={ImagePath.RIVERPOD_LOGO}
-//         alt={""}
-//         fill
-//         loading={"lazy"}
-//         draggable={false}
-//       />
-//     </div>
-//   );
-// };
 
-const NestJSLogo = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      preserveAspectRatio="xMidYMid"
-      className={className}
-    >
-      <path
-        d="M18.487,2a1.781,1.781,0,0,0-.564.1c1.615,1.062-.29,2.6.6,3.9A2.235,2.235,0,0,1,19.6,3.765c.285-.237.468-.322.407-.714C19.908,2.409,19.052,2,18.487,2Zm2.3.414c-.223,1.123-.5,1.164-1.323,1.887a1.821,1.821,0,0,0-.527,2.191c-3.4-1.32-7.758-2.118-10.953.166-1.149.821-1.85,2-3.267,2.481-.916.314-1.816.221-2.39,1.129A1.413,1.413,0,0,0,2.383,12.1c.171.175.5.287.636.465.079.1.077.2.152.333a2.6,2.6,0,0,0,.564.828c.147.121.652.239.738.368.108.161-.172.8.063.9.158.073.621-.744.666-.816-.092.643-.213,1.784.51.834.343-.451.364-.6.941-.7a8.2,8.2,0,0,1,1.117-.116,8.362,8.362,0,0,1,8.622,7.622c-.108-.5-.761-1.3-1.369-1.11-.259.08-.355.527-.525.786a3.773,3.773,0,0,1-.785.868,4.687,4.687,0,0,0-.072-1.452c-.182.748-.547,1.989-1.466,1.788a1.652,1.652,0,0,1-1.328-1.142c-.119-.76.684-1.651-.607-1.714-2.59-.127-1.991,3.682-.462,4.675a3.272,3.272,0,0,0-1.015.283,6.893,6.893,0,0,0,10.276-4.922,7.058,7.058,0,0,1-.015,3.085,7.213,7.213,0,0,1-.554,1.559,6.781,6.781,0,0,1-1.3,1.81c-.314.311-.89.624-1.088.941a13.409,13.409,0,0,0,3.52-.968A11.638,11.638,0,0,1,15.1,30a11.589,11.589,0,0,0,9.3-5.909,11.657,11.657,0,0,1-1.945,4.668,11.531,11.531,0,0,0,4.975-7.783,11.622,11.622,0,0,1,.209,3.5A12.418,12.418,0,0,0,29.528,13.91a15.755,15.755,0,0,0-1.689-3.962A14.838,14.838,0,0,0,26.9,8.554c-.133-.173-.844-.806-.844-1q-.009.029-.015,0c0,3.248-3.5,5.333-6.431,4.463A5,5,0,0,0,24.156,7.85,5,5,0,0,0,20.787,2.414Z"
-        style={{
-          fill: "#ea2845",
-          fillRule: "evenodd",
-        }}
-      />
-    </svg>
-  );
-};
-
-// const LaravelLogo = ({ className }: { className?: string }) => {
+// const NestJSLogo = ({ className }: { className?: string }) => {
 //   return (
 //     <svg
-//       viewBox="-4 0 264 264"
-//       version="1.1"
+//       viewBox="0 0 32 32"
 //       xmlns="http://www.w3.org/2000/svg"
 //       xmlnsXlink="http://www.w3.org/1999/xlink"
 //       preserveAspectRatio="xMidYMid"
 //       className={className}
 //     >
-//       <g>
-//         <path
-//           d="M255.855641,59.619717 C255.950565,59.9710596 256,60.3333149 256,60.6972536 L256,117.265345 C256,118.743206 255.209409,120.108149 253.927418,120.843385 L206.448786,148.178786 L206.448786,202.359798 C206.448786,203.834322 205.665123,205.195421 204.386515,205.937838 L105.27893,262.990563 C105.05208,263.119455 104.804608,263.201946 104.557135,263.289593 C104.464333,263.320527 104.376687,263.377239 104.278729,263.403017 C103.585929,263.58546 102.857701,263.58546 102.164901,263.403017 C102.051476,263.372083 101.948363,263.310215 101.840093,263.26897 C101.613244,263.186479 101.376082,263.1143 101.159544,262.990563 L2.07258227,205.937838 C0.7913718,205.201819 0,203.837372 0,202.359798 L0,32.6555248 C0,32.2843161 0.0515567729,31.9234187 0.144358964,31.5728326 C0.175293028,31.454252 0.24747251,31.3459828 0.288717928,31.2274022 C0.366053087,31.0108638 0.438232569,30.7891697 0.55165747,30.5880982 C0.628992629,30.4540506 0.742417529,30.3457814 0.83521972,30.2220451 C0.953800298,30.0570635 1.06206952,29.8869261 1.20127281,29.7425672 C1.31985339,29.6239866 1.4745237,29.5363401 1.60857131,29.4332265 C1.75808595,29.3094903 1.89213356,29.1754427 2.06227091,29.0774848 L2.06742659,29.0774848 L51.6134853,0.551122364 C52.8901903,-0.183535768 54.4613221,-0.183535768 55.7380271,0.551122364 L105.284086,29.0774848 L105.294397,29.0774848 C105.459379,29.1805983 105.598582,29.3094903 105.748097,29.4280708 C105.882144,29.5311844 106.031659,29.6239866 106.15024,29.7374115 C106.294599,29.8869261 106.397712,30.0570635 106.521448,30.2220451 C106.609095,30.3457814 106.727676,30.4540506 106.799855,30.5880982 C106.918436,30.7943253 106.985459,31.0108638 107.06795,31.2274022 C107.109196,31.3459828 107.181375,31.454252 107.212309,31.5779883 C107.307234,31.9293308 107.355765,32.2915861 107.356668,32.6555248 L107.356668,138.651094 L148.643332,114.878266 L148.643332,60.6920979 C148.643332,60.3312005 148.694889,59.9651474 148.787691,59.619717 C148.823781,59.4959808 148.890804,59.3877116 148.93205,59.269131 C149.014541,59.0525925 149.08672,58.8308984 149.200145,58.629827 C149.27748,58.4957794 149.390905,58.3875102 149.478552,58.2637739 C149.602288,58.0987922 149.705401,57.9286549 149.84976,57.7842959 C149.968341,57.6657153 150.117856,57.5780688 150.251903,57.4749553 C150.406573,57.351219 150.540621,57.2171714 150.705603,57.1192136 L150.710758,57.1192136 L200.261973,28.5928511 C201.538395,27.8571345 203.110093,27.8571345 204.386515,28.5928511 L253.932573,57.1192136 C254.107866,57.2223271 254.241914,57.351219 254.396584,57.4697996 C254.525476,57.5729132 254.674991,57.6657153 254.793572,57.7791402 C254.93793,57.9286549 255.041044,58.0987922 255.16478,58.2637739 C255.257582,58.3875102 255.371007,58.4957794 255.443187,58.629827 C255.561767,58.8308984 255.628791,59.0525925 255.711282,59.269131 C255.757683,59.3877116 255.824707,59.4959808 255.855641,59.619717 Z M247.740605,114.878266 L247.740605,67.8378666 L230.402062,77.8192579 L206.448786,91.6106946 L206.448786,138.651094 L247.745761,114.878266 L247.740605,114.878266 Z M198.194546,199.97272 L198.194546,152.901386 L174.633101,166.357704 L107.351512,204.757188 L107.351512,252.27191 L198.194546,199.97272 Z M8.25939501,39.7961379 L8.25939501,199.97272 L99.0921175,252.266755 L99.0921175,204.762344 L51.6392637,177.906421 L51.6237967,177.89611 L51.603174,177.885798 C51.443348,177.792996 51.3093004,177.658949 51.1597857,177.545524 C51.0308938,177.44241 50.8813791,177.359919 50.7679542,177.246494 L50.7576429,177.231027 C50.6235953,177.102135 50.5307931,176.942309 50.4173682,176.79795 C50.3142546,176.658747 50.1905184,176.540167 50.1080276,176.395808 L50.1028719,176.380341 C50.0100697,176.22567 49.9533572,176.040066 49.8863334,175.864773 C49.8193096,175.710103 49.7316631,175.565744 49.6904177,175.400762 L49.6904177,175.395606 C49.6388609,175.19969 49.6285496,174.993463 49.6079269,174.792392 C49.5873041,174.637722 49.5460587,174.483051 49.5460587,174.328381 L49.5460587,174.31807 L49.5460587,63.5689658 L25.5979377,49.7723734 L8.25939501,39.8012935 L8.25939501,39.7961379 Z M53.6809119,8.89300821 L12.3994039,32.6555248 L53.6706006,56.4180414 L94.9469529,32.6503692 L53.6706006,8.89300821 L53.6809119,8.89300821 Z M75.1491521,157.19091 L99.0972731,143.404629 L99.0972731,39.7961379 L81.7587304,49.7775291 L57.8054537,63.5689658 L57.8054537,167.177457 L75.1491521,157.19091 Z M202.324244,36.934737 L161.047891,60.6972536 L202.324244,84.4597702 L243.59544,60.6920979 L202.324244,36.934737 Z M198.194546,91.6106946 L174.24127,77.8192579 L156.902727,67.8378666 L156.902727,114.878266 L180.850848,128.664547 L198.194546,138.651094 L198.194546,91.6106946 Z M103.216659,197.616575 L163.759778,163.052915 L194.023603,145.781396 L152.778185,122.034346 L105.289242,149.374903 L62.0073307,174.292291 L103.216659,197.616575 Z"
-//           fill="#FF2D20"
-//         ></path>
-//       </g>
+//       <path
+//         d="M18.487,2a1.781,1.781,0,0,0-.564.1c1.615,1.062-.29,2.6.6,3.9A2.235,2.235,0,0,1,19.6,3.765c.285-.237.468-.322.407-.714C19.908,2.409,19.052,2,18.487,2Zm2.3.414c-.223,1.123-.5,1.164-1.323,1.887a1.821,1.821,0,0,0-.527,2.191c-3.4-1.32-7.758-2.118-10.953.166-1.149.821-1.85,2-3.267,2.481-.916.314-1.816.221-2.39,1.129A1.413,1.413,0,0,0,2.383,12.1c.171.175.5.287.636.465.079.1.077.2.152.333a2.6,2.6,0,0,0,.564.828c.147.121.652.239.738.368.108.161-.172.8.063.9.158.073.621-.744.666-.816-.092.643-.213,1.784.51.834.343-.451.364-.6.941-.7a8.2,8.2,0,0,1,1.117-.116,8.362,8.362,0,0,1,8.622,7.622c-.108-.5-.761-1.3-1.369-1.11-.259.08-.355.527-.525.786a3.773,3.773,0,0,1-.785.868,4.687,4.687,0,0,0-.072-1.452c-.182.748-.547,1.989-1.466,1.788a1.652,1.652,0,0,1-1.328-1.142c-.119-.76.684-1.651-.607-1.714-2.59-.127-1.991,3.682-.462,4.675a3.272,3.272,0,0,0-1.015.283,6.893,6.893,0,0,0,10.276-4.922,7.058,7.058,0,0,1-.015,3.085,7.213,7.213,0,0,1-.554,1.559,6.781,6.781,0,0,1-1.3,1.81c-.314.311-.89.624-1.088.941a13.409,13.409,0,0,0,3.52-.968A11.638,11.638,0,0,1,15.1,30a11.589,11.589,0,0,0,9.3-5.909,11.657,11.657,0,0,1-1.945,4.668,11.531,11.531,0,0,0,4.975-7.783,11.622,11.622,0,0,1,.209,3.5A12.418,12.418,0,0,0,29.528,13.91a15.755,15.755,0,0,0-1.689-3.962A14.838,14.838,0,0,0,26.9,8.554c-.133-.173-.844-.806-.844-1q-.009.029-.015,0c0,3.248-3.5,5.333-6.431,4.463A5,5,0,0,0,24.156,7.85,5,5,0,0,0,20.787,2.414Z"
+//         style={{
+//           fill: "#ea2845",
+//           fillRule: "evenodd",
+//         }}
+//       />
 //     </svg>
 //   );
 // };
+
 
 const MySQLLogo = ({ className }: { className?: string }) => {
   return (
@@ -969,7 +1036,12 @@ const LookaLogo = ({ className }: { className?: string }) => {
 
 const FastAPILogo = ({ className }: { className?: string }) => {
   return (
-    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 154" className={className}>
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 154 154"
+      className={className}
+    >
       <circle cx="77" cy="77" fill="#05998b" r="77" />
       <path
         d="M81.375 18.667l-38.75 70H77.5l-3.875 46.666 38.75-70H77.5z"
@@ -981,29 +1053,21 @@ const FastAPILogo = ({ className }: { className?: string }) => {
 
 const frontendTechnologies = [
   {
+    Icon: Icons.nextjs,
+    name: "Next Js",
+  },
+  {
     Icon: ReactLogo,
     name: "React Js",
   },
   {
-    Icon: Icons.nextjs,
-    name: "Next Js",
-  },
-
-  {
     Icon: VueLogo,
     name: "Vue Js",
   },
-
-  {
-    Icon: Icons.vuetify,
-    name: "Vuetify",
-  },
-
   {
     Icon: Icons.vite,
     name: "Vite & Vitest",
   },
-
   {
     Icon: AngularLogo,
     name: "Angular Js",
@@ -1044,20 +1108,24 @@ const frontendTechnologies = [
 const backendTechnologies = [
   {
     Icon: Icons.nodejs,
-    name: "Node Js",
-  },
-  {
-    Icon: NestJSLogo,
-    name: "Nest Js",
+    name: "Node Js / Fastify / Express",
   },
   {
     Icon: FastAPILogo,
     name: "FastAPI",
   },
-  // {
-  //   Icon: LaravelLogo,
-  //   name: "Laravel",
-  // },
+  {
+    Icon: Icons.redis,
+    name: "Redis",
+  },
+  {
+    Icon: Icons.kafka,
+    name: "Kafka",
+  },
+  {
+    Icon: MySQLLogo,
+    name: "MySQL DB",
+  },
   {
     Icon: Icons.mongodb,
     name: "Mongo DB",
@@ -1065,10 +1133,6 @@ const backendTechnologies = [
   {
     Icon: Icons.firebase,
     name: "Firebase",
-  },
-  {
-    Icon: MySQLLogo,
-    name: "MySQL DB",
   },
 ];
 
@@ -1082,29 +1146,21 @@ const seoTechnologies = [
     name: "Google Page Speed",
   },
   {
-    Icon: SEOIcons.chromeLightHouse,
-    name: "Lighthouse",
-  },
-  {
     Icon: SEOIcons.semRush,
     name: "Semrush",
-  },
-  {
-    Icon: Icons.moz,
-    name: "MOZ",
-  },
-  {
-    Icon: Icons.optimizely,
-    name: "Optimizely",
   },
   {
     Icon: Icons.openai,
     name: "ChatGPT",
   },
   {
-    Icon: Icons.gemini,
-    name: "Gemini",
+    Icon: SEOIcons.chromeLightHouse,
+    name: "Lighthouse",
   },
+  {
+    Icon: Icons.vercel,
+    name: "Vercel Analytics & Speed Insights",
+  }
 ];
 
 const mobileTechnologies = [
@@ -1143,16 +1199,39 @@ const toolsTechnologies = [
     name: "VS Code",
   },
   {
-    Icon: Icons.openai,
-    name: "ChatGPT",
-  },
-  {
     Icon: Icons.git,
     name: "Git",
   },
   {
     Icon: Icons.postman,
     name: "Postman",
+  },
+];
+
+const aiTechnologies = [
+  {
+    Icon: Icons.openai,
+    name: "OpenAI API",
+  },
+  {
+    Icon: Icons.tensorflow,
+    name: "TensorFlow",
+  },
+  {
+    Icon: Icons.langchain,
+    name: "LangChain",
+  },
+  {
+    Icon: Icons.huggingFace,
+    name: "Hugging Face",
+  },
+  {
+    Icon: Icons.autogen,
+    name: "AutoGen",
+  },
+  {
+    Icon: Icons.wb,
+    name: "Weights & Biases",
   },
 ];
 
@@ -1189,2050 +1268,322 @@ const devopsTechnologies = [
 const programmingLanguages = [
   {
     Icon: Icons.typescript,
-    name: "TypeScript",
-  },
-  {
-    Icon: Icons.javascript,
-    name: "JavaScript",
+    name: "JavaScript / TypeScript",
   },
   {
     Icon: Icons.python,
     name: "Python",
   },
   {
+    Icon: MySQLLogo,
+    name: "SQL",
+  },
+  {
     Icon: Icons.dart,
     name: "Dart",
-  }
+  },
 ];
 
 const Technologies = () => {
   return (
     <motion.div className="section h-full gap-y-10 py-10 xl:py-12 2xl:py-16 relative z-[2000]">
       <motion.div className="flex flex-col items-center">
-        <HeadingChip>Technologies & Offerings</HeadingChip>
+        <HeadingChip>Tools & Technologies</HeadingChip>
+        <motion.p className="text-xl text-center text-zinc-50 font-poppins font-normal mt-4 xl:mt-6 md:max-w-[80%]">
+          I leverage a powerful tech stack to build AI-driven, scalable, and high-performance solutions. From frontend to backend, I integrate AI seamlessly to enhance automation, intelligence, and user experience.
+        </motion.p>
       </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-6 2xl:mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <div className="relative size-7 md:size-8">
-                <svg
-                  viewBox="0 0 80 81"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M58.8475 17.0616C58.5346 15.7908 57.8728 14.6326 56.9369 13.7178L46.6412 3.73469C45.9887 3.10017 45.219 2.59857 44.375 2.25781V15.0366C44.3755 15.5735 44.589 16.0883 44.9687 16.4679C45.3483 16.8476 45.8631 17.0611 46.4 17.0616H58.8475Z"
-                    fill="url(#paint0_angular_106_517)"
-                  />
-                  <path
-                    d="M15.1562 63.624H9.53125C8.7546 63.624 8.125 64.2536 8.125 65.0303V70.6553C8.125 71.4319 8.7546 72.0615 9.53125 72.0615H15.1562C15.9329 72.0615 16.5625 71.4319 16.5625 70.6553V65.0303C16.5625 64.2536 15.9329 63.624 15.1562 63.624Z"
-                    fill="url(#paint1_angular_106_517)"
-                  />
-                  <path
-                    d="M15.1562 29.874H9.53125C8.7546 29.874 8.125 30.5036 8.125 31.2803V36.9053C8.125 37.6819 8.7546 38.3115 9.53125 38.3115H15.1562C15.9329 38.3115 16.5625 37.6819 16.5625 36.9053V31.2803C16.5625 30.5036 15.9329 29.874 15.1562 29.874Z"
-                    fill="url(#paint4_angular_106_517)"
-                  />
-                  <path
-                    d="M15.1562 46.749H9.53125C8.7546 46.749 8.125 47.3786 8.125 48.1553V53.7803C8.125 54.5569 8.7546 55.1865 9.53125 55.1865H15.1562C15.9329 55.1865 16.5625 54.5569 16.5625 53.7803V48.1553C16.5625 47.3786 15.9329 46.749 15.1562 46.749Z"
-                    fill="url(#paint5_angular_106_517)"
-                  />
-                  <path
-                    d="M15.1562 12.999H9.53125C8.7546 12.999 8.125 13.6286 8.125 14.4053V20.0303C8.125 20.8069 8.7546 21.4365 9.53125 21.4365H15.1562C15.9329 21.4365 16.5625 20.8069 16.5625 20.0303V14.4053C16.5625 13.6286 15.9329 12.999 15.1562 12.999Z"
-                    fill="url(#paint6_angular_106_517)"
-                  />
-                  <path
-                    d="M8.28125 78.9366H52.0312C52.4235 78.9344 52.8148 78.8997 53.2013 78.8328C50.5853 77.9456 48.1822 76.5244 46.1444 74.6594C44.1067 72.7945 42.4787 70.5264 41.3638 67.9991H23.2812C23.1569 67.9991 23.0377 67.9497 22.9498 67.8618C22.8619 67.7739 22.8125 67.6546 22.8125 67.5303C22.8125 67.406 22.8619 67.2868 22.9498 67.1989C23.0377 67.1109 23.1569 67.0616 23.2812 67.0616H40.9788C40.0022 64.4932 39.5716 61.7496 39.7141 59.0056C39.8567 56.2616 40.5694 53.5774 41.8069 51.1241H23.2812C23.1569 51.1241 23.0377 51.0747 22.9498 50.9868C22.8619 50.8989 22.8125 50.7796 22.8125 50.6553C22.8125 50.531 22.8619 50.4118 22.9498 50.3239C23.0377 50.2359 23.1569 50.1866 23.2812 50.1866H42.3125C44.009 47.2211 46.4421 44.7436 49.3764 42.9938C52.3108 41.2441 55.6471 40.2812 59.0625 40.1984V18.7397C59.062 18.4922 59.0481 18.245 59.0206 17.9991H46.4C45.6145 17.9982 44.8615 17.6858 44.3061 17.1304C43.7507 16.575 43.4383 15.822 43.4375 15.0366V1.96218C42.8832 1.82282 42.314 1.75125 41.7425 1.74906H8.28125C6.42499 1.7434 4.64227 2.47423 3.32414 3.78123C2.00601 5.08823 1.26009 6.86469 1.25 8.72093V71.9678C1.26091 73.8235 2.00719 75.5992 3.32524 76.9055C4.64328 78.2118 6.42553 78.9422 8.28125 78.9366ZM23.2812 16.4366H38.9062C39.0306 16.4366 39.1498 16.4859 39.2377 16.5738C39.3256 16.6618 39.375 16.781 39.375 16.9053C39.375 17.0296 39.3256 17.1489 39.2377 17.2368C39.1498 17.3247 39.0306 17.3741 38.9062 17.3741H23.2812C23.1569 17.3741 23.0377 17.3247 22.9498 17.2368C22.8619 17.1489 22.8125 17.0296 22.8125 16.9053C22.8125 16.781 22.8619 16.6618 22.9498 16.5738C23.0377 16.4859 23.1569 16.4366 23.2812 16.4366ZM23.2812 33.3116H51.7188C51.8431 33.3116 51.9623 33.3609 52.0502 33.4489C52.1381 33.5368 52.1875 33.656 52.1875 33.7803C52.1875 33.9046 52.1381 34.0239 52.0502 34.1118C51.9623 34.1997 51.8431 34.2491 51.7188 34.2491H23.2812C23.1569 34.2491 23.0377 34.1997 22.9498 34.1118C22.8619 34.0239 22.8125 33.9046 22.8125 33.7803C22.8125 33.656 22.8619 33.5368 22.9498 33.4489C23.0377 33.3609 23.1569 33.3116 23.2812 33.3116ZM7.1875 14.4053C7.18816 13.7839 7.4353 13.1882 7.8747 12.7488C8.31409 12.3094 8.90985 12.0622 9.53125 12.0616H15.1562C15.7776 12.0622 16.3734 12.3094 16.8128 12.7488C17.2522 13.1882 17.4993 13.7839 17.5 14.4053V20.0303C17.4993 20.6517 17.2522 21.2475 16.8128 21.6869C16.3734 22.1263 15.7776 22.3734 15.1562 22.3741H9.53125C8.90985 22.3734 8.31409 22.1263 7.8747 21.6869C7.4353 21.2475 7.18816 20.6517 7.1875 20.0303V14.4053ZM7.1875 31.2803C7.18816 30.6589 7.4353 30.0632 7.8747 29.6238C8.31409 29.1844 8.90985 28.9372 9.53125 28.9366H15.1562C15.7776 28.9372 16.3734 29.1844 16.8128 29.6238C17.2522 30.0632 17.4993 30.6589 17.5 31.2803V36.9053C17.4993 37.5267 17.2522 38.1225 16.8128 38.5619C16.3734 39.0013 15.7776 39.2484 15.1562 39.2491H9.53125C8.90985 39.2484 8.31409 39.0013 7.8747 38.5619C7.4353 38.1225 7.18816 37.5267 7.1875 36.9053V31.2803ZM7.1875 48.1553C7.18816 47.5339 7.4353 46.9382 7.8747 46.4988C8.31409 46.0594 8.90985 45.8122 9.53125 45.8116H15.1562C15.7776 45.8122 16.3734 46.0594 16.8128 46.4988C17.2522 46.9382 17.4993 47.5339 17.5 48.1553V53.7803C17.4993 54.4017 17.2522 54.9975 16.8128 55.4369C16.3734 55.8763 15.7776 56.1234 15.1562 56.1241H9.53125C8.90985 56.1234 8.31409 55.8763 7.8747 55.4369C7.4353 54.9975 7.18816 54.4017 7.1875 53.7803V48.1553ZM7.1875 65.0303C7.18816 64.4089 7.4353 63.8132 7.8747 63.3738C8.31409 62.9344 8.90985 62.6872 9.53125 62.6866H15.1562C15.7776 62.6872 16.3734 62.9344 16.8128 63.3738C17.2522 63.8132 17.4993 64.4089 17.5 65.0303V70.6553C17.4993 71.2767 17.2522 71.8725 16.8128 72.3119C16.3734 72.7513 15.7776 72.9984 15.1562 72.9991H9.53125C8.90985 72.9984 8.31409 72.7513 7.8747 72.3119C7.4353 71.8725 7.18816 71.2767 7.1875 70.6553V65.0303Z"
-                    fill="url(#paint8_angular_106_517)"
-                  />
-                  <defs>
-                    <radialGradient
-                      id="paint0_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(51.6112 9.65969) scale(7.23625 7.40188)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint1_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(12.3438 67.8428) scale(4.21875)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint2_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(59.5313 56.9268) scale(18.9063 15.8028)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint3_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(59.5312 55.0303) scale(5.78125)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint4_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(12.3438 34.0928) scale(4.21875)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint5_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(12.3438 50.9678) scale(4.21875)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint6_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(12.3438 17.2178) scale(4.21875)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint7_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(59.5312 70.4102) scale(13.1738 8.5264)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                    <radialGradient
-                      id="paint8_angular_106_517"
-                      cx={0}
-                      cy={0}
-                      r={1}
-                      gradientUnits="userSpaceOnUse"
-                      gradientTransform="translate(30.1562 40.3428) scale(28.9062 38.5938)"
-                    >
-                      <stop offset="0.269613" stopColor="#a1a1aa" />
-                      <stop offset="0.504104" stopColor="#a1a1aa" />
-                      <stop offset="0.612837" stopColor="#a1a1aa" />
-                      <stop offset="0.743238" stopColor="#a1a1aa" />
-                      <stop offset="0.986924" stopColor="#71717a" />
-                    </radialGradient>
-                  </defs>
-                </svg>
+      <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8 2xl:gap-12 items-start mt-6 xl:mt-10 2xl:mt-12">
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute bottom-[-2px] right-[-2px] size-5 z-[2100] rounded-full bg-zinc-600/90"
-                >
-                  <path
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    fill="#52525b"
-                  />
-                  <path
-                    d="M7.99945 14.75C7.80945 14.75 7.61945 14.68 7.46945 14.53L5.46945 12.53C5.17945 12.24 5.17945 11.7599 5.46945 11.4699L7.46945 9.46994C7.75945 9.17994 8.23945 9.17994 8.52945 9.46994C8.81945 9.75994 8.81945 10.24 8.52945 10.53L7.05945 12L8.52945 13.4699C8.81945 13.7599 8.81945 14.24 8.52945 14.53C8.37945 14.68 8.18945 14.75 7.99945 14.75Z"
-                    fill="#d4d4d8"
-                  />
-                  <path
-                    d="M15.9995 14.75C15.8095 14.75 15.6195 14.68 15.4695 14.53C15.1795 14.24 15.1795 13.7599 15.4695 13.4699L16.9395 12L15.4695 10.53C15.1795 10.24 15.1795 9.75994 15.4695 9.46994C15.7595 9.17994 16.2395 9.17994 16.5295 9.46994L18.5295 11.4699C18.8195 11.7599 18.8195 12.24 18.5295 12.53L16.5295 14.53C16.3795 14.68 16.1895 14.75 15.9995 14.75Z"
-                    fill="#d4d4d8"
-                  />
-                  <path
-                    d="M11.0001 15.0801C10.9001 15.0801 10.8001 15.0601 10.7101 15.0201C10.3301 14.8601 10.1501 14.4201 10.3201 14.0301L12.3201 9.36004C12.4801 8.98004 12.9201 8.80002 13.3001 8.97002C13.6801 9.13002 13.8601 9.57008 13.6901 9.96008L11.6901 14.6301C11.5701 14.9101 11.2901 15.0801 11.0001 15.0801Z"
-                    fill="#d4d4d8"
-                  />
-                </svg>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            Programming Languages
+          </h4>
+
+          {programmingLanguages.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
               </div>
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-                Programming Languages
-              </h4>
-            </div>
-
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Proficient in JavaScript, TypeScript, Python, PHP, and other core
-              programming languages essential for developing scalable,
-              efficient, and modern applications.
-            </p>
-          </div>
-
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {programmingLanguages.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                className="size-7 md:size-8"
-                viewBox="0 0 80 81"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M51.5625 65.3903C51.3488 64.7696 51.1844 64.189 51.05 63.624H28.6475C27.924 66.8378 26.2777 69.7704 23.9106 72.0615H51.5625V65.3903Z"
-                  fill="url(#paint0_angular_106_566)"
-                />
-                <path
-                  d="M71.4062 7.37402H8.28125C7.5046 7.37402 6.875 8.00362 6.875 8.78027V28.7803C6.875 29.5569 7.5046 30.1865 8.28125 30.1865H71.4062C72.1829 30.1865 72.8125 29.5569 72.8125 28.7803V8.78027C72.8125 8.00362 72.1829 7.37402 71.4062 7.37402Z"
-                  fill="url(#paint1_angular_106_566)"
-                />
-                <path
-                  d="M35.1562 36.4365H8.28125C7.5046 36.4365 6.875 37.0661 6.875 37.8428V45.0303C6.875 45.8069 7.5046 46.4365 8.28125 46.4365H35.1562C35.9329 46.4365 36.5625 45.8069 36.5625 45.0303V37.8428C36.5625 37.0661 35.9329 36.4365 35.1562 36.4365Z"
-                  fill="url(#paint2_angular_106_566)"
-                />
-                <path
-                  d="M71.4062 1.74902H8.28125C6.41711 1.75117 4.62993 2.49265 3.31178 3.8108C1.99363 5.12895 1.25215 6.91613 1.25 8.78027V52.0615H51.5625V47.374H44.5312C43.9099 47.3732 43.3142 47.126 42.8749 46.6866C42.4355 46.2473 42.1883 45.6516 42.1875 45.0303V37.8428C42.1883 37.2214 42.4355 36.6258 42.8749 36.1864C43.3142 35.747 43.9099 35.4999 44.5312 35.499H52.0856C52.4497 34.8372 52.9846 34.2851 53.6346 33.9004C54.2846 33.5156 55.0259 33.3123 55.7812 33.3115H75.1562C75.786 33.3117 76.4077 33.4531 76.9756 33.7253C77.5435 33.9976 78.043 34.3937 78.4375 34.8846V8.78027C78.4353 6.91613 77.6939 5.12895 76.3757 3.8108C75.0576 2.49265 73.2704 1.75117 71.4062 1.74902ZM37.5 45.0303C37.4992 45.6516 37.252 46.2473 36.8126 46.6866C36.3733 47.126 35.7776 47.3732 35.1562 47.374H8.28125C7.6599 47.3732 7.06424 47.126 6.62488 46.6866C6.18552 46.2473 5.93833 45.6516 5.9375 45.0303V37.8428C5.93833 37.2214 6.18552 36.6258 6.62488 36.1864C7.06424 35.747 7.6599 35.4999 8.28125 35.499H35.1562C35.7776 35.4999 36.3733 35.747 36.8126 36.1864C37.252 36.6258 37.4992 37.2214 37.5 37.8428V45.0303ZM73.75 28.7803C73.7492 29.4016 73.502 29.9973 73.0626 30.4366C72.6233 30.876 72.0276 31.1232 71.4062 31.124H8.28125C7.6599 31.1232 7.06424 30.876 6.62488 30.4366C6.18552 29.9973 5.93833 29.4016 5.9375 28.7803V8.78027C5.93833 8.15893 6.18552 7.56326 6.62488 7.12391C7.06424 6.68455 7.6599 6.43735 8.28125 6.43652H71.4062C72.0276 6.43735 72.6233 6.68455 73.0626 7.12391C73.502 7.56326 73.7492 8.15893 73.75 8.78027V28.7803Z"
-                  fill="url(#paint3_angular_106_566)"
-                />
-                <path
-                  d="M51.5625 72.999H20.7812C19.9113 73 19.0773 73.346 18.4622 73.9612C17.847 74.5763 17.501 75.4103 17.5 76.2803V77.5303C17.5005 77.9031 17.6488 78.2605 17.9124 78.5241C18.176 78.7877 18.5334 78.936 18.9062 78.9365H53.1325C53.0169 78.839 52.9019 78.7409 52.7962 78.6328C52.0117 77.8396 51.5689 76.7709 51.5625 75.6553V72.999Z"
-                  fill="url(#paint4_angular_106_566)"
-                />
-                <path
-                  d="M62.2632 37.0615H68.6744C69.0733 37.049 69.4614 36.9288 69.7974 36.7135C70.1335 36.4983 70.405 36.1961 70.5832 35.839L71.4357 34.249H59.502L60.3545 35.839C60.5326 36.1961 60.8042 36.4983 61.1402 36.7135C61.4763 36.9288 61.8643 37.049 62.2632 37.0615Z"
-                  fill="url(#paint5_angular_106_566)"
-                />
-                <path
-                  d="M62.5894 60.499H57.3438C57.0849 60.499 56.875 60.7089 56.875 60.9678V65.3428C56.875 65.6017 57.0849 65.8115 57.3438 65.8115H62.5894C62.8483 65.8115 63.0581 65.6017 63.0581 65.3428V60.9678C63.0581 60.7089 62.8483 60.499 62.5894 60.499Z"
-                  fill="url(#paint6_angular_106_566)"
-                />
-                <path
-                  d="M44.5312 36.4365C44.1584 36.437 43.801 36.5853 43.5374 36.849C43.2738 37.1126 43.1255 37.47 43.125 37.8428V45.0303C43.1255 45.4031 43.2738 45.7605 43.5374 46.0241C43.801 46.2877 44.1584 46.436 44.5312 46.4365H51.5625V37.5303C51.5639 37.1607 51.6139 36.793 51.7112 36.4365H44.5312Z"
-                  fill="url(#paint7_angular_106_566)"
-                />
-                <path
-                  d="M73.5938 60.499H68.3481C68.0893 60.499 67.8794 60.7089 67.8794 60.9678V65.3428C67.8794 65.6017 68.0893 65.8115 68.3481 65.8115H73.5938C73.8527 65.8115 74.0625 65.6017 74.0625 65.3428V60.9678C74.0625 60.7089 73.8527 60.499 73.5938 60.499Z"
-                  fill="url(#paint8_angular_106_566)"
-                />
-                <path
-                  d="M75.1562 34.249H72.5L71.4094 36.2803C71.1512 36.7869 70.7606 37.2141 70.279 37.5164C69.7974 37.8188 69.2429 37.9849 68.6744 37.9971H62.2631C61.6952 37.9843 61.1413 37.8179 60.6603 37.5157C60.1793 37.2134 59.7891 36.7865 59.5312 36.2803L58.4375 34.249H55.7812C54.9113 34.25 54.0773 34.596 53.4622 35.2112C52.847 35.8263 52.501 36.6603 52.5 37.5303V75.6553C52.501 76.5252 52.847 77.3592 53.4622 77.9744C54.0773 78.5895 54.9113 78.9355 55.7812 78.9365H75.1562C76.0262 78.9355 76.8602 78.5895 77.4753 77.9744C78.0905 77.3592 78.4365 76.5252 78.4375 75.6553V37.5303C78.4365 36.6603 78.0905 35.8263 77.4753 35.2112C76.8602 34.596 76.0262 34.25 75.1562 34.249ZM55.9375 65.3428V60.9678C55.938 60.595 56.0863 60.2376 56.3499 59.974C56.6135 59.7103 56.9709 59.562 57.3438 59.5615H62.5894C62.9622 59.562 63.3196 59.7103 63.5832 59.974C63.8468 60.2376 63.9951 60.595 63.9956 60.9678V65.3428C63.9951 65.7156 63.8468 66.073 63.5832 66.3366C63.3196 66.6002 62.9622 66.7485 62.5894 66.749H57.3438C56.9709 66.7485 56.6135 66.6002 56.3499 66.3366C56.0863 66.073 55.938 65.7156 55.9375 65.3428ZM68.9062 74.249H62.0312C61.9069 74.249 61.7877 74.1996 61.6998 74.1117C61.6119 74.0238 61.5625 73.9046 61.5625 73.7803C61.5625 73.656 61.6119 73.5367 61.6998 73.4488C61.7877 73.3609 61.9069 73.3115 62.0312 73.3115H68.9062C69.0306 73.3115 69.1498 73.3609 69.2377 73.4488C69.3256 73.5367 69.375 73.656 69.375 73.7803C69.375 73.9046 69.3256 74.0238 69.2377 74.1117C69.1498 74.1996 69.0306 74.249 68.9062 74.249ZM75 65.3428C74.9995 65.7156 74.8512 66.073 74.5876 66.3366C74.324 66.6002 73.9666 66.7485 73.5938 66.749H68.3481C67.9753 66.7485 67.6179 66.6002 67.3543 66.3366C67.0907 66.073 66.9424 65.7156 66.9419 65.3428V60.9678C66.9424 60.595 67.0907 60.2376 67.3543 59.974C67.6179 59.7103 67.9753 59.562 68.3481 59.5615H73.5938C73.9666 59.562 74.324 59.7103 74.5876 59.974C74.8512 60.2376 74.9995 60.595 75 60.9678V65.3428ZM75 55.3428C74.9995 55.7156 74.8512 56.073 74.5876 56.3366C74.324 56.6002 73.9666 56.7485 73.5938 56.749H57.3438C56.9709 56.7485 56.6135 56.6002 56.3499 56.3366C56.0863 56.073 55.938 55.7156 55.9375 55.3428V44.0928C55.938 43.72 56.0863 43.3626 56.3499 43.099C56.6135 42.8353 56.9709 42.687 57.3438 42.6865H73.5938C73.9666 42.687 74.324 42.8353 74.5876 43.099C74.8512 43.3626 74.9995 43.72 75 44.0928V55.3428Z"
-                  fill="url(#paint9_angular_106_566)"
-                />
-                <path
-                  d="M73.5938 43.624H57.3438C57.0849 43.624 56.875 43.8339 56.875 44.0928V55.3428C56.875 55.6017 57.0849 55.8115 57.3438 55.8115H73.5938C73.8526 55.8115 74.0625 55.6017 74.0625 55.3428V44.0928C74.0625 43.8339 73.8526 43.624 73.5938 43.624Z"
-                  fill="url(#paint10_angular_106_566)"
-                />
-                <path
-                  d="M8.28125 62.6865H51.5625V52.999H1.25V55.6553C1.25215 57.5194 1.99363 59.3066 3.31178 60.6247C4.62993 61.9429 6.41711 62.6844 8.28125 62.6865ZM39.8438 56.5928C40.091 56.5928 40.3326 56.6661 40.5382 56.8034C40.7438 56.9408 40.904 57.136 40.9986 57.3644C41.0932 57.5928 41.118 57.8442 41.0697 58.0866C41.0215 58.3291 40.9025 58.5518 40.7276 58.7267C40.5528 58.9015 40.3301 59.0205 40.0876 59.0688C39.8451 59.117 39.5938 59.0922 39.3654 58.9976C39.137 58.903 38.9418 58.7428 38.8044 58.5372C38.6671 58.3317 38.5938 58.09 38.5938 57.8428C38.5938 57.5113 38.7254 57.1933 38.9599 56.9589C39.1943 56.7245 39.5122 56.5928 39.8438 56.5928Z"
-                  fill="url(#paint11_angular_106_566)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(37.7366 67.8428) scale(13.8259 4.21875)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa " />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.8438 18.7803) scale(32.9688 11.4062)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(21.7188 41.4365) scale(14.8438 5)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.8438 26.9053) scale(38.5938 25.1562)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(35.3162 75.9678) scale(17.8162 2.96875)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 35.6553) scale(5.96687 1.40625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(59.9666 63.1553) scale(3.09156 2.65625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(47.4181 41.4365) scale(4.29312 5)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint8_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(70.971 63.1553) scale(3.09156 2.65625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint9_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 56.5928) scale(12.9688 22.3438)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint10_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 49.7178) scale(8.59375 6.09375)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint11_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(26.4062 57.8428) scale(25.1562 4.84375)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a " />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
-                Frontend Development
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            AI & Machine Learning
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              I specialize in building user-focused, high-performing interfaces.
-              My choice of technologies ensures scalability, modern design, and
-              quick adaptability to user needs. By leveraging frameworks like
-              React and Vue, I create seamless, interactive, and visually
-              appealing applications.
-            </p>
-          </div>
+          {aiTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {frontendTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
 
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 80 81"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-7 md:size-8"
-              >
-                <path
-                  d="M45.2816 44.9188C45.2818 43.8741 44.9721 42.8528 44.3918 41.9842C43.8115 41.1155 42.9866 40.4384 42.0215 40.0385C41.0563 39.6386 39.9943 39.5339 38.9697 39.7376C37.945 39.9414 37.0038 40.4444 36.265 41.183C35.5263 41.9217 35.0232 42.8629 34.8193 43.8875C34.6155 44.9121 34.72 45.9741 35.1198 46.9393C35.5195 47.9045 36.1965 48.7295 37.0652 49.3099C37.9338 49.8903 38.955 50.2001 39.9997 50.2001C41.3998 50.1979 42.7419 49.6408 43.7319 48.6508C44.722 47.6609 45.2793 46.3189 45.2816 44.9188Z"
-                  fill="url(#paint0_angular_106_554)"
-                />
-                <path
-                  d="M23.8708 52.273H22.6372C23.1916 55.8137 24.8196 59.0988 27.3011 61.6846C27.5867 59.0197 28.6978 56.5106 30.4792 54.5081C32.2605 52.5056 34.6231 51.1097 37.2366 50.5156C35.9711 49.8917 34.9539 48.8581 34.3505 47.5827C33.7471 46.3074 33.593 44.8653 33.9132 43.4913C34.2335 42.1172 35.0093 40.8919 36.1144 40.0148C37.2195 39.1377 38.5889 38.6602 39.9998 38.6602C41.4107 38.6602 42.7801 39.1377 43.8852 40.0148C44.9903 40.8919 45.7661 42.1172 46.0863 43.4913C46.4066 44.8653 46.2525 46.3074 45.6491 47.5827C45.0457 48.8581 44.0285 49.8917 42.763 50.5156C45.3765 51.1097 47.739 52.5056 49.5204 54.5081C51.3017 56.5106 52.4129 59.0197 52.6985 61.6846C55.18 59.0988 56.8079 55.8137 57.3624 52.273H56.1288C55.4016 52.273 54.7042 51.9841 54.19 51.4699C53.6758 50.9557 53.3869 50.2582 53.3869 49.531C53.3869 48.8038 53.6758 48.1064 54.19 47.5922C54.7042 47.078 55.4016 46.7891 56.1288 46.7891H57.3624C56.7896 43.117 55.0647 39.722 52.4368 37.0941C49.8088 34.4661 46.4138 32.7413 42.7417 32.1685V33.402C42.7417 34.1292 42.4528 34.8266 41.9386 35.3408C41.4244 35.8551 40.727 36.1439 39.9998 36.1439C39.2726 36.1439 38.5752 35.8551 38.0609 35.3408C37.5467 34.8266 37.2579 34.1292 37.2579 33.402V32.1685C33.5858 32.7413 30.1907 34.4661 27.5628 37.0941C24.9349 39.722 23.21 43.117 22.6372 46.7891H23.8708C24.598 46.7891 25.2954 47.078 25.8096 47.5922C26.3238 48.1064 26.6127 48.8038 26.6127 49.531C26.6127 50.2582 26.3238 50.9557 25.8096 51.4699C25.2954 51.9841 24.598 52.273 23.8708 52.273Z"
-                  fill="url(#paint1_angular_106_554)"
-                />
-                <path
-                  d="M0.161133 73.0796C0.163353 75.0039 0.928752 76.8487 2.28942 78.2094C3.65009 79.57 5.49492 80.3354 7.4192 80.3377H72.5805C74.5048 80.3354 76.3496 79.57 77.7103 78.2094C79.0709 76.8487 79.8363 75.0039 79.8385 73.0796V18.0796H0.161133V73.0796ZM15.4837 46.7893H17.0966C17.7194 41.6585 20.0437 36.8844 23.6984 33.2298C27.353 29.5751 32.1271 27.2507 37.2579 26.628V25.0151C37.2579 24.2879 37.5468 23.5904 38.061 23.0762C38.5752 22.562 39.2726 22.2731 39.9998 22.2731C40.727 22.2731 41.4245 22.562 41.9387 23.0762C42.4529 23.5904 42.7418 24.2879 42.7418 25.0151V26.628C47.8726 27.2507 52.6466 29.5751 56.3013 33.2298C59.9559 36.8844 62.2803 41.6585 62.9031 46.7893H64.516C65.2432 46.7893 65.9406 47.0782 66.4548 47.5924C66.969 48.1066 67.2579 48.804 67.2579 49.5312C67.2579 50.2584 66.969 50.9558 66.4548 51.47C65.9406 51.9843 65.2432 52.2731 64.516 52.2731H62.9031C62.2803 57.4039 59.9559 62.178 56.3013 65.8327C52.6466 69.4873 47.8726 71.8117 42.7418 72.4344V74.0473C42.7418 74.7745 42.4529 75.472 41.9387 75.9862C41.4245 76.5004 40.727 76.7893 39.9998 76.7893C39.2726 76.7893 38.5752 76.5004 38.061 75.9862C37.5468 75.472 37.2579 74.7745 37.2579 74.0473V72.4344C32.1271 71.8117 27.353 69.4873 23.6984 65.8327C20.0437 62.178 17.7194 57.4039 17.0966 52.2731H15.4837C14.7565 52.2731 14.0591 51.9843 13.5449 51.47C13.0307 50.9558 12.7418 50.2584 12.7418 49.5312C12.7418 48.804 13.0307 48.1066 13.5449 47.5924C14.0591 47.0782 14.7565 46.7893 15.4837 46.7893Z"
-                  fill="url(#paint2_angular_106_554)"
-                />
-                <path
-                  d="M15.4837 51.3052H17.5327C17.6528 51.3051 17.7686 51.3498 17.8575 51.4304C17.9465 51.511 18.0023 51.6219 18.014 51.7414C18.532 56.8096 20.7819 61.5441 24.3843 65.1465C27.9867 68.749 32.7213 70.9989 37.7895 71.5169C37.909 71.5286 38.0198 71.5843 38.1005 71.6733C38.1811 71.7623 38.2257 71.8781 38.2256 71.9981V74.0472C38.2256 74.5177 38.4125 74.969 38.7453 75.3017C39.078 75.6344 39.5293 75.8214 39.9998 75.8214C40.4703 75.8214 40.9216 75.6344 41.2543 75.3017C41.5871 74.969 41.774 74.5177 41.774 74.0472V71.9981C41.7739 71.8781 41.8185 71.7623 41.8991 71.6733C41.9798 71.5843 42.0906 71.5286 42.2101 71.5169C47.2783 70.9989 52.0129 68.749 55.6153 65.1465C59.2177 61.5441 61.4676 56.8096 61.9856 51.7414C61.9973 51.6219 62.0531 51.511 62.142 51.4304C62.231 51.3498 62.3468 51.3051 62.4669 51.3052H64.5159C64.9865 51.3052 65.4377 51.1183 65.7705 50.7856C66.1032 50.4529 66.2901 50.0016 66.2901 49.531C66.2901 49.0605 66.1032 48.6092 65.7705 48.2765C65.4377 47.9438 64.9865 47.7569 64.5159 47.7569H62.4669C62.3468 47.7569 62.231 47.7123 62.142 47.6317C62.0531 47.5511 61.9973 47.4402 61.9856 47.3207C61.4676 42.2525 59.2177 37.518 55.6153 33.9155C52.0129 30.3131 47.2783 28.0632 42.2101 27.5452C42.0906 27.5335 41.9798 27.4778 41.8991 27.3888C41.8185 27.2998 41.7739 27.184 41.774 27.0639V25.0149C41.774 24.5444 41.5871 24.0931 41.2543 23.7604C40.9216 23.4276 40.4703 23.2407 39.9998 23.2407C39.5293 23.2407 39.078 23.4276 38.7453 23.7604C38.4125 24.0931 38.2256 24.5444 38.2256 25.0149V27.0639C38.2257 27.184 38.1811 27.2998 38.1005 27.3888C38.0198 27.4778 37.909 27.5335 37.7895 27.5452C32.7213 28.0632 27.9867 30.3131 24.3843 33.9155C20.7819 37.518 18.532 42.2525 18.014 47.3207C18.0023 47.4402 17.9465 47.5511 17.8575 47.6317C17.7686 47.7123 17.6528 47.7569 17.5327 47.7569H15.4837C15.0131 47.7569 14.5618 47.9438 14.2291 48.2765C13.8964 48.6092 13.7095 49.0605 13.7095 49.531C13.7095 50.0016 13.8964 50.4529 14.2291 50.7856C14.5618 51.1183 15.0131 51.3052 15.4837 51.3052ZM23.8708 47.7569H22.0811C22.0126 47.7563 21.945 47.7414 21.8827 47.713C21.8204 47.6846 21.7648 47.6434 21.7195 47.5921C21.6741 47.5408 21.6401 47.4805 21.6196 47.4152C21.5991 47.3499 21.5926 47.281 21.6004 47.213C22.1077 43.1246 23.9651 39.3225 26.8782 36.4094C29.7913 33.4964 33.5934 31.639 37.6817 31.1317C37.7497 31.1238 37.8186 31.1303 37.884 31.1508C37.9493 31.1713 38.0096 31.2054 38.0609 31.2507C38.1122 31.2961 38.1533 31.3517 38.1817 31.414C38.2101 31.4763 38.2251 31.5439 38.2256 31.6123V33.402C38.2256 33.8726 38.4125 34.3238 38.7453 34.6566C39.078 34.9893 39.5293 35.1762 39.9998 35.1762C40.4703 35.1762 40.9216 34.9893 41.2543 34.6566C41.5871 34.3238 41.774 33.8726 41.774 33.402V31.6123C41.7744 31.5438 41.7893 31.4762 41.8177 31.4139C41.846 31.3515 41.8872 31.2958 41.9385 31.2505C41.9898 31.2051 42.0502 31.1711 42.1155 31.1506C42.1809 31.1302 42.2498 31.1237 42.3179 31.1317C46.4062 31.639 50.2083 33.4964 53.1214 36.4094C56.0345 39.3225 57.8919 43.1246 58.3992 47.213C58.407 47.281 58.4005 47.3499 58.38 47.4152C58.3595 47.4805 58.3255 47.5408 58.2801 47.5921C58.2348 47.6434 58.1792 47.6846 58.1169 47.713C58.0546 47.7414 57.987 47.7563 57.9185 47.7569H56.1288C55.6583 47.7569 55.207 47.9438 54.8743 48.2765C54.5416 48.6092 54.3546 49.0605 54.3546 49.531C54.3546 50.0016 54.5416 50.4529 54.8743 50.7856C55.207 51.1183 55.6583 51.3052 56.1288 51.3052H57.9185C57.987 51.3058 58.0546 51.3207 58.1169 51.3491C58.1792 51.3775 58.2348 51.4187 58.2801 51.47C58.3255 51.5213 58.3595 51.5816 58.38 51.6469C58.4005 51.7122 58.407 51.7811 58.3992 51.8491C57.8919 55.9375 56.0345 59.7396 53.1214 62.6527C50.2083 65.5657 46.4062 67.4231 42.3179 67.9304C42.2499 67.9383 42.1809 67.9318 42.1156 67.9113C42.0503 67.8907 41.99 67.8567 41.9387 67.8114C41.8874 67.766 41.8462 67.7104 41.8179 67.6481C41.7895 67.5858 41.7745 67.5182 41.774 67.4498V65.6601C41.774 65.1895 41.5871 64.7383 41.2543 64.4055C40.9216 64.0728 40.4703 63.8859 39.9998 63.8859C39.5293 63.8859 39.078 64.0728 38.7453 64.4055C38.4125 64.7383 38.2256 65.1895 38.2256 65.6601V67.4498C38.225 67.5182 38.2099 67.5857 38.1815 67.648C38.1531 67.7102 38.1119 67.7658 38.0607 67.8111C38.0094 67.8565 37.9491 67.8905 37.8839 67.911C37.8186 67.9316 37.7497 67.9382 37.6817 67.9304C33.5934 67.4231 29.7913 65.5657 26.8782 62.6527C23.9651 59.7396 22.1077 55.9375 21.6004 51.8491C21.5926 51.7811 21.5991 51.7122 21.6196 51.6469C21.6401 51.5816 21.6741 51.5213 21.7195 51.47C21.7648 51.4187 21.8204 51.3775 21.8827 51.3491C21.945 51.3207 22.0126 51.3058 22.0811 51.3052H23.8708C24.3413 51.3052 24.7926 51.1183 25.1253 50.7856C25.458 50.4529 25.645 50.0016 25.645 49.531C25.645 49.0605 25.458 48.6092 25.1253 48.2765C24.7926 47.9438 24.3413 47.7569 23.8708 47.7569Z"
-                  fill="url(#paint3_angular_106_554)"
-                />
-                <path
-                  d="M39.9998 51.168C36.9449 51.1841 34.0139 52.3782 31.8175 54.5017C29.6212 56.6251 28.3287 59.514 28.2095 62.5667C30.7388 64.861 33.8842 66.3651 37.2579 66.8938V65.6602C37.2579 64.933 37.5467 64.2356 38.061 63.7214C38.5752 63.2072 39.2726 62.9183 39.9998 62.9183C40.727 62.9183 41.4244 63.2072 41.9386 63.7214C42.4529 64.2356 42.7417 64.933 42.7417 65.6602V66.8938C46.1154 66.3651 49.2608 64.861 51.7901 62.5667C51.6709 59.514 50.3784 56.6251 48.1821 54.5017C45.9857 52.3782 43.0547 51.1841 39.9998 51.168Z"
-                  fill="url(#paint4_angular_106_554)"
-                />
-                <path
-                  d="M29.3544 10.6601C30.1561 10.6601 30.8061 10.0102 30.8061 9.20845C30.8061 8.40675 30.1561 7.75684 29.3544 7.75684C28.5527 7.75684 27.9028 8.40675 27.9028 9.20845C27.9028 10.0102 28.5527 10.6601 29.3544 10.6601Z"
-                  fill="url(#paint5_angular_106_554)"
-                />
-                <path
-                  d="M72.5805 0.660156H7.4192C5.49492 0.662376 3.65009 1.42778 2.28942 2.78845C0.928752 4.14912 0.163353 5.99394 0.161133 7.91822V17.1118H79.8385V7.91822C79.8363 5.99394 79.0709 4.14912 77.7103 2.78845C76.3496 1.42778 74.5048 0.662376 72.5805 0.660156ZM8.70952 11.6279C8.23102 11.6279 7.76326 11.486 7.3654 11.2202C6.96754 10.9543 6.65744 10.5765 6.47433 10.1344C6.29121 9.69231 6.2433 9.20586 6.33665 8.73655C6.43 8.26724 6.66042 7.83615 6.99878 7.4978C7.33713 7.15945 7.76822 6.92903 8.23753 6.83568C8.70684 6.74232 9.19329 6.79024 9.63537 6.97335C10.0774 7.15647 10.4553 7.46656 10.7211 7.86442C10.987 8.26228 11.1289 8.73004 11.1289 9.20854C11.128 9.84993 10.8729 10.4648 10.4193 10.9183C9.96579 11.3719 9.35091 11.627 8.70952 11.6279ZM19.0321 11.6279C18.5536 11.6279 18.0858 11.486 17.688 11.2202C17.2901 10.9543 16.98 10.5765 16.7969 10.1344C16.6138 9.69231 16.5659 9.20586 16.6592 8.73655C16.7526 8.26724 16.983 7.83615 17.3214 7.4978C17.6597 7.15945 18.0908 6.92903 18.5601 6.83568C19.0294 6.74232 19.5159 6.79024 19.9579 6.97335C20.4 7.15647 20.7779 7.46656 21.0437 7.86442C21.3096 8.26228 21.4515 8.73004 21.4515 9.20854C21.4506 9.84993 21.1954 10.4648 20.7419 10.9183C20.2884 11.3719 19.6735 11.627 19.0321 11.6279ZM29.3547 11.6279C28.8762 11.6279 28.4084 11.486 28.0106 11.2202C27.6127 10.9543 27.3026 10.5765 27.1195 10.1344C26.9364 9.69231 26.8885 9.20586 26.9818 8.73655C27.0752 8.26724 27.3056 7.83615 27.6439 7.4978C27.9823 7.15945 28.4134 6.92903 28.8827 6.83568C29.352 6.74232 29.8384 6.79024 30.2805 6.97335C30.7226 7.15647 31.1005 7.46656 31.3663 7.86442C31.6321 8.26228 31.774 8.73004 31.774 9.20854C31.7732 9.84993 31.518 10.4648 31.0645 10.9183C30.6109 11.3719 29.9961 11.627 29.3547 11.6279ZM70.645 11.6279H60.3224C59.6808 11.6279 59.0654 11.373 58.6117 10.9193C58.158 10.4656 57.9031 9.8502 57.9031 9.20854C57.9031 8.56689 58.158 7.95152 58.6117 7.4978C59.0654 7.04408 59.6808 6.78919 60.3224 6.78919H70.645C71.2867 6.78919 71.902 7.04408 72.3557 7.4978C72.8095 7.95152 73.0644 8.56689 73.0644 9.20854C73.0644 9.8502 72.8095 10.4656 72.3557 10.9193C71.902 11.373 71.2867 11.6279 70.645 11.6279Z"
-                  fill="url(#paint6_angular_106_554)"
-                />
-                <path
-                  d="M19.0322 10.6601C19.8339 10.6601 20.4838 10.0102 20.4838 9.20845C20.4838 8.40675 19.8339 7.75684 19.0322 7.75684C18.2305 7.75684 17.5806 8.40675 17.5806 9.20845C17.5806 10.0102 18.2305 10.6601 19.0322 10.6601Z"
-                  fill="url(#paint7_angular_106_554)"
-                />
-                <path
-                  d="M8.70943 10.6601C9.51113 10.6601 10.161 10.0102 10.161 9.20845C10.161 8.40675 9.51113 7.75684 8.70943 7.75684C7.90772 7.75684 7.25781 8.40675 7.25781 9.20845C7.25781 10.0102 7.90772 10.6601 8.70943 10.6601Z"
-                  fill="url(#paint8_angular_106_554)"
-                />
-                <path
-                  d="M70.6448 7.75684H60.3222C59.9372 7.75684 59.568 7.90977 59.2958 8.182C59.0235 8.45423 58.8706 8.82346 58.8706 9.20845C58.8706 9.59344 59.0235 9.96266 59.2958 10.2349C59.568 10.5071 59.9372 10.6601 60.3222 10.6601H70.6448C71.0298 10.6601 71.399 10.5071 71.6712 10.2349C71.9435 9.96266 72.0964 9.59344 72.0964 9.20845C72.0964 8.82346 71.9435 8.45423 71.6712 8.182C71.399 7.90977 71.0298 7.75684 70.6448 7.75684Z"
-                  fill="url(#paint9_angular_106_554)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9997 44.9182) scale(5.28194 5.28194)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 46.9265) scale(17.3626 14.7581)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 49.2086) scale(39.8387 31.129)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 49.531) scale(26.2903)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 59.0309) scale(11.7903 7.8629)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.3544 9.20845) scale(1.45161)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 8.88596) scale(39.8387 8.22581)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(19.0322 9.20845) scale(1.45161)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint8_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(8.70943 9.20845) scale(1.45161)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint9_angular_106_554"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4835 9.20845) scale(6.6129 1.45161)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
-                Backend Development
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            Frontend Development
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Expertise in developing robust APIs and server-side solutions
-              tailored to unique business requirements. My backend systems are
-              secure, scalable, and built with efficiency in mind.
-            </p>
-          </div>
+          {frontendTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {backendTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
 
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 80 81"
-                fill="none"
-                className="size-7 md:size-8"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M47.7469 47.908L48.602 47.0523C49.0889 46.5765 49.4193 45.9635 49.549 45.2952C49.6787 44.6268 49.6017 43.9348 49.3281 43.3114C49.0626 42.6861 48.6153 42.155 48.0442 41.787C47.4732 41.419 46.8047 41.2311 46.1255 41.2476L31.9024 41.5611C31.026 41.5787 30.1905 41.9346 29.5707 42.5544C28.9509 43.1742 28.5949 44.0098 28.5774 44.8861L28.2645 59.1093C28.2497 59.7881 28.4383 60.4557 28.8062 61.0264C29.1741 61.597 29.7044 62.0444 30.3288 62.3111C30.9532 62.5777 31.6431 62.6514 32.3097 62.5226C32.9763 62.3938 33.5891 62.0684 34.0692 61.5883L34.9242 60.7333C34.9694 60.6881 35.0229 60.6523 35.0819 60.6279C35.1409 60.6034 35.2041 60.5908 35.2679 60.5908C35.3317 60.5908 35.3949 60.6034 35.4539 60.6279C35.5128 60.6523 35.5664 60.6881 35.6115 60.7333L50.2661 75.3911C50.9059 76.0249 51.77 76.3806 52.6706 76.3806C53.5712 76.3806 54.4354 76.0249 55.0752 75.3911L62.4041 68.0622C63.0409 67.424 63.3986 66.5592 63.3986 65.6576C63.3986 64.756 63.0409 63.8913 62.4041 63.2531L47.7469 48.5946C47.7018 48.5496 47.666 48.4961 47.6416 48.4371C47.6171 48.3782 47.6046 48.3151 47.6046 48.2513C47.6046 48.1875 47.6171 48.1244 47.6416 48.0655C47.666 48.0066 47.7018 47.9531 47.7469 47.908Z"
-                  fill="url(#paint0_angular_241_759)"
-                />
-                <path
-                  d="M0 73.5122C0.00222875 75.4443 0.770727 77.2966 2.13691 78.6628C3.50308 80.0289 5.35538 80.7974 7.28745 80.7997H72.7125C74.6446 80.7974 76.4969 80.0289 77.8631 78.6628C79.2293 77.2966 79.9978 75.4443 80 73.5122V18.2896H0V73.5122ZM20.9101 60.4551L17.0235 64.3417C16.9314 64.4275 16.8096 64.4742 16.6837 64.472C16.5578 64.4698 16.4378 64.4188 16.3487 64.3298C16.2597 64.2408 16.2087 64.1207 16.2065 63.9948C16.2043 63.869 16.251 63.7472 16.3368 63.6551L20.2235 59.7684C20.3156 59.6826 20.4374 59.6359 20.5633 59.6381C20.6891 59.6403 20.8092 59.6913 20.8982 59.7803C20.9872 59.8693 21.0382 59.9894 21.0404 60.1153C21.0427 60.2411 20.9959 60.363 20.9101 60.4551ZM59.0899 27.3798L62.9765 23.4931C63.0686 23.4073 63.1904 23.3606 63.3163 23.3628C63.4422 23.365 63.5622 23.416 63.6512 23.505C63.7403 23.594 63.7913 23.7141 63.7935 23.84C63.7957 23.9658 63.749 24.0877 63.6632 24.1798L59.7765 28.0664C59.6844 28.1522 59.5626 28.1989 59.4367 28.1967C59.3109 28.1945 59.1908 28.1435 59.1018 28.0545C59.0128 27.9655 58.9618 27.8454 58.9596 27.7195C58.9573 27.5937 59.0041 27.4719 59.0899 27.3798ZM39.5142 22.9859C39.5142 22.8571 39.5654 22.7335 39.6565 22.6424C39.7476 22.5513 39.8711 22.5001 40 22.5001C40.1288 22.5001 40.2524 22.5513 40.3435 22.6424C40.4346 22.7335 40.4858 22.8571 40.4858 22.9859V27.5203C40.4858 27.6492 40.4346 27.7727 40.3435 27.8639C40.2524 27.955 40.1288 28.0061 40 28.0061C39.8711 28.0061 39.7476 27.955 39.6565 27.8639C39.5654 27.7727 39.5142 27.6492 39.5142 27.5203V22.9859ZM16.3368 23.4931C16.3819 23.448 16.4354 23.4122 16.4943 23.3878C16.5532 23.3633 16.6164 23.3508 16.6802 23.3508C16.7439 23.3508 16.8071 23.3633 16.866 23.3878C16.9249 23.4122 16.9784 23.448 17.0235 23.4931L20.9101 27.3798C20.9959 27.4719 21.0427 27.5937 21.0404 27.7195C21.0382 27.8454 20.9872 27.9655 20.8982 28.0545C20.8092 28.1435 20.6891 28.1945 20.5633 28.1967C20.4374 28.1989 20.3156 28.1522 20.2235 28.0664L16.3368 24.1798C16.2917 24.1347 16.2559 24.0812 16.2315 24.0223C16.2071 23.9634 16.1945 23.9002 16.1945 23.8364C16.1945 23.7727 16.2071 23.7095 16.2315 23.6506C16.2559 23.5917 16.2917 23.5382 16.3368 23.4931ZM7.44939 35.9414C7.45076 34.7821 7.91187 33.6708 8.73157 32.8511C9.55127 32.0314 10.6626 31.5703 11.8219 31.5689H68.1781C69.3374 31.5703 70.4487 32.0314 71.2684 32.8511C72.0881 33.6708 72.5492 34.7821 72.5506 35.9414V52.1357C72.5492 53.2949 72.0881 54.4063 71.2684 55.226C70.4487 56.0457 69.3374 56.5068 68.1781 56.5082H57.0364L63.0925 62.5649C63.9114 63.3854 64.3713 64.4974 64.3713 65.6567C64.3713 66.816 63.9114 67.9279 63.0925 68.7485L55.7623 76.0768C54.9397 76.8919 53.8285 77.3492 52.6704 77.3492C51.5124 77.3492 50.4012 76.8919 49.5786 76.0768L35.2628 61.761L34.7511 62.2727C34.1338 62.8899 33.3458 63.3083 32.4887 63.4738C31.6315 63.6394 30.7445 63.5446 29.9417 63.2016C29.1389 62.8586 28.4572 62.2832 27.9842 61.5494C27.5113 60.8157 27.2689 59.9571 27.2881 59.0844L27.3451 56.5056H11.8219C10.6626 56.5042 9.55127 56.0431 8.73157 55.2234C7.91187 54.4037 7.45076 53.2923 7.44939 52.1331V35.9414Z"
-                  fill="url(#paint1_angular_241_759)"
-                />
-                <path
-                  d="M11.8217 55.5365H27.3683L27.6028 44.8638C27.6253 43.7369 28.083 42.6625 28.8799 41.8656C29.6768 41.0687 30.7512 40.611 31.8781 40.5885L46.1012 40.2749C46.9741 40.2559 47.8326 40.4985 48.5664 40.9716C49.3001 41.4447 49.8755 42.1266 50.2183 42.9295C50.5612 43.7324 50.6559 44.6195 50.4903 45.4767C50.3247 46.3339 49.9062 47.1219 49.2889 47.7392L48.7772 48.251L56.0646 55.5365H68.178C69.0796 55.5354 69.944 55.1768 70.5816 54.5393C71.2191 53.9017 71.5778 53.0373 71.5788 52.1357V35.9413C71.5778 35.0397 71.2191 34.1753 70.5816 33.5377C69.944 32.9002 69.0796 32.5416 68.178 32.5405H11.8217C10.9201 32.5416 10.0557 32.9002 9.41811 33.5377C8.78056 34.1753 8.42193 35.0397 8.4209 35.9413V52.1357C8.42193 53.0373 8.78056 53.9017 9.41811 54.5393C10.0557 55.1768 10.9201 55.5354 11.8217 55.5365Z"
-                  fill="url(#paint2_angular_241_759)"
-                />
-                <path
-                  d="M18.9472 10.8403C19.7522 10.8403 20.4047 10.1877 20.4047 9.38278C20.4047 8.57783 19.7522 7.92529 18.9472 7.92529C18.1423 7.92529 17.4897 8.57783 17.4897 9.38278C17.4897 10.1877 18.1423 10.8403 18.9472 10.8403Z"
-                  fill="url(#paint3_angular_241_759)"
-                />
-                <path
-                  d="M8.58298 10.8403C9.38793 10.8403 10.0405 10.1877 10.0405 9.38278C10.0405 8.57783 9.38793 7.92529 8.58298 7.92529C7.77803 7.92529 7.12549 8.57783 7.12549 9.38278C7.12549 10.1877 7.77803 10.8403 8.58298 10.8403Z"
-                  fill="url(#paint4_angular_241_759)"
-                />
-                <path
-                  d="M70.7691 7.92529H60.4048C60.0182 7.92529 59.6475 8.07885 59.3742 8.35218C59.1008 8.62551 58.9473 8.99623 58.9473 9.38278C58.9473 9.76933 59.1008 10.1401 59.3742 10.4134C59.6475 10.6867 60.0182 10.8403 60.4048 10.8403H70.7691C71.1557 10.8403 71.5264 10.6867 71.7997 10.4134C72.0731 10.1401 72.2266 9.76933 72.2266 9.38278C72.2266 8.99623 72.0731 8.62551 71.7997 8.35218C71.5264 8.07885 71.1557 7.92529 70.7691 7.92529Z"
-                  fill="url(#paint5_angular_241_759)"
-                />
-                <path
-                  d="M72.7125 0.799805H7.28745C5.35538 0.802033 3.50308 1.57053 2.13691 2.93671C0.770727 4.30289 0.00222875 6.15519 0 8.08725V17.318H80V8.08725C79.9978 6.15519 79.2293 4.30289 77.8631 2.93671C76.4969 1.57053 74.6446 0.802033 72.7125 0.799805ZM8.583 11.812C8.10256 11.8119 7.6329 11.6695 7.23343 11.4026C6.83396 11.1356 6.52261 10.7563 6.33875 10.3124C6.1549 9.86853 6.10679 9.38011 6.20052 8.9089C6.29425 8.43769 6.5256 8.00485 6.86533 7.66513C7.20505 7.32541 7.63788 7.09406 8.10909 7.00033C8.5803 6.9066 9.06872 6.9547 9.51259 7.13856C9.95646 7.32242 10.3358 7.63377 10.6028 8.03324C10.8697 8.43271 11.0121 8.90236 11.0121 9.3828C11.0113 10.0268 10.7551 10.6442 10.2997 11.0995C9.84435 11.5549 9.22698 11.8111 8.583 11.812ZM18.9474 11.812C18.4669 11.8119 17.9973 11.6695 17.5978 11.4026C17.1983 11.1356 16.887 10.7563 16.7031 10.3124C16.5193 9.86853 16.4712 9.38011 16.5649 8.9089C16.6586 8.43769 16.89 8.00485 17.2297 7.66513C17.5694 7.32541 18.0023 7.09406 18.4735 7.00033C18.9447 6.9066 19.4331 6.9547 19.877 7.13856C20.3208 7.32242 20.7002 7.63377 20.9671 8.03324C21.2341 8.43271 21.3765 8.90236 21.3765 9.3828C21.3757 10.0268 21.1195 10.6442 20.6641 11.0995C20.2087 11.5549 19.5914 11.8111 18.9474 11.812ZM29.3117 11.812C28.8313 11.8119 28.3616 11.6695 27.9622 11.4026C27.5627 11.1356 27.2514 10.7563 27.0675 10.3124C26.8836 9.86853 26.8355 9.38011 26.9293 8.9089C27.023 8.43769 27.2544 8.00485 27.5941 7.66513C27.9338 7.32541 28.3666 7.09406 28.8378 7.00033C29.309 6.9066 29.7975 6.9547 30.2413 7.13856C30.6852 7.32242 31.0646 7.63377 31.3315 8.03324C31.5984 8.43271 31.7409 8.90236 31.7409 9.3828C31.74 10.0268 31.4838 10.6442 31.0285 11.0995C30.5731 11.5549 29.9557 11.8111 29.3117 11.812ZM70.7692 11.812H60.4049C59.7606 11.8119 59.1427 11.556 58.6872 11.1005C58.2316 10.6449 57.9757 10.0271 57.9757 9.3828C57.9757 8.73855 58.2316 8.12069 58.6872 7.66513C59.1427 7.20958 59.7606 6.95365 60.4049 6.95365H70.7692C71.4135 6.95365 72.0313 7.20958 72.4869 7.66513C72.9425 8.12069 73.1984 8.73855 73.1984 9.3828C73.1984 10.0271 72.9425 10.6449 72.4869 11.1005C72.0313 11.556 71.4135 11.8119 70.7692 11.812Z"
-                  fill="url(#paint6_angular_241_759)"
-                />
-                <path
-                  d="M29.312 10.8403C30.1169 10.8403 30.7695 10.1877 30.7695 9.38278C30.7695 8.57783 30.1169 7.92529 29.312 7.92529C28.507 7.92529 27.8545 8.57783 27.8545 9.38278C27.8545 10.1877 28.507 10.8403 29.312 10.8403Z"
-                  fill="url(#paint7_angular_241_759)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(45.8311 58.8136) scale(17.5675 17.567)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40 49.5446) scale(40 31.2551)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.9998 44.0385) scale(31.5789 11.498)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(18.9472 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(8.58298 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.5869 9.38278) scale(6.63968 1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40 9.05891) scale(40 8.25911)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_241_759"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.312 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100 to-zinc-600">
-                Web & SEO Optimization
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            Backend & APIs
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              I optimize websites for speed, visibility, and user retention.
-              Combining modern development practices with proven SEO strategies,
-              I ensure your digital presence stands out.
-            </p>
-          </div>
+          {backendTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {seoTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-2 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 80 81"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-7 md:size-8"
-              >
-                <path
-                  d="M22.125 45.2894C22.2742 45.3424 22.431 45.3704 22.5893 45.3723H35.5409C35.6991 45.3704 35.856 45.3424 36.0052 45.2894L29.0651 39.6816L22.125 45.2894Z"
-                  fill="url(#paint0_angular_241_758)"
-                />
-                <path
-                  d="M64.52 13.876V68.1244C68.2939 64.6861 71.3088 60.4976 73.3717 55.827C75.4346 51.1563 76.5001 46.1064 76.5001 41.0002C76.5001 35.894 75.4346 30.8441 73.3717 26.1734C71.3088 21.5028 68.2939 17.3143 64.52 13.876Z"
-                  fill="url(#paint1_angular_241_758)"
-                />
-                <path
-                  d="M33.6626 7.15385H45.8371C46.6683 7.13066 47.4776 6.88245 48.1789 6.43564C48.8802 5.98883 49.4473 5.36015 49.8197 4.61652L51.7624 1H27.7373L29.68 4.61652C30.0525 5.36015 30.6195 5.98883 31.3209 6.43564C32.0222 6.88245 32.8315 7.13066 33.6626 7.15385Z"
-                  fill="url(#paint2_angular_241_758)"
-                />
-                <path
-                  d="M28.2915 39.0568L21.3475 33.4458C21.2076 33.672 21.1329 33.9325 21.1318 34.1985V43.9151C21.1329 44.1811 21.2076 44.4416 21.3475 44.6678L28.2915 39.0568Z"
-                  fill="url(#paint3_angular_241_758)"
-                />
-                <path
-                  d="M3 41.0002C3.0022 46.106 4.06874 51.1553 6.13152 55.8256C8.1943 60.496 11.208 64.6847 14.9802 68.1244V13.876C11.208 17.3157 8.1943 21.5044 6.13152 26.1747C4.06874 30.8451 3.0022 35.8944 3 41.0002Z"
-                  fill="url(#paint4_angular_241_758)"
-                />
-                <path
-                  d="M36.0052 32.8236C35.856 32.7706 35.6991 32.7426 35.5409 32.7407H22.5893C22.431 32.7426 22.2742 32.7706 22.125 32.8236L29.0651 38.4314L36.0052 32.8236Z"
-                  fill="url(#paint5_angular_241_758)"
-                />
-                <path
-                  d="M56.0277 50.8784H23.4727L39.7502 56.6786L56.0277 50.8784Z"
-                  fill="url(#paint6_angular_241_758)"
-                />
-                <path
-                  d="M36.7819 44.6678C36.9218 44.4416 36.9964 44.1811 36.9975 43.9151V34.1985C36.9964 33.9325 36.9218 33.672 36.7819 33.4458L29.8379 39.0568L36.7819 44.6678Z"
-                  fill="url(#paint7_angular_241_758)"
-                />
-                <path
-                  d="M51.208 39.0568L58.152 44.6678C58.2919 44.4416 58.3665 44.1811 58.3676 43.9151V34.1985C58.3665 33.9325 58.2919 33.672 58.152 33.4458L51.208 39.0568Z"
-                  fill="url(#paint8_angular_241_758)"
-                />
-                <path
-                  d="M21.6246 51.252C21.4704 51.3875 21.3468 51.5543 21.2618 51.7412C21.1769 51.9281 21.1326 52.131 21.1318 52.3363V62.0529C21.1326 62.2583 21.1769 62.4611 21.2618 62.6481C21.3468 62.835 21.4704 63.0018 21.6246 63.1373L38.3024 57.1946L21.6246 51.252Z"
-                  fill="url(#paint9_angular_241_758)"
-                />
-                <path
-                  d="M56.0277 14.6025H23.4727L39.7502 20.4027L56.0277 14.6025Z"
-                  fill="url(#paint10_angular_241_758)"
-                />
-                <path
-                  d="M23.4727 27.2347H56.0277L39.7502 21.4346L23.4727 27.2347Z"
-                  fill="url(#paint11_angular_241_758)"
-                />
-                <path
-                  d="M57.875 26.8619C58.0292 26.7264 58.1529 26.5596 58.2378 26.3727C58.3228 26.1857 58.3671 25.9829 58.3678 25.7775V16.0609C58.3671 15.8556 58.3228 15.6527 58.2378 15.4658C58.1529 15.2789 58.0292 15.1121 57.875 14.9766L41.1973 20.9192L57.875 26.8619Z"
-                  fill="url(#paint12_angular_241_758)"
-                />
-                <path
-                  d="M23.2369 1C21.3054 1.00223 19.4537 1.77073 18.0879 3.13691C16.7222 4.50308 15.9539 6.35538 15.9517 8.28745V73.7125C15.9539 75.6446 16.7222 77.4969 18.0879 78.8631C19.4537 80.2293 21.3054 80.9978 23.2369 81H56.2634C58.1949 80.9978 60.0466 80.2293 61.4124 78.8631C62.7781 77.4969 63.5464 75.6446 63.5486 73.7125V8.28745C63.5464 6.35538 62.7781 4.50308 61.4124 3.13691C60.0466 1.77073 58.1949 1.00223 56.2634 1H52.8642L50.6774 5.07579C50.2218 5.97445 49.531 6.73268 48.6787 7.26973C47.8264 7.80678 46.8444 8.10254 45.8374 8.12551H33.6629C32.6561 8.1023 31.6744 7.80644 30.8223 7.2694C29.9703 6.73237 29.2797 5.97426 28.8242 5.07579L26.636 1H23.2369ZM20.1609 34.1984C20.1618 33.5544 20.4179 32.937 20.8731 32.4817C21.3284 32.0263 21.9455 31.7701 22.5893 31.7692H35.5409C36.1847 31.7701 36.8019 32.0263 37.2571 32.4817C37.7123 32.937 37.9684 33.5544 37.9693 34.1984V43.915C37.9684 44.559 37.7123 45.1763 37.2571 45.6317C36.8019 46.0871 36.1847 46.3433 35.5409 46.3441H22.5893C21.9455 46.3433 21.3284 46.0871 20.8731 45.6317C20.4179 45.1763 20.1618 44.559 20.1609 43.915V34.1984ZM46.5497 73.5506H32.9506C32.8218 73.5506 32.6982 73.4994 32.6071 73.4083C32.5161 73.3172 32.4649 73.1936 32.4649 73.0648C32.4649 72.9359 32.5161 72.8124 32.6071 72.7212C32.6982 72.6301 32.8218 72.5789 32.9506 72.5789H46.5497C46.6785 72.5789 46.8021 72.6301 46.8931 72.7212C46.9842 72.8124 47.0354 72.9359 47.0354 73.0648C47.0354 73.1936 46.9842 73.3172 46.8931 73.4083C46.8021 73.4994 46.6785 73.5506 46.5497 73.5506ZM59.3394 62.0526C59.3385 62.6966 59.0824 63.314 58.6272 63.7694C58.1719 64.2247 57.5547 64.4809 56.911 64.4818H22.5893C21.9455 64.4809 21.3284 64.2247 20.8731 63.7694C20.4179 63.314 20.1618 62.6966 20.1609 62.0526V52.336C20.1618 51.692 20.4179 51.0747 20.8731 50.6193C21.3284 50.1639 21.9455 49.9077 22.5893 49.9069H56.911C57.5547 49.9077 58.1719 50.1639 58.6272 50.6193C59.0824 51.0747 59.3385 51.692 59.3394 52.336V62.0526ZM59.3394 43.915C59.3385 44.559 59.0824 45.1763 58.6272 45.6317C58.1719 46.0871 57.5547 46.3433 56.911 46.3441H43.9594C43.3156 46.3433 42.6984 46.0871 42.2432 45.6317C41.788 45.1763 41.5318 44.559 41.531 43.915V34.1984C41.5318 33.5544 41.788 32.937 42.2432 32.4817C42.6984 32.0263 43.3156 31.7701 43.9594 31.7692H56.911C57.5547 31.7701 58.1719 32.0263 58.6272 32.4817C59.0824 32.937 59.3385 33.5544 59.3394 34.1984V43.915ZM56.911 13.6316C57.5547 13.6324 58.1719 13.8886 58.6272 14.344C59.0824 14.7994 59.3385 15.4167 59.3394 16.0607V25.7773C59.3385 26.4213 59.0824 27.0387 58.6272 27.494C58.1719 27.9494 57.5547 28.2056 56.911 28.2065H22.5893C21.9455 28.2056 21.3284 27.9494 20.8731 27.494C20.4179 27.0387 20.1618 26.4213 20.1609 25.7773V16.0607C20.1618 15.4167 20.4179 14.7994 20.8731 14.344C21.3284 13.8886 21.9455 13.6324 22.5893 13.6316H56.911Z"
-                  fill="url(#paint13_angular_241_758)"
-                />
-                <path
-                  d="M43.4951 45.2894C43.6443 45.3424 43.8012 45.3704 43.9594 45.3723H56.911C57.0693 45.3704 57.2262 45.3424 57.3753 45.2894L50.4352 39.6816L43.4951 45.2894Z"
-                  fill="url(#paint14_angular_241_758)"
-                />
-                <path
-                  d="M41.1973 57.1946L57.875 63.1373C58.0292 63.0018 58.1529 62.835 58.2378 62.6481C58.3228 62.4611 58.3671 62.2583 58.3678 62.0529V52.3363C58.3671 52.131 58.3228 51.9281 58.2378 51.7412C58.1529 51.5543 58.0292 51.3875 57.875 51.252L41.1973 57.1946Z"
-                  fill="url(#paint15_angular_241_758)"
-                />
-                <path
-                  d="M23.4727 63.5096H56.0277L39.7502 57.7095L23.4727 63.5096Z"
-                  fill="url(#paint16_angular_241_758)"
-                />
-                <path
-                  d="M57.3753 32.8236C57.2262 32.7706 57.0693 32.7426 56.911 32.7407H43.9594C43.8012 32.7426 43.6443 32.7706 43.4951 32.8236L50.4352 38.4314L57.3753 32.8236Z"
-                  fill="url(#paint17_angular_241_758)"
-                />
-                <path
-                  d="M42.7176 33.4458C42.5777 33.672 42.5031 33.9325 42.502 34.1985V43.9151C42.5031 44.1811 42.5777 44.4416 42.7176 44.6678L49.6616 39.0568L42.7176 33.4458Z"
-                  fill="url(#paint18_angular_241_758)"
-                />
-                <path
-                  d="M21.6246 14.9766C21.4704 15.1121 21.3468 15.2789 21.2618 15.4658C21.1769 15.6527 21.1326 15.8556 21.1318 16.0609V25.7775C21.1326 25.9829 21.1769 26.1857 21.2618 26.3727C21.3468 26.5596 21.4704 26.7264 21.6246 26.8619L38.3024 20.9192L21.6246 14.9766Z"
-                  fill="url(#paint19_angular_241_758)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.0651 42.527) scale(6.94009 2.84534)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(70.5101 41.0002) scale(5.99006 27.1242)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7499 4.07692) scale(12.0126 3.07692)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(24.7116 39.0568) scale(3.57981 5.61101)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(8.99009 41.0002) scale(5.99009 27.1242)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.0651 35.5861) scale(6.94009 2.84534)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7502 53.7785) scale(16.2775 2.90008)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(33.4177 39.0568) scale(3.57981 5.61101)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint8_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(54.7878 39.0568) scale(3.57981 5.61101)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint9_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.7171 57.1946) scale(8.58526 5.94267)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint10_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7502 17.5026) scale(16.2775 2.90008)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint11_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7502 24.3347) scale(16.2775 2.90008)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint12_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(49.7825 20.9192) scale(8.58526 5.94267)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint13_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7501 41) scale(23.7985 40)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint14_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(50.4352 42.527) scale(6.94009 2.84534)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint15_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(49.7825 57.1946) scale(8.58526 5.94267)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint16_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.7502 60.6096) scale(16.2775 2.90008)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint17_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(50.4352 35.5861) scale(6.94009 2.84534)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint18_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(46.0818 39.0568) scale(3.57981 5.61101)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint19_angular_241_758"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.7171 20.9192) scale(8.58526 5.94267)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-                Mobile Development
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+            Mobile Development
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Flutter is my go-to framework for its flexibility, cross-platform
-              capabilities, and quick development cycle. I create polished,
-              high-performance apps that run seamlessly on iOS and Android.
-              React Native complements this with native-like performance for
-              specific projects. AI Integration: Leverage Firebase AI and
-              TensorFlow Lite for advanced features like predictive user actions
-              and personalized content delivery.
-            </p>
-          </div>
+          {mobileTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {mobileTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                className="size-7 md:size-8"
-                viewBox="0 0 80 81"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M51.5625 65.3903C51.3488 64.7696 51.1844 64.189 51.05 63.624H28.6475C27.924 66.8378 26.2777 69.7704 23.9106 72.0615H51.5625V65.3903Z"
-                  fill="url(#paint0_angular_106_566)"
-                />
-                <path
-                  d="M71.4062 7.37402H8.28125C7.5046 7.37402 6.875 8.00362 6.875 8.78027V28.7803C6.875 29.5569 7.5046 30.1865 8.28125 30.1865H71.4062C72.1829 30.1865 72.8125 29.5569 72.8125 28.7803V8.78027C72.8125 8.00362 72.1829 7.37402 71.4062 7.37402Z"
-                  fill="url(#paint1_angular_106_566)"
-                />
-                <path
-                  d="M35.1562 36.4365H8.28125C7.5046 36.4365 6.875 37.0661 6.875 37.8428V45.0303C6.875 45.8069 7.5046 46.4365 8.28125 46.4365H35.1562C35.9329 46.4365 36.5625 45.8069 36.5625 45.0303V37.8428C36.5625 37.0661 35.9329 36.4365 35.1562 36.4365Z"
-                  fill="url(#paint2_angular_106_566)"
-                />
-                <path
-                  d="M71.4062 1.74902H8.28125C6.41711 1.75117 4.62993 2.49265 3.31178 3.8108C1.99363 5.12895 1.25215 6.91613 1.25 8.78027V52.0615H51.5625V47.374H44.5312C43.9099 47.3732 43.3142 47.126 42.8749 46.6866C42.4355 46.2473 42.1883 45.6516 42.1875 45.0303V37.8428C42.1883 37.2214 42.4355 36.6258 42.8749 36.1864C43.3142 35.747 43.9099 35.4999 44.5312 35.499H52.0856C52.4497 34.8372 52.9846 34.2851 53.6346 33.9004C54.2846 33.5156 55.0259 33.3123 55.7812 33.3115H75.1562C75.786 33.3117 76.4077 33.4531 76.9756 33.7253C77.5435 33.9976 78.043 34.3937 78.4375 34.8846V8.78027C78.4353 6.91613 77.6939 5.12895 76.3757 3.8108C75.0576 2.49265 73.2704 1.75117 71.4062 1.74902ZM37.5 45.0303C37.4992 45.6516 37.252 46.2473 36.8126 46.6866C36.3733 47.126 35.7776 47.3732 35.1562 47.374H8.28125C7.6599 47.3732 7.06424 47.126 6.62488 46.6866C6.18552 46.2473 5.93833 45.6516 5.9375 45.0303V37.8428C5.93833 37.2214 6.18552 36.6258 6.62488 36.1864C7.06424 35.747 7.6599 35.4999 8.28125 35.499H35.1562C35.7776 35.4999 36.3733 35.747 36.8126 36.1864C37.252 36.6258 37.4992 37.2214 37.5 37.8428V45.0303ZM73.75 28.7803C73.7492 29.4016 73.502 29.9973 73.0626 30.4366C72.6233 30.876 72.0276 31.1232 71.4062 31.124H8.28125C7.6599 31.1232 7.06424 30.876 6.62488 30.4366C6.18552 29.9973 5.93833 29.4016 5.9375 28.7803V8.78027C5.93833 8.15893 6.18552 7.56326 6.62488 7.12391C7.06424 6.68455 7.6599 6.43735 8.28125 6.43652H71.4062C72.0276 6.43735 72.6233 6.68455 73.0626 7.12391C73.502 7.56326 73.7492 8.15893 73.75 8.78027V28.7803Z"
-                  fill="url(#paint3_angular_106_566)"
-                />
-                <path
-                  d="M51.5625 72.999H20.7812C19.9113 73 19.0773 73.346 18.4622 73.9612C17.847 74.5763 17.501 75.4103 17.5 76.2803V77.5303C17.5005 77.9031 17.6488 78.2605 17.9124 78.5241C18.176 78.7877 18.5334 78.936 18.9062 78.9365H53.1325C53.0169 78.839 52.9019 78.7409 52.7962 78.6328C52.0117 77.8396 51.5689 76.7709 51.5625 75.6553V72.999Z"
-                  fill="url(#paint4_angular_106_566)"
-                />
-                <path
-                  d="M62.2632 37.0615H68.6744C69.0733 37.049 69.4614 36.9288 69.7974 36.7135C70.1335 36.4983 70.405 36.1961 70.5832 35.839L71.4357 34.249H59.502L60.3545 35.839C60.5326 36.1961 60.8042 36.4983 61.1402 36.7135C61.4763 36.9288 61.8643 37.049 62.2632 37.0615Z"
-                  fill="url(#paint5_angular_106_566)"
-                />
-                <path
-                  d="M62.5894 60.499H57.3438C57.0849 60.499 56.875 60.7089 56.875 60.9678V65.3428C56.875 65.6017 57.0849 65.8115 57.3438 65.8115H62.5894C62.8483 65.8115 63.0581 65.6017 63.0581 65.3428V60.9678C63.0581 60.7089 62.8483 60.499 62.5894 60.499Z"
-                  fill="url(#paint6_angular_106_566)"
-                />
-                <path
-                  d="M44.5312 36.4365C44.1584 36.437 43.801 36.5853 43.5374 36.849C43.2738 37.1126 43.1255 37.47 43.125 37.8428V45.0303C43.1255 45.4031 43.2738 45.7605 43.5374 46.0241C43.801 46.2877 44.1584 46.436 44.5312 46.4365H51.5625V37.5303C51.5639 37.1607 51.6139 36.793 51.7112 36.4365H44.5312Z"
-                  fill="url(#paint7_angular_106_566)"
-                />
-                <path
-                  d="M73.5938 60.499H68.3481C68.0893 60.499 67.8794 60.7089 67.8794 60.9678V65.3428C67.8794 65.6017 68.0893 65.8115 68.3481 65.8115H73.5938C73.8527 65.8115 74.0625 65.6017 74.0625 65.3428V60.9678C74.0625 60.7089 73.8527 60.499 73.5938 60.499Z"
-                  fill="url(#paint8_angular_106_566)"
-                />
-                <path
-                  d="M75.1562 34.249H72.5L71.4094 36.2803C71.1512 36.7869 70.7606 37.2141 70.279 37.5164C69.7974 37.8188 69.2429 37.9849 68.6744 37.9971H62.2631C61.6952 37.9843 61.1413 37.8179 60.6603 37.5157C60.1793 37.2134 59.7891 36.7865 59.5312 36.2803L58.4375 34.249H55.7812C54.9113 34.25 54.0773 34.596 53.4622 35.2112C52.847 35.8263 52.501 36.6603 52.5 37.5303V75.6553C52.501 76.5252 52.847 77.3592 53.4622 77.9744C54.0773 78.5895 54.9113 78.9355 55.7812 78.9365H75.1562C76.0262 78.9355 76.8602 78.5895 77.4753 77.9744C78.0905 77.3592 78.4365 76.5252 78.4375 75.6553V37.5303C78.4365 36.6603 78.0905 35.8263 77.4753 35.2112C76.8602 34.596 76.0262 34.25 75.1562 34.249ZM55.9375 65.3428V60.9678C55.938 60.595 56.0863 60.2376 56.3499 59.974C56.6135 59.7103 56.9709 59.562 57.3438 59.5615H62.5894C62.9622 59.562 63.3196 59.7103 63.5832 59.974C63.8468 60.2376 63.9951 60.595 63.9956 60.9678V65.3428C63.9951 65.7156 63.8468 66.073 63.5832 66.3366C63.3196 66.6002 62.9622 66.7485 62.5894 66.749H57.3438C56.9709 66.7485 56.6135 66.6002 56.3499 66.3366C56.0863 66.073 55.938 65.7156 55.9375 65.3428ZM68.9062 74.249H62.0312C61.9069 74.249 61.7877 74.1996 61.6998 74.1117C61.6119 74.0238 61.5625 73.9046 61.5625 73.7803C61.5625 73.656 61.6119 73.5367 61.6998 73.4488C61.7877 73.3609 61.9069 73.3115 62.0312 73.3115H68.9062C69.0306 73.3115 69.1498 73.3609 69.2377 73.4488C69.3256 73.5367 69.375 73.656 69.375 73.7803C69.375 73.9046 69.3256 74.0238 69.2377 74.1117C69.1498 74.1996 69.0306 74.249 68.9062 74.249ZM75 65.3428C74.9995 65.7156 74.8512 66.073 74.5876 66.3366C74.324 66.6002 73.9666 66.7485 73.5938 66.749H68.3481C67.9753 66.7485 67.6179 66.6002 67.3543 66.3366C67.0907 66.073 66.9424 65.7156 66.9419 65.3428V60.9678C66.9424 60.595 67.0907 60.2376 67.3543 59.974C67.6179 59.7103 67.9753 59.562 68.3481 59.5615H73.5938C73.9666 59.562 74.324 59.7103 74.5876 59.974C74.8512 60.2376 74.9995 60.595 75 60.9678V65.3428ZM75 55.3428C74.9995 55.7156 74.8512 56.073 74.5876 56.3366C74.324 56.6002 73.9666 56.7485 73.5938 56.749H57.3438C56.9709 56.7485 56.6135 56.6002 56.3499 56.3366C56.0863 56.073 55.938 55.7156 55.9375 55.3428V44.0928C55.938 43.72 56.0863 43.3626 56.3499 43.099C56.6135 42.8353 56.9709 42.687 57.3438 42.6865H73.5938C73.9666 42.687 74.324 42.8353 74.5876 43.099C74.8512 43.3626 74.9995 43.72 75 44.0928V55.3428Z"
-                  fill="url(#paint9_angular_106_566)"
-                />
-                <path
-                  d="M73.5938 43.624H57.3438C57.0849 43.624 56.875 43.8339 56.875 44.0928V55.3428C56.875 55.6017 57.0849 55.8115 57.3438 55.8115H73.5938C73.8526 55.8115 74.0625 55.6017 74.0625 55.3428V44.0928C74.0625 43.8339 73.8526 43.624 73.5938 43.624Z"
-                  fill="url(#paint10_angular_106_566)"
-                />
-                <path
-                  d="M8.28125 62.6865H51.5625V52.999H1.25V55.6553C1.25215 57.5194 1.99363 59.3066 3.31178 60.6247C4.62993 61.9429 6.41711 62.6844 8.28125 62.6865ZM39.8438 56.5928C40.091 56.5928 40.3326 56.6661 40.5382 56.8034C40.7438 56.9408 40.904 57.136 40.9986 57.3644C41.0932 57.5928 41.118 57.8442 41.0697 58.0866C41.0215 58.3291 40.9025 58.5518 40.7276 58.7267C40.5528 58.9015 40.3301 59.0205 40.0876 59.0688C39.8451 59.117 39.5938 59.0922 39.3654 58.9976C39.137 58.903 38.9418 58.7428 38.8044 58.5372C38.6671 58.3317 38.5938 58.09 38.5938 57.8428C38.5938 57.5113 38.7254 57.1933 38.9599 56.9589C39.1943 56.7245 39.5122 56.5928 39.8438 56.5928Z"
-                  fill="url(#paint11_angular_106_566)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(37.7366 67.8428) scale(13.8259 4.21875)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.8438 18.7803) scale(32.9688 11.4062)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(21.7188 41.4365) scale(14.8438 5)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(39.8438 26.9053) scale(38.5938 25.1562)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(35.3162 75.9678) scale(17.8162 2.96875)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 35.6553) scale(5.96687 1.40625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(59.9666 63.1553) scale(3.09156 2.65625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(47.4181 41.4365) scale(4.29312 5)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint8_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(70.971 63.1553) scale(3.09156 2.65625)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint9_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 56.5928) scale(12.9688 22.3438)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint10_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.4688 49.7178) scale(8.59375 6.09375)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint11_angular_106_566"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(26.4062 57.8428) scale(25.1562 4.84375)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
-                UI/UX Design & Audit
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+            UI/UX Design & Audit
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Enhance user engagement through intuitive design and regular
-              audits. I ensure your applications are visually appealing and easy
-              to navigate.
-            </p>
-          </div>
+          {designTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {designTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-7 md:size-8"
-              >
-                <path
-                  d="M8.42229 20.6181C10.1779 21.5395 11.0557 22.0001 12 22.0001V12.0001L2.63802 7.07275C2.62423 7.09491 2.6107 7.11727 2.5974 7.13986C2 8.15436 2 9.41678 2 11.9416V12.0586C2 14.5834 2 15.8459 2.5974 16.8604C3.19479 17.8749 4.27063 18.4395 6.42229 19.5686L8.42229 20.6181Z"
-                  fill="#a1a1aa"
-                />
-                <path
-                  opacity="0.7"
-                  d="M17.5774 4.43152L15.5774 3.38197C13.8218 2.46066 12.944 2 11.9997 2C11.0554 2 10.1776 2.46066 8.42197 3.38197L6.42197 4.43152C4.31821 5.53552 3.24291 6.09982 2.6377 7.07264L11.9997 12L21.3617 7.07264C20.7564 6.09982 19.6811 5.53552 17.5774 4.43152Z"
-                  fill="#a1a1aa"
-                />
-                <path
-                  opacity="0.5"
-                  d="M21.4026 7.13986C21.3893 7.11727 21.3758 7.09491 21.362 7.07275L12 12.0001V22.0001C12.9443 22.0001 13.8221 21.5395 15.5777 20.6181L17.5777 19.5686C19.7294 18.4395 20.8052 17.8749 21.4026 16.8604C22 15.8459 22 14.5834 22 12.0586V11.9416C22 9.41678 22 8.15436 21.4026 7.13986Z"
-                  fill="#a1a1aa"
-                />
-                <path
-                  d="M6.32334 4.48382C6.35617 4.46658 6.38926 4.44922 6.42261 4.43172L7.91614 3.64795L17.0169 8.65338L21.0406 6.64152C21.1783 6.79745 21.298 6.96175 21.4029 7.13994C21.5525 7.39396 21.6646 7.66352 21.7487 7.96455L17.7503 9.96373V13.0002C17.7503 13.4144 17.4145 13.7502 17.0003 13.7502C16.5861 13.7502 16.2503 13.4144 16.2503 13.0002V10.7137L12.7503 12.4637V21.9042C12.4934 21.9682 12.2492 22.0002 12.0003 22.0002C11.7515 22.0002 11.5072 21.9682 11.2503 21.9042V12.4637L2.25195 7.96455C2.33601 7.66352 2.44813 7.39396 2.59771 7.13994C2.70264 6.96175 2.82232 6.79745 2.96001 6.64152L12.0003 11.1617L15.3865 9.46857L6.32334 4.48382Z"
-                  fill="#a1a1aa"
-                />
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
-                Tools
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+            Tools
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Proficient in tools that streamline development, enhance
-              collaboration, and ensure project success.
-            </p>
-          </div>
+          {toolsTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6 overflow-hidden">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {toolsTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 80 81"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-7 md:size-8"
-              >
-                <path
-                  d="M18.9472 10.8403C19.7522 10.8403 20.4047 10.1877 20.4047 9.38278C20.4047 8.57783 19.7522 7.92529 18.9472 7.92529C18.1423 7.92529 17.4897 8.57783 17.4897 9.38278C17.4897 10.1877 18.1423 10.8403 18.9472 10.8403Z"
-                  fill="url(#paint0_angular_241_724)"
-                />
-                <path
-                  d="M72.7125 0.799805H7.28745C5.35538 0.802033 3.50308 1.57053 2.13691 2.93671C0.770727 4.30289 0.00222875 6.15519 0 8.08725V17.318H80V8.08725C79.9978 6.15519 79.2293 4.30289 77.8631 2.93671C76.4969 1.57053 74.6446 0.802033 72.7125 0.799805ZM8.583 11.812C8.10256 11.8119 7.6329 11.6695 7.23343 11.4026C6.83396 11.1356 6.52261 10.7563 6.33875 10.3124C6.1549 9.86853 6.10679 9.38011 6.20052 8.9089C6.29425 8.43769 6.5256 8.00485 6.86533 7.66513C7.20505 7.32541 7.63788 7.09406 8.10909 7.00033C8.5803 6.9066 9.06872 6.9547 9.51259 7.13856C9.95646 7.32242 10.3358 7.63377 10.6028 8.03324C10.8697 8.43271 11.0121 8.90236 11.0121 9.3828C11.0115 10.0268 10.7553 10.6443 10.2999 11.0997C9.8445 11.5551 9.22704 11.8113 8.583 11.812ZM18.9474 11.812C18.4669 11.8119 17.9973 11.6695 17.5978 11.4026C17.1983 11.1356 16.887 10.7563 16.7031 10.3124C16.5193 9.86853 16.4712 9.38011 16.5649 8.9089C16.6586 8.43769 16.89 8.00485 17.2297 7.66513C17.5694 7.32541 18.0023 7.09406 18.4735 7.00033C18.9447 6.9066 19.4331 6.9547 19.877 7.13856C20.3208 7.32242 20.7002 7.63377 20.9671 8.03324C21.2341 8.43271 21.3765 8.90236 21.3765 9.3828C21.3758 10.0268 21.1197 10.6443 20.6643 11.0997C20.2089 11.5551 19.5914 11.8113 18.9474 11.812ZM29.3117 11.812C28.8313 11.8119 28.3616 11.6695 27.9622 11.4026C27.5627 11.1356 27.2514 10.7563 27.0675 10.3124C26.8836 9.86853 26.8355 9.38011 26.9293 8.9089C27.023 8.43769 27.2544 8.00485 27.5941 7.66513C27.9338 7.32541 28.3666 7.09406 28.8378 7.00033C29.309 6.9066 29.7975 6.9547 30.2413 7.13856C30.6852 7.32242 31.0646 7.63377 31.3315 8.03324C31.5984 8.43271 31.7409 8.90236 31.7409 9.3828C31.7402 10.0268 31.4841 10.6443 31.0287 11.0997C30.5732 11.5551 29.9558 11.8113 29.3117 11.812ZM70.7692 11.812H60.4049C59.7606 11.8119 59.1427 11.556 58.6872 11.1005C58.2316 10.6449 57.9757 10.0271 57.9757 9.3828C57.9757 8.73855 58.2316 8.12069 58.6872 7.66513C59.1427 7.20958 59.7606 6.95365 60.4049 6.95365H70.7692C71.4135 6.95365 72.0313 7.20958 72.4869 7.66513C72.9425 8.12069 73.1984 8.73855 73.1984 9.3828C73.1984 10.0271 72.9425 10.6449 72.4869 11.1005C72.0313 11.556 71.4135 11.8119 70.7692 11.812Z"
-                  fill="url(#paint1_angular_241_724)"
-                />
-                <path
-                  d="M29.312 10.8403C30.1169 10.8403 30.7695 10.1877 30.7695 9.38278C30.7695 8.57783 30.1169 7.92529 29.312 7.92529C28.507 7.92529 27.8545 8.57783 27.8545 9.38278C27.8545 10.1877 28.507 10.8403 29.312 10.8403Z"
-                  fill="url(#paint2_angular_241_724)"
-                />
-                <path
-                  d="M70.7691 7.92529H60.4048C60.0182 7.92529 59.6475 8.07885 59.3742 8.35218C59.1008 8.62551 58.9473 8.99623 58.9473 9.38278C58.9473 9.76933 59.1008 10.1401 59.3742 10.4134C59.6475 10.6867 60.0182 10.8403 60.4048 10.8403H70.7691C71.1557 10.8403 71.5264 10.6867 71.7997 10.4134C72.0731 10.1401 72.2266 9.76933 72.2266 9.38278C72.2266 8.99623 72.0731 8.62551 71.7997 8.35218C71.5264 8.07885 71.1557 7.92529 70.7691 7.92529Z"
-                  fill="url(#paint3_angular_241_724)"
-                />
-                <path
-                  d="M8.58298 10.8403C9.38793 10.8403 10.0405 10.1877 10.0405 9.38278C10.0405 8.57783 9.38793 7.92529 8.58298 7.92529C7.77803 7.92529 7.12549 8.57783 7.12549 9.38278C7.12549 10.1877 7.77803 10.8403 8.58298 10.8403Z"
-                  fill="url(#paint4_angular_241_724)"
-                />
-                <path
-                  d="M40.0001 39.9902C40.4725 39.9898 40.9254 39.8021 41.2594 39.4681C41.5934 39.1341 41.7812 38.6812 41.7815 38.2088V31.7311C41.7815 31.2586 41.5938 30.8055 41.2597 30.4715C40.9257 30.1374 40.4726 29.9497 40.0001 29.9497C39.5277 29.9497 39.0746 30.1374 38.7405 30.4715C38.4064 30.8055 38.2188 31.2586 38.2188 31.7311V38.2088C38.2191 38.6812 38.4069 39.1341 38.7409 39.4681C39.0749 39.8021 39.5278 39.9898 40.0001 39.9902Z"
-                  fill="url(#paint5_angular_241_724)"
-                />
-                <path
-                  d="M40.0001 48.4114C40.984 48.4114 41.7815 47.6138 41.7815 46.63C41.7815 45.6462 40.984 44.8486 40.0001 44.8486C39.0163 44.8486 38.2188 45.6462 38.2188 46.63C38.2188 47.6138 39.0163 48.4114 40.0001 48.4114Z"
-                  fill="url(#paint6_angular_241_724)"
-                />
-                <path
-                  d="M72.7124 61.0425H56.518C55.7131 61.0425 55.0605 61.695 55.0605 62.5V72.8643C55.0605 73.6693 55.7131 74.3218 56.518 74.3218H72.7124C73.5173 74.3218 74.1699 73.6693 74.1699 72.8643V62.5C74.1699 61.695 73.5173 61.0425 72.7124 61.0425Z"
-                  fill="url(#paint7_angular_241_724)"
-                />
-                <path
-                  d="M26.4067 52.9455H53.5937C54.1893 52.9399 54.7731 52.7788 55.2872 52.4781C55.8014 52.1775 56.2281 51.7478 56.5252 51.2316C56.8223 50.7154 56.9793 50.1305 56.9809 49.5349C56.9824 48.9393 56.8284 48.3536 56.534 47.8359L42.9404 24.4513C42.6375 23.9414 42.2071 23.5191 41.6916 23.2258C41.1762 22.9325 40.5933 22.7783 40.0002 22.7783C39.4071 22.7783 38.8242 22.9325 38.3088 23.2258C37.7933 23.5191 37.3629 23.9414 37.06 24.4513L23.4664 47.8359C23.1721 48.3536 23.018 48.9393 23.0195 49.5349C23.0211 50.1305 23.1782 50.7154 23.4752 51.2316C23.7723 51.7478 24.199 52.1775 24.7132 52.4781C25.2273 52.7788 25.8111 52.9399 26.4067 52.9455ZM37.2472 31.7309C37.2472 31.0008 37.5372 30.3006 38.0535 29.7843C38.5698 29.268 39.2701 28.9779 40.0002 28.9779C40.7304 28.9779 41.4306 29.268 41.9469 29.7843C42.4632 30.3006 42.7532 31.0008 42.7532 31.7309V38.2087C42.7532 38.9388 42.4632 39.6391 41.9469 40.1554C41.4306 40.6717 40.7304 40.9617 40.0002 40.9617C39.2701 40.9617 38.5698 40.6717 38.0535 40.1554C37.5372 39.6391 37.2472 38.9388 37.2472 38.2087V31.7309ZM40.0002 43.8767C40.5447 43.8767 41.077 44.0382 41.5297 44.3407C41.9824 44.6432 42.3353 45.0731 42.5437 45.5762C42.7521 46.0792 42.8066 46.6328 42.7003 47.1668C42.5941 47.7009 42.3319 48.1914 41.9469 48.5764C41.5619 48.9614 41.0713 49.2236 40.5373 49.3299C40.0033 49.4361 39.4497 49.3816 38.9467 49.1732C38.4436 48.9648 38.0136 48.612 37.7111 48.1592C37.4086 47.7065 37.2472 47.1742 37.2472 46.6297C37.248 45.8998 37.5384 45.2001 38.0545 44.684C38.5706 44.1679 39.2703 43.8776 40.0002 43.8767Z"
-                  fill="url(#paint8_angular_241_724)"
-                />
-                <path
-                  d="M0 73.5122C0.00222875 75.4443 0.770727 77.2966 2.13691 78.6628C3.50308 80.0289 5.35538 80.7974 7.28745 80.7997H72.7125C74.6446 80.7974 76.4969 80.0289 77.8631 78.6628C79.2293 77.2966 79.9978 75.4443 80 73.5122V18.2896H0V73.5122ZM50.5263 72.8644C50.5256 73.5085 50.2695 74.126 49.8141 74.5814C49.3587 75.0368 48.7412 75.2929 48.0972 75.2936H31.9028C31.2588 75.2929 30.6413 75.0368 30.1859 74.5814C29.7305 74.126 29.4744 73.5085 29.4737 72.8644V62.5001C29.4744 61.856 29.7305 61.2386 30.1859 60.7832C30.6413 60.3278 31.2588 60.0716 31.9028 60.0709H48.0972C48.7412 60.0716 49.3587 60.3278 49.8141 60.7832C50.2695 61.2386 50.5256 61.856 50.5263 62.5001V72.8644ZM75.1417 62.5001V72.8644C75.141 73.5085 74.8849 74.126 74.4295 74.5814C73.9741 75.0368 73.3566 75.2929 72.7125 75.2936H56.5182C55.8742 75.2929 55.2567 75.0368 54.8013 74.5814C54.3459 74.126 54.0898 73.5085 54.0891 72.8644V62.5001C54.0898 61.856 54.3459 61.2386 54.8013 60.7832C55.2567 60.3278 55.8742 60.0716 56.5182 60.0709H72.7125C73.3566 60.0716 73.9741 60.3278 74.4295 60.7832C74.8849 61.2386 75.141 61.856 75.1417 62.5001ZM22.6261 47.3474L36.2196 23.9576C36.6042 23.2958 37.1558 22.7466 37.8192 22.3648C38.4826 21.9831 39.2346 21.7821 40 21.7821C40.7654 21.7821 41.5174 21.9831 42.1808 22.3648C42.8442 22.7466 43.3958 23.2958 43.7804 23.9576L57.3739 47.3422C57.7615 48.0068 57.9668 48.762 57.9691 49.5314C57.9714 50.3007 57.7707 51.0571 57.3872 51.7241C57.0037 52.3911 56.451 52.9451 55.7849 53.3301C55.1188 53.7152 54.3629 53.9176 53.5935 53.9171H26.4065C25.6379 53.9171 24.8828 53.7145 24.2174 53.3297C23.5521 52.945 22.9999 52.3916 22.6165 51.7254C22.2332 51.0592 22.0322 50.3037 22.0339 49.5351C22.0356 48.7665 22.2398 48.0119 22.6261 47.3474ZM4.8583 62.5001C4.85899 61.856 5.11513 61.2386 5.57054 60.7832C6.02594 60.3278 6.64341 60.0716 7.28745 60.0709H23.4818C24.1258 60.0716 24.7433 60.3278 25.1987 60.7832C25.6541 61.2386 25.9102 61.856 25.9109 62.5001V72.8644C25.9102 73.5085 25.6541 74.126 25.1987 74.5814C24.7433 75.0368 24.1258 75.2929 23.4818 75.2936H7.28745C6.64341 75.2929 6.02594 75.0368 5.57054 74.5814C5.11513 74.126 4.85899 73.5085 4.8583 72.8644V62.5001Z"
-                  fill="url(#paint9_angular_241_724)"
-                />
-                <path
-                  d="M48.0971 61.0425H31.9028C31.0979 61.0425 30.4453 61.695 30.4453 62.5V72.8643C30.4453 73.6693 31.0979 74.3218 31.9028 74.3218H48.0971C48.9021 74.3218 49.5546 73.6693 49.5546 72.8643V62.5C49.5546 61.695 48.9021 61.0425 48.0971 61.0425Z"
-                  fill="url(#paint10_angular_241_724)"
-                />
-                <path
-                  d="M23.4819 61.0425H7.28757C6.48262 61.0425 5.83008 61.695 5.83008 62.5V72.8643C5.83008 73.6693 6.48262 74.3218 7.28757 74.3218H23.4819C24.2868 74.3218 24.9394 73.6693 24.9394 72.8643V62.5C24.9394 61.695 24.2868 61.0425 23.4819 61.0425Z"
-                  fill="url(#paint11_angular_241_724)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(18.9472 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint1_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40 9.05891) scale(40 8.25911)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(29.312 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint3_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(65.5869 9.38278) scale(6.63968 1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint4_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(8.58298 9.38278) scale(1.45749)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint5_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40.0001 34.9699) scale(1.78138 5.02024)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint6_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40.0001 46.63) scale(1.78138)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint7_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(64.6152 67.6822) scale(9.55466 6.63968)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint8_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40.0002 37.8619) scale(16.9807 15.0836)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint9_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40 49.5446) scale(40 31.2551)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint10_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(40 67.6822) scale(9.55466 6.63968)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint11_angular_241_724"
-                    cx={0}
-                    cy={0}
-                    r={1}
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(15.3847 67.6822) scale(9.55466 6.63968)"
-                  >
-                    <stop offset="0.269613" stopColor="#a1a1aa" />
-                    <stop offset="0.504104" stopColor="#a1a1aa" />
-                    <stop offset="0.612837" stopColor="#a1a1aa" />
-                    <stop offset="0.743238" stopColor="#a1a1aa" />
-                    <stop offset="0.986924" stopColor="#71717a" />
-                  </radialGradient>
-                </defs>
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
-                Code Security & Audit
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+            Code Security & Audit
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-wide mt-1">
-              Conduct rigorous security audits, vulnerability assessments, and
-              implement encryption standards to safeguard applications.
-            </p>
-          </div>
+          {securityTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {securityTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-sm md:text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
-      </motion.div>
+          ))}
+        </motion.div>
 
-      <motion.div className="flex flex-col gap-y-8 items-start mt-12">
-        <div className="grid grid-cols-12 gap-y-6 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-12 transition-all duration-300 w-full">
-          <div className="col-span-12 xl:col-span-6">
-            <div className="flex items-center space-x-2 mb-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="size-7 md:size-8"
-              >
-                <path
-                  d="M12 4V15.2C12 16.8802 12 17.7202 12.327 18.362C12.6146 18.9265 13.0735 19.3854 13.638 19.673C14.2798 20 15.1198 20 16.8 20H17M17 20C17 21.1046 17.8954 22 19 22C20.1046 22 21 21.1046 21 20C21 18.8954 20.1046 18 19 18C17.8954 18 17 18.8954 17 20ZM7 4L17 4M7 4C7 5.10457 6.10457 6 5 6C3.89543 6 3 5.10457 3 4C3 2.89543 3.89543 2 5 2C6.10457 2 7 2.89543 7 4ZM17 4C17 5.10457 17.8954 6 19 6C20.1046 6 21 5.10457 21 4C21 2.89543 20.1046 2 19 2C17.8954 2 17 2.89543 17 4ZM12 12H17M17 12C17 13.1046 17.8954 14 19 14C20.1046 14 21 13.1046 21 12C21 10.8954 20.1046 10 19 10C17.8954 10 17 10.8954 17 12Z"
-                  stroke="#a1a1aa"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
 
-              <h4 className="font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
-                DevOps
-              </h4>
-            </div>
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+            DevOps
+          </h4>
 
-            <p className="text-[15px] leading-6 md:text-base xl:text-lg text-zinc-50 font-poppins font-light tracking-widemt-1">
-              Seamlessly integrate DevOps practices to ensure efficient
-              development pipelines, continuous delivery, and smooth
-              deployments.
-            </p>
-          </div>
+          {devopsTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
 
-          <div className="col-span-12 xl:col-span-6">
-            <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
-              <Grid size={60} />
-
-              {devopsTechnologies.map(({ Icon, name }) => (
-                <motion.div
-                  transition={{
-                    type: "tween",
-                    ease: "easeInOut",
-                    duration: 0.3,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                  }}
-                  key={nanoid()}
-                  className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
-                >
-                  <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
-                    <Icon />
-                  </div>
-
-                  <span>{name}</span>
-                </motion.div>
-              ))}
+              <span>{name}</span>
             </motion.div>
-          </div>
-        </div>
+          ))}
+        </motion.div>
+
+        <motion.div className="w-full h-auto relative flex flex-row flex-wrap gap-2 md:gap-4 items-start p-4 xl:p-6 rounded-2xl bg-gradient-to-b from-zinc-900/50 via-zinc-800/50 to-zinc-900/50 shadow-sm shadow-zinc-900/90 overflow-hidden">
+          <Grid size={60} />
+
+          <h4 className="block w-full font-bricolage font-bold text-xl md:text-2xl xl:text-3xl text-transparent bg-gradient-to-b bg-clip-text from-zinc-100/90 to-zinc-600">
+            Web & SEO Optimization
+          </h4>
+
+          {seoTechnologies.map(({ Icon, name }) => (
+            <motion.div
+              transition={{
+                type: "tween",
+                ease: "easeInOut",
+                duration: 0.3,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
+              key={nanoid()}
+              className="relative inline-flex flex-row items-center space-x-1 md:space-x-2 rounded-full font-poppins font-light tracking-wide capitalize text-base py-1 px-2 md:px-4 bg-zinc-700/90 cursor-default"
+            >
+              <div className="size-5 md:size-6 relative overflow-hidden grid place-items-center p-px">
+                <Icon />
+              </div>
+
+              <span>{name}</span>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
     </motion.div>
   );

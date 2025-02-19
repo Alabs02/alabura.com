@@ -87,6 +87,17 @@ export const ImagePath = {
   ASTRO_MARKETER_FULL_LOGO: "/images/astro-marketer-full.webp",
   PLATEAU_STATE_FULL_LOGO: "/images/plateau-state-government-logo-full.webp",
 
+  NEXT_JS: "/images/next-js.svg",
+  TENSORFLOW: "/images/tensorflow.svg",
+
+  LANGCHAIN_LOGO: "/images/langchain.svg",
+  LANGCHAIN_FULL_LOGO: "/images/langchain-full.svg",
+
+  WB_LOGO: "/images/wb.svg",
+  REDIS_LOGO: "/images/redis.svg",
+  KAFKA_LOGO: "/images/kafka.svg",
+  HUGGING_FACE_LOGO: "/images/huggingface.svg",
+
   ALABURA_USMAN: "/images/alabura-usman.webp",
   ALABURA_COM: "/images/alabura.com.webp",
 

@@ -47,14 +47,14 @@ const Recommendations = () => {
         <div className="flex flex-col gap-y-2">
           <p className="text-inherit block">
             When our official site went down unnoticed, Usman took the
-            initiative to create a new version within just three days—a version
+            initiative to create a new version within just three days   a version
             far superior to the previous one. The interface is beautiful and
             remains the best-looking site we’ve ever had. His communication
             skills are equally impressive; he has a rare ability to explain
             technical concepts in simple, relatable terms.
           </p>
           <p className="text-inherit block">
-            I highly recommend Usman to any organization—he is a fantastic
+            I highly recommend Usman to any organization, he is a fantastic
             engineer and a true problem-solver.
           </p>
         </div>
@@ -94,8 +94,8 @@ const Recommendations = () => {
         <div className="flex flex-col gap-y-2">
           <p className="text-inherit block">
             I brought Usman into an ongoing project, and his ability to adapt
-            and start delivering value almost immediately—with little to no
-            onboarding—was truly remarkable. As the PM on the project, I could
+            and start delivering value almost immediately with little to no
+            onboarding was truly remarkable. As the PM on the project, I could
             immediately feel his impact. His communication skills were
             excellent, and he quickly established himself as a reliable
             contributor to the team.

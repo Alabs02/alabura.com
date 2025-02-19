@@ -36,41 +36,45 @@ const AboutAlaburaUsman = () => {
       <header className="w-full flex flex-col items-center relative bg-gradient-to-b from-background to-background">
         <section className="section relative h-full gap-y-10 py-10 xl:py-12 2xl:py-16 mt-[95px] z-[2000]">
           <div className="grid grid-cols-12 gap-5 xl:gap-8 2xl:gap-10 w-full">
-          <div className="col-span-12 lg:col-span-7 2xl:col-span-8 w-full flex flex-col gap-y-4 items-start">
-            <HeadingChip>ABOUT ALABURA</HeadingChip>
+            <div className="col-span-12 lg:col-span-7 2xl:col-span-8 w-full flex flex-col gap-y-4 items-start">
+              <HeadingChip>ABOUT ALABURA</HeadingChip>
 
-            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-              AI Solutions Expert
-            </h3>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bricolage mt-2 font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
+                AI Solutions Expert
+              </h3>
 
-            <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[96%] !leading-relaxed mt-8">
-              With a strategic mindset and hands-on expertise, I help businesses
-              design, build, and scale AI-driven solutions that drive revenue,
-              cut costs, and automate operations. My passion lies in
-              transforming bold ideas into impactful, scalable AI solutions,
-              leaving a legacy of innovation and business success with every
-              project.
-            </p>
+              <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[96%] !leading-relaxed mt-8">
+                I design, build, and scale AI-driven solutions that boost
+                revenue, cut costs, and automate operations. Beyond code,
+                I&apos;m a car enthusiast who loves precision, whether in AI
+                systems or finely tuned machines. I unwind with
+                thought-provoking podcasts and classic rom-coms.
+              </p>
 
-            <Link
-              href={resumeHref}
-              target={"_blank"}
-              aria-label="Preview My Resume"
-              className="mt-4"
-              passHref
-            >
-              <RainbowButton
+              <p className="font-poppins text-zinc-50/90 text-base lg:text-xl w-full xl:max-w-[96%] mt-2">
+                For me, AI isn&apos;t just automation, it&apos;s about crafting
+                experiences that last. Let&apos;s build something remarkable.
+              </p>
+
+              <Link
+                href={resumeHref}
+                target={"_blank"}
                 aria-label="Preview My Resume"
-                className={cn(
-                  "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
-                )}
+                className="mt-4"
+                passHref
               >
-                <span>{"Preview Resume"}</span>
-                <ScanEye />
-              </RainbowButton>
-            </Link>
-          </div>
-            
+                <RainbowButton
+                  aria-label="Preview My Resume"
+                  className={cn(
+                    "inline-flex space-x-2 items-center !rounded-full uppercase tracking-wide text-[15px] text-zinc-950 font-poppins !font-medium !bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(var(--color-1)),hsl(var(--color-5)),hsl(var(--color-3)),hsl(var(--color-4)),hsl(var(--color-2)))]"
+                  )}
+                >
+                  <span>{"Preview Resume"}</span>
+                  <ScanEye />
+                </RainbowButton>
+              </Link>
+            </div>
+
             <div className="col-span-12 lg:col-span-5 2xl:col-span-4 grid-cols-1 hidden lg:grid">
               <div className="relative size-full opacity-95">
                 <Image
@@ -86,7 +90,6 @@ const AboutAlaburaUsman = () => {
               </div>
             </div>
           </div>
-          
         </section>
 
         <div className="grid grid-cols-1 absolute h-[60%] w-[60%] 2xl:h-[40%] 2xl:w-[40%] overflow-hidden -top-0 -left-0 z-[500]">
@@ -97,7 +100,7 @@ const AboutAlaburaUsman = () => {
             y={-1}
             squares={patterns}
             className={cn(
-              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
             )}
           />
         </div>
@@ -193,17 +196,15 @@ const AboutAlaburaUsman = () => {
             <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Work:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-                Crafting Solutions That Matter
+                Building Impactful AI Solutions
               </span>
             </h3>
 
             <p className="font-poppins font-light text-zinc-50/90 text-base lg:text-xl w-full text-center max-w-[90%] mt-6">
-              Work is more than a job; it&apos;s a commitment to excellence.
-              Each project I take on is an opportunity to innovate, solve
-              challenges, and deliver solutions that make a difference. From
-              collaborating with startups to spearheading large-scale
-              initiatives, my work is rooted in grit, precision, and
-              results-driven execution.
+              Every project is an opportunity to innovate, solve challenges, and
+              drive real results. Whether collaborating with startups or leading
+              large-scale initiatives, I bring grit, precision, and a commitment
+              to excellence.
             </p>
           </div>
 
@@ -211,16 +212,15 @@ const AboutAlaburaUsman = () => {
             <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Inspired:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-                Driven by Curiosity, Fueled by Purpose
+                Curiosity Meets Purpose
               </span>
             </h3>
 
             <p className="font-poppins font-light text-zinc-50/90 text-center text-base lg:text-xl w-full max-w-[90%] mt-6">
-              I find inspiration in challenges and innovation in collaboration.
-              Whether it&apos;s a groundbreaking idea or a complex problem, I
-              believe every obstacle holds the seed of transformation. My
-              curiosity drives me to explore new technologies, frameworks, and
-              methods that empower businesses to thrive in the digital age.
+              I thrive on challenges and collaboration, always exploring new
+              technologies to turn obstacles into opportunities. Innovation
+              isn&apos;t just a goal, it&apos;s a mindset that fuels every
+              solution I build.
             </p>
           </div>
 
@@ -228,17 +228,15 @@ const AboutAlaburaUsman = () => {
             <h3 className="text-2xl lg:text-3xl xl:text-4xl text-center font-bricolage font-bold md:font-extrabold subpixel-antialiased text-transparent bg-gradient-to-b bg-clip-text from-secondary-300 to-cyan-600">
               Vision:{" "}
               <span className="bg-gradient-to-b bg-clip-text from-zinc-200 to-zinc-600">
-                Engineering a Better Tomorrow
+                Engineering the Future
               </span>
             </h3>
 
             <p className="font-poppins font-light text-zinc-50/90 text-base lg:text-xl text-center w-full max-w-[90%] mt-6">
-              My vision is simple—engineer solutions that inspire and create
-              lasting value. I aim to bridge the gap between ambition and
-              reality, helping businesses realize their full potential while
-              making an impact on industries and communities. This isn&apos;t
-              just about building; it&apos;s about shaping a future where
-              possibilities are limitless.
+              I bridge the gap between ambition and reality, crafting AI-driven
+              solutions that create lasting value. It&apos;s not just about
+              building, it&apos;s about shaping a future of limitless
+              possibilities.
             </p>
           </div>
         </div>
