@@ -586,5 +586,4 @@ export const inquiryQuestions = {
   ]
 };
 
-export const resumeHref =
-  "https://firebasestorage.googleapis.com/v0/b/alaburausmanportfolio.appspot.com/o/docs%2FAU%2FAlabura's%20Resume.pdf?alt=media&token=a6a1e56c-5509-4afe-b186-989af0186042";
+export const resumeHref = "https://firebasestorage.googleapis.com/v0/b/alaburausmanportfolio.appspot.com/o/docs%2FAU%2FLatest%2FAlabura's%20Resume.pdf?alt=media&token=aff98a3f-1827-4c87-b9b9-4b403527244e";
